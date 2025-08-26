@@ -8,7 +8,7 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    server: {
-        port: 5175,
-    },
+    // server: {
+    //     port: 5175,
+    // },
 });
