@@ -27,6 +27,9 @@ jobs:
                 composer install
 
                 echo "Npm  Installing..."
+                npm uninstall vite
+                npm install vite@6 --save-dev
+
                 npm install
 
                 echo "Migrating..."
