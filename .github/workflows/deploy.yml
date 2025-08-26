@@ -34,7 +34,7 @@ jobs:
                 echo "Zipping Assets..."
                 cd ../
                 ls
-                cd ../ ../
+                cd ../..
                 ls
                 tar -czf NextInnovation_company_website.tar.gz NextInnovation_company_website
                 ls
