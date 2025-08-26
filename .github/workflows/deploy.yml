@@ -32,12 +32,19 @@ jobs:
                 npm install
 
                 echo "Zipping Assets..."
-                cd ../
-                ls
                 cd ../..
-                ls
                 tar -czf NextInnovation_company_website.tar.gz NextInnovation_company_website
-                ls
+                mv NextInnovation_company_website.tar.gz NextInnovation_company_website/
+
+            - name: Copy NextInnovation_company_website.tar.gz over scp
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                    source: NextInnovation_company_website.tar.gz
+                    target: /home/ubuntu/nextinnovations-company-networks/
+                    host: ${{ secrets.STAGING_HOST }}
+                    username: ${{ secrets.STAGING_USER }}
+                    key: ${{ secrets.STAGING_KEY }}
+
 
 
 
