@@ -5,8 +5,8 @@
         ['name'=>'Contact','link'=>route('contact')],
     ]" current="View" />
 
-    <div class="w-1/2 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 class="text-3xl font-medium text-gray-900 dark:text-white mb-6">Contact Information</h5>
+    <div class="w-1/2 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
+        <h5 class="text-3xl font-medium text-gray-900 mb-6">Contact Information</h5>
         <div class="flex flex-col gap-3">
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Name :</h4>

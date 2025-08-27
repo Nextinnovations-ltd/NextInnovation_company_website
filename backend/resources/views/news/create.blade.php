@@ -7,7 +7,7 @@
 
     <div class="grid grid-cols-5 gap-4">
         <div class="col-span-5 xl:col-span-3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
-            <h5 class="text-2xl font-medium text-gray-900 dark:text-white mb-6">Create News</h5>
+            <h5 class="text-2xl font-medium text-gray-900 mb-6">Create News</h5>
             <form class="space-y-6" action="{{ route('news.store') }}" method="POST">
                 @csrf
                 <div>
@@ -36,7 +36,7 @@
                     <x-forms.error name="feature" />
                 </div>
 
-                <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Create</button>
+                <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center">Create</button>
             </form>
         </div>
         <div class="col-span-5 xl:col-span-2">

@@ -5,8 +5,8 @@
         ['name'=>'Users','link'=>route('users')],
     ]" current="Edit" />
 
-    <div class="w-full xl:w-2/3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <h5 class="text-2xl font-medium text-gray-900 dark:text-white mb-6">Edit Users</h5>
+    <div class="w-full xl:w-2/3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
+        <h5 class="text-2xl font-medium text-gray-900 mb-6">Edit Users</h5>
         <form class="space-y-6" action="{{ route('users.update', $user->id) }}" method="POST">
             @csrf
             @method('PUT')
@@ -31,7 +31,7 @@
             <div class="flex items-center">
                 <input name="changePassword" id="changePassword" type="checkbox" {{ old('changePassword') ? 'checked' : '' }}
                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-2 border-2 focus:ring-blue-500"/>
-                <label for="changePassword" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Change Password</label>
+                <label for="changePassword" class="ms-2 text-sm font-medium text-gray-900">Change Password</label>
             </div>
             <div class="grid grid-cols-2 gap-3" id="passwordField">
                 <div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Update</button>
+            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center">Update</button>
         </form>
     </div>
 

@@ -3,7 +3,7 @@
     <h1 class="text-4xl font-semibold mb-3">Change Password</h1>
     <x-breadcrumb :route="[]" current="Change Password" />
 
-    <div class="w-2/3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div class="w-2/3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
         @session('success')
         <x-success-alert name="success" />
         @endsession
@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Change Password</button>
+            <button type="submit" class="px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center">Change Password</button>
         </form>
     </div>
 

@@ -20,7 +20,7 @@
                 show: true,
                 style: {
                     fontFamily: "Inter, sans-serif",
-                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                    cssClass: 'text-xs font-normal fill-gray-500'
                 }
             },
             axisBorder: {
@@ -36,7 +36,7 @@
                 show: true,
                 style: {
                     fontFamily: "Inter, sans-serif",
-                    cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+                    cssClass: 'text-xs font-normal fill-gray-500'
                 },
                 formatter: function(value) {
                     return value;

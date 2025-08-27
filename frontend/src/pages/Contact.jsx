@@ -244,7 +244,7 @@ const Contact = () => {
                                         <div className="flex items-center h-5">
                                         <input id="terms" type="checkbox" checked={check} onChange={(e) => setCheck(e.target.checked)} className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 " />
                                         </div>
-                                        <label htmlFor="terms" className="ms-2 text-[16px] font-medium text-gray-900 dark:text-gray-300">I agree to the <Link to="/privacy" className="text-blue-600 hover:underline">privacy policy</Link></label>
+                                        <label htmlFor="terms" className="ms-2 text-[16px] font-medium text-gray-900">I agree to the <Link to="/privacy" className="text-blue-600 hover:underline">privacy policy</Link></label>
                                     </div>
                                 </div>
 
