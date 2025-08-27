@@ -71,7 +71,10 @@ jobs:
 
 
                 echo "Moving Frontend Dist to Root Dir"
-                mv frontend/dist NextInnovation_company_website
+                cd ./frontend
+                ls
+                echo "Checking frontend Dist Folder"
+                mv ./frontend/dist NextInnovation_company_website
                 ls
                 tar -czf dist.tar.gz dist
                 ls
