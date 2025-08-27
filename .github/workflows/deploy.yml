@@ -74,7 +74,7 @@ jobs:
                 cd ./frontend
                 ls
                 echo "Checking frontend Dist Folder"
-                mv ./frontend/dist NextInnovation_company_website
+                mv dist NextInnovation_company_website
                 ls
                 tar -czf dist.tar.gz dist
                 ls
