@@ -32,7 +32,7 @@ jobs:
                 name: frontend-build
                 path: frontend/dist
 
-    deploy-to-staging-job:
+    move-files-staging-job:
         runs-on: ubuntu-latest
 
         permissions:
@@ -80,9 +80,6 @@ jobs:
                 tar -czf dist.tar.gz dist
                 ls
 
-
-
-
             - name: Copy NextInnovation Company Website Backend over scp
               uses: appleboy/scp-action@v0.1.7
               with:
@@ -100,6 +97,36 @@ jobs:
                      host: ${{ secrets.STAGING_HOST }}
                      username: ${{ secrets.STAGING_USER }}
                      key: ${{ secrets.STAGING_KEY }}
+
+    SSH-and-deploy:
+        runs-on: ubuntu-latest
+                
+        permissions:
+                contents: read
+                id-token: write
+                packages: write
+                        
+        needs:  [build-frontend , move-files-staging-job]
+        steps:
+            - name: Executing remote ssh commands
+              uses: appleboy/ssh-action@v1.2.0
+              with:
+                host: ${{ secrets.STAGING_HOST }}
+                username: ${{ secrets.STAGING_USER }}
+                key: ${{ secrets.STAGING_KEY }}
+                script: |
+                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz -C /home/ubuntu/talentcloud-networks
+                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz -C /home/ubuntu/talentcloud-networks
+
+                    sudo rm -rf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz
+                    sudo rm -rf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz
+
+                    sudo rm -rf /var/www/dist
+                    sudo cp -r /home/ubuntu/nextinnovations-company-networks/dist /var/www/dist
+
+                    cd ./home/ubuntu/nextinnovations-company-networks/backend
+                    php artisan migrate 
+
 
 
                     # /var/www/html/NextInnovation_company_website/backend/public
