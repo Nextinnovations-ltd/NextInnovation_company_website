@@ -39,6 +39,8 @@ jobs:
             contents: read
             id-token: write
             packages: write
+        
+        needs:  build-frontend
 
         steps:
             - name: Checkout Repository
