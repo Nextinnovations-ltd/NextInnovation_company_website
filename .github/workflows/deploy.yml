@@ -66,14 +66,14 @@ jobs:
                 npm run build
 
                 echo "Zipping Assets..."
-                cd ../..
-                tar -czf NextInnovation_company_website.tar.gz NextInnovation_company_website
-                mv NextInnovation_company_website.tar.gz NextInnovation_company_website/
+                cd ../
+                tar -czf backend.tar.gz backend
 
-            - name: Copy NextInnovation_company_website.tar.gz over scp
+
+            - name: Copy NextInnovation Company Website Backend over scp
               uses: appleboy/scp-action@v0.1.7
               with:
-                    source: NextInnovation_company_website.tar.gz
+                    source: backend.tar.gz
                     target: /home/ubuntu/nextinnovations-company-networks/
                     host: ${{ secrets.STAGING_HOST }}
                     username: ${{ secrets.STAGING_USER }}
