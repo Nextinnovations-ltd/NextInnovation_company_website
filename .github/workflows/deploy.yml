@@ -115,8 +115,8 @@ jobs:
                 username: ${{ secrets.STAGING_USER }}
                 key: ${{ secrets.STAGING_KEY }}
                 script: |
-                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz -C /home/ubuntu/talentcloud-networks
-                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz -C /home/ubuntu/talentcloud-networks
+                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz -C /home/ubuntu/nextinnovations-company-networks
+                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz -C /home/ubuntu/nextinnovations-company-networks
 
                     sudo rm -rf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz
                     sudo rm -rf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz
