@@ -46,6 +46,10 @@ jobs:
                     key: ${{ secrets.STAGING_KEY }}
 
 
+                    # /var/www/html/NextInnovation_company_website/backend/public
+                    # /var/run/php/php8.2-fpm.sock
+
+
 
 
 
