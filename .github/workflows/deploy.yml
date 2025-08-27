@@ -55,7 +55,7 @@ jobs:
             - name: Install dependencies and zip
               run: |
                 # Backend build
-                cd ./NextInnovation_company_website/backend
+                cd ./backend
 
                 echo "Composer Installing..."
                 composer install
