@@ -124,8 +124,9 @@ jobs:
                     sudo rm -rf /var/www/dist
                     sudo cp -r /home/ubuntu/nextinnovations-company-networks/dist /var/www/dist
 
-                    cd ./home/ubuntu/nextinnovations-company-networks/backend
-                    php artisan migrate 
+                    # Run backend migrations
+                    cd /home/ubuntu/nextinnovations-company-networks/backend
+                    php artisan migrate --force
 
 
 
