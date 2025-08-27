@@ -124,16 +124,19 @@ jobs:
                     sudo rm -rf /var/www/dist
                     sudo cp -r /home/ubuntu/nextinnovations-company-networks/dist /var/www/dist
 
+
+
                     # Run backend migrations
                     cd /home/ubuntu/nextinnovations-company-networks/backend
                     php artisan migrate --force
 
 
+                    sudo rm -rf /var/www/backend
+                    sudo cp -r /home/ubuntu/nextinnovations-company-networks/backend /var/www/backend
 
-                    # /var/www/html/NextInnovation_company_website/backend/public
-                    # /var/run/php/php8.2-fpm.sock
+                    sudo chown -R www-data:www-data /var/www/backend
 
-
+                    sudo systemctl restart nginx.service
 
 
 
