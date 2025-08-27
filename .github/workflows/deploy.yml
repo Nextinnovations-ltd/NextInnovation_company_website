@@ -7,6 +7,31 @@ on:
     workflow_dispatch:
 
 jobs:
+    build-frontend:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: read
+            id-token: write
+            packages: write
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v3
+
+            - name: Install dependencies and build 
+              run: |
+                ls
+                cd ./frontend
+                npm ci
+                npm run build
+
+            - name: Upload build artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: frontend-build
+                path: frontend/dist
+
     deploy-to-staging-job:
         runs-on: ubuntu-latest
 
@@ -19,6 +44,12 @@ jobs:
             - name: Checkout Repository
               uses: actions/checkout@v3
 
+            - name: Download build artifact
+              uses: actions/download-artifact@v4
+              with:
+                name: frontend-build
+                path: frontend/dist
+
             - name: Install dependencies and zip 
               run: |
                 cd ./backend
@@ -30,6 +61,7 @@ jobs:
                 npm uninstall vite
                 npm install vite@6 --save-dev
                 npm install
+                npm run build
 
                 echo "Zipping Assets..."
                 cd ../..
