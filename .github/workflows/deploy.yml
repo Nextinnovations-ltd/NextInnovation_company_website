@@ -71,13 +71,14 @@ jobs:
 
 
                 echo "Moving Frontend Dist to Root Dir"
-                cd ./frontend
+                cd ./NextInnovation_company_website/frontend
                 echo "Checking frontend Dist Folder"
-                mv dist NextInnovation_company_website/
-                cd ../
+                mv dist ../..
+                cd ../..
                 ls
                 tar -czf dist.tar.gz dist
                 ls
+
 
 
             - name: Copy NextInnovation Company Website Backend over scp
