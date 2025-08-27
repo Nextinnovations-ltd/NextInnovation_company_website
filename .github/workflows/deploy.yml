@@ -70,6 +70,13 @@ jobs:
                 tar -czf backend.tar.gz backend
 
 
+                echo "Moving Frontend Dist to Root Dir"
+                mv frontend/dist NextInnovation_company_website
+                ls
+                tar -czf dist.tar.gz dist
+                ls
+
+
             - name: Copy NextInnovation Company Website Backend over scp
               uses: appleboy/scp-action@v0.1.7
               with:
@@ -78,6 +85,15 @@ jobs:
                     host: ${{ secrets.STAGING_HOST }}
                     username: ${{ secrets.STAGING_USER }}
                     key: ${{ secrets.STAGING_KEY }}
+            
+            - name: Copy NextInnovation Company Website Frontend over scp
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                     source: dist.tar.gz
+                     target: /home/ubuntu/nextinnovations-company-networks/
+                     host: ${{ secrets.STAGING_HOST }}
+                     username: ${{ secrets.STAGING_USER }}
+                     key: ${{ secrets.STAGING_KEY }}
 
 
                     # /var/www/html/NextInnovation_company_website/backend/public
