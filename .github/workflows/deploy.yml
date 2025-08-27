@@ -52,32 +52,34 @@ jobs:
                 name: frontend-build
                 path: frontend/dist
 
-            - name: Install dependencies and zip 
+            - name: Install dependencies and zip
               run: |
-                cd ./backend
+                # Backend build
+                cd ./NextInnovation_company_website/backend
 
                 echo "Composer Installing..."
                 composer install
 
-                echo "Npm  Installing..."
+                echo "Npm Installing..."
                 npm uninstall vite
                 npm install vite@6 --save-dev
                 npm install
                 npm run build
 
-                echo "Zipping Assets..."
-                cd ../
+                echo "Zipping Backend..."
+                cd ..
                 tar -czf backend.tar.gz backend
 
-
+                # Frontend build
                 echo "Moving Frontend Dist to Root Dir"
-                cd ./NextInnovation_company_website/frontend
+                cd ./frontend
                 echo "Checking frontend Dist Folder"
-                mv dist ../..
-                cd ../..
+                mv dist ..
+                cd ..
                 ls
                 tar -czf dist.tar.gz dist
                 ls
+
 
 
 
