@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Instagram = () => {
 
     let [post,setPost] = useState([])
-    let url = 'https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=6&access_token=IGAA3bLiU8KH5BZAE1OZADRiMGpoWnZARYnBFTnVwT1lRa0FqYlF1ZADRQcTkwNkZAoSHlKNGRMSS04bUZAoMTR0QW1NQnZAPQzBId2J1b2JEVWtIeDZAEVzM0UEYyQldEelYzRV9NYVBnWkJSTURZAazZA4SGtaZAzNhVFpkdzlXVFU3c09iZAwZDZD'
+    let url = 'https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink,timestamp&limit=6&access_token=IGAAKld0Wp3MdBZAE5YUklLakNpV0N0SjVYUEpaX1VaY3V3c3NlTGpLNWJ1ZAlJSZAFFMSE11TE53NnJyZAWdiemIyRnBQVC1qWHRvNjZAGMDF0dWhoSkVfS3VYVFNxZA050TnU5Sm9XZA3c5N3JKWjU3OXlkekt0STlONS1kUjZA2RF9nYwZDZD'
     
     useEffect(() => {
         fetch(url)

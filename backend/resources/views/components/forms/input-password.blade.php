@@ -1,6 +1,6 @@
 <div class="relative flex items-center">
     <input type="password" name="{{ $name }}" id="{{ $name }}"
-        class="text-sm rounded-lg block w-full pr-10 p-2.5 border focus:ring-1
+        class="text-sm rounded-lg block w-full pr-10 p-2.5 border focus:ring-1 focus:outline-none
         @if ($errors->has($name))
             bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500
         @else
