@@ -21,6 +21,7 @@ import OtherService from "../../components/development/OtherService"
 import SuccessfulWorkWebsite from "../../components/development/SuccessfulWorkWebsite"
 import OurStrength from "../../components/OurStrength"
 import useVisiter from "../../hooks/useVisiter"
+import { API_BASE_URL } from "../../config"
 
 const Eor = () => {
     useVisiter('eor');
@@ -68,7 +69,7 @@ const Eor = () => {
                     <TopShadow step = "06" title = "Reduce Risks"/>
                 </div>
 
-                <SuccessfulWorkWebsite category='eor' url="https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category=4" />
+                <SuccessfulWorkWebsite category='eor' url={`${API_BASE_URL}/api/works?category=4`} />
 
             </div>
 

@@ -1,11 +1,12 @@
 import { useEffect } from "react";
+import { API_BASE_URL } from "../config";
 
 export default function useVisiter(page) {
   useEffect(() => {
     if (!page) return;
 
     const visiter = () => {
-        fetch('http://127.0.0.1:8000/api/visiter/' + page, {
+        fetch(`${API_BASE_URL}/api/visiter/${page}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'

@@ -3,13 +3,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom"
 import CareerCard from "./CareerCard";
+import { API_BASE_URL } from '../config';
 
 const HomeCareer = () => {
 
     let [career,setCareer] = useState([])
 
     useEffect(() => {
-        fetch('https://demo-site.next-innovations.ltd/ni-backend/public/api/news')
+        fetch(`${API_BASE_URL}/api/news`)
         .then(res => res.json())
         .then(data => {
             setCareer(data.data.slice(0, 3));

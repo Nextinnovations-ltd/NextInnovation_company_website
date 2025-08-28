@@ -27,6 +27,7 @@ import TestingService from "../../../public/images/testing.png"
 import WebsiteDevelopment from "../../../public/images/website-development.png"
 import Eor from "../../../public/images/eor.png"
 import useVisiter from "../../hooks/useVisiter"
+import { API_BASE_URL } from "../../config"
 
 
 const UiUx = () => {
@@ -83,7 +84,7 @@ const UiUx = () => {
             />
 
             <div className="other-sections mx-auto px-[25px] xl:px-[25px] mt-[174px]">
-                <SuccessfulWorkWebsite category='uiux' url="https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category=3" />
+                <SuccessfulWorkWebsite category='uiux' url={`${API_BASE_URL}/api/works?category=3`} />
             </div>
 
             <PackageSection

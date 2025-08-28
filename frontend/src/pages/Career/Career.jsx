@@ -4,11 +4,12 @@ import { useState, useEffect, useRef } from 'react';
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useVisiter from "../../hooks/useVisiter";
+import { API_BASE_URL } from "../../config";
 
 const Career = () => {
     useVisiter('news');
 
-    let [url,setUrl] = useState('https://demo-site.next-innovations.ltd/ni-backend/public/api/news');
+    let [url,setUrl] = useState(`${API_BASE_URL}/api/news`);
     let [news,setNews] = useState([]);
     let [category,setCategory] = useState('');
     let [currentPage,setCurrentPage] = useState('');
@@ -39,7 +40,7 @@ const Career = () => {
     }, [url]);
 
     let link = (page) => {
-        setUrl('https://demo-site.next-innovations.ltd/ni-backend/public/api/news?category='+category+'&page='+page);
+        setUrl(`${API_BASE_URL}/api/news?category=${category}&page=${page}`);
         pageTransition();
     }
 
@@ -47,7 +48,7 @@ const Career = () => {
         const value = slug ? categoryMap[slug] : ''; // convert "news" to "1"
         setCategory(value);
         setSearchParams({ category: slug }); // URL: ?category=news
-        setUrl(`https://demo-site.next-innovations.ltd/ni-backend/public/api/news?category=${value}`);
+        setUrl(`${API_BASE_URL}/api/news?category=${value}`);
         pageTransition();
     };
 
@@ -55,7 +56,7 @@ const Career = () => {
         const slug = searchParams.get("category"); // e.g. "news"
         const value = categoryMap[slug] || '';
         setCategory(value);
-        setUrl(`https://demo-site.next-innovations.ltd/ni-backend/public/api/news?category=${value}`);
+        setUrl(`${API_BASE_URL}/api/news?category=${value}`);
     }, []);
 
     let pageTransition = () => {

@@ -4,6 +4,7 @@ import Blur2 from "../../public/images/Blur2.svg"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 const Confirm = () => {
 
@@ -37,7 +38,7 @@ const Confirm = () => {
     let sendMessage = (e) => {
         setLoading(true)
         e.preventDefault();
-        fetch('http://127.0.0.1:8000/api/contact', {
+        fetch(`${API_BASE_URL}/api/contact`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'

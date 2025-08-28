@@ -6,6 +6,7 @@ import ContactSelect from "../components/ContactSelect"
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 const Contact = () => {
 
@@ -44,7 +45,7 @@ const Contact = () => {
     let validate = (e) => {
         setLoading(true)
         e.preventDefault();
-        fetch('http://127.0.0.1:8000/api/contact/validation', {
+        fetch(`${API_BASE_URL}/api/contact/validation`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'

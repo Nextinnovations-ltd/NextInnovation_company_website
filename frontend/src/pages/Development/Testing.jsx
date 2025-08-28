@@ -24,6 +24,7 @@ import UiUxService from "../../../public/images/ui-ux-service.png"
 import WebsiteDevelopment from "../../../public/images/website-development.png"
 import Eor from "../../../public/images/eor.png"
 import useVisiter from "../../hooks/useVisiter"
+import { API_BASE_URL } from "../../config"
 
 const Testing = () => {
     useVisiter('testing');
@@ -79,7 +80,7 @@ const Testing = () => {
             />
 
             <div className="max-w-[1240px] mx-auto mt-[136px] px-[25px] xl:px-0">
-                <SuccessfulWorkWebsite category='testing' url="https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category=5" />
+                <SuccessfulWorkWebsite category='testing' url={`${API_BASE_URL}/api/works?category=5`} />
             </div>
 
             <div className="max-w-[1240px] mx-auto mb-[100px] md:my-[150px] lg:my-[201px] text-[#D22E19] px-[25px] xl:px-0">

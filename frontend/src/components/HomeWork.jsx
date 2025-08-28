@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom"
 import SuccessfulWorkCard from "./development/SuccessfulWorkCard"
+import { API_BASE_URL } from '../config';
 
 
 const  HomeWork = () => {
@@ -10,7 +11,7 @@ const  HomeWork = () => {
     let [work,setWork] = useState([])
     
     useEffect(() => {
-        fetch('https://demo-site.next-innovations.ltd/ni-backend/public/api/works')
+        fetch(`${API_BASE_URL}/api/works`)
         .then(res => res.json())
         .then(data => {
             setWork(data.data.slice(0, 4));

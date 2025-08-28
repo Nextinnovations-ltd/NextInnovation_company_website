@@ -7,9 +7,10 @@ import { useSearchParams } from "react-router-dom"
 import SuccessfulWorkCard from "../../components/development/SuccessfulWorkCard"
 import Gif from "../../components/Gif"
 import gsap from "gsap"
+import { API_BASE_URL } from '../../config';
 
 const Work = () => {
-    let [url,setUrl] = useState('https://demo-site.next-innovations.ltd/ni-backend/public/api/works');
+    let [url,setUrl] = useState(`${API_BASE_URL}/api/works`);
     let [works,setWorks] = useState([]);
     let [category,setCategory] = useState('');
     let [currentPage,setCurrentPage] = useState('');
@@ -39,7 +40,7 @@ const Work = () => {
     }, [url]);
     
     let link = (page) => {
-        setUrl('https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category='+category+'&page='+page);
+        setUrl(`${API_BASE_URL}/api/works?category=${category}&page=${page}`);
         pageTransition();
     }
 
@@ -47,7 +48,7 @@ const Work = () => {
         const value = slug ? categoryMap[slug] : ''; // convert "news" to "1"
         setCategory(value);
         setSearchParams({ category: slug });
-        setUrl('https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category='+value);
+        setUrl(`${API_BASE_URL}/api/works?category=${value}`);
         pageTransition();
     }
 
@@ -55,7 +56,7 @@ const Work = () => {
       const slug = searchParams.get("category");
       const value = categoryMap[slug] || '';
       setCategory(value);
-      setUrl(`https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category=${value}`);
+      setUrl(`${API_BASE_URL}/api/works?category=${value}`);
     }, []);
 
     let pageTransition = () => {

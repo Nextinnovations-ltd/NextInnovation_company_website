@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CareerCard from "../../components/CareerCard"
 import { Link, useParams } from "react-router-dom";
+import { API_BASE_URL } from "../../config";
 
 const CareerDetail = () => {
     let {id} = useParams();
@@ -8,7 +9,7 @@ const CareerDetail = () => {
     let [latest,setLatest] = useState([]);
     let [error,setError] = useState(false)
 
-    let url= 'https://demo-site.next-innovations.ltd/ni-backend/public/api/news/'+id
+    let url= `${API_BASE_URL}/api/news/${id}`;
     fetch(url)
     .then(res => res.json())
     .then(data => {

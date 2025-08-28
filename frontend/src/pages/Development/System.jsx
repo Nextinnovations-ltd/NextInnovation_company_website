@@ -20,6 +20,7 @@ import US1 from "../../../public/images/US1.png"
 import US2 from "../../../public/images/US2.png"
 import US3 from "../../../public/images/US3.png"
 import useVisiter from "../../hooks/useVisiter"
+import { API_BASE_URL } from "../../config"
 
 const System = () => {
     useVisiter('system');
@@ -52,7 +53,7 @@ const System = () => {
 
                 <StepSystem/>
 
-                <SuccessfulWorkWebsite category='system' url="https://demo-site.next-innovations.ltd/ni-backend/public/api/works?category=2" />
+                <SuccessfulWorkWebsite category='system' url={`${API_BASE_URL}/api/works?category=2`} />
 
             </div>
 
