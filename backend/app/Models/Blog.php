@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Support\Str;
+use App\Models\BlogCategory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,22 +17,8 @@ class Blog extends Model
         return $this->hasMany(BlogImage::class);
     }
 
-    public function getCategoryNameAttribute() {
-        switch ($this->category) {
-            case 1:
-                $categoryName = 'News';
-                break;
-            case 2:
-                $categoryName = 'Career';
-                break;
-            case 3:
-                $categoryName = 'Blog';
-                break;
-            default:
-                $categoryName = 'Unknown';
-                break;
-        }
-        return $categoryName;
+    public function blog_category(){
+        return $this->belongsTo(BlogCategory::class, 'category');
     }
 
     public function getMediumFeatureAttribute() {

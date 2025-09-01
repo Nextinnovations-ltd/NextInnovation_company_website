@@ -12,9 +12,9 @@
         <input type="text" name="search" value="{{ request('search') }}" id="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:ring-1 focus:border-blue-500 focus:outline-none block w-full md:w-[300px] p-2.5" placeholder="Search Title or Id" />
         <select id="category" name="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:ring-1 focus:border-blue-500 focus:outline-none block w-full md:w-[150px] p-2.5">
             <x-forms.option name="category" value="" text="Choose Category" />
-            <x-forms.option name="category" value="1" text="News" :dbData="request('category')" />
-            <x-forms.option name="category" value="2" text="Career" :dbData="request('category')" />
-            <x-forms.option name="category" value="3" text="Blog" :dbData="request('category')" />
+            @foreach ($category as $item)
+            <x-forms.option name="category" :value="$item->id" :text="$item->name" :dbData="request('category')" />
+            @endforeach
         </select>
         <x-forms.searchbtn/>
     </form>
@@ -42,7 +42,7 @@
                         {{ $item->title_limit }}
                     </th>
                     <td class="px-6 py-4 my-auto">
-                        {{ $item->category_name }}
+                        {{ $item->blog_category->name }}
                     </td>
                     <td class="px-6 py-4">
                         <img src="{{ $item->medium_feature }}" class="w-[100px] h-[70px] rounded shadow-lg" alt="">

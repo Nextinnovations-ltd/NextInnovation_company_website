@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\BlogImage;
+use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 use App\Http\Requests\BlogRequest;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +16,8 @@ class BlogController extends Controller
 {
     public function index() {
         $data = $this->getBlogData();
-        return view('news.index', compact('data'));
+        $category = BlogCategory::get();
+        return view('news.index', compact('data','category'));
     }
 
     public function create() {
@@ -119,7 +121,7 @@ class BlogController extends Controller
             'id' => $blog->id,
             'title' => $blog->title,
             'description' => $blog->description,
-            'category' => $blog->category_name,
+            'category' => $blog->blog_category->name,
             'feature' => $blog->medium_feature,
             'created_at' => $blog->created_at->format('j/n/Y'),
         ];

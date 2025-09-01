@@ -21,15 +21,7 @@
                     <textarea name="description" id="description" >{{ old('description', $blog->description) }}</textarea>
                     <x-forms.error name="description" />
                 </div>
-                <div>
-                    <x-forms.label for="category" text="Category" require="*" />
-                    <x-forms.select name="category">
-                        <x-forms.option name="category" value="1" text="News" :dbData="$blog->category" />
-                        <x-forms.option name="category" value="2" text="Career" :dbData="$blog->category" />
-                        <x-forms.option name="category" value="3" text="Blog" :dbData="$blog->category" />
-                    </x-forms.select>
-                    <x-forms.error name="category" />
-                </div>
+                <x-blog-category-drop-down :dbData="$blog->category" />
                 <div>
                     <x-forms.label for="feature" text="Feature Image" require="*" />
                     <x-forms.input type="hidden" name="feature" id="hidden-feature" :dbData="$blog->feature" />

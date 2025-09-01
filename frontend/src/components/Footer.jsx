@@ -73,16 +73,6 @@ const Footer = () => {
           allTimelines.forEach(tl => tl.kill());
         };
       }, []);
-  
-
-
-
-
-
-
-
-
-
 
     const textRef = useRef(null);
     const [isInViewport, setIsInViewport] = useState(false);
@@ -184,7 +174,7 @@ const Footer = () => {
             </div>
             <Link to="/privacy" className="hover:text-[#E84721] underline">Privacy Policy</Link>
           </div>
-          <div className="flex items-center justify-center mt-[70px] overflow-hidden">
+          <div className="flex items-center justify-center mt-[70px]">
             <div 
               ref={textRef}
               className="we-are-top bebas_neue font-bold transform origin-bottom"

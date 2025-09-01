@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BlogCategoryController;
 
 Route::get('/storage-link', function () {
     Artisan::call('storage:link');
@@ -70,6 +71,15 @@ Route::prefix('admin')->group(function () {
             Route::post('/create/image', 'createImage')->name('news.create.image');
             Route::post('/edit/create/image/{blogId}', 'editCreateImage')->name('news.edit.create.image');
             Route::get('/delete/image/{image}', 'deleteImage')->name('news.delete.image');
+        });
+
+        Route::prefix('news/category')->controller(BlogCategoryController::class)->group(function () {
+            Route::get('/', 'category')->name('news.category');
+            Route::get('/create', 'createCategory')->name('news.category.create');
+            Route::post('/create', 'storeCategory')->name('news.category.store');
+            Route::get('/edit/{category}', 'editCategory')->name('news.category.edit');
+            Route::put('/update/{category}', 'updateCategory')->name('news.category.update');
+            Route::delete('/delete/{category}', 'destroyCategory')->name('news.category.delete');
         });
 
         Route::prefix('users')->middleware(['admin'])->controller(UserController::class)->group(function () {
