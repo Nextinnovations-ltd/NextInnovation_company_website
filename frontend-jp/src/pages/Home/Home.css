@@ -711,14 +711,6 @@
     position: relative;
 }
 
-.home .our-services {
-    max-width: 1240px;
-    margin: auto;
-    padding-top: 186px;
-    padding-bottom: 143px;
-
-}
-
 .home .our-services h1 {
     color: var(--Netural-Background, #121212);
     font-size: 56px;
@@ -737,31 +729,30 @@
 .home .our-services .link-container::after {
     content: '';
     position: absolute;
-
-    height: 1px;
-    background: #121212;
+    height: 2px;
+    background: #444444;
     bottom: 0;
     width: var(--after-width);
-
 }
 
 .home .our-services .link-container .link-title h3 {
-    color: var(--text-light-theme-3rd, #999);
+    color: #999999;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
-    letter-spacing: 0.16px;
+    letter-spacing: 1%;
     text-transform: uppercase;
 }
 
 .home .our-services .link-container .link-title h2 {
-    color: var(--Netural-Background, #121212);
-    font-size: 48px;
+    color: #444444;
+    font-size: 38px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 64px;
-    letter-spacing: -0.48px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -2%;
+    text-transform: uppercase;
 }
 
 .home .our-services .link-container .link-title span {
@@ -942,23 +933,17 @@
 
 /* Trusted clients section */
 .home .trusted-clients-section h1 {
-    color: var(--Netural-Background, #121212);
-    font-size: 48px;
+    color: #444444;
+    font-size: 58px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: -0.96px;
+    font-weight: 700;
+    line-height: 67px;
+    letter-spacing: -1%;
     text-transform: uppercase;
 }
 
 .home .trusted-clients-section h1 span {
     color: #E84721;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 48px;
-    letter-spacing: -0.96px;
-    text-transform: uppercase;
     margin-left: 32px;
 }
 
@@ -1286,12 +1271,12 @@
 
 /* start our powerful product section */
 .home .our-powerful-product-section {
-    background: #0F0F0F;
+    background: #1E2C44;
     color: #EDEDED;
 }
 
 .home .our-powerful-product {
-    max-width: 1366px;
+    max-width: 1266px;
 }
 
 .home .our-powerful-product img {
@@ -1312,7 +1297,7 @@
 
 .home .our-powerful-product h3 {
     line-height: 120%;
-    letter-spacing: -0.48px;
+    letter-spacing: -1%;
 }
 
 .home .our-powerful-product .main-left {
@@ -1442,13 +1427,11 @@ svg.squiggle2 path {
 }
 
 svg.squiggle2 {
-
     position: absolute;
     right: 0;
     z-index: -1;
     width: 100vw;
     height: 100vw;
-
     top: -25vh;
 }
 

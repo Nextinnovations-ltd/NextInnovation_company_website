@@ -4,34 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Link } from "react-router-dom";
 import "./Home.css";
-import YutaSan from "../../components/YutaSan";
-import FlutterLogo from "../../../public/images/flutter.png";
-import WordpressLogo from "../../../public/images/wordpress.png";
-import BootstrapLogo from "../../../public/images/bootstrap5.png";
-import MaterialLogo from "../../../public/images/materialui.png";
-import ReactLogo from "../../../public/images/react-logo.png";
-import TailwindLogo from "../../../public/images/tailwind.png";
-import PhpLogo from "../../../public/images/php.png";
-import JsLogo from "../../../public/images/js.png";
-import LaravelLogo from "../../../public/images/laravel.png";
-import NodejsLogo from "../../../public/images/nodejs.png";
-import DjangoLogo from "../../../public/images/django.png";
-import PythonLogo from "../../../public/images/python-icon.png";
-import AwsLogo from "../../../public/images/aws.png";
-import CpanelLogo from "../../../public/images/cpanel.png";
-import MysqlLogo from "../../../public/images/mysql.png";
-import MongodbLogo from "../../../public/images/mongodb.png";
-import PostgreLogo from "../../../public/images/postgresql.png";
-import AzureLogo from "../../../public/images/azure.png";
-import DigitalOceanLogo from "../../../public/images/digitalocean.png";
-import AdobeLogo from "../../../public/images/adobe.png";
-import PremiereProLogo from "../../../public/images/premiere-pro.png";
-import PhotoShopLogo from "../../../public/images/ps.png";
-import AiLogo from "../../../public/images/ai.png";
-import IdLogo from "../../../public/images/indesign.png";
-import LrLogo from "../../../public/images/lightroom.png";
-import FigmaLogo from "../../../public/images/figma.png";
-import CanvaLogo from "../../../public/images/canva.png";
 import PowerFullProduct from "../../../public/images/powerful-product.png";
 import marqueeLogo1 from "../../../public/images/Group-logo.png";
 import marqueeLogo2 from "../../../public/images/Screenshot (117) 1.png";
@@ -43,18 +15,18 @@ import Gif from "../../components/Gif"
 import Hero from "../../components/Hero";
 import LetWorkTogether from "../../components/LetWorkTogether";
 import OurService from "../../components/OurService";
-import sliderImg from "../../../public/images/video section.png";
-import sliderImg2 from "../../../public/images/video section (2).png";
 import sliderImg3 from "../../../public/images/eor-slider.png"
 import sliderImg4 from "../../../public/images/development-slider.png"
-import Package from "../../components/Package"
-import Instagram from "../../components/Instagram"
 import HomeCareer from '../../components/HomeCareer';
-import HomeWork from '../../components/HomeWork';
-import Logo from '../../components/Logo';
 import useVisiter from '../../hooks/useVisiter';
 import GoButton from '../../components/GoButton';
 import WhatWeDo from '../../components/WhatWeDo';
+import CaseStudy from '../../components/CaseStudy';
+import SectionTitle from '../../components/SectionTitle';
+import Blog from "/images/blog.png"
+import Note from "/images/note.png"
+import MediaButton from '../../components/MediaButton';
+import FAQ from '../../components/FAQ';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -385,8 +357,7 @@ const Home = () => {
       <Hero/>
 
       {/* Slider Section */}
-       <div className="stage bg-[#1E2C44] text-white rounded-b-[80px]">
-
+      <div className="stage bg-[#1E2C44] text-white rounded-b-[80px]">
         <section className="slide slide--4" id="slide-4">
           <div className="col col--1">
             <div className="col__content col__content--4">
@@ -469,7 +440,7 @@ const Home = () => {
         </section> */}
 
 
-         
+        
       </div>
 
       <LetWorkTogether/>
@@ -478,77 +449,65 @@ const Home = () => {
 
       <OurService/>
 
-      {/* Successful works */}
-      <HomeWork/>
+      <CaseStudy/>
 
-      {/* Trusted clients section */}
-      <div className="trusted-clients-section overflow-hidden  my-[168px] flex flex-col gap-y-20 px-[24px] xl:px-0">
-        <h1 className="w-[1240px] mx-auto"  ref={addToRefs}>
-          trusted Clients<span>50+</span>
-        </h1>
-        <div className="marquee-logo-container max-w-[1400px] mx-auto ">
-          <div className="marquee-animation flex items-center justify-between gap-24">
-            <img src={marqueeLogo1} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo2} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo3} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo4} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo1} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo2} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo3} alt="" />
-            <div className="logo-divider"></div>
-            <img src={marqueeLogo4} alt="" />
-            <div className="logo-divider"></div>
+      <div className="bg-[#1E2C44]">
+        <div className="trusted-clients-section pt-[147px] pb-[180px] bg-white overflow-hidden flex flex-col gap-y-20 px-[24px] xl:px-0 rounded-b-[80px]">
+          <div ref={addToRefs} className="w-[1240px] mx-auto">
+            <SectionTitle jp="取引先/パートナー一覧" />
+            <h1 className="mt-[10px] roboto">
+              trusted Clients<span>50+</span>
+            </h1>
           </div>
-          <img src={marqueeGradientLeft} alt="" className="coverLeft hidden lg:block" />
-          <img src={marqueeGradientRight} alt="" className="coverRight hidden lg:block" />
+          <div className="marquee-logo-container max-w-[1400px] mx-auto ">
+            <div className="marquee-animation flex items-center justify-between gap-24">
+              <img src={marqueeLogo1} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo2} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo3} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo4} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo1} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo2} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo3} alt="" />
+              <div className="logo-divider"></div>
+              <img src={marqueeLogo4} alt="" />
+              <div className="logo-divider"></div>
+            </div>
+            <img src={marqueeGradientLeft} alt="" className="coverLeft hidden lg:block" />
+            <img src={marqueeGradientRight} alt="" className="coverRight hidden lg:block" />
+          </div>
         </div>
       </div>
 
       {/* start our powerful section */}
-      <div className="our-powerful-product-section w-full pt-24 pb-44 lg:pt-[200px] lg:pb-[212px]">
+      <div className="our-powerful-product-section w-full pt-[100px] pb-[216px] rounded-b-[80px]">
         <div className="our-powerful-product mx-auto lg:pl-[63px]">
-          <div  ref={addToRefs} className="mx-[25px] xl:mx-0 title text-[32px] md:text-[46px] xl:text-[56px] font-semibold uppercase lg:mb-20 xl:mb-24">
-            OUR POWERFUL PRODUCTS
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            <div className="lg:col-span-5 main-left mt-5 mx-[25px] xl:mx-0">
-              <h3  ref={addToRefs} className="text-[24px] md:text-[38px] xl:text-[48px] font-light mt-10 mb-6 xl:mt-16 xl:mb-8">
-                Talent Cloud
-              </h3>
-              <span ref={addToRefs}  className="text-[14px] md:text-[16px] xl:text-[18px] lg:w-[320px] xl:w-[398px] font-normal">
-                Talent Cloud is a smart and seamless job portal connecting skilled professionals from Myanmar with remote work opportunities in oversea countries. We simplify the hiring process, ensuring smooth collaboration between businesses and talent— without the need for a local presence. Start your global career or build your remote team effortlessly with Talent Cloud 
-              </span>
-              <Link >
-                <div ref={addToRefs} className="flex items-center gap-x-3 mt-10 view-more-btn">
-                  <span  className="text-[14px] lg:text-[16px] font-semibold uppercase" ref={addToRefs}>
-                    View More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="6"
-                    viewBox="0 0 16 6"
-                    fill="none"
-                  >
-                    <path
-                      d="M0 4.81543H14L11.2 0.81543"
-                      stroke="#EEEEEE"
-                      strokeWidth="1.5"
-                    />
-                  </svg>
+          <div className="flex gap-[55px]">
+            <div className="w-[483px] mx-[25px] xl:mx-0">
+              <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
+              <div className="main-left mt-[50px]">
+                <h3  ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal pt-[40px] mb-6 xl:mb-8">
+                  Talent Cloud
+                </h3>
+                <span ref={addToRefs}  className="text-[14px] md:text-[21px] xl:text-[18px] font-normal leading-[34px] tracking-[0%]">
+                  Talent Cloudは、ミャンマーの優秀なエンジニア・専門人材と、海外企業をつなぐことを目的とした
+                  クラウド型人材プラットフォームです。
+                  「グローバルに活躍したい個人」と「信頼できる海外人材を確保したい企業」、双方のニーズをスムーズに結びつけることを使命としています。
+                </span>
+                <div ref={addToRefs} className="mt-[60px]">
+                  <GoButton name="詳しく見る" />
                 </div>
-              </Link>
+              </div>
             </div>
 
-            <div className="lg:col-span-7 relative ms-[25px]">
+            <div className="w-[728px] relative ms-[25px]">
               <div className="image-container rounded-l-[16px] overflow-hidden">
-                <img src={PowerFullProduct} alt="" className="lg:h-full xl:w-[850px] xl:h-[478px] rounded-start-2xl blockReveal"/>
+                <img src={PowerFullProduct} alt="" className="rounded-start-2xl blockReveal w-full"/>
               </div>
               <Link to="" className="coming-soon absolute md:text-2xl uppercase font-normal px-6 py-4 rounded-lg">
                 Coming Soon
@@ -559,88 +518,54 @@ const Home = () => {
       </div>
       {/* end our powerful section */}
 
-      {/* start language service section */}
-      <div className="language-service mx-auto mt-[121px] mb-40 lg:mb-[233px] px-[25px] xl:px-0">
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10">
+      <HomeCareer/>
 
-          <div className="card border-2 border-solid rounded-3xl p-8" style={{ overflow: 'hidden' }}>
-            <h3 className="text-[32px] font-semibold uppercase mb-6" ref={addToRefs}>Frontend</h3>
-            <div className=" blockReveal grid grid-cols-3 md:grid-cols-4 gap-6"  style={{ width: '100%', display: 'grid' }}>
-              <Logo image={BootstrapLogo} title="Bootstrap" />
-              <Logo image={MaterialLogo} title="Material Ui" />
-              <Logo image={TailwindLogo} title="Tailwind" />
-              <Logo image={WordpressLogo} title="Wordpress" />
-              <Logo image={ReactLogo} title="React" />
-              <Logo image={FlutterLogo} title="FLUTTER" />
-              <Logo image={ReactLogo} title="React Native" />
+      {/* start media section */}
+      <div className="bg-[#F7F7F7] z-0" id="yutasan-section" >
+        <div className="max-w-[1240px] mx-auto pt-[140px] pb-[325px]">
+          <div ref={addToRefs}><SectionTitle jp="メディア" eng="Media" /></div>
+          <div className="flex justify-between mt-[50px]">
+            <div className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
+              <div className="flex justify-between mb-[82px]">
+                <div>
+                  <h3 ref={addToRefs} className="text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[24px]">ミャンマー人材活用ナビ</h3>
+                  <p ref={addToRefs} className="text-[12px] font-bold leading-[24px] tracking-[0%]">採用・EOR・リモート開発の最新情報<br/>をお届けしています。</p>
+                </div>
+                <div>
+                  <img src={Blog} alt="" />
+                </div>
+              </div>
+              <MediaButton bgColor="bg-[#444444]" />
             </div>
-          </div>
-          <div className="card border-2 border-solid rounded-3xl p-8" style={{ overflow: 'hidden' }}>
-            <h3 className="text-[32px] font-semibold uppercase mb-6" ref={addToRefs}>Backend</h3>
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-6 blockReveal" style={{ width: '100%', display: 'grid' }}>
-              <Logo image={JsLogo} title="Javascript" />
-              <Logo image={NodejsLogo} title="Node Js" />
-              <Logo image={PythonLogo} title="Python" />
-              <Logo image={DjangoLogo} title="Django" />
-              <Logo image={PhpLogo} title="PHP" />
-              <Logo image={LaravelLogo} title="Laravel" />
-            </div>
-          </div>
-          <div className="card border-2 border-solid rounded-3xl p-8" style={{ overflow: 'hidden' }}>
-            <h3 ref={addToRefs} className="text-[32px] font-semibold uppercase mb-6">
-              Server Side
-            </h3>
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-6 blockReveal" style={{ width: '100%', display: 'grid' }}>
-              <Logo image={AwsLogo} title="Aws" />
-              <Logo image={AzureLogo} title="Azure" />
-              <Logo image={DigitalOceanLogo} title="Digital Ocean" />
-              <Logo image={CpanelLogo} title="Cpanel" />
-              <Logo image={MysqlLogo} title="Mysql" />
-              <Logo image={MongodbLogo} title="Mongo Db" />
-              <Logo image={PostgreLogo} title="Postgresql" />
-            </div>
-          </div>
-          <div className="card border-2 border-solid rounded-3xl p-8" style={{ overflow: 'hidden' }}>
-            <h3 ref={addToRefs} className="text-[32px] font-semibold uppercase mb-6">Design</h3>
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-6 blockReveal" style={{ width: '100%', display: 'grid' }}>
-              <Logo image={AdobeLogo} title="Adobe" />
-              <Logo image={PremiereProLogo} title="Premiere Pro" />
-              <Logo image={PhotoShopLogo} title="Photoshop" />
-              <Logo image={AiLogo} title="Illustrator" />
-              <Logo image={IdLogo} title="Indesign" />
-              <Logo image={LrLogo} title="Lightroom" />
-              <Logo image={FigmaLogo} title="Figma" />
-              <Logo image={CanvaLogo} title="Canva" />
+            <div className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-white rounded-[12px] text-white shadow-md">
+              <div className="flex justify-between mb-[36px]">
+                <div className="w-[278px]">
+                  <h3 ref={addToRefs} className="text-[#F15A29] text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[24px]">ミャンマーで生きる<br/>独身IT社長日記</h3>
+                  <p ref={addToRefs} className="text-[#444444] text-[12px] font-bold leading-[24px] tracking-[0%]">
+                    ミャンマー在住11年／ミャンマーにてIT会社を単身起業。右葉曲線ミャンマーで10年以上、人材採用と運用支援に携わってきた経験をもとに、失敗しないコツや「ミャンマーのIT人材事情」「日本企業が活用する方法」などのビジネス話やミャンマーでの生活日記など現地にいるからわかる生の情報を発信しています。
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <img src={Note} alt="" />
+                </div>
+              </div>
+              <MediaButton bgColor="bg-[#F15A29]" />
             </div>
           </div>
         </div>
-      </div>
-      {/* end language service section */}
-
-      <Gif/>
-
-      {/* start company overview section */}
-      <div className="" id="yutasan-section" >
-        <div className="company-overview max-w-[1240px] mx-auto text-[#000] mt-[198px] ">
-          <div ref={addToRefs } className="title text-[32px] tracking-[-1.12px] text-[#121212] md:text-[46px] xl:text-[56px] font-semibold uppercase mb-14 ps-6 xl:ps-0">
-              Company Overview
-          </div>
-          <YutaSan/>
-        </div>
-         <svg ref={svgRef}  className="squiggle2"  xmlns="http://www.w3.org/2000/svg" width="1366" height="1068" viewBox="0 0 1366 1068" fill="none">
-          <path ref={pathRef}  d="M1379.5 17C1290.33 65.3243 1144.35 178.349 1098.5 276.405C1051 378 1021.5 545.5 1204 596C1334 631.974 1345.19 896.319 1098.5 875C977 864.5 770.009 770.501 654.5 758.5C577.5 750.5 383.291 809.608 301.5 961.064C223.5 1105.5 94 1025.68 -2.5 1036.5" stroke="#90FEFE" strokeWidth="38"
+        <svg ref={svgRef}  className="squiggle2"  xmlns="http://www.w3.org/2000/svg" width="1366" height="1068" viewBox="0 0 1366 1068" fill="none">
+          <path ref={pathRef}  d="M1379.5 17C1290.33 65.3243 1144.35 178.349 1098.5 276.405C1051 378 1021.5 545.5 1204 596C1334 631.974 1345.19 896.319 1098.5 875C977 864.5 770.009 770.501 654.5 758.5C577.5 750.5 383.291 809.608 301.5 961.064C223.5 1105.5 94 1025.68 -2.5 1036.5" stroke="#096FCA" strokeWidth="38"
           strokeLinejoin="round"
           strokeLinecap="round"  />
         </svg>
       </div>
-      {/* end company overview section */}
+      {/* end media section */}
 
-      <Instagram/>
+      <FAQ/>
 
-      <HomeCareer/>
+      <Gif/>
 
     </div>
-    
   );
 }
 

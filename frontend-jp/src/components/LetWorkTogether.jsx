@@ -144,7 +144,7 @@ useEffect(() => {
 
 // Empty dependency array means this runs once on mount
   return (
-<div className="" id='letWorkTogether' >
+<div className="bg-white z-0" id='letWorkTogether' >
   <div  className="about-us flex justify-between lg:px-[25px] xl:px-0">
       <div className="title-section">
              <h1  ref={addToRefs} className="roboto uppercase text-[65.6px] font-bold leading-[75.78px] tracking-[-1%]" style={{ whiteSpace: 'pre-line' }}>

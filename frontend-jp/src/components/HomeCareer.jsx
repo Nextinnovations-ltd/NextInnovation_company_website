@@ -4,6 +4,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from "react-router-dom"
 import CareerCard from "./CareerCard";
 import { API_BASE_URL } from '../config';
+import SectionTitle from './SectionTitle';
+import GoButton from './GoButton';
 
 const HomeCareer = () => {
 
@@ -152,26 +154,8 @@ const HomeCareer = () => {
       }, []);
     return (
         <div  className="home-news mb-[100px] mx-auto px-[25px] xl:px-0 mt-[120px]">
-            <div className="flex justify-between items-end mb-12">
-                <div  ref={addToRefs}  className="title font-semibold uppercase text-[32px] md:text-[46px] xl:text-[56px]">
-                News 
-                </div>
-                <Link  to="/news">
-                    <div ref={addToRefs}  className="group hidden md:flex space-x-3 items-center mb-3">
-                      <div ref={addToRefs}  className="hover:text-[#E84721] view-more text-[14px] md:text-[16px] font-semibold uppercase">
-                      View More
-                      </div>
-                      <svg className="block group-hover:hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6" fill="none">
-                          <path d="M0 5H14L11.2 1" stroke="#121212" strokeWidth="1.5" />
-                      </svg>
-                      <svg className="hidden group-hover:block" xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6" fill="none">
-                          <path d="M0 5H14L11.2 1" stroke="#E84721" strokeWidth="1.5" />
-                      </svg>
-                    </div>
-                </Link>
-            </div>
-
-            <div ref={revealRef} className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-[40px] text-[#999]">
+            <SectionTitle jp="ニュース" eng="NEWS" />
+            <div ref={revealRef} className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-[40px] text-[#444444] mt-[50px]">
                 {!!career.length && career.map(item => (
                     <Link key={item.id} to={`/news/${item.id}`}>
                         <CareerCard title={item.title} image={item.feature} date={item.created_at} category={item.category} />
@@ -179,16 +163,9 @@ const HomeCareer = () => {
                 ))}
             </div>
 
-            <Link to="/news">
-                <div className="md:hidden flex space-x-3 items-center mt-[40px]">
-                    <div  className="view-more text-[14px] md:text-[16px] font-semibold uppercase">
-                    View More
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="6" viewBox="0 0 16 6" fill="none" >
-                      <path d="M0 5H14L11.2 1" stroke="#121212" strokeWidth="1.5" />
-                    </svg>
-                </div>
-            </Link>
+            <div className="text-end mt-[65px]">
+              <GoButton name="続きを見る" />
+            </div>
         </div>
     )
 }

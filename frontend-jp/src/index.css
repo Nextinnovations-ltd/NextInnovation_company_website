@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../public/Fonts/Roboto/static/Roboto-Bold.ttf') format('truetype');
+    src: url('../public/Fonts/Roboto/static/Roboto-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -32,7 +32,6 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
 body {

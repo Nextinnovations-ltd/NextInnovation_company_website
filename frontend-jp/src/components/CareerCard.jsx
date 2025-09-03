@@ -119,20 +119,7 @@ const CareerCard = ({ title, image, category, date }) => {
       setTimeout(() => {
         ScrollTrigger.refresh();
       }, 500);
-
-    
-
-
     /* TEXT ANIMATION */
-
-
-
-
-
-
-
-
-
      
     }, []);
     return (
@@ -141,11 +128,11 @@ const CareerCard = ({ title, image, category, date }) => {
             <div  className="blockReveal overflow-hidden">
                 <img src={image} className="w-full h-[400px] hover:scale-110 ease-in-out duration-300" alt="" />
             </div>
-            <div  className="flex gap-[16px] text-[14px] font-semibold leading-[14px] tracking-[0.14px] uppercase my-[24px]">
+            <div  className="roboto flex gap-[16px] text-[14px] font-semibold leading-[14px] tracking-[0.14px] uppercase my-[24px]">
                 <span >{date}</span>
                 <span >{category}</span>
             </div>
-            <h4   className="text-[24px] text-[#121212] font-normal leading-[145%] text-limit min-h-[71px]">{title}</h4>
+            <h4 className="text-[24px] text-[#444444] font-bold leading-[44px] tracking-[-2%] text-limit min-h-[71px]">{title}</h4>
         </div>
        </div>
     )

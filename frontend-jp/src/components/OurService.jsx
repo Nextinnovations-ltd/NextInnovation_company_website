@@ -15,9 +15,6 @@ const bgPositions = {
   p5: "0 100%",
 };
 
-
-
-
 useEffect(() => {
   const projects = projectsRef.current;
   const preview = previewRef.current;
@@ -229,22 +226,6 @@ useEffect(() => {
   };
 }, []);
   
-  
-
-
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-  
   /* IMAGE REVEAL // BLOG REVEAL  */
   useEffect(() => {
     // Initialize all reveal elements
@@ -282,8 +263,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="our-services gap-12 flex flex-col px-[25px] xl:px-0">
-      <h1  ref={addToRefs} >OUR SERVICES</h1>
+    <div className="our-services max-w-[1240px] mx-auto mt-[199px] mb-[180px] gap-12 flex flex-col px-[25px] xl:px-0">
       
       {/* Preview element - match vanilla version structure */}
       <div 
@@ -310,13 +290,11 @@ useEffect(() => {
        
         <div className="relative project" id="p1">
           <Link to="/eor">
-            <div className="link-container flex justify-between items-center pb-10 mt-8">
+            <div className="link-container flex justify-between items-center pb-10 pt-10 border-t-[2px] border-[#444444]">
               <div className="link-title gap-3 flex flex-col">
-                <h3 ref={addToRefs}>compelling like no other</h3>
-                <div className='flex flex-col md:flex-row items-center'>
-                  <h2 ref={addToRefs}>Employer of Record </h2>
-                  <div ref={addToRefs} className='text-[20px] lg:text-[28px]'>(Services for Hiring Employees)</div>
-                </div>
+                <h3 className="roboto" ref={addToRefs}>Lab-based EOR for Long-term Team Building</h3>
+                <h2 ref={addToRefs}>安心ラボ型EOR</h2>
+                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">勤怠管理・福利厚生・現場サポート込みで、海外人材を“チーム”として定着・活躍させます。</p>
               </div>
                <div className="" style={{ overflow: 'hidden' }}>
                  <svg className='blockReveal'
@@ -332,13 +310,14 @@ useEffect(() => {
             </div>
           </Link>
         </div>
-        {/* Other project items... */}
+
         <div className="relative project" id="p2">
           <Link to="/development/website">
-            <div className="link-container flex justify-between items-center pb-10 mt-8">
+            <div className="link-container flex justify-between items-center pb-10 mt-10">
               <div className="link-title gap-3 flex flex-col">
-                <h3 ref={addToRefs}>develop for performance & security</h3>
-                <h2 ref={addToRefs}>Development</h2>
+                <h3 className="roboto" ref={addToRefs}>EOR with Project Management Support</h3>
+                <h2 ref={addToRefs}>プロジェクト伴走型EOR</h2>
+                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">専任PMが進捗・品質を管理。オフショア開発の課題を解決し、成果創出まで伴走。</p>
               </div>
                <div className="" style={{ overflow: 'hidden' }}>
                  <svg className='blockReveal'
@@ -354,12 +333,14 @@ useEffect(() => {
             </div>
           </Link>
         </div>
+
          <div className="relative project" id="p3">
           <Link to="/ui-ux">
-            <div className="mt-8 link-container flex justify-between items-center pb-10">
+            <div className="mt-10 link-container flex justify-between items-center pb-10">
               <div className="link-title gap-3 flex flex-col">
-                <h3   ref={addToRefs}>design for growth</h3>
-                <h2   ref={addToRefs}>UI/UX Design</h2>
+                <h3 className="roboto" ref={addToRefs}>Custom Development Services</h3>
+                <h2 ref={addToRefs}>受託開発</h2>
+                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">Web開発・クロスプラットフォーム開発など柔軟に対応。日本案件経験豊富なエンジニアが担当。</p>
               </div>
               <div className="" style={{ overflow: 'hidden' }}>
                  <svg className='blockReveal'
@@ -376,12 +357,14 @@ useEffect(() => {
             </div>
           </Link>
         </div>
+        
         <div className="relative project" id="p4">
           <Link to="/testing">
-            <div className="link-container flex justify-between items-center pb-10 mt-8">
+            <div className="link-container flex justify-between items-center pb-10 mt-10">
               <div className="link-title gap-3 flex flex-col">
-                <h3 ref={addToRefs}>compelling like no other</h3>
-                <h2 ref={addToRefs}>Testing Service</h2>
+                <h3 className="roboto" ref={addToRefs}>Creative UI/UX Design with Figma</h3>
+                <h2 ref={addToRefs}>UI/UXデザイン</h2>
+                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">Figmaを用いた最新のデザイン。コストを抑えつつ高品質なUI/UXを実現。</p>
               </div>
                <div className="" style={{ overflow: 'hidden' }}>
                  <svg className='blockReveal'
