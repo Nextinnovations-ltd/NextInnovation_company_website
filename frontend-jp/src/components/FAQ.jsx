@@ -16,39 +16,39 @@ const faqData = [
         subTitles: "特典には以下が含まれます：",
     },
     {
-        question: " How do we manage Myanmar's electricity challenges? ",
-        answers: ["Talent Cloud provides necessary support for electricity if needed."],
+        question: "ミャンマーの電力課題にどう対処していますか？",
+        answers: ["当社は必要に応じて電力に関する必要なサポートを提供します。"],
         subTitles: "",
     },
     {
-        question: "How does Talent Cloud handle employee onboarding and management?",
+        question: "従業員の採用と管理をどのように行っていますか？",
         answers: [
-            "Conducting background checks and verifying qualifications.",
-            "Facilitating smooth onboarding processes.",
-            "Managing payroll, benefits, and compliance documentation.",
-            "Providing ongoing HR support and performance evaluations.",
+            "バックグラウンドチェックの実施と資格の検証。",
+            "onboarding（入社手続き）の円滑化。",
+            "給与、福利厚生、書類の管理。",
+            "継続的な人事支援と業績評価を提供する。",
         ],
-        subTitles: "Our comprehensive approach includes:",
+        subTitles: "当社は次の行動に包括的しています：",
     },
     {
-        question: " What support is available for employees regarding workplace challenges?",
+        question: "職場の課題に関して、従業員にはどのような支援がありますか？",
         answers: [
-            "Regular check-ins and feedback sessions.",
-            "Assistance with conflict resolution and workplace issues.",
-            "Guidance on career development opportunities.",
+            "定期的なチェックインとフィードバック",
+            "抵触解決と職場の課題に対する支援",
+            "キャリア開発の機会に関するガイダンス",
         ],
-        subTitles: "We offer:",
+        subTitles: "当社は次の点を提供しています：",
     },
     {
-        question: "What HR services does Talent Cloud provide?",
+        question: "どのような人事サービスを提供していますか？",
         answers: [
-            "Employee onboarding & offboarding.",
-            "Contract generation (in line with Myanmar labor law).",
-            "Leave management and attendance tracking.",
-            "Performance monitoring and conflict resolution.",
-            "Employee engagement and welfare coordination.",
+            "従業員の onboarding（入社手続き）と offboarding（退職手続き）",
+            "契約書作成（ミャンマー労働法に準拠）",
+            "休暇管理と出勤状況の追跡",
+            "業績の監視と抵触解決",
+            "従業員の雇用と福利厚生の調整",
         ],
-        subTitles: "We handle end-to-end HR management, including:",
+        subTitles: "当社は次の点を含むエンドツーエンドの人事管理を扱っています：",
     },
 ];
 
@@ -59,7 +59,7 @@ const FAQ = () => {
     }
 
     return (
-        <div id="faq" className="w-full text-[#444444] rounded-b-[80px] bg-red-300">
+        <div id="faq" className="w-full text-[#444444] rounded-b-[80px] bg-white">
             <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[30px] pb-[100px] md:pt-[130px] md:pb-[200px] pr-5 pl-5">
                 {/* Left Title Section */}
                 <motion.div

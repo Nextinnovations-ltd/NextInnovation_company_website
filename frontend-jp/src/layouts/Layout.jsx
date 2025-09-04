@@ -8,7 +8,7 @@ const Layout = () => {
         <div>
             <Navbar/>
             <ScrollToTop />
-            <div className="page-transition overflow-hidden">
+            <div className="page-transition">
                 <Outlet/>
             </div>
 

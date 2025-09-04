@@ -37,6 +37,7 @@ body {
 body {
     font-family: "NotoSansJP";
     background: #FFF;
+    overflow-x:hidden;
 }
 
 .roboto {
@@ -365,10 +366,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* .gif-section .consult-free:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-} */
-
 @media only screen and (max-width: 1024px) {
     .gif-section .rotate {
         width: 70%;
@@ -377,11 +374,8 @@ body {
 
 @media screen and (max-width:768px) {
     .footer .we-are-top {
-
         letter-spacing: 3px;
-
     }
-
 }
 
 @media only screen and (max-width: 426px) {

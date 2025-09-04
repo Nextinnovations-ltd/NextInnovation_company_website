@@ -263,124 +263,126 @@ useEffect(() => {
   }, []);
 
   return (
-    <div className="our-services max-w-[1240px] mx-auto mt-[199px] mb-[180px] gap-12 flex flex-col px-[25px] xl:px-0">
+    <div className="bg-white">
+      <div className="our-services max-w-[1240px] mx-auto pt-[199px] pb-[180px] gap-12 flex flex-col px-[25px] xl:px-0">
       
-      {/* Preview element - match vanilla version structure */}
-      <div 
-        className="preview" 
-        ref={previewRef}
-        style={{
-          width: '300px',
-          height: '200px',
-        }}
-      >
+        {/* Preview element - match vanilla version structure */}
         <div 
-          className="preview-img" 
-          ref={previewImgRef}
+          className="preview" 
+          ref={previewRef}
           style={{
-            width: '100%',
-            height: '100%',
-            backgroundSize: '100% 500%'
+            width: '300px',
+            height: '200px',
           }}
-        ></div>
-      </div>
-      
-      {/* Projects container */}
-      <div className="projects" ref={projectsRef}>
-       
-        <div className="relative project" id="p1">
-          <Link to="/eor">
-            <div className="link-container flex justify-between items-center pb-10 pt-10 border-t-[2px] border-[#444444]">
-              <div className="link-title gap-3 flex flex-col">
-                <h3 className="roboto" ref={addToRefs}>Lab-based EOR for Long-term Team Building</h3>
-                <h2 ref={addToRefs}>安心ラボ型EOR</h2>
-                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">勤怠管理・福利厚生・現場サポート込みで、海外人材を“チーム”として定着・活躍させます。</p>
-              </div>
-               <div className="" style={{ overflow: 'hidden' }}>
-                 <svg className='blockReveal'
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="7"
-                  viewBox="0 0 20 7"
-                  fill="none"
-                >
-                  <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
-                </svg>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="relative project" id="p2">
-          <Link to="/development/website">
-            <div className="link-container flex justify-between items-center pb-10 mt-10">
-              <div className="link-title gap-3 flex flex-col">
-                <h3 className="roboto" ref={addToRefs}>EOR with Project Management Support</h3>
-                <h2 ref={addToRefs}>プロジェクト伴走型EOR</h2>
-                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">専任PMが進捗・品質を管理。オフショア開発の課題を解決し、成果創出まで伴走。</p>
-              </div>
-               <div className="" style={{ overflow: 'hidden' }}>
-                 <svg className='blockReveal'
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="7"
-                  viewBox="0 0 20 7"
-                  fill="none"
-                >
-                  <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
-                </svg>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-         <div className="relative project" id="p3">
-          <Link to="/ui-ux">
-            <div className="mt-10 link-container flex justify-between items-center pb-10">
-              <div className="link-title gap-3 flex flex-col">
-                <h3 className="roboto" ref={addToRefs}>Custom Development Services</h3>
-                <h2 ref={addToRefs}>受託開発</h2>
-                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">Web開発・クロスプラットフォーム開発など柔軟に対応。日本案件経験豊富なエンジニアが担当。</p>
-              </div>
-              <div className="" style={{ overflow: 'hidden' }}>
-                 <svg className='blockReveal'
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="7"
-                  viewBox="0 0 20 7"
-                  fill="none"
-                >
-                  <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
-                </svg>
-              </div>
-             
-            </div>
-          </Link>
+        >
+          <div 
+            className="preview-img" 
+            ref={previewImgRef}
+            style={{
+              width: '100%',
+              height: '100%',
+              backgroundSize: '100% 500%'
+            }}
+          ></div>
         </div>
         
-        <div className="relative project" id="p4">
-          <Link to="/testing">
-            <div className="link-container flex justify-between items-center pb-10 mt-10">
-              <div className="link-title gap-3 flex flex-col">
-                <h3 className="roboto" ref={addToRefs}>Creative UI/UX Design with Figma</h3>
-                <h2 ref={addToRefs}>UI/UXデザイン</h2>
-                <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">Figmaを用いた最新のデザイン。コストを抑えつつ高品質なUI/UXを実現。</p>
-              </div>
-               <div className="" style={{ overflow: 'hidden' }}>
-                 <svg className='blockReveal'
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="7"
-                  viewBox="0 0 20 7"
-                  fill="none"
-                >
-                  <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
-                </svg>
-              </div>
-            </div>
-          </Link>
-        </div>
+        {/* Projects container */}
+        <div className="projects" ref={projectsRef}>
         
+          <div className="relative project" id="p1">
+            <Link to="/eor">
+              <div className="link-container flex justify-between items-center pb-10 pt-10 border-t-[2px] border-[#444444]">
+                <div className="link-title gap-3 flex flex-col">
+                  <h3 className="roboto" ref={addToRefs}>Lab-based EOR for Long-term Team Building</h3>
+                  <h2 ref={addToRefs}>安心ラボ型EOR</h2>
+                  <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">勤怠管理・福利厚生・現場サポート込みで、海外人材を“チーム”として定着・活躍させます。</p>
+                </div>
+                <div className="" style={{ overflow: 'hidden' }}>
+                  <svg className='blockReveal'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="7"
+                    viewBox="0 0 20 7"
+                    fill="none"
+                  >
+                    <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="relative project" id="p2">
+            <Link to="/development/website">
+              <div className="link-container flex justify-between items-center pb-10 mt-10">
+                <div className="link-title gap-3 flex flex-col">
+                  <h3 className="roboto" ref={addToRefs}>EOR with Project Management Support</h3>
+                  <h2 ref={addToRefs}>プロジェクト伴走型EOR</h2>
+                  <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">専任PMが進捗・品質を管理。オフショア開発の課題を解決し、成果創出まで伴走。</p>
+                </div>
+                <div className="" style={{ overflow: 'hidden' }}>
+                  <svg className='blockReveal'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="7"
+                    viewBox="0 0 20 7"
+                    fill="none"
+                  >
+                    <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          <div className="relative project" id="p3">
+            <Link to="/ui-ux">
+              <div className="mt-10 link-container flex justify-between items-center pb-10">
+                <div className="link-title gap-3 flex flex-col">
+                  <h3 className="roboto" ref={addToRefs}>Custom Development Services</h3>
+                  <h2 ref={addToRefs}>受託開発</h2>
+                  <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">Web開発・クロスプラットフォーム開発など柔軟に対応。日本案件経験豊富なエンジニアが担当。</p>
+                </div>
+                <div className="" style={{ overflow: 'hidden' }}>
+                  <svg className='blockReveal'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="7"
+                    viewBox="0 0 20 7"
+                    fill="none"
+                  >
+                    <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
+                  </svg>
+                </div>
+              
+              </div>
+            </Link>
+          </div>
+          
+          <div className="relative project" id="p4">
+            <Link to="/testing">
+              <div className="link-container flex justify-between items-center pb-10 mt-10">
+                <div className="link-title gap-3 flex flex-col">
+                  <h3 className="roboto" ref={addToRefs}>Creative UI/UX Design with Figma</h3>
+                  <h2 ref={addToRefs}>UI/UXデザイン</h2>
+                  <p ref={addToRefs} className="text-[21px] text-[#444444] font-normal leading-[33px] tracking-[1%]">Figmaを用いた最新のデザイン。コストを抑えつつ高品質なUI/UXを実現。</p>
+                </div>
+                <div className="" style={{ overflow: 'hidden' }}>
+                  <svg className='blockReveal'
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="7"
+                    viewBox="0 0 20 7"
+                    fill="none"
+                  >
+                    <path d="M0 6H17.5L14 1" stroke="#121212" strokeWidth="2" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+          
+        </div>
       </div>
     </div>
   )

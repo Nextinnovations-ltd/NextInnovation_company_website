@@ -99,21 +99,7 @@ const HomeCareer = () => {
         setTimeout(() => {
           ScrollTrigger.refresh();
         }, 500);
-
-    
-
-
       /* TEXT ANIMATION */
-
-
-
-
-
-
-
-
-
-     
       }, []);
 
 
@@ -153,7 +139,8 @@ const HomeCareer = () => {
      
       }, []);
     return (
-        <div  className="home-news mb-[100px] mx-auto px-[25px] xl:px-0 mt-[120px]">
+      <div className="bg-white">
+        <div  className="home-news pb-[100px] mx-auto px-[25px] xl:px-0 pt-[120px]">
             <SectionTitle jp="ニュース" eng="NEWS" />
             <div ref={revealRef} className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-[40px] text-[#444444] mt-[50px]">
                 {!!career.length && career.map(item => (
@@ -167,6 +154,7 @@ const HomeCareer = () => {
               <GoButton name="続きを見る" />
             </div>
         </div>
+      </div>
     )
 }
 
