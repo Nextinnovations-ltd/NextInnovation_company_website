@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import circle from "/images/circle-blue.svg";
 import plusBtn from "/images/plus.svg";
 import SectionTitle from "./SectionTitle";
+import useSectionTitleAnimation from "../hooks/useSectionTitleAnimation";
 
 const faqData = [
     {
@@ -57,6 +58,8 @@ const FAQ = () => {
     const toggleIndex = (index) => {
         setOpenIndex(openIndex === index ? null : index)
     }
+    const titleRef = useRef(null)
+    useSectionTitleAnimation(titleRef, {start: "top+=700 top"})
 
     return (
         <div id="faq" className="w-full text-[#444444] rounded-b-[80px] bg-white">
@@ -69,7 +72,11 @@ const FAQ = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <SectionTitle jp="よくある質問" eng="FAQ" />
+                    <div className="overflow-hidden">
+                        <div ref={titleRef}>
+                            <SectionTitle jp="よくある質問" eng="FAQ" />
+                        </div>
+                    </div>
                     <p className="w-[370px] text-[15px] text-[#575757] font-normal leading-[24px] tracking-[0%] mt-[20px]">
                         よくあるご質問とその回答をまとめました。ご不明点
                         の解消にお役立てください。<br/>

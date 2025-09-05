@@ -44,9 +44,9 @@ CaseStudyCard.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     text1: PropTypes.string.isRequired,
-    text1Next: PropTypes.string.isRequired,
+    text1Next: PropTypes.string,
     text2: PropTypes.string.isRequired,
-    text2Next: PropTypes.string.isRequired,
+    text2Next: PropTypes.string,
     text3: PropTypes.string.isRequired,
 }
 

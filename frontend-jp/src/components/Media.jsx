@@ -1,15 +1,57 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import SectionTitle from "./SectionTitle"
-import MediaButton from "./MediaButton"
 import Blog from "/images/blog.png"
 import Note from "/images/note.png"
+import useSectionTitleAnimation from "../hooks/useSectionTitleAnimation";
+import GoButton from "./GoButton";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Media = () => {
 
+    const titleRef = useRef(null);
+    const blogRef = useRef(null);
+    const noteRef = useRef(null);
     const svgRef = useRef(null);
     const pathRef = useRef(null);
+    useSectionTitleAnimation(titleRef, {start: "top+=900 top"})
 
+    useEffect(() => {
+        gsap.fromTo(
+            blogRef.current,
+            { x: -300, rotate: -45, opacity: 0 },
+            {
+                x: 0,
+                rotate: 0,
+                opacity: 1,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: blogRef.current,
+                    start: "top+=900 top",
+                },
+            }
+        );
+        gsap.fromTo(
+            noteRef.current,
+            { x: 300, rotate: 45, opacity: 0 },
+            {
+                x: 0,
+                rotate: 0,
+                opacity: 1,
+                duration: 1.5,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: noteRef.current,
+                    start: "top+=900 top",
+                },
+            }
+        );
+    }, []);
 
+    // scroll svg path animation
     useEffect(() => {
         const svg = svgRef.current;
         const path = pathRef.current;
@@ -57,9 +99,13 @@ const Media = () => {
     return (
         <div className="bg-[#F7F7F7] z-0" id="yutasan-section" >
             <div className="max-w-[1240px] mx-auto pt-[140px] pb-[350px]">
-                <SectionTitle jp="メディア" eng="Media" />
+                <div className="overflow-hidden">
+                    <div ref={titleRef}>
+                        <SectionTitle jp="メディア" eng="Media" />
+                    </div>
+                </div>
                 <div className="flex justify-between mt-[50px]">
-                    <div className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
+                    <div ref={blogRef} id="blog" className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
                         <div className="flex justify-between mb-[82px]">
                             <div>
                                 <h3 className="text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[24px]">ミャンマー人材活用ナビ</h3>
@@ -69,9 +115,11 @@ const Media = () => {
                                 <img src={Blog} alt="" />
                             </div>
                         </div>
-                        <MediaButton bgColor="bg-[#444444]" />
+                        <div className="flex justify-center">
+                            <GoButton name="詳しく見る" bgColor="bg-[#444444]" />
+                        </div>
                     </div>
-                    <div className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-white rounded-[12px] text-white shadow-md z-[20]">
+                    <div ref={noteRef} id="note" className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-white rounded-[12px] text-white shadow-md z-[20]">
                         <div className="flex justify-between mb-[36px]">
                             <div className="w-[278px]">
                                 <h3 className="text-[#F15A29] text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[24px]">ミャンマーで生きる<br/>独身IT社長日記</h3>
@@ -83,7 +131,9 @@ const Media = () => {
                                 <img src={Note} alt="" />
                             </div>
                         </div>
-                        <MediaButton bgColor="bg-[#F15A29]" />
+                        <div className="flex justify-center">
+                            <GoButton name="詳しく見る" />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -15,10 +15,6 @@
     z-index: 10;
 }
 
-.home #hero-rotate{
-    mix-blend-mode: difference;
-}
-
 .home .heroSection .heroSection-img {
     margin-top: 163px;
     overflow: hidden;
@@ -365,7 +361,7 @@
 
 .col__content--2 {
     /*  background: #f8e9e6 */
-    background-color: #1E2C44;
+    background-color: #261E44;
 }
 
 @media all and (max-width: 768px) {

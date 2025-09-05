@@ -4,9 +4,6 @@ import Logoimage1 from "/images/Blur1.svg";
 import Logoimage2 from "/images/Blur2.svg";
 import DrivingDXwith from "/images/DrivingDXwith.png";
 import HeroStar from "/images/hero-star.png";
-import NILoop from "/images/Ni-loop.gif";
-import Hand from "/images/hand.svg";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
 
@@ -58,8 +55,8 @@ const Hero = () => {
   return (
     <div className="bg-white">
       <div className="NI-homepage-background-logo-container relative flex w-full h-[650px] md:h-[110vh] justify-center items-center overflow-hidden">
-        <img src={Logoimage1} alt="" className="logo1 layer w-[24%] left-[3%] relative" />
-        <img src={Logoimage2} alt="" className="logo2 layer w-[70%] right-[2%] relative" />
+        <img src={Logoimage1} alt="" className="logo1 layer w-[24%] left-[3%] relative opacity-60" />
+        <img src={Logoimage2} alt="" className="logo2 layer w-[70%] right-[2%] relative opacity-60" />
       </div>
       <div className="absolute top-[140px] left-[72px] right-[66px]">
         <div className="relative">
@@ -77,22 +74,15 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-[70px] text-[#444444] flex justify-between items-center">
-          <div ref={ParaRef} className="">
-            <h3 className="text-[45px] font-bold leading-[76px] tracking-[0%]">グローバル人材で、DXを加速する。</h3>
-            <div className="border-t-[2px] border-[#444444] w-[700px] pt-[20px] mt-[16px]">
-              <p className="text-[24px] font-medium leading-[40px] tracking-[1%]">
-                EORを軸に、東南アジアのタレントを活かした<br/>DX推進・受託開発・UI/UXをワンストップで提供します。
+        <div className="mt-[70px] text-[#444444]">
+          <div ref={ParaRef}>
+            <h3 className="text-[40px] font-bold leading-[56px] tracking-[0%]">グローバル人材で、DXを加速する。</h3>
+            <div className="border-t-[2px] border-[#444444] w-[620px] pt-[16px] mt-[12px]">
+              <p className="text-[20px] font-medium leading-[40px] tracking-[1%]">
+                EORを基盤に、東南アジアの優秀なタレントと共に、企業のDX推進<br/>
+                から受託開発、UI/UXデザインまでを 一貫してサポート。国境を<br/>
+                越えた新しいチームで、未来の成長と挑戦を共に実現します。
               </p>
-            </div>
-          </div>
-          <div id="hero-rotate">
-            <div className="relative">
-              <img src={NILoop} alt="" className="relative w-[277px] mix-blend-difference" />
-              <Link className="flex gap-[12px] items-center absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2">
-                <img src={Hand} alt="" />
-                <p className="text-[16px] font-semibold leading-[20px] tracking-[-2%] uppercase text-nowrap">consult free</p>
-              </Link>
             </div>
           </div>
         </div>

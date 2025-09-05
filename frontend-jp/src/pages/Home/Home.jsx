@@ -25,13 +25,25 @@ import CaseStudy from '../../components/CaseStudy';
 import SectionTitle from '../../components/SectionTitle';
 import FAQ from '../../components/FAQ';
 import Media from '../../components/Media';
+import useSectionTitleAnimation from '../../hooks/useSectionTitleAnimation';
+import useGoButtonAnimation from '../../hooks/useGoButtonAnimation';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-
 const Home = () => {
 
+  const trustClientTitleRef = useRef(null)
+  const ourProductTitleRef = useRef(null)
+  const goButtonRef1 = useRef(null)
+  const goButtonRef2 = useRef(null)
+  const goButtonRef3 = useRef(null)
+
   useVisiter('home');
+  useSectionTitleAnimation(trustClientTitleRef, {start: "top+=300 top"})
+  useSectionTitleAnimation(ourProductTitleRef, {start: "top+=300 top"})
+  useGoButtonAnimation(goButtonRef1, {start: "top 90%"})
+  useGoButtonAnimation(goButtonRef2, {start: "top 90%"})
+  useGoButtonAnimation(goButtonRef3, {start: "top+=300 top"})
 
   /* TEXT AND LINE ANIMATION */
   const textRefs = useRef([]);
@@ -295,7 +307,11 @@ const Home = () => {
                 人材定着、教育、成果創出まで、海外人材活用と<br/>
                 チーム化を一気通貫でサポートします。
               </p>
-              <GoButton name="詳しく見る" />
+              <div className="h-[68px] overflow-hidden">
+                <div ref={goButtonRef1}>
+                  <GoButton name="詳しく見る" />
+                </div>
+              </div>
             </div>
           </div>
           <div className="col col--2">
@@ -322,7 +338,11 @@ const Home = () => {
                 ワンストップで実現し、企業のDX推進とチームの<br/>
                 成長を強力にバックアップします。
               </p>
-              <GoButton name="詳しく見る" />
+              <div className="h-[68px] overflow-hidden">
+                <div ref={goButtonRef2}>
+                  <GoButton name="詳しく見る" />
+                </div>
+              </div>
             </div>
           </div>
           <div className="col col--2">
@@ -348,7 +368,11 @@ const Home = () => {
       <div className="bg-[#1E2C44]">
         <div className="trusted-clients-section pt-[147px] pb-[180px] bg-white overflow-hidden flex flex-col gap-y-20 px-[24px] xl:px-0 rounded-b-[80px]">
           <div className="w-[1240px] mx-auto">
-            <SectionTitle jp="取引先/パートナー一覧" />
+            <div className="overflow-hidden">
+                <div ref={trustClientTitleRef}>
+                    <SectionTitle jp="取引先/パートナー一覧" />
+                </div>
+            </div>
             <h1 ref={addToRefs} className="mt-[10px] roboto">
               trusted Clients<span>50+</span>
             </h1>
@@ -384,7 +408,11 @@ const Home = () => {
           <div className="our-powerful-product mx-auto lg:pl-[63px]">
             <div className="flex gap-[55px]">
               <div className="w-[483px] mx-[25px] xl:mx-0">
-                <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
+                <div className="overflow-hidden">
+                    <div ref={ourProductTitleRef}>
+                        <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
+                    </div>
+                </div>
                 <div className="main-left mt-[50px]">
                   <h3  ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal pt-[40px] mb-6 xl:mb-8">
                     Talent Cloud
@@ -394,8 +422,10 @@ const Home = () => {
                     クラウド型人材プラットフォームです。
                     「グローバルに活躍したい個人」と「信頼できる海外人材を確保したい企業」、双方のニーズをスムーズに結びつけることを使命としています。
                   </span>
-                  <div className="mt-[60px]">
-                    <GoButton name="詳しく見る" />
+                  <div className="mt-[60px] h-[68px] overflow-hidden">
+                    <div ref={goButtonRef3}>
+                      <GoButton name="詳しく見る" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -424,7 +454,7 @@ const Home = () => {
 
       <Gif/>
 
-      <div className="mb-[580px]"></div>
+      <div className="mb-[100vh]"></div>
 
     </div>
   );
