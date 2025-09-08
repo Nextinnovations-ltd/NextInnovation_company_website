@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import GoButton from './GoButton';
 import UseGoButtonAnimation from '../hooks/useGoButtonAnimation';
+import VisionIcon from '/images/bubble.svg'
 
 const LetWorkTogether = () => {
 
@@ -150,44 +151,38 @@ useEffect(() => {
 // Empty dependency array means this runs once on mount
   return (
       <div className="bg-white z-0" id='letWorkTogether' >
-        <div  className="about-us flex justify-between lg:px-[25px] xl:px-0">
+        <div  className="about-us flex justify-between gap-[57px] lg:px-[25px] xl:px-0">
             <div className="title-section">
-                  <h1  ref={addToRefs} className="roboto uppercase text-[65.6px] font-bold leading-[75.78px] tracking-[-1%]" style={{ whiteSpace: 'pre-line' }}>
-                  Beyond Borders, <br />
-                  Creating<br />
-                  a New <br />
-                    <div className="flex gap-3 items-center" >
-                    Future
-                    <svg width="108" height="66" viewBox="0 0 108 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.9838 66L1.98293 5.98122C0.853241 5.79859 -0.00548113 4.83142 2.63423e-05 3.66997C0.00918093 2.38523 1.0757 1.34882 2.38582 1.35504C3.69493 1.36404 4.74958 2.41216 4.74137 3.69969C4.73588 4.57057 4.24701 5.32272 3.52563 5.71857L12.5321 65.7581L10.9838 66ZM8.5633 30.1278C9.48061 29.0491 19.1498 25.1336 19.9462 25.0726C22.9462 24.8468 25.8575 25.9399 28.1469 27.8203C30.0429 29.3785 31.6614 30.325 33.0868 30.8352C35.7498 31.7807 37.7346 31.1986 39.5629 30.2063C40.6257 29.6314 65.6777 19.7429 69.3149 19.2733C70.7898 19.0834 72.9787 18.8234 73.9234 20.2638C74.8746 21.715 73.7815 23.7446 75.8807 24.5616C77.9606 25.3695 80.6328 24.5292 82.6633 23.9129C85.2696 23.1194 108 12.0165 108 12.0165C108 12.0165 95.4681 15.8805 91.2451 16.8909C80.8299 19.383 79.8421 15.3345 79.7706 14.1488C79.7596 13.9553 79.7724 13.8375 79.7724 13.8375C79.3623 11.7718 77.0782 10.909 75.2354 10.4951C72.0221 9.77713 49.7417 13.3759 46.6435 13.4434C43.4768 13.5154 41.6853 12.7515 40.4165 10.8406C39.0607 8.80007 38.5554 6.36546 37.4486 4.21267C35.0152 -0.523141 29.7292 -0.139892 25.1116 0.158601C18.5422 0.58506 4.95659 5.90229 4.45389 6.1234C4.77431 8.02981 5.09746 9.93356 5.41788 11.8381C5.99921 15.2452 8.46738 29.7302 8.56441 30.1277L8.5633 30.1278Z" fill="#096FCA"/>
-                    </svg>
+              <h1 ref={addToRefs} className="roboto uppercase text-[40px] lg:text-[65.6px] font-bold leading-[48px] lg:leading-[75.78px] tracking-[-1%]" style={{ whiteSpace: 'pre-line' }}>
+                Beyond Borders, <br />
+                Creating<br />
+                a New <br />
+                <div className="flex gap-3 items-start" >
+                  Future
+                  <svg width="108" height="66" viewBox="0 0 108 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.9838 66L1.98293 5.98122C0.853241 5.79859 -0.00548113 4.83142 2.63423e-05 3.66997C0.00918093 2.38523 1.0757 1.34882 2.38582 1.35504C3.69493 1.36404 4.74958 2.41216 4.74137 3.69969C4.73588 4.57057 4.24701 5.32272 3.52563 5.71857L12.5321 65.7581L10.9838 66ZM8.5633 30.1278C9.48061 29.0491 19.1498 25.1336 19.9462 25.0726C22.9462 24.8468 25.8575 25.9399 28.1469 27.8203C30.0429 29.3785 31.6614 30.325 33.0868 30.8352C35.7498 31.7807 37.7346 31.1986 39.5629 30.2063C40.6257 29.6314 65.6777 19.7429 69.3149 19.2733C70.7898 19.0834 72.9787 18.8234 73.9234 20.2638C74.8746 21.715 73.7815 23.7446 75.8807 24.5616C77.9606 25.3695 80.6328 24.5292 82.6633 23.9129C85.2696 23.1194 108 12.0165 108 12.0165C108 12.0165 95.4681 15.8805 91.2451 16.8909C80.8299 19.383 79.8421 15.3345 79.7706 14.1488C79.7596 13.9553 79.7724 13.8375 79.7724 13.8375C79.3623 11.7718 77.0782 10.909 75.2354 10.4951C72.0221 9.77713 49.7417 13.3759 46.6435 13.4434C43.4768 13.5154 41.6853 12.7515 40.4165 10.8406C39.0607 8.80007 38.5554 6.36546 37.4486 4.21267C35.0152 -0.523141 29.7292 -0.139892 25.1116 0.158601C18.5422 0.58506 4.95659 5.90229 4.45389 6.1234C4.77431 8.02981 5.09746 9.93356 5.41788 11.8381C5.99921 15.2452 8.46738 29.7302 8.56441 30.1277L8.5633 30.1278Z" fill="#096FCA"/>
+                  </svg>
                 </div>
-                </h1>
+              </h1>
             </div>
-            <div className="vision-mission-section">
+            <div className="vision-mission-section lg:w-[50%] lg:max-w-[503px] text-[#444444] px-[20.5px] lg:px-0">
                 <div className="section flex flex-col" >
-                    <div  ref={addToRefs}  className="title flex justify-start items-center gap-4">
-                        <svg width="47" height="30" viewBox="0 0 47 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="14.0712" cy="14.9999" r="13.7194" fill="#096FCA" stroke="#096FCA" strokeWidth="0.703558"/>
-                        <circle cx="32.2814" cy="14.9999" r="13.7212" stroke="#096FCA" strokeWidth="0.7"/>
-                        </svg>
-                        <h1 className="roboto">(OUR VISION)</h1>
+                    <div ref={addToRefs} className="title flex justify-start items-center gap-4">
+                        <img src={VisionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px]" alt="" />
+                        <h1 className="roboto text-[20px] lg:text-[24px] font-semibold leading-[15.39px] lg:leading-[29.55px] tracking-[-2%] uppercase">(OUR VISION)</h1>
                     </div>
-                    <p ref={addToRefs} className="text-nowrap">
+                    <p ref={addToRefs} className="text-nowrap text-[12px] lg:text-[21px] font-normal leading-[17.71px] lg:leading-[34px] tracking-[0%]">
                       東南アジアの優秀な人材と共に、<br/>
                       日本企業のDXを加速させ、未来の競争力を創出する。<br/>
                       国境を越えたチームづくりを通じて、持続的な成長を<br/>実現します。
                     </p> 
                 </div>
-                <div className="section flex flex-col mt-[100px] mb-[56px]" >
+                <div className="section flex flex-col mt-[32px] lg:mt-[100px] mb-[43px] lg:mb-[56px]" >
                     <div  ref={addToRefs}  className="title flex justify-start items-center gap-4">
-                        <svg width="47" height="30" viewBox="0 0 47 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="14.0712" cy="14.9999" r="13.7194" fill="#096FCA" stroke="#096FCA" strokeWidth="0.703558"/>
-                        <circle cx="32.2814" cy="14.9999" r="13.7212" stroke="#096FCA" strokeWidth="0.7"/>
-                        </svg>
-                        <h1 className="roboto">(OUR MISSION)</h1>
+                        <img src={VisionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px]" alt="" />
+                        <h1 className="roboto text-[20px] lg:text-[24px] font-semibold leading-[15.39px] lg:leading-[29.55px] tracking-[-2%] uppercase">(OUR MISSION)</h1>
                     </div>
-                    <p ref={addToRefs} className="text-nowrap">
+                    <p ref={addToRefs} className="text-nowrap text-[12px] lg:text-[21px] font-normal leading-[17.71px] lg:leading-[34px] tracking-[0%]">
                       「海外人材活用は難しい・不安」と感じる日本企業<br/>
                       に、EORをはじめとする最適な仕組みを提供し、採用<br/>
                       から定着・教育・成果創出までを一気通貫で支援す<br/>

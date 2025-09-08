@@ -47,7 +47,7 @@ const Hero = () => {
     .fromTo(
       "#hero-rotate",
       { scale: 0, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }, // grow to normal
+      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" },
       "<"
     );
   }, []);

@@ -17,14 +17,14 @@ const CaseStudy = () => {
     useCardAnimation(containerRef, '.case-study-card', {start: "top+=400 top",})
 
     return (
-        <div className="bg-white">
+        <div className="bg-white px-6 lg:px-0">
             <div className="max-w-[1240px] mx-auto text-[#444444]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="導入事例" eng="Case Study" />
                     </div>
                 </div>
-                <div ref={containerRef} className="flex gap-[24px] mt-[50px]">
+                <div ref={containerRef} className="flex flex-col gap-[50px] lg:flex-row lg:gap-[24px] mt-[50px]">
                     <div className="case-study-card">
                         <CaseStudyCard image={CaseStudyImg} title="株式会社GlobalHire" description="海外採用をスピーディに実現"
                             text1="新規市場進出に伴い、海外人材の雇用や法的手" text1Next="続きが複雑化"

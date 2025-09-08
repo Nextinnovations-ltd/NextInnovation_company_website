@@ -3,11 +3,11 @@ const CaseStudyCard = ({image, title, description, text1, text1Next='', text2, t
     return (
         <div>
             <img src={image} alt="" />
-            <h3 className="text-[24px] font-bold leading-[44px] tracking-[-2%] mt-[19px] mb-[12px]">{title}</h3>
-            <div className="text-[15px] font-normal leading-[24px] tracking-[0%] space-y-3">
+            <h3 className="text-[20px] lg:text-[24px] font-bold leading-[44px] tracking-[-2%] mt-[12px] lg:mt-[19px] mb-[12px]">{title}</h3>
+            <div className="text-[14px] lg:text-[15px] font-normal leading-[24px] tracking-[0%] space-y-3">
                 <p className="mb-1">{description}</p>
                 <div className="flex gap-3 items-start">
-                    <h5 className="text-[16px] font-medium tracking-[0%]">課題</h5>
+                    <h5 className="lg:text-[16px] font-medium tracking-[0%]">課題</h5>
                     <p>
                         {text1}
                         {!!text1Next && (
@@ -19,7 +19,7 @@ const CaseStudyCard = ({image, title, description, text1, text1Next='', text2, t
                     </p>
                 </div>
                 <div className="flex gap-3 items-start">
-                    <h5 className="text-[16px] font-medium tracking-[0%]">成果</h5>
+                    <h5 className="lg:text-[16px] font-medium tracking-[0%]">成果</h5>
                     <p>
                         {text2}
                         {!!text2Next && (
@@ -31,7 +31,7 @@ const CaseStudyCard = ({image, title, description, text1, text1Next='', text2, t
                     </p>
                 </div>
                 <div className="flex gap-3 items-start">
-                    <h5 className="text-[16px] font-medium tracking-[0%]">提供</h5>
+                    <h5 className="lg:text-[16px] font-medium tracking-[0%]">提供</h5>
                     <p>{text3}</p>
                 </div>
             </div>

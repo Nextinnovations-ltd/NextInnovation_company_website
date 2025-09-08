@@ -27,6 +27,8 @@ import FAQ from '../../components/FAQ';
 import Media from '../../components/Media';
 import useSectionTitleAnimation from '../../hooks/useSectionTitleAnimation';
 import useGoButtonAnimation from '../../hooks/useGoButtonAnimation';
+import HeroMobile from '../../components/HeroMobile';
+import SliderMobile from '../../components/SliderMobile';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -289,10 +291,15 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Hero/>
+      <div className="hidden md:block">
+        <Hero/>
+      </div>
+      <div className="block md:hidden">
+        <HeroMobile/>
+      </div>
 
       {/* Slider Section */}
-      <div className="stage text-white">
+      <div className="stage text-white hidden md:block">
         <section className="slide slide--4" id="slide-4">
           <div className="col col--1">
             <div className="col__content col__content--4">
@@ -356,6 +363,9 @@ const Home = () => {
           </div>
         </section>
       </div>
+      <div className="block md:hidden">
+        <SliderMobile/>
+      </div>
 
       <LetWorkTogether/>
 
@@ -366,7 +376,7 @@ const Home = () => {
       <CaseStudy/>
 
       <div className="bg-[#1E2C44]">
-        <div className="trusted-clients-section pt-[147px] pb-[180px] bg-white overflow-hidden flex flex-col gap-y-20 px-[24px] xl:px-0 rounded-b-[80px]">
+        <div className="trusted-clients-section pt-[73px] lg:pt-[147px] pb-[36px] lg:pb-[180px] bg-white overflow-hidden flex flex-col gap-[46px] lg:gap-y-20 px-[24px] xl:px-0 rounded-b-[40px] lg:rounded-b-[80px]">
           <div className="w-[1240px] mx-auto">
             <div className="overflow-hidden">
                 <div ref={trustClientTitleRef}>
@@ -404,20 +414,25 @@ const Home = () => {
 
       {/* start our powerful section */}
       <div className="bg-white">
-        <div className="our-powerful-product-section w-full pt-[100px] pb-[216px] rounded-b-[80px]">
+        <div className="our-powerful-product-section w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[80px] px-6 lg:px-0">
           <div className="our-powerful-product mx-auto lg:pl-[63px]">
-            <div className="flex gap-[55px]">
-              <div className="w-[483px] mx-[25px] xl:mx-0">
-                <div className="overflow-hidden">
+            <div className="overflow-hidden lg:hidden">
+                <div ref={ourProductTitleRef}>
+                    <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
+                </div>
+            </div>
+            <div className="flex flex-col-reverse lg:flex-row lg:gap-[55px]">
+              <div className="lg:w-[483px]">
+                <div className="overflow-hidden hidden lg:block">
                     <div ref={ourProductTitleRef}>
                         <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
                     </div>
                 </div>
                 <div className="main-left mt-[50px]">
-                  <h3  ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal pt-[40px] mb-6 xl:mb-8">
+                  <h3  ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal mb-6 xl:mb-8">
                     Talent Cloud
                   </h3>
-                  <span ref={addToRefs}  className="text-[14px] md:text-[21px] xl:text-[18px] font-normal leading-[34px] tracking-[0%]">
+                  <span ref={addToRefs} className="text-[14px] md:text-[21px] xl:text-[18px] font-normal leading-[34px] tracking-[0%]">
                     Talent Cloudは、ミャンマーの優秀なエンジニア・専門人材と、海外企業をつなぐことを目的とした
                     クラウド型人材プラットフォームです。
                     「グローバルに活躍したい個人」と「信頼できる海外人材を確保したい企業」、双方のニーズをスムーズに結びつけることを使命としています。
@@ -429,10 +444,9 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="w-[728px] relative ms-[25px]">
+              <div className="w-full mt-[26px] lg:mt-0 border-t-[2px] lg:border-t-0 pt-[70px] lg:pt-0 border-[#EDEDED] lg:w-[728px] relative">
                 <div className="image-container rounded-l-[16px] overflow-hidden">
-                  <img src={PowerFullProduct} alt="" className="rounded-start-2xl blockReveal w-full"/>
+                  <img src={PowerFullProduct} alt="" className="blockReveal w-full"/>
                 </div>
                 <Link to="" className="coming-soon absolute md:text-2xl uppercase font-normal px-6 py-4 rounded-lg">
                   Coming Soon
