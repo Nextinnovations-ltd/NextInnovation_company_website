@@ -36,7 +36,7 @@ const HomeCareer = () => {
 
     return (
       <div className="bg-white">
-        <div  className="home-news pb-[100px] mx-auto px-[25px] xl:px-0 pt-[120px]">
+        <div  className="home-news pb-[100px] mx-auto px-[25px] xl:px-0 pt-[63px] lg:pt-[120px]">
             <div className="overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp="ニュース" eng="NEWS" />
@@ -52,7 +52,7 @@ const HomeCareer = () => {
                 ))}
             </div>
 
-            <div className="text-end mt-[65px] h-[68px] overflow-hidden">
+            <div className="text-center lg:text-end mt-[40px] lg:mt-[65px] h-[68px] overflow-hidden">
               <div ref={goButtonRef}>
                 <GoButton name="続きを見る" />
               </div>

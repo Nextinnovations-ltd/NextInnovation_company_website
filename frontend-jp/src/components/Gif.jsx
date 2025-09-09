@@ -81,7 +81,7 @@ const Gif = () => {
   };
 
   return (
-    <div className="gif-section bg-cover bg-center rounded-b-[80px] w-full h-screen bg-no-repeat relative">
+    <div className="gif-section bg-cover bg-center rounded-b-[40px] lg:rounded-b-[80px] w-full h-screen bg-no-repeat relative">
       <div className="rotate absolute">
         <img src={NiLoop} alt="" />
       </div>

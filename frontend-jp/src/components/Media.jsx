@@ -16,7 +16,7 @@ const Media = () => {
     const noteRef = useRef(null);
     const svgRef = useRef(null);
     const pathRef = useRef(null);
-    useSectionTitleAnimation(titleRef, {start: "top+=900 top"})
+    useSectionTitleAnimation(titleRef, {start: "top+=300 top"})
 
     useEffect(() => {
         gsap.fromTo(
@@ -30,7 +30,7 @@ const Media = () => {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: blogRef.current,
-                    start: "top+=900 top",
+                    start: "top+=300 top",
                 },
             }
         );
@@ -45,7 +45,7 @@ const Media = () => {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: noteRef.current,
-                    start: "top+=900 top",
+                    start: "top+=300 top",
                 },
             }
         );
@@ -97,21 +97,21 @@ const Media = () => {
     }, []);
 
     return (
-        <div className="bg-[#F7F7F7] z-0" id="yutasan-section" >
-            <div className="max-w-[1240px] mx-auto pt-[140px] pb-[350px]">
+        <div className="bg-[#F7F7F7] z-0" id="yutasan-section">
+            <div className="max-w-[1240px] mx-auto pt-[59px] pb-[47px] lg:pt-[140px] lg:pb-[350px] px-6 lg:px-0">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="メディア" eng="Media" />
                     </div>
                 </div>
-                <div className="flex justify-between mt-[50px]">
-                    <div ref={blogRef} id="blog" className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
-                        <div className="flex justify-between mb-[82px]">
+                <div className="flex flex-col gap-[40px] lg:gap-0 lg:flex-row lg:justify-between mt-[50px]">
+                    <div ref={blogRef} className="lg:w-[600px] pt-[27px] pb-[15px] ps-[22px] pe-[30px] lg:pt-[50px] lg:pb-[50px] lg:ps-[41px] lg:pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
+                        <div className="flex justify-between mb-[40px] lg:mb-[82px]">
                             <div>
-                                <h3 className="text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[24px]">ミャンマー人材活用ナビ</h3>
-                                <p className="text-[12px] font-bold leading-[24px] tracking-[0%]">採用・EOR・リモート開発の最新情報<br/>をお届けしています。</p>
+                                <h3 className="text-[18px] lg:text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[18px] lg:mb-[24px]">ミャンマー人材<br className="lg:hidden"/>活用ナビ</h3>
+                                <p className="text-[12px] w-[130px] lg:w-full font-medium lg:font-bold leading-[20px] lg:leading-[24px] tracking-[0%]">採用・EOR・リモート開発の最新情報<br className="hidden lg:block" />をお届けしています。</p>
                             </div>
-                            <div>
+                            <div className="w-[130px] lg:w-[200px]">
                                 <img src={Blog} alt="" />
                             </div>
                         </div>
@@ -119,16 +119,16 @@ const Media = () => {
                             <GoButton name="詳しく見る" bgColor="bg-[#444444]" />
                         </div>
                     </div>
-                    <div ref={noteRef} id="note" className="w-[600px] py-[50px] ps-[41px] pe-[57px] bg-white rounded-[12px] text-white shadow-md z-[20]">
-                        <div className="flex justify-between mb-[36px]">
-                            <div className="w-[278px]">
-                                <h3 className="text-[#F15A29] text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[24px]">ミャンマーで生きる<br/>独身IT社長日記</h3>
-                                <p className="text-[#444444] text-[12px] font-bold leading-[24px] tracking-[0%]">
+                    <div ref={noteRef} className="lg:w-[600px] px-[22px] lg:px-0 py-6 lg:py-[50px] lg:ps-[41px] lg:pe-[57px] bg-white rounded-[12px] text-white shadow-md z-[20]">
+                        <div className="flex flex-col gap-[5px] lg:gap-0 lg:flex-row lg:justify-between mb-6 lg:mb-[36px]">
+                            <div className="lg:w-[278px]">
+                                <h3 className="text-[#F15A29] text-[18px] lg:text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[10px] lg:mb-[24px]">ミャンマーで生きる<br/>独身IT社長日記</h3>
+                                <p className="text-[#444444] text-[12px] font-medium lg:font-bold leading-[21px] lg:leading-[24px] tracking-[0%]">
                                     ミャンマー在住11年／ミャンマーにてIT会社を単身起業。右葉曲線ミャンマーで10年以上、人材採用と運用支援に携わってきた経験をもとに、失敗しないコツや「ミャンマーのIT人材事情」「日本企業が活用する方法」などのビジネス話やミャンマーでの生活日記など現地にいるからわかる生の情報を発信しています。
                                 </p>
                             </div>
-                            <div className="flex items-center">
-                                <img src={Note} alt="" />
+                            <div className="flex justify-center items-center">
+                                <img src={Note} alt="" className="w-[107px] lg:w-[210px] shadow-[0_3px_21px_#1E2C441A]" />
                             </div>
                         </div>
                         <div className="flex justify-center">

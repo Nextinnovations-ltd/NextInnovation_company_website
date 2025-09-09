@@ -1214,6 +1214,10 @@
     .home .our-powerful-product .main-left::before {
         height: 0px;
     }
+
+    .home .our-powerful-product .coming-soon {
+        top: 60%;
+    }
 }
 
 /* end our powerful product section */

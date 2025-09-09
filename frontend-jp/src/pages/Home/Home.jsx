@@ -414,7 +414,7 @@ const Home = () => {
 
       {/* start our powerful section */}
       <div className="bg-white">
-        <div className="our-powerful-product-section w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[80px] px-6 lg:px-0">
+        <div className="our-powerful-product-section w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[40px] lg:rounded-b-[80px] px-6 lg:px-0">
           <div className="our-powerful-product mx-auto lg:pl-[63px]">
             <div className="overflow-hidden lg:hidden">
                 <div ref={ourProductTitleRef}>
@@ -429,7 +429,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="main-left mt-[50px]">
-                  <h3  ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal mb-6 xl:mb-8">
+                  <h3 ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal mb-6 xl:mb-8 lg:pt-[64px]">
                     Talent Cloud
                   </h3>
                   <span ref={addToRefs} className="text-[14px] md:text-[21px] xl:text-[18px] font-normal leading-[34px] tracking-[0%]">
@@ -437,7 +437,7 @@ const Home = () => {
                     クラウド型人材プラットフォームです。
                     「グローバルに活躍したい個人」と「信頼できる海外人材を確保したい企業」、双方のニーズをスムーズに結びつけることを使命としています。
                   </span>
-                  <div className="mt-[60px] h-[68px] overflow-hidden">
+                  <div className="mt-[48px] lg:mt-[60px] h-[68px] overflow-hidden">
                     <div ref={goButtonRef3}>
                       <GoButton name="詳しく見る" />
                     </div>
@@ -468,7 +468,7 @@ const Home = () => {
 
       <Gif/>
 
-      <div className="mb-[100vh]"></div>
+      <div className="lg:mb-[100vh]"></div>
 
     </div>
   );

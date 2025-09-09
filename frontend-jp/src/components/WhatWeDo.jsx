@@ -51,7 +51,7 @@ const WhatWeDo = () => {
                             <br className="hidden lg:block"/>なります。
                         </p><br/>
                         <p>
-                            長年の現地経験と日本企業案件で培ったノウハウを活かし、国内採用の限界を超える新しい働き方を実現すること。<br/>
+                            長年の現地経験と日本企業案件で培ったノウハウを活かし、国内採用の限界を超える新しい働き方を実現すること。<br className="hidden lg:block"/>
                             それが、私たちNext Innovationsにしかできない強みです。
                         </p>
                     </div>

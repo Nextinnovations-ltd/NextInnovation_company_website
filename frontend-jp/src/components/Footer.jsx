@@ -14,10 +14,10 @@ const Footer = () => {
     if (!showFooter) return null;
   
     return (
-        <div className="bg-[#1E2C44] fixed -z-[100] inset-0">
-          <div className="max-w-[1420px] mx-auto text-white pt-[105px] pb-[50px]">
-            <div className="max-w-[1266px] mx-auto">
-              <div className="flex justify-between">
+        <div className="bg-[#1E2C44] lg:fixed -z-[100] lg:inset-0 -mt-[35px] lg:mt-0">
+          <div className="max-w-[1420px] mx-auto text-white pb-[54px] pt-[105px] lg:pb-[50px]">
+            <div className="max-w-[1266px] mx-auto px-6 lg:px-0">
+              <div className="grid grid-cols-2 gap-y-[66px] lg:gap-y-0 lg:flex lg:justify-between">
                 <div>
                   <p className="text-[18px] font-bold leading-[26px] tracking-[1%]">サービス</p>
                   <div className="flex flex-col gap-[22px] mt-[24px]">
@@ -73,7 +73,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between items-center mt-[130px] mb-[80px]">
+              <div className="flex flex-col-reverse gap-[32px] lg:gap-0 lg:flex-row justify-between items-center mt-[50px] lg:mt-[130px] mb-[36px] lg:mb-[80px]">
                 <p className="roboto text-[18px] font-normal leading-[26px] tracking-[1%]">Copyright © Next Innovations</p>
                 <p className="roboto text-[18px] font-normal leading-[26px] tracking-[1%]">Let’s grab high achievements together!</p>
                 <div className="roboto underline text-[18px] font-normal leading-[26px] tracking-[1%] flex gap-2">
@@ -84,7 +84,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="montserrat text-[131px] font-bold leading-[100%] tracking-[-3%] uppercase">DRIVEN DX WITH US</div>
+            <div className="montserrat text-center text-[37px] lg:text-[131px] font-bold leading-[100%] tracking-[-3%] uppercase">DRIVEN DX WITH US</div>
           </div>
         </div>
     )

@@ -1,9 +1,9 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { useRef } from "react";
 import Logoimage1 from "/images/Blur1.svg";
 import Logoimage2 from "/images/Blur2.svg";
 import DrivingDXwith from "/images/DrivingDXwith.png";
 import HeroStar from "/images/hero-star.png";
+import useHeroAnimation from "../hooks/useHeroAnimation";
 
 const Hero = () => {
 
@@ -13,47 +13,10 @@ const Hero = () => {
   const TalentRef = useRef(null);
   const ParaRef = useRef(null);
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      drivingRef.current,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }
-    )
-    .fromTo(
-      SouthEastRef.current,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
-      "-=0.1"
-    )
-    .fromTo(
-      StarRef.current,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
-      "-=0.1"
-    )
-    .fromTo(
-      TalentRef.current,
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
-      "-=0.1"
-    )
-    .fromTo(
-      ParaRef.current,
-      { y: -100, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
-      "-=0.1"
-    )
-    .fromTo(
-      "#hero-rotate",
-      { scale: 0, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" },
-      "<"
-    );
-  }, []);
+  useHeroAnimation(drivingRef,SouthEastRef,StarRef,TalentRef,ParaRef);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-[80px]">
       <div className="NI-homepage-background-logo-container relative flex w-full h-[650px] md:h-[110vh] justify-center items-center overflow-hidden">
         <img src={Logoimage1} alt="" className="logo1 layer w-[24%] left-[3%] relative opacity-60" />
         <img src={Logoimage2} alt="" className="logo2 layer w-[70%] right-[2%] relative opacity-60" />

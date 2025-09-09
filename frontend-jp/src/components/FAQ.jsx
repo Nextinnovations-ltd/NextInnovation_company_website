@@ -59,11 +59,11 @@ const FAQ = () => {
         setOpenIndex(openIndex === index ? null : index)
     }
     const titleRef = useRef(null)
-    useSectionTitleAnimation(titleRef, {start: "top+=700 top"})
+    useSectionTitleAnimation(titleRef, {start: "top+=300 top"})
 
     return (
-        <div id="faq" className="w-full text-[#444444] rounded-b-[80px] bg-white">
-            <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[30px] pb-[100px] md:pt-[130px] md:pb-[200px] pr-5 pl-5">
+        <div id="faq" className="w-full text-[#444444] rounded-b-[40px] lg:rounded-b-[80px] bg-white">
+            <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[41px] pb-[100px] md:pt-[130px] md:pb-[200px] pr-5 pl-5">
                 {/* Left Title Section */}
                 <motion.div
                     className="max-w-[394px]"
@@ -77,7 +77,7 @@ const FAQ = () => {
                             <SectionTitle jp="よくある質問" eng="FAQ" />
                         </div>
                     </div>
-                    <p className="w-[370px] text-[15px] text-[#575757] font-normal leading-[24px] tracking-[0%] mt-[20px]">
+                    <p className="w-[370px] text-[14px] lg:text-[15px] text-[#575757] font-normal leading-[24px] tracking-[0%] mt-[20px]">
                         よくあるご質問とその回答をまとめました。ご不明点
                         の解消にお役立てください。<br/>
                         また、海外人材の活用や弊社サービスに少しでもご関心がございましたら、ぜひお気軽にお問い合わせください。代表より直接ご返信いたします。
