@@ -32,6 +32,18 @@ jobs:
                 name: frontend-build
                 path: frontend/dist
 
+            - name: Install JP frontend and build
+              run: |
+                cd ./frontend-jp 
+                npm ci
+                npm run build
+              
+            - name: Upload JP frontend build artifact
+              uses: actions/upload-artifact@v4
+              with: 
+                name: jp-frontend-build
+                path: frontend-jp/dist
+
     move-files-staging-job:
         runs-on: ubuntu-latest
 
@@ -80,6 +92,23 @@ jobs:
                 tar -czf dist.tar.gz dist
                 ls
 
+            - name: Download jp build artifact
+              uses: actions/download-artifact@v4
+              with:
+                name: jp-frontend-build
+                path: frontend-jp/dist
+
+            - name: Install dependencies and zip
+              run : |
+                   echo "Checking Jp frontend Dist Folder"
+                   ls
+                   cd ./frontend-jp
+                   ls
+                   tar -czf jpdist.tar.gz dist
+                   ls
+                   mv jpdist.tar.gz ..
+                   ls
+
             - name: Copy NextInnovation Company Website Backend over scp
               uses: appleboy/scp-action@v0.1.7
               with:
@@ -97,6 +126,15 @@ jobs:
                      host: ${{ secrets.STAGING_HOST }}
                      username: ${{ secrets.STAGING_USER }}
                      key: ${{ secrets.STAGING_KEY }}
+
+            - name: Copy Japan NextInnovation Company Website Frontend over scp
+              uses: appleboy/scp-action@v0.1.7
+              with:
+                      source: jpdist.tar.gz
+                      target: /home/ubuntu/nextinnovations-company-networks/
+                      host: ${{ secrets.STAGING_HOST }}
+                      username: ${{ secrets.STAGING_USER }}
+                      key: ${{ secrets.STAGING_KEY }}
 
     SSH-and-deploy:
         runs-on: ubuntu-latest
@@ -117,12 +155,20 @@ jobs:
                 script: |
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz -C /home/ubuntu/nextinnovations-company-networks
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz -C /home/ubuntu/nextinnovations-company-networks
+                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/jpdist.tar.gz -C /home/ubuntu/nextinnovations-company-networks
+
 
                     sudo rm -rf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz
                     sudo rm -rf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz
+                    sudo rm -rf /home/ubuntu/nextinnovations-company-networks/jpdist.tar.gz
+
 
                     sudo rm -rf /var/www/dist
+                    sudo rm -rf /var/www/jpdist
+
                     sudo cp -r /home/ubuntu/nextinnovations-company-networks/dist /var/www/dist
+                    sudo cp -r /home/ubuntu/nextinnovations-company-networks/jpdist /var/www/jpdist
+
 
 
 
