@@ -12,12 +12,12 @@ const SliderMobile = () => {
     const descriptionRef2 = useRef();
     const buttonRef2 = useRef();
 
-    useGoButtonAnimation(titleRef1, {start: "top 70%"})
-    useGoButtonAnimation(buttonRef1, {start: "top 80%"})
-    useHorizontalAnimation(descriptionRef1, {start: "top 60%"})
-    useGoButtonAnimation(titleRef2, {start: "top 70%"})
-    useGoButtonAnimation(buttonRef2, {start: "top 80%"})
-    useHorizontalAnimation(descriptionRef2, {start: "top 60%"})
+    useGoButtonAnimation(titleRef1, {start: "top 90%"})
+    useGoButtonAnimation(buttonRef1, {start: "top 90%"})
+    useHorizontalAnimation(descriptionRef1, {start: "top 90%"})
+    useGoButtonAnimation(titleRef2, {start: "top 90%"})
+    useGoButtonAnimation(buttonRef2, {start: "top 90%"})
+    useHorizontalAnimation(descriptionRef2, {start: "top 90%"})
 
     return (
         <div className="bg-[#1E2C44] text-white px-[24px] rounded-b-[40px]">

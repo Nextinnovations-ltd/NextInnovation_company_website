@@ -72,11 +72,7 @@ const FAQ = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <div className="overflow-hidden">
-                        <div ref={titleRef}>
-                            <SectionTitle jp="よくある質問" eng="FAQ" />
-                        </div>
-                    </div>
+                    <SectionTitle jp="よくある質問" eng="FAQ" />
                     <p className="w-[370px] text-[14px] lg:text-[15px] text-[#575757] font-normal leading-[24px] tracking-[0%] mt-[20px]">
                         よくあるご質問とその回答をまとめました。ご不明点
                         の解消にお役立てください。<br/>
@@ -118,7 +114,7 @@ const FAQ = () => {
                                             initial={{ opacity: 0, height: 0 }}
                                             animate={{ opacity: 1, height: "auto" }}
                                             exit={{ opacity: 0, height: 0 }}
-                                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                                            transition={{ duration: 0.2, ease: "linear" }}
                                             className="overflow-hidden mt-2 md:mt-[13px]"
                                         >
                                             <p className="text-[#484747] text-[12px] md:text-[16px] font-[500] leading-[20px] md:leading-[48px]">

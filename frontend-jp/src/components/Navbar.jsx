@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom"
 import DownArrow from "./svg/DownArrow";
-import SectionTitle from "./SectionTitle";
+import DropDownModal from "./DropDownModal";
 
 const Navbar = () => {
 
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const servicesRef = useRef(null);
+    const [dropDownOpen, setDropDownOpen] = useState('');
+    const wrapperRef  = useRef(null);
 
     // navbar show hide scroll
     useEffect(() => {
@@ -29,17 +29,16 @@ const Navbar = () => {
     }, [lastScrollY]);
 
     // click service
-    const clickService = () => {
-        setIsServicesOpen((prev) => !prev)
+    const clickService = (name) => {
+        dropDownOpen == name ? setDropDownOpen('') : setDropDownOpen(name);
         setShowNavbar(true)
-        console.log(showNavbar);
     }
 
     // Close when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (servicesRef.current && !servicesRef.current.contains(event.target)) {
-                setIsServicesOpen(false);
+            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+                setDropDownOpen('');
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
@@ -48,16 +47,16 @@ const Navbar = () => {
 
     // Prevent body scroll when modal open
     useEffect(() => {
-        if (isServicesOpen) {
+        if (dropDownOpen) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "";
         }
 
         return () => {
-            document.body.style.overflow = ""; // cleanup
+            document.body.style.overflow = "";
         };
-    }, [isServicesOpen]);
+    }, [dropDownOpen]);
 
     return (
         <>
@@ -69,21 +68,19 @@ const Navbar = () => {
                 <div>
                     <h2 className="chillax text-[20px] md:text-[32px] font-light leading-[100%] tracking-[-4%]">Next Innovations</h2>
                 </div>
-                <div className="w-[835px] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
-                    <Link>ホーム</Link>
 
-                    <button ref={servicesRef} onClick={clickService} className="flex gap-[6px] items-center">
-                    {/* <button className="flex gap-[6px] items-center"> */}
+                <div ref={wrapperRef} className="w-[835px] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                    <Link>ホーム</Link>
+                    <button onClick={() => clickService('services')} className="flex gap-[6px] items-center">
                         <h4>サービス</h4>
                         <DownArrow/>
                     </button>
-
                     <Link className="archivo">Talent Cloud</Link>
                     <Link>導入事例</Link>
-                    <div className="flex gap-[6px] items-center">
+                    <button onClick={() => clickService('about')} className="flex gap-[6px] items-center">
                         <h4>会社情報</h4>
                         <DownArrow/>
-                    </div>
+                    </button>
                     <Link>ニュース</Link>
                     <Link>ブログ</Link>
                 </div>
@@ -95,14 +92,33 @@ const Navbar = () => {
             </div>
 
             {/* Dropdown box */}
-            {isServicesOpen && (
-                <>
-                    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
-                    <div className="sticky h-[50vh] top-16 left-0 bg-white w-full z-50">
-                        <SectionTitle jp="サービス" eng="Services" />
-                    </div>
-                </>
+            {dropDownOpen == 'services' && (
+                <DropDownModal
+                    jp="サービス"
+                    eng="Services"
+                    description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています"
+                    menus={[
+                        { title: "EOR（雇用代行）", link: "" },
+                        { title: "EOR代理店制度", link: "" },
+                        { title: "DX支援", link: "" },
+                        { title: "受託開発", link: "" },
+                        { title: "UI/UXデザイン", link: "" },
+                    ]}
+                />
             )}
+            {dropDownOpen == 'about' && (
+                <DropDownModal
+                    jp="会社情報"
+                    eng="About"
+                    description="私たちはミャンマーに拠点を置くIT企業です。高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを、専門的なチームとともにお客様の満足を第一に提供します。"
+                    menus={[
+                        { title: "会社概要", link: "" },
+                        { title: "経営方針", link: "" },
+                        { title: "メンバー紹介", link: "" },
+                    ]}
+                />
+            )}
+
         </>
     );
 }
