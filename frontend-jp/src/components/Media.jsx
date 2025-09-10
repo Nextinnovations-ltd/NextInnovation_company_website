@@ -109,7 +109,7 @@ const Media = () => {
                         <div className="flex justify-between mb-[40px] lg:mb-[82px]">
                             <div>
                                 <h3 className="text-[18px] lg:text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[18px] lg:mb-[24px]">ミャンマー人材<br className="lg:hidden"/>活用ナビ</h3>
-                                <p className="text-[12px] w-[130px] lg:w-full font-medium lg:font-bold leading-[20px] lg:leading-[24px] tracking-[0%]">採用・EOR・リモート開発の最新情報<br className="hidden lg:block" />をお届けしています。</p>
+                                <p className="text-[12px] lg:text-[15px] w-[130px] lg:w-full font-normal leading-[20px] lg:leading-[24px] tracking-[0%]">採用・EOR・リモート開発の最新情報<br className="hidden lg:block" />をお届けしています。</p>
                             </div>
                             <div className="w-[130px] lg:w-[200px]">
                                 <img src={Blog} alt="" />
@@ -119,11 +119,11 @@ const Media = () => {
                             <GoButton name="詳しく見る" bgColor="bg-[#444444]" />
                         </div>
                     </div>
-                    <div ref={noteRef} className="lg:w-[600px] px-[22px] lg:px-0 py-6 lg:py-[50px] lg:ps-[41px] lg:pe-[57px] bg-white rounded-[12px] text-white shadow-md z-[20]">
+                    <div ref={noteRef} className="lg:w-[600px] ps-[22px] pe-[22px] py-6 lg:py-[50px] lg:ps-[41px] lg:pe-[33px] bg-white rounded-[12px] text-white shadow-md z-[20]">
                         <div className="flex flex-col gap-[5px] lg:gap-0 lg:flex-row lg:justify-between mb-6 lg:mb-[36px]">
                             <div className="lg:w-[278px]">
                                 <h3 className="text-[#F15A29] text-[18px] lg:text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[10px] lg:mb-[24px]">ミャンマーで生きる<br/>独身IT社長日記</h3>
-                                <p className="text-[#444444] text-[12px] font-medium lg:font-bold leading-[21px] lg:leading-[24px] tracking-[0%]">
+                                <p className="text-[12px] text-[#444444] lg:text-[15px] font-normal leading-[21px] lg:leading-[24px] tracking-[0%]">
                                     ミャンマー在住11年／ミャンマーにてIT会社を単身起業。右葉曲線ミャンマーで10年以上、人材採用と運用支援に携わってきた経験をもとに、失敗しないコツや「ミャンマーのIT人材事情」「日本企業が活用する方法」などのビジネス話やミャンマーでの生活日記など現地にいるからわかる生の情報を発信しています。
                                 </p>
                             </div>

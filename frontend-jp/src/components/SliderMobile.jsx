@@ -40,7 +40,7 @@ const SliderMobile = () => {
                 </div>
             </div>
             <div className="py-[50px]">
-                <div className="h-[45px] overflow-hidden">
+                <div className="h-[80px] overflow-hidden">
                     <h2 ref={titleRef2} className="text-[20px] font-bold leading-[38.65px] tracking-[-2%]">DX支援 / 受託開発<br/>・UI/UXデザイン</h2>
                 </div>
                 <p ref={descriptionRef2} className="text-[14px] font-normal leading-[19.62px] tracking-[0%] mt-[16px] mb-[29px]">
