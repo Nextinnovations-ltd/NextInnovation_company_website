@@ -15,8 +15,8 @@ import Gif from "../../components/Gif"
 import Hero from "../../components/Hero";
 import LetWorkTogether from "../../components/LetWorkTogether";
 import OurService from "../../components/OurService";
-import sliderImg3 from "../../../public/images/eor-slider.png"
-import sliderImg4 from "../../../public/images/development-slider.png"
+import sliderImg3 from "../../../public/images/slider1.png"
+import sliderImg4 from "../../../public/images/slider2.png"
 import HomeCareer from '../../components/HomeCareer';
 import useVisiter from '../../hooks/useVisiter';
 import GoButton from '../../components/GoButton';

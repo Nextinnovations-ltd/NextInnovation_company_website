@@ -106,7 +106,7 @@ const Media = () => {
                 </div>
                 <div className="flex flex-col gap-[40px] lg:gap-0 lg:flex-row lg:justify-between mt-[50px]">
                     <div ref={blogRef} className="lg:w-[600px] pt-[27px] pb-[15px] ps-[22px] pe-[30px] lg:pt-[50px] lg:pb-[50px] lg:ps-[41px] lg:pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
-                        <div className="flex justify-between mb-[40px] lg:mb-[82px]">
+                        <div className="flex justify-between mb-[40px] lg:mb-[100px]">
                             <div>
                                 <h3 className="text-[18px] lg:text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[18px] lg:mb-[24px]">ミャンマー人材<br className="lg:hidden"/>活用ナビ</h3>
                                 <p className="text-[12px] lg:text-[15px] w-[130px] lg:w-full font-normal leading-[20px] lg:leading-[24px] tracking-[0%]">採用・EOR・リモート開発の最新情報<br className="hidden lg:block" />をお届けしています。</p>
@@ -137,7 +137,7 @@ const Media = () => {
                     </div>
                 </div>
             </div>
-            <svg ref={svgRef}  className="squiggle2"  xmlns="http://www.w3.org/2000/svg" width="1366" height="1068" viewBox="0 0 1366 1068" fill="none">
+            <svg ref={svgRef}  className="squiggle2 hidden md:block"  xmlns="http://www.w3.org/2000/svg" width="1366" height="1068" viewBox="0 0 1366 1068" fill="none">
             <path ref={pathRef}  d="M1379.5 17C1290.33 65.3243 1144.35 178.349 1098.5 276.405C1051 378 1021.5 545.5 1204 596C1334 631.974 1345.19 896.319 1098.5 875C977 864.5 770.009 770.501 654.5 758.5C577.5 750.5 383.291 809.608 301.5 961.064C223.5 1105.5 94 1025.68 -2.5 1036.5" stroke="#096FCA" strokeWidth="38"
             strokeLinejoin="round"
             strokeLinecap="round"  />

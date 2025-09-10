@@ -73,7 +73,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col-reverse gap-[32px] lg:gap-0 lg:flex-row justify-between items-center mt-[50px] lg:mt-[130px] mb-[36px] lg:mb-[80px]">
+              <div className="flex flex-col-reverse gap-[32px] lg:gap-0 lg:flex-row justify-between items-center mt-[50px] lg:mt-[100px] mb-[36px] lg:mb-[50px]">
                 <p className="roboto text-[18px] font-normal leading-[26px] tracking-[1%]">Copyright © Next Innovations</p>
                 <p className="roboto text-[18px] font-normal leading-[26px] tracking-[1%]">Let’s grab high achievements together!</p>
                 <div className="roboto underline text-[18px] font-normal leading-[26px] tracking-[1%] flex gap-2">

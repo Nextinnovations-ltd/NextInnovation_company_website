@@ -195,9 +195,9 @@ useEffect(() => {
                   </div>
                 </div>
             </div>
-            <svg ref={svgRef} className="squiggle" width="1365" height="730" viewBox="0 0 1365 730" fill="none">
+            <svg ref={svgRef} className="squiggle hidden md:block" width="1365" height="730" viewBox="0 0 1365 730" fill="none">
             <path ref={pathRef} d="M0.5 19.5005C90.6667 18.3338 283.5 40 365.5 100.5C467.509 175.764 484.531 280.966 453 371C411.5 489.5 291 508.339 215 465C152.5 429.36 103.872 333.551 164.5 250.5C274 100.501 519 158 611.5 250.5C694.567 333.567 725 479.5 790 515.5C874.475 562.286 982.125 508.074 1017 489.5C1063 465 1140 431.717 1202.5 489.5C1255.5 538.5 1235.5 582.5 1339.5 646.5C1422.7 697.7 1471.5 710.5 1485.5 710.5" stroke="#096FCA" strokeWidth="38" strokeLinejoin="round" strokeLinecap="round" />
-          </svg>
+            </svg>
         </div>
       </div>
       

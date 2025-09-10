@@ -35,7 +35,7 @@ const WhatWeDo = () => {
 
     return (
         <div className="bg-white pt-[114px] lg:pt-[376px]">
-            <div style={{background: `url(${Earth})`}} className="!bg-[25%_0%] lg:!bg-[110%_0%] !bg-no-repeat">
+            <div style={{background: `url(${Earth})`}} className="!bg-[25%_0%] lg:!bg-[130%_0%] !bg-no-repeat">
                 <div className="max-w-[1238px] mx-auto text-[#444444] px-6 lg:px-0">
                     <div className="overflow-hidden">
                         <div ref={titleRef}>
