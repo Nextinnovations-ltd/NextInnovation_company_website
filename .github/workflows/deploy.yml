@@ -155,7 +155,7 @@ jobs:
                 script: |
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz -C /home/ubuntu/nextinnovations-company-networks
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz -C /home/ubuntu/nextinnovations-company-networks
-                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/jpdist.tar.gz -C /home/ubuntu/nextinnovations-company-networks
+                    sudo tar -xf /home/ubuntu/nextinnovations-company-networks/jpdist.tar.gz -C /home/ubuntu/nextinnovations-company-networks/jpfrontend
 
 
                     sudo rm -rf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz
@@ -167,7 +167,7 @@ jobs:
                     sudo rm -rf /var/www/jpdist
 
                     sudo cp -r /home/ubuntu/nextinnovations-company-networks/dist /var/www/dist
-                    sudo cp -r /home/ubuntu/nextinnovations-company-networks/jpdist /var/www/jpdist
+                    sudo cp -r /home/ubuntu/nextinnovations-company-networks/jpfrontend/dist /var/www/jpdist
 
 
 
