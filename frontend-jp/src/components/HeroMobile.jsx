@@ -34,7 +34,7 @@ const HeroMobile = () => {
                     <div className="mt-[30px] text-[#444444] px-2">
                         <div ref={ParaRef}>
                             <h3 className="text-[20px] font-bold leading-[29px] tracking-[0%]">グローバル人材で、DXを加速する。</h3>
-                            <div className="border-t-[2px] border-[#444444] pt-[16px] mt-[12px]">
+                            <div className="w-[320px] border-t-[2px] border-[#444444] pt-[16px] mt-[12px]">
                                 <p className="text-[12px] font-medium leading-[21px] tracking-[-4%]">
                                     EORを基盤に、東南アジアの優秀なタレント<br/>
                                     と共に、企業のDX推進から受託開発、UI/UX <br/>

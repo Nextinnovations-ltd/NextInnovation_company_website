@@ -1,24 +1,25 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom"
 import DownArrow from "./svg/DownArrow";
+import SectionTitle from "./SectionTitle";
 
 const Navbar = () => {
 
     const [showNavbar, setShowNavbar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    // const [isServicesOpen, setIsServicesOpen] = useState(false);
-    // const servicesRef = useRef(null);
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const servicesRef = useRef(null);
 
     // navbar show hide scroll
     useEffect(() => {
         const handleScroll = () => {
-        if (window.scrollY > lastScrollY) {
-            // scrolling down → hide navbar
-            setShowNavbar(false);
-        } else {
-            // scrolling up → show navbar
-            setShowNavbar(true);
-        }
+            if (window.scrollY > lastScrollY) {
+                // scrolling down → hide navbar
+                setShowNavbar(true);
+            } else {
+                // scrolling up → show navbar
+                setShowNavbar(true);
+            }
             setLastScrollY(window.scrollY);
         };
 
@@ -28,34 +29,35 @@ const Navbar = () => {
     }, [lastScrollY]);
 
     // click service
-    // const clickService = () => {
-    //     setIsServicesOpen((prev) => !prev)
-    //     setShowNavbar(true)
-    // }
+    const clickService = () => {
+        setIsServicesOpen((prev) => !prev)
+        setShowNavbar(true)
+        console.log(showNavbar);
+    }
 
     // Close when clicking outside
-    // useEffect(() => {
-    //     const handleClickOutside = (event) => {
-    //         if (servicesRef.current && !servicesRef.current.contains(event.target)) {
-    //             setIsServicesOpen(false);
-    //         }
-    //     };
-    //     document.addEventListener("mousedown", handleClickOutside);
-    //     return () => document.removeEventListener("mousedown", handleClickOutside);
-    // }, []);
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (servicesRef.current && !servicesRef.current.contains(event.target)) {
+                setIsServicesOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
 
     // Prevent body scroll when modal open
-    // useEffect(() => {
-    //     if (isServicesOpen) {
-    //         document.body.style.overflow = "hidden";
-    //     } else {
-    //         document.body.style.overflow = "";
-    //     }
+    useEffect(() => {
+        if (isServicesOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
 
-    //     return () => {
-    //         document.body.style.overflow = ""; // cleanup
-    //     };
-    // }, [isServicesOpen]);
+        return () => {
+            document.body.style.overflow = ""; // cleanup
+        };
+    }, [isServicesOpen]);
 
     return (
         <>
@@ -70,8 +72,8 @@ const Navbar = () => {
                 <div className="w-[835px] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
                     <Link>ホーム</Link>
 
-                    {/* <button ref={servicesRef} onClick={clickService} className="flex gap-[6px] items-center"> */}
-                    <button className="flex gap-[6px] items-center">
+                    <button ref={servicesRef} onClick={clickService} className="flex gap-[6px] items-center">
+                    {/* <button className="flex gap-[6px] items-center"> */}
                         <h4>サービス</h4>
                         <DownArrow/>
                     </button>
@@ -93,14 +95,14 @@ const Navbar = () => {
             </div>
 
             {/* Dropdown box */}
-            {/* {isServicesOpen && (
+            {isServicesOpen && (
                 <>
                     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
-                    <div className=" sticky h-[30vh] top-16 left-0 bg-white w-full z-50">
-                        
+                    <div className="sticky h-[50vh] top-16 left-0 bg-white w-full z-50">
+                        <SectionTitle jp="サービス" eng="Services" />
                     </div>
                 </>
-            )} */}
+            )}
         </>
     );
 }

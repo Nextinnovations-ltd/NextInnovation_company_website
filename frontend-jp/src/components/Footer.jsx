@@ -25,7 +25,7 @@ const Footer = () => {
                     <Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">安心ラボ型EOR</Link>
                     <Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">DX支援</Link>
                     <Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発</Link>
-                    <Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">UIUXデザイン</Link>
+                    <Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン</Link>
                   </div>
                 </div>
                 <div>

@@ -94,7 +94,7 @@ class BlogController extends Controller
         }
         $data = [];
         foreach ($blogs as $blog) {
-            $data[] = $this->dataInfo($blog);
+            $data[] = $this->dataInfo($blog,'thumbnail');
         }
         return dataWithPagination($blogs, $data);
     }
@@ -106,9 +106,9 @@ class BlogController extends Controller
         if (!$blog) {
             return error();
         }
-        $data = $this->dataInfo($blog);
+        $data = $this->dataInfo($blog,'medium');
         foreach ($latest as $item) {
-            $latestBlog[] = $this->dataInfo($item);
+            $latestBlog[] = $this->dataInfo($item,'thumbnail');
         }
         return response()->json([
             "data" => $data,
@@ -116,13 +116,13 @@ class BlogController extends Controller
         ],200);
     }
 
-    private function dataInfo($blog) {
+    private function dataInfo($blog,$imageAction) {
         return [
             'id' => $blog->id,
             'title' => $blog->title,
             'description' => $blog->description,
             'category' => $blog->blog_category->name,
-            'feature' => $blog->medium_feature,
+            'feature' => $imageAction == 'thumbnail' ? $blog->thumbnail_feature : $blog->medium_feature,
             'created_at' => $blog->created_at->format('j/n/Y'),
         ];
     }
