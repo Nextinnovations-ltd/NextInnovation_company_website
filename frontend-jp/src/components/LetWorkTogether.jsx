@@ -3,7 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import GoButton from './GoButton';
 import UseGoButtonAnimation from '../hooks/useGoButtonAnimation';
-import VisionIcon from '/images/bubble.svg'
+import VisionIcon from '/images/vision.svg'
+import MissionIcon from '/images/mission.svg'
 
 const LetWorkTogether = () => {
 
@@ -99,53 +100,57 @@ const LetWorkTogether = () => {
       };
     }, []);
 
+	// scroll svg path animation
+	const pathRef = useRef(null);
+	const mobilePathRef = useRef(null);
 
+	useEffect(() => {
+		const path = pathRef.current;
+		const mobilePath = mobilePathRef.current;
+		if (!mobilePath || !path) return;
 
-  
-const svgRef = useRef(null);
-const pathRef = useRef(null);
+		const workSection = document.querySelector('#letWorkTogether');
+		if (!workSection) return;
 
-useEffect(() => {
-  const svg = svgRef.current;
-  const path = pathRef.current;
-  if (!svg || !path) return;
+		// Initialize path styles
+		const pathLength = path.getTotalLength();
+		path.style.strokeDasharray = pathLength;
+		path.style.strokeDashoffset = pathLength;
+		
+		const mobilePathLength = mobilePath.getTotalLength();
+		mobilePath.style.strokeDasharray = mobilePathLength;
+		mobilePath.style.strokeDashoffset = mobilePathLength;
 
-  const workSection = document.querySelector('#letWorkTogether');
-  if (!workSection) return;
+		// Speed multiplier (higher = faster animation)
+		const speedMultiplier = 2.3; // Adjust this value (1 = normal, 2 = 2x faster, etc.)
 
-  // Initialize path styles
-  const pathLength = path.getTotalLength();
-  path.style.strokeDasharray = pathLength;
-  path.style.strokeDashoffset = pathLength;
+		const scroll = () => {
+			const sectionRect = workSection.getBoundingClientRect();
+			const windowHeight = window.innerHeight;
+			const sectionHeight = sectionRect.height;
 
-  // Speed multiplier (higher = faster animation)
-  const speedMultiplier = 2; // Adjust this value (1 = normal, 2 = 2x faster, etc.)
+			// Calculate when middle of section reaches middle of viewport
+			const sectionMiddle = sectionRect.top + sectionHeight / 2;
+			const viewportMiddle = windowHeight / 2;
 
-  const scroll = () => {
-    const sectionRect = workSection.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    const sectionHeight = sectionRect.height;
+			if (sectionMiddle <= viewportMiddle) {
+				// Calculate progress with speed multiplier
+				const scrollPastTrigger = viewportMiddle - sectionMiddle;
+				const maxScrollPast = (sectionHeight + windowHeight) / speedMultiplier;
+				const scrollProgress = Math.min(scrollPastTrigger / maxScrollPast, 1);
 
-    // Calculate when middle of section reaches middle of viewport
-    const sectionMiddle = sectionRect.top + sectionHeight / 2;
-    const viewportMiddle = windowHeight / 2;
+				path.style.strokeDashoffset = pathLength * (1 - scrollProgress);
+				mobilePath.style.strokeDashoffset = mobilePathLength * (1 - scrollProgress);
+			} else {
+				path.style.strokeDashoffset = pathLength;
+				mobilePath.style.strokeDashoffset = mobilePathLength;
+			}
+		};
 
-    if (sectionMiddle <= viewportMiddle) {
-      // Calculate progress with speed multiplier
-      const scrollPastTrigger = viewportMiddle - sectionMiddle;
-      const maxScrollPast = (sectionHeight + windowHeight) / speedMultiplier;
-      const scrollProgress = Math.min(scrollPastTrigger / maxScrollPast, 1);
-
-      path.style.strokeDashoffset = pathLength * (1 - scrollProgress);
-    } else {
-      path.style.strokeDashoffset = pathLength;
-    }
-  };
-
-  scroll();
-  window.addEventListener('scroll', scroll);
-  return () => window.removeEventListener('scroll', scroll);
-}, []); 
+		scroll();
+		window.addEventListener('scroll', scroll);
+		return () => window.removeEventListener('scroll', scroll);
+	}, []); 
 
 
 // Empty dependency array means this runs once on mount
@@ -168,7 +173,11 @@ useEffect(() => {
             <div className="vision-mission-section lg:w-[50%] lg:max-w-[503px] text-[#444444] px-[20.5px] lg:px-0">
                 <div className="section flex flex-col" >
                     <div ref={addToRefs} className="title flex justify-start items-center gap-4">
-                        <img src={VisionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px]" alt="" />
+                        {/* <div className="w-[46.35px] relative animate-fade">
+                          <div className="absolute left-0 w-[28.14px] h-[28.14px] bg-[#096FCA] rounded-full"></div>
+                          <div className="absolute right-0 w-[28.14px] h-[28.14px] border-[0.7px] border-[#096FCA] rounded-full"></div>
+                        </div> */}
+                        <img src={VisionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px] animate-fade" alt="" />
                         <h1 className="roboto text-[20px] lg:text-[24px] font-semibold leading-[15.39px] lg:leading-[29.55px] tracking-[-2%] uppercase">(OUR VISION)</h1>
                     </div>
                     <p ref={addToRefs} className="text-nowrap text-[12px] lg:text-[21px] font-normal leading-[17.71px] lg:leading-[34px] tracking-[0%]">
@@ -179,7 +188,7 @@ useEffect(() => {
                 </div>
                 <div className="section flex flex-col mt-[32px] lg:mt-[100px] mb-[43px] lg:mb-[56px]" >
                     <div  ref={addToRefs}  className="title flex justify-start items-center gap-4">
-                        <img src={VisionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px]" alt="" />
+                        <img src={MissionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px] animate-fade" alt="" />
                         <h1 className="roboto text-[20px] lg:text-[24px] font-semibold leading-[15.39px] lg:leading-[29.55px] tracking-[-2%] uppercase">(OUR MISSION)</h1>
                     </div>
                     <p ref={addToRefs} className="text-nowrap text-[12px] lg:text-[21px] font-normal leading-[17.71px] lg:leading-[34px] tracking-[0%]">
@@ -191,16 +200,20 @@ useEffect(() => {
                 </div>
                 <div className="h-[68px] overflow-hidden">
                   <div ref={goButtonRef}>
-                    <GoButton name="私たちについて" />
+                    <GoButton name="私たちについて" link="" />
                   </div>
                 </div>
             </div>
-            <svg ref={svgRef} className="squiggle hidden md:block" width="1365" height="730" viewBox="0 0 1365 730" fill="none">
+
+            <svg className="squiggle hidden lg:block" width="1365" height="730" viewBox="0 0 1365 730" fill="none">
             <path ref={pathRef} d="M0.5 19.5005C90.6667 18.3338 283.5 40 365.5 100.5C467.509 175.764 484.531 280.966 453 371C411.5 489.5 291 508.339 215 465C152.5 429.36 103.872 333.551 164.5 250.5C274 100.501 519 158 611.5 250.5C694.567 333.567 725 479.5 790 515.5C874.475 562.286 982.125 508.074 1017 489.5C1063 465 1140 431.717 1202.5 489.5C1255.5 538.5 1235.5 582.5 1339.5 646.5C1422.7 697.7 1471.5 710.5 1485.5 710.5" stroke="#096FCA" strokeWidth="38" strokeLinejoin="round" strokeLinecap="round" />
             </svg>
+
+			<svg className="md:hidden absolute top-[220px] -right-[50px]" width="503" height="653" viewBox="0 0 503 653" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path ref={mobilePathRef} d="M481.5 11.43C467.5 11.43 432.5 2.46853 385.5 29.4126C337.5 56.9299 329.465 123.072 341 164.43C361.5 237.93 412.395 237.881 458.5 265.931C530 309.43 487 566.43 354.5 622.93C236.378 673.3 68 542.93 9 647.43" stroke="#096FCA" strokeWidth="19" strokeLinejoin="round" strokeLinecap="round" />
+			</svg>
         </div>
       </div>
-      
     )
 }
 

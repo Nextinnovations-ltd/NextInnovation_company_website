@@ -316,7 +316,7 @@ const Home = () => {
               </p>
               <div className="h-[68px] overflow-hidden">
                 <div ref={goButtonRef1}>
-                  <GoButton name="詳しく見る" />
+                  <GoButton name="詳しく見る" link="" />
                 </div>
               </div>
             </div>
@@ -347,7 +347,7 @@ const Home = () => {
               </p>
               <div className="h-[68px] overflow-hidden">
                 <div ref={goButtonRef2}>
-                  <GoButton name="詳しく見る" />
+                  <GoButton name="詳しく見る" link="" />
                 </div>
               </div>
             </div>
@@ -439,7 +439,7 @@ const Home = () => {
                   </span>
                   <div className="mt-[48px] lg:mt-[60px] h-[68px] overflow-hidden">
                     <div ref={goButtonRef3}>
-                      <GoButton name="詳しく見る" />
+                      <GoButton name="詳しく見る" link="http://staging.talent-cloud.asia/emp/lp" target="_blank" />
                     </div>
                   </div>
                 </div>
@@ -448,7 +448,7 @@ const Home = () => {
                 <div className="image-container rounded-l-[16px] overflow-hidden">
                   <img src={PowerFullProduct} alt="" className="blockReveal w-full"/>
                 </div>
-                <Link to="" className="coming-soon absolute md:text-2xl uppercase font-normal px-6 py-4 rounded-lg">
+                <Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="coming-soon absolute md:text-2xl uppercase font-normal px-6 py-4 rounded-lg">
                   Coming Soon
                 </Link>
               </div>

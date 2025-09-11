@@ -35,7 +35,7 @@ const SliderMobile = () => {
                 </p>
                 <div className="overflow-hidden">
                     <div ref={buttonRef1}>
-                        <GoButton name="詳しく見る" />
+                        <GoButton name="詳しく見る" link="" />
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ const SliderMobile = () => {
                 </p>
                 <div className="overflow-hidden">
                     <div ref={buttonRef2}>
-                        <GoButton name="詳しく見る" />
+                        <GoButton name="詳しく見る" link="" />
                     </div>
                 </div>
             </div>

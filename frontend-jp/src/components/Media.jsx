@@ -14,8 +14,8 @@ const Media = () => {
     const titleRef = useRef(null);
     const blogRef = useRef(null);
     const noteRef = useRef(null);
-    const svgRef = useRef(null);
     const pathRef = useRef(null);
+    const mobilePathRef = useRef(null);
     useSectionTitleAnimation(titleRef, {start: "top+=300 top"})
 
     useEffect(() => {
@@ -53,9 +53,9 @@ const Media = () => {
 
     // scroll svg path animation
     useEffect(() => {
-        const svg = svgRef.current;
         const path = pathRef.current;
-        if (!svg || !path) return;
+        const mobilePath = mobilePathRef.current;
+        if (!path || !mobilePath) return;
 
         const workSection = document.querySelector('#yutasan-section');
         if (!workSection) return;
@@ -64,6 +64,10 @@ const Media = () => {
         const pathLength = path.getTotalLength();
         path.style.strokeDasharray = pathLength;
         path.style.strokeDashoffset = pathLength;
+        
+        const mobilePathLength = mobilePath.getTotalLength();
+        mobilePath.style.strokeDasharray = mobilePathLength;
+        mobilePath.style.strokeDashoffset = mobilePathLength;
 
         // Speed multiplier (higher = faster animation)
         const speedMultiplier = 2;
@@ -86,8 +90,10 @@ const Media = () => {
                 const scrollProgress = Math.min(scrollPastTrigger / maxScrollPast, 1);
 
                 path.style.strokeDashoffset = pathLength * (1 - scrollProgress);
+                mobilePath.style.strokeDashoffset = mobilePathLength * (1 - scrollProgress);
             } else {
                 path.style.strokeDashoffset = pathLength;
+                mobilePath.style.strokeDashoffset = mobilePathLength;
             }
         };
 
@@ -98,14 +104,14 @@ const Media = () => {
 
     return (
         <div className="bg-[#F7F7F7] z-0" id="yutasan-section">
-            <div className="max-w-[1240px] mx-auto pt-[59px] pb-[47px] lg:pt-[140px] lg:pb-[350px] px-6 lg:px-0">
+            <div className="max-w-[1240px] mx-auto pt-[59px] pb-[80px] lg:pt-[140px] lg:pb-[350px] px-6 lg:px-0">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="メディア" eng="Media" />
                     </div>
                 </div>
                 <div className="flex flex-col gap-[40px] lg:gap-0 lg:flex-row lg:justify-between mt-[50px]">
-                    <div ref={blogRef} className="lg:w-[600px] pt-[27px] pb-[15px] ps-[22px] pe-[30px] lg:pt-[50px] lg:pb-[50px] lg:ps-[41px] lg:pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
+                    <div ref={blogRef} className="!z-[999] lg:w-[600px] pt-[27px] pb-[15px] ps-[22px] pe-[30px] lg:pt-[50px] lg:pb-[50px] lg:ps-[41px] lg:pe-[57px] bg-[#F15A29] rounded-[12px] text-white shadow-md">
                         <div className="flex justify-between mb-[40px] lg:mb-[100px]">
                             <div>
                                 <h3 className="text-[18px] lg:text-[24px] font-bold leading-[120%] tracking-[-1%] mb-[18px] lg:mb-[24px]">ミャンマー人材<br className="lg:hidden"/>活用ナビ</h3>
@@ -116,7 +122,7 @@ const Media = () => {
                             </div>
                         </div>
                         <div className="flex justify-center">
-                            <GoButton name="詳しく見る" bgColor="bg-[#444444]" />
+                            <GoButton name="詳しく見る" bgColor="bg-[#444444]" link="" />
                         </div>
                     </div>
                     <div ref={noteRef} className="lg:w-[600px] ps-[22px] pe-[22px] py-6 lg:py-[50px] lg:ps-[41px] lg:pe-[33px] bg-white rounded-[12px] text-white shadow-md z-[20]">
@@ -132,15 +138,17 @@ const Media = () => {
                             </div>
                         </div>
                         <div className="flex justify-center">
-                            <GoButton name="詳しく見る" />
+                            <GoButton name="詳しく見る" link="https://note.com/yuta_myanmar_eor" target="_blank" />
                         </div>
                     </div>
                 </div>
             </div>
-            <svg ref={svgRef}  className="squiggle2 hidden md:block"  xmlns="http://www.w3.org/2000/svg" width="1366" height="1068" viewBox="0 0 1366 1068" fill="none">
-            <path ref={pathRef}  d="M1379.5 17C1290.33 65.3243 1144.35 178.349 1098.5 276.405C1051 378 1021.5 545.5 1204 596C1334 631.974 1345.19 896.319 1098.5 875C977 864.5 770.009 770.501 654.5 758.5C577.5 750.5 383.291 809.608 301.5 961.064C223.5 1105.5 94 1025.68 -2.5 1036.5" stroke="#096FCA" strokeWidth="38"
-            strokeLinejoin="round"
-            strokeLinecap="round"  />
+            <svg className="squiggle2 hidden md:block"  xmlns="http://www.w3.org/2000/svg" width="1366" height="1068" viewBox="0 0 1366 1068" fill="none">
+            <path ref={pathRef} d="M1379.5 17C1290.33 65.3243 1144.35 178.349 1098.5 276.405C1051 378 1021.5 545.5 1204 596C1334 631.974 1345.19 896.319 1098.5 875C977 864.5 770.009 770.501 654.5 758.5C577.5 750.5 383.291 809.608 301.5 961.064C223.5 1105.5 94 1025.68 -2.5 1036.5" stroke="#096FCA" strokeWidth="38" strokeLinejoin="round" strokeLinecap="round" />
+            </svg>
+
+            <svg className="md:hidden absolute top-[20px] -right-[60px] !z-1" width="308" height="935" viewBox="0 0 308 935" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path ref={mobilePathRef} d="M303 9C230.328 47.7612 110.034 119.734 50 213C-6 300 4.3629 538.033 140.248 518.55C269.552 500.01 343.3 686.401 120.692 708.848C-73.5335 728.433 36.3966 943.674 87.5471 923.692" stroke="#096FCA" strokeWidth="18.7101" strokeLinejoin="round" strokeLinecap="round" />
             </svg>
         </div>
     )

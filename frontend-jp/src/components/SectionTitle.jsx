@@ -5,7 +5,7 @@ const SectionTitle = ({jp,eng='',jpcolor='text-[#575757]'}) => {
         <>
             <div>
                 <div className={`flex items-center text-[12px] lg:text-[16px] font-medium leading-[31px] tracking-[0%] ${jpcolor}`}>(
-                    <div className="w-2 h-2 rounded-full bg-[#096FCA] ms-1 me-2"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#096FCA] ms-1 me-2 animate-fade"></div>
                     {jp} )
                 </div>
                 {!!eng && (
