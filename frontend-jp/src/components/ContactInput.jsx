@@ -9,7 +9,7 @@ const ContactInput = ({type,placeholder,state,setState,error}) => {
                 type={type} 
                 placeholder={placeholder} 
                 className={`${className} w-full px-4 py-[16px] md:py-[20px] placeholder-[#000000CC]
-                placeholder:text-[16px] md:placeholder:text-[20px] placeholder:font-normal rounded-[8px] text-[16px] md:text-[20px] bg-transparent focus:outline-none`}
+                placeholder:text-[15px] placeholder:font-normal rounded-[8px] text-[15px] bg-transparent focus:outline-none`}
                 onChange={(e)=>setState(e.target.value)} value={state}
             />
             {error.length > 0 && (<p className="text-red-600">{error}</p>)}

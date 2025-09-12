@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation } from "react-router-dom"
 import DownArrow from "./svg/DownArrow";
 import DropDownModal from "./DropDownModal";
 import Hamburger from "./svg/Hamburger";
@@ -8,35 +8,14 @@ import MobileDropDown from "./MobileDropDown";
 
 const Navbar = () => {
 
-    const [showNavbar, setShowNavbar] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
     const [dropDownOpen, setDropDownOpen] = useState('');
     const [mobileOpen, setMobileOpen] = useState(false);
     const [mobileDropDownOpen, setMobileDropDownOpen] = useState('');
     const wrapperRef  = useRef(null);
 
-    // navbar show hide scroll
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
-                // scrolling down → hide navbar
-                setShowNavbar(true);
-            } else {
-                // scrolling up → show navbar
-                setShowNavbar(true);
-            }
-            setLastScrollY(window.scrollY);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
-
     // click service
     const clickDropDown = (name) => {
         dropDownOpen == name ? setDropDownOpen('') : setDropDownOpen(name);
-        setShowNavbar(true)
     }
 
     // Close when clicking outside
@@ -50,7 +29,7 @@ const Navbar = () => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    // Prevent body scroll when modal open
+    // // Prevent body scroll when modal open
     useEffect(() => {
         if (dropDownOpen || mobileOpen) {
             document.body.style.overflow = "hidden";
@@ -62,31 +41,34 @@ const Navbar = () => {
         };
     }, [dropDownOpen, mobileOpen]);
 
+    const location = useLocation();
+    const noBorderRoutes = ["/"]; // list of routes without border
+    const showBorder = !noBorderRoutes.includes(location.pathname);
+
     return (
         <>
             <div
-                className={`text-[#444444] bg-white flex justify-between items-center py-[18px] px-[32px] fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
-                    showNavbar ? "translate-y-0" : "-translate-y-full"
-                }`}
+                className={`text-[#444444] bg-white flex justify-between items-center pt-[18px] pb-[18px] px-[32px] fixed top-0 left-0 right-0 z-50 transition-transform duration-300 
+                    ${showBorder ? "border-b-[1px]" : ""}`}
             >
                 <div>
-                    <h2 className="chillax text-[20px] md:text-[32px] font-light leading-[100%] tracking-[-4%]">Next Innovations</h2>
+                    <Link to="/" className="chillax text-[20px] md:text-[32px] font-light leading-[100%] tracking-[-4%]">Next Innovations</Link>
                 </div>
 
                 <div ref={wrapperRef} className="w-[835px] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
-                    <Link>ホーム</Link>
-                    <button onClick={() => clickDropDown('services')} className="flex gap-[6px] items-center">
+                    <Link className="py-2">ホーム</Link>
+                    <button onClick={() => clickDropDown('services')} className={`flex gap-[6px] items-center py-2 ${dropDownOpen == 'services' ? 'border-b-[2px] border-[#F15A29]' : ''}`}>
                         <h4>サービス</h4>
                         <DownArrow/>
                     </button>
-                    <Link className="archivo">Talent Cloud</Link>
-                    <Link>導入事例</Link>
-                    <button onClick={() => clickDropDown('about')} className="flex gap-[6px] items-center">
+                    <Link className="archivo py-2">Talent Cloud</Link>
+                    <Link className="py-2">導入事例</Link>
+                    <button onClick={() => clickDropDown('about')} className={`flex gap-[6px] items-center py-2 ${dropDownOpen == 'about' ? 'border-b-[2px] border-[#F15A29]' : ''}`}>
                         <h4>会社情報</h4>
                         <DownArrow/>
                     </button>
-                    <Link>ニュース</Link>
-                    <Link>ブログ</Link>
+                    <Link className="py-2">ニュース</Link>
+                    <Link className="py-2">ブログ</Link>
                 </div>
                 <div className="block lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
                     {!mobileOpen ? <Hamburger/> : <Cross/>}

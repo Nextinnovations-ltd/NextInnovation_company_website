@@ -6,7 +6,7 @@ const ContactSelect = ({children,state,setState,error}) => {
             <select
                 value={state} onChange={(e)=>setState(e.target.value)}
                 className={`${className} w-full px-4 py-[16px] md:py-[20px]  placeholder-[#000000CC]
-                text-[16px] md:text-[20px] font-normal rounded-[8px] bg-transparent focus:outline-none appearance-none pr-10`}
+                text-[15px] font-normal rounded-[8px] bg-transparent focus:outline-none appearance-none pr-10`}
             >
             {children}
             </select>

@@ -4,7 +4,7 @@ import WebsiteDev from "../pages/Development/Website";
 import SystemDev from "../pages/Development/System";
 import UiUx from "../pages/Development/UiUx";
 import Layout from "../layouts/Layout"
-import Eor from "../pages/Development/Eor";
+import Eor from "../pages/Services/Eor";
 import Testing from "../pages/Development/Testing";
 import Work from "../pages/Work/Work";
 import Contact from "../pages/Contact";

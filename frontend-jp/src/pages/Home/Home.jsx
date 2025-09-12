@@ -92,11 +92,10 @@ const Home = () => {
       const textTl = gsap.timeline({
         scrollTrigger: {
           trigger: textElement,
-          start: "top -50%", // Adjusted to trigger when element enters viewport
+          start: "top -20%", // Adjusted to trigger when element enters viewport
           end: "bottom 20%",
           toggleActions: "play none none none",
           markers: false, // Set to true for debugging
-       
           once: true // Ensure it only animates once
         }
       });
