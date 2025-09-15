@@ -5,6 +5,7 @@ import EorCardSection from "../../components/eor/EorCardSection";
 import EorChallenges from "../../components/eor/EorChallenges";
 import EorHero from "../../components/eor/EorHero";
 import EorServiceSolve from "../../components/eor/EorServiceSolve";
+import Strength from "../../components/eor/Strength";
 
 const Eor = () => {
     return (
@@ -24,6 +25,7 @@ const Eor = () => {
                 </div>
             </div>
             <EorServiceSolve/>
+            <Strength/>
         </>
     );
 }

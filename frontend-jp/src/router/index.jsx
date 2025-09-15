@@ -77,11 +77,11 @@ import ContactSuccess from "../pages/ContactSuccess";
           path: "/news/:id",
           element: <CareerDetail/>,
         },
+        {
+          path: "/privacy",
+          element: <Privacy/>,
+        },
       ]
-    },
-    {
-      path: "/privacy",
-      element: <Privacy/>,
     },
   ]);
 

@@ -1,6 +1,6 @@
 import {PropTypes} from "prop-types"
 
-const SectionTitle = ({jp,eng='',jpcolor='text-[#575757]'}) => {
+const SectionTitle = ({jp,eng='',jpcolor='text-[#575757]',engcolor='text-[#444444]'}) => {
     return (
         <>
             <div>
@@ -9,7 +9,7 @@ const SectionTitle = ({jp,eng='',jpcolor='text-[#575757]'}) => {
                     {jp} )
                 </div>
                 {!!eng && (
-                    <h1 className="roboto w-[574px] text-[32px] lg:text-[58px] font-bold leading-[31px] lg:leading-[67px] tracking-[0%] lg:tracking-[-1%] uppercase mt-[10px]">{eng}</h1>
+                    <h1 className={`roboto w-[574px] text-[32px] lg:text-[58px] font-bold leading-[31px] lg:leading-[67px] tracking-[0%] lg:tracking-[-1%] uppercase mt-[10px] ${engcolor}`}>{eng}</h1>
                 )}
             </div>
         </>
@@ -20,6 +20,7 @@ SectionTitle.propTypes = {
     jp: PropTypes.string.isRequired,
     eng: PropTypes.string,
     jpcolor: PropTypes.string,
+    engcolor: PropTypes.string,
 }
 
 export default SectionTitle
