@@ -63,7 +63,7 @@ const FAQ = () => {
 
     return (
         <div id="faq" className="w-full text-[#444444] rounded-b-[40px] lg:rounded-b-[80px] bg-white">
-            <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[41px] pb-[100px] md:pt-[130px] md:pb-[200px] pr-5 pl-5">
+            <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[41px] pb-[100px] md:py-[130px] pr-5 pl-5">
                 {/* Left Title Section */}
                 <motion.div
                     className="max-w-[394px]"

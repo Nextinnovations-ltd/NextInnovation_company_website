@@ -17,7 +17,7 @@ const HeroMobile = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] pt-[60px]">
-                <div className="px-3 pt-[30px] pb-[77px]" style={{ background: `url(${HeroBg})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'top right' }}>
+                <div className="px-3 pt-[30px] pb-[105px]" style={{ background: `url(${HeroBg})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'top right' }}>
                     <div className="h-[125px] overflow-hidden">
                         <img src={DrivingDXwith} alt="" ref={drivingRef} />
                     </div>

@@ -6,6 +6,14 @@ import EorChallenges from "../../components/eor/EorChallenges";
 import EorHero from "../../components/eor/EorHero";
 import EorServiceSolve from "../../components/eor/EorServiceSolve";
 import Strength from "../../components/eor/Strength";
+import ComparisonTable from "../../components/eor/ComparisonTable";
+import PlanAndPricing from "../../components/eor/PlanAndPricing";
+import UseCase from "../../components/eor/UseCase";
+import Onboarding from "../../components/eor/Onboarding";
+import FAQ from "../../components/FAQ";
+import Platform from "../../components/eor/Platform";
+import Gif from "../../components/Gif";
+import OtherService from "../../components/eor/OtherService";
 
 const Eor = () => {
     return (
@@ -26,6 +34,17 @@ const Eor = () => {
             </div>
             <EorServiceSolve/>
             <Strength/>
+            <ComparisonTable/>
+            <PlanAndPricing/>
+            <UseCase/>
+            <Onboarding/>
+            <FAQ/>
+            <div className="-mb-[60px] relative !z-[1]">
+                <Platform/>
+            </div>
+            <Gif/>
+            <OtherService/>
+            <div className="lg:mb-[100vh]"></div>
         </>
     );
 }

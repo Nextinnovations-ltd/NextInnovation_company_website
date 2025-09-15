@@ -4,19 +4,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Link } from "react-router-dom";
 import "./Home.css";
-import PowerFullProduct from "../../../public/images/powerful-product.png";
-import marqueeLogo1 from "../../../public/images/Group-logo.png";
-import marqueeLogo2 from "../../../public/images/Screenshot (117) 1.png";
-import marqueeLogo3 from "../../../public/images/glambar 1.png";
-import marqueeLogo4 from "../../../public/images/trustmyanmarpartners 1.png";
-import marqueeGradientLeft from "../../../public/images/Rectangle 4681.png";
-import marqueeGradientRight from "../../../public/images/Rectangle 4682.png";
+import PowerFullProduct from "/images/powerful-product.png";
+import marqueeLogo1 from "/images/Group-logo.png";
+import marqueeLogo2 from "/images/Screenshot (117) 1.png";
+import marqueeLogo3 from "/images/glambar 1.png";
+import marqueeLogo4 from "/images/trustmyanmarpartners 1.png";
+import marqueeGradientLeft from "/images/Rectangle 4681.png";
+import marqueeGradientRight from "/images/Rectangle 4682.png";
 import Gif from "../../components/Gif"
 import Hero from "../../components/Hero";
 import LetWorkTogether from "../../components/LetWorkTogether";
 import OurService from "../../components/OurService";
-import sliderImg3 from "../../../public/images/slider1.png"
-import sliderImg4 from "../../../public/images/slider2.png"
+import sliderImg3 from "/images/slider1.png"
+import sliderImg4 from "/images/slider2.png"
 import HomeCareer from '../../components/HomeCareer';
 import useVisiter from '../../hooks/useVisiter';
 import GoButton from '../../components/GoButton';
@@ -417,14 +417,14 @@ const Home = () => {
           <div className="our-powerful-product mx-auto lg:pl-[63px]">
             <div className="overflow-hidden lg:hidden">
                 <div ref={ourProductTitleRef}>
-                    <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
+                    <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" engcolor="text-white" />
                 </div>
             </div>
             <div className="flex flex-col-reverse lg:flex-row lg:gap-[55px]">
               <div className="lg:w-[483px]">
                 <div className="overflow-hidden hidden lg:block">
                     <div ref={ourProductTitleRef}>
-                        <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" />
+                        <SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" engcolor="text-white" />
                     </div>
                 </div>
                 <div className="main-left mt-[50px]">
@@ -465,7 +465,7 @@ const Home = () => {
         <FAQ/>
       </div>
 
-      <Gif/>
+      <Gif round />
 
       <div className="lg:mb-[100vh]"></div>
 
