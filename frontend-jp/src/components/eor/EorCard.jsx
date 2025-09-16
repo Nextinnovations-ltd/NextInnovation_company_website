@@ -5,7 +5,7 @@ import CircleCorrect from "../svg/CircleCorrect";
 
 const EorCard = ({title,image,text1,text1Next,text2,text2Next,text3,text3Next}) => {
     return (
-        <div>
+        <div className="eor-card">
             {title != 'EORのみ' && (
                 <div className="flex justify-center gap-[20px] items-end mb-3">
                     <LineLeft/>

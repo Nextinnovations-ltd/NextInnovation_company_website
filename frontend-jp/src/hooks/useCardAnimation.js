@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useCardAnimation = (containerRef, cardSelector, options = {}) => {
+const useCardAnimation = (containerRef, cardSelector, options = {}, time = 0.8,stagger = 0) => {
     useEffect(() => {
         if (!containerRef.current) return;
         const cards = containerRef.current.querySelectorAll(cardSelector);
@@ -16,9 +16,9 @@ const useCardAnimation = (containerRef, cardSelector, options = {}) => {
                 {
                     scale: 1,
                     opacity: 1,
-                    duration: 1,
+                    duration: time,
                     // ease: "back.out(1.1)",
-                    stagger: 0.1,
+                    stagger: stagger,
                     scrollTrigger: {
                         trigger: containerRef.current,
                         start: "top+=400 top",
@@ -28,7 +28,7 @@ const useCardAnimation = (containerRef, cardSelector, options = {}) => {
             );
         }, containerRef);
         return () => ctx.revert();
-    }, [containerRef, cardSelector, options]);
+    }, [containerRef, cardSelector, options,time,stagger]);
 }
 
 export default useCardAnimation;

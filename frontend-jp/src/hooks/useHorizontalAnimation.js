@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import { gsap } from "gsap"
 
-const useHorizontalAnimation = (ref, options = {}) => {
+const useHorizontalAnimation = (ref, options = {},value = 150) => {
     useEffect(() => {
         gsap.fromTo(
             ref.current,
-            { x: 150, opacity: 0 },
+            { x: value, opacity: 0 },
             {
                 x: 0,
                 opacity: 1,
@@ -18,7 +18,7 @@ const useHorizontalAnimation = (ref, options = {}) => {
                 },
             }
         );
-    }, [ref,options]);
+    }, [ref,options,value]);
 }
 
 export default useHorizontalAnimation;

@@ -1,15 +1,26 @@
+import { useRef } from "react";
 import SectionTitle from "../SectionTitle";
 import UseCaseCard from "./UseCaseCard";
 import Img1 from "/images/sample-use-case1.png"
 import Img2 from "/images/sample-use-case2.png"
 import Img3 from "/images/sample-use-case3.png"
+import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
+import useCardAnimation from "../../hooks/useCardAnimation";
 
 const UseCase = () => {
+    const titleRef = useRef(null)
+    const containerRef = useRef(null)
+    useSectionTitleAnimation(titleRef,{start: "top 70%"})
+    useCardAnimation(containerRef,".usecase-card",{start: "top 80%"})
     return (
         <div className="bg-[#1E2C44]">
             <div className="max-w-[1366px] mx-auto px-[64px] py-[140px]">
-                <SectionTitle jp="参考導入例" eng="sample use cases" jpcolor="text-white" engcolor="text-white" />
-                <div className="flex justify-between mt-[60px]">
+                <div className="overflow-hidden">
+                    <div ref={titleRef}>
+                        <SectionTitle jp="参考導入例" eng="sample use cases" jpcolor="text-white" engcolor="text-white" />
+                    </div>
+                </div>
+                <div ref={containerRef} className="flex justify-between mt-[60px]">
                     <UseCaseCard
                         title="小規模サイト運用・保守チーム"
                         description="料金目安：月額 30万円〜（税抜・別途消費税）"

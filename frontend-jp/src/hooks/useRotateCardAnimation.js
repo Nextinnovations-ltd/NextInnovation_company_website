@@ -1,28 +1,26 @@
 import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap"
 
-gsap.registerPlugin(ScrollTrigger);
-
-const useGoButtonAnimation = (ref, options = {},time = 0.5) => {
+const useRotateCardAnimation = (ref, options = {}, xValue = -300, deg = -45, time = 1.5) => {
     useEffect(() => {
         if (!ref.current) return;
         gsap.fromTo(
             ref.current,
-            { y: 150, opacity: 0 },
+            { x: xValue, rotate: deg, opacity: 0 },
             {
-                y: 0,
+                x: 0,
+                rotate: 0,
                 opacity: 1,
                 duration: time,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: ref.current,
-                    start: "top 90%",
+                    start: "top+=300 top",
                     ...options,
                 },
             }
         );
-    }, [ref, options,time]);
+    },[ref,options,xValue,deg,time])
 }
 
-export default useGoButtonAnimation;
+export default useRotateCardAnimation;

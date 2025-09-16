@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import SectionTitle from "../SectionTitle";
 import OnboardingCard from "./OnboardingCard";
 import Img1 from "/images/onboarding1.png"
@@ -7,13 +8,24 @@ import Img4 from "/images/onboarding4.png"
 import Img5 from "/images/onboarding5.png"
 import Img6 from "/images/onboarding6.png"
 import Img7 from "/images/onboarding7.png"
+import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
+import useCardAnimation from "../../hooks/useCardAnimation";
 
 const Onboarding = () => {
+    const titleRef = useRef(null)
+    const containerRef = useRef(null)
+    useSectionTitleAnimation(titleRef,{start: "top 70%"})
+    useCardAnimation(containerRef,".onboarding-card",{start: "top 80%"},0.8,0.3)
+    
     return (
         <div className="bg-white">
             <div className="max-w-[1366px] mx-auto pt-[209px] pb-[33px] px-[64px]">
-                <SectionTitle jp="導入の流れ" eng="onboarding process" />
-                <div className="mt-[90px] grid grid-cols-3 gap-x-[35px] gap-y-[52px]">
+                <div className="overflow-hidden">
+                    <div ref={titleRef}>
+                        <SectionTitle jp="導入の流れ" eng="onboarding process" />
+                    </div>
+                </div>
+                <div ref={containerRef} className="mt-[90px] grid grid-cols-3 gap-x-[35px] gap-y-[52px]">
                     <OnboardingCard
                         step="1"
                         title="お問い合わせ／お打ち合わせ"

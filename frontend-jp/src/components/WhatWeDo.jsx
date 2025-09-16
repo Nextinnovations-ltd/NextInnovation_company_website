@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionTitle from "./SectionTitle"
 import Earth from "/images/earth.gif"
 import useSectionTitleAnimation from "../hooks/useSectionTitleAnimation"
+import useParagraphAnimation from "../hooks/useParagraphAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,25 +14,7 @@ const WhatWeDo = () => {
     const titleRef = useRef(null);
     
     useSectionTitleAnimation(titleRef, { start: "top+=50 top" })
-
-    useEffect(() => {
-        const paragraphs = textContainer.current.querySelectorAll("p");
-        gsap.fromTo(
-            paragraphs,
-            { y: 150, opacity: 0 },
-            {
-                y: 0,
-                opacity: 1,
-                duration: 0.5,
-                ease: "power3.out",
-                stagger: 0.3, // animate one by one
-                scrollTrigger: {
-                    trigger: textContainer.current,
-                    start: "top 20%",
-                },
-            }
-        );
-    }, []);
+    useParagraphAnimation(textContainer,"p",{start: "top 20%"})
 
     return (
         <div className="bg-white pt-[114px] lg:pt-[376px]">

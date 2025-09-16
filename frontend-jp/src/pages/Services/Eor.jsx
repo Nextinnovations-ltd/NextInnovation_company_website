@@ -16,6 +16,7 @@ import Gif from "../../components/Gif";
 import OtherService from "../../components/eor/OtherService";
 
 const Eor = () => {
+
     return (
         <>
             <div className="!bg-fixed !bg-no-repeat !bg-cover" style={{background: `url(${EorHeroImg})`}}>

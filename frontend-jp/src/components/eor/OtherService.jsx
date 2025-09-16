@@ -1,15 +1,26 @@
+import { useRef } from "react";
 import SectionTitle from "../SectionTitle";
 import OtherServiceCard from "./OtherServiceCard";
 import Img1 from "/images/other-service1.png"
 import Img2 from "/images/other-service2.png"
 import Img3 from "/images/other-service3.png"
+import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
+import useCardAnimation from "../../hooks/useCardAnimation";
 
 const OtherService = () => {
+    const titleRef = useRef(null)
+    const containerRef = useRef(null)
+    useSectionTitleAnimation(titleRef,{start: "top 70%"})
+    useCardAnimation(containerRef,".other-service-card",{start: "top 80%"})
     return (
         <div className="bg-white rounded-b-[80px]">
             <div className="max-w-[1366px] mx-auto px-[64px] pt-[140px] pb-[180px]">
-                <SectionTitle jp="他のサービス" eng="other services" />
-                <div className="mt-[60px] flex gap-[25px]">
+                <div className="overflow-hidden">
+                    <div ref={titleRef}>
+                        <SectionTitle jp="他のサービス" eng="other services" />
+                    </div>
+                </div>
+                <div ref={containerRef} className="mt-[60px] flex gap-[25px]">
                     <OtherServiceCard
                         title="DX Support"
                         description="グローバル人材の雇用・管理をスムーズに支援。法務・労務リスクを軽減し、安心して海外人材を活用可能。"

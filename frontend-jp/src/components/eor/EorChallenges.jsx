@@ -3,15 +3,31 @@ import Challenge2 from "/images/challenge2.png"
 import Challenge3 from "/images/challenge3.png"
 import ChallengeCard from "./ChallengeCard";
 import SectionTitle from "../../components/SectionTitle";
+import { useRef } from "react";
+import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
+import useCardAnimation from "../../hooks/useCardAnimation";
 
 const EorChallenges = () => {
+    const titleRef = useRef(null)
+    const textRef = useRef(null)
+    const containerRef = useRef(null)
+    useSectionTitleAnimation(titleRef,{start: "top 70%"})
+    useSectionTitleAnimation(textRef,{start: "top 60%"})
+    useCardAnimation(containerRef,".challenge-card",{start: "top 80%"})
+
     return (
         <div className="text-[#444444] pb-[180px]">
             <div className="flex justify-between">
-                <SectionTitle jp="課題" eng="Challenges" />
-                <p className="w-[523px] text-[20px] font-medium leading-[38px] tracking-[0%] mt-[54px]">これらの課題を解決し、海外人材の活用を容易にしたのが当社のEORサービスです。</p>
+                <div className="h-[100px] overflow-hidden">
+                    <div ref={titleRef}>
+                        <SectionTitle jp="課題" eng="Challenges" />
+                    </div>
+                </div>
+                <div className="w-[523px] overflow-hidden h-[70px] text-[20px] font-medium leading-[38px] tracking-[0%] mt-[54px]">
+                    <div ref={textRef}>これらの課題を解決し、海外人材の活用を容易にしたのが当社のEORサービスです。</div>
+                </div>
             </div>
-            <div className="flex justify-between mt-[60px]">
+            <div ref={containerRef} className="flex justify-between mt-[60px]">
                 <ChallengeCard
                     image={Challenge1}
                     title="国内採用の壁"

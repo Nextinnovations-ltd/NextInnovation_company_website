@@ -1,15 +1,27 @@
+import { useRef } from "react";
 import SectionTitle from "../SectionTitle";
 import EorServiceSolveCard from "./EorServiceSolveCard";
 import Img1 from "/images/eor-service-solve1.png"
+import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
 
 const EorServiceSolve = () => {
+
+    const titleRef = useRef(null)
+    const textRef = useRef(null)
+    useSectionTitleAnimation(titleRef,{start: "top 70%"})
+    useSectionTitleAnimation(textRef,{start: "top 80%"},50)
+
     return (
         <div className="bg-white rounded-b-[80px]">
             <div className="max-w-[1366px] mx-auto py-[180px] px-[63px] text-[#444444]">
 
-                <div className="flex items-end justify-between">
-                    <SectionTitle jp="当社EORサービスが解決すること" eng="What Our EOR Service Solves" />
-                    <p className="w-[502px] text-[20px] font-medium leading-[38px] tracking-[0%] pb-[7px]">こうした課題を解消し、企業が安心して海外人材を活用できる仕組みが当社のEOR（Employer of Record）<br/>サービスです。</p>
+                <div className="flex items-end justify-between overflow-hidden">
+                    <div ref={titleRef}>
+                        <SectionTitle jp="当社EORサービスが解決すること" eng="What Our EOR Service Solves" />
+                    </div>
+                    <div className="w-[502px] h-[110px] text-[20px] font-medium leading-[38px] tracking-[0%] pb-[7px]">
+                        <p ref={textRef}>こうした課題を解消し、企業が安心して海外人材を活用できる仕組みが当社のEOR（Employer of Record）<br/>サービスです。</p>
+                    </div>
                 </div>
 
                 <div className="mt-[64px]">
