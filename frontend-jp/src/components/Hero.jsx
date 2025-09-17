@@ -30,8 +30,8 @@ const Hero = () => {
             <div className="h-[120px] overflow-hidden">
               <h1 ref={SouthEastRef} className="text-[110px] text-[#444444] font-bold leading-[117%] tracking-[-3%] uppercase montserrat">Southeast Asian</h1>
             </div>
-            <div className="flex gap-4 justify-end ms-[103px] overflow-hidden">
-              <img ref={StarRef} src={HeroStar} alt="" />
+            <div className="flex gap-4 justify-end items-center ms-[103px] overflow-hidden">
+              <img ref={StarRef} src={HeroStar} alt="" className="w-[99px] h-[108px]" />
               <h1 ref={TalentRef} className="text-[110px] text-[#096FCA] font-bold leading-[117%] tracking-[-3%] uppercase montserrat">Talent</h1>
             </div>
           </div>

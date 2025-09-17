@@ -13,14 +13,14 @@ const OtherService = () => {
     useSectionTitleAnimation(titleRef,{start: "top 70%"})
     useCardAnimation(containerRef,".other-service-card",{start: "top 80%"})
     return (
-        <div className="bg-white rounded-b-[80px]">
-            <div className="max-w-[1366px] mx-auto px-[64px] pt-[140px] pb-[180px]">
+        <div className="relative bg-white rounded-b-[40px] lg:rounded-b-[80px]">
+            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[64px] pt-[120px] lg:pt-[140px] pb-[120px] lg:pb-[180px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="他のサービス" eng="other services" />
                     </div>
                 </div>
-                <div ref={containerRef} className="mt-[60px] flex gap-[25px]">
+                <div ref={containerRef} className="mt-[50px] lg:mt-[60px] lg:flex lg:gap-[25px] space-y-[28px] lg:space-y-0">
                     <OtherServiceCard
                         title="DX Support"
                         description="グローバル人材の雇用・管理をスムーズに支援。法務・労務リスクを軽減し、安心して海外人材を活用可能。"

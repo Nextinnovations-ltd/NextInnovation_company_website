@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import {gsap} from "gsap"
 
-const useParagraphAnimation = (containerRef,selector,options = {}) => {
+const useParagraphAnimation = (containerRef,selector,options = {},stagger = 0.3) => {
     useEffect(() => {
         if (!containerRef.current) return;
         const paragraphs = containerRef.current.querySelectorAll(selector);
@@ -13,7 +13,7 @@ const useParagraphAnimation = (containerRef,selector,options = {}) => {
                 opacity: 1,
                 duration: 0.5,
                 ease: "power3.out",
-                stagger: 0.3, // animate one by one
+                stagger: stagger, // animate one by one
                 scrollTrigger: {
                     trigger: containerRef.current,
                     start: "top 20%",
@@ -21,7 +21,7 @@ const useParagraphAnimation = (containerRef,selector,options = {}) => {
                 },
             }
         );
-    },[containerRef,selector,options])
+    },[containerRef,selector,options,stagger])
 }
 
 export default useParagraphAnimation;

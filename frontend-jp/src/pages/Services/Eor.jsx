@@ -1,4 +1,3 @@
-import EorHeroImg from "/images/eor-hero.png"
 import WhatIsEor from "../../components/eor/WhatIsEor";
 import Diagram from "../../components/eor/Diagram";
 import EorCardSection from "../../components/eor/EorCardSection";
@@ -19,13 +18,13 @@ const Eor = () => {
 
     return (
         <>
-            <div className="!bg-fixed !bg-no-repeat !bg-cover" style={{background: `url(${EorHeroImg})`}}>
+            <div className="eor !bg-fixed !bg-no-repeat !bg-cover bg-[url('/images/eor-hero-mobile.png')] lg:bg-[url('/images/eor-hero.png')]">
                 <EorHero/>
 
                 <div className="h-screen"></div>
 
-                <div className="bg-[#F8F8F8] rounded-t-[80px]">
-                    <div className="max-w-[1366px] mx-auto px-[64px] text-[#444444]">
+                <div className="bg-[#F8F8F8] rounded-t-[40px] lg:rounded-t-[80px]">
+                    <div className="max-w-[1366px] mx-auto text-[#444444]">
                         <WhatIsEor/>
                         <Diagram/>
                         <EorCardSection/>

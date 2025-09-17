@@ -31,14 +31,14 @@ const WhatIsEor = () => {
     useTextSplitAnimation(textRef,"span.animate-char")
 
     return (
-        <div className="text-[#444444] pt-[180px]">
+        <div className="text-[#444444] pt-[60px] lg:pt-[180px] px-[24px] lg:px-[64px]">
             <div className="overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp="EORとは？" eng="what is eor?" />
                 </div>
             </div>
             <div className="flex justify-end mt-[36px]">
-                <p ref={textRef} className="relative w-[819px] text-[24px] font-normal leading-[42px] tracking-[0%] pt-[28px]">
+                <p ref={textRef} className="relative lg:w-[819px] text-[16px] lg:text-[24px] font-normal leading-[30px] lg:leading-[42px] tracking-[0%] pt-[20px] lg:pt-[28px]">
                     <span ref={lineRef} className="absolute top-0 left-0 h-[2px] bg-[#E84721] block"></span>
                     {splitChars(beforeBold)}
                     <span className="font-bold">{splitChars(boldText)}</span>

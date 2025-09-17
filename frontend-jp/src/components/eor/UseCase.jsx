@@ -14,13 +14,13 @@ const UseCase = () => {
     useCardAnimation(containerRef,".usecase-card",{start: "top 80%"})
     return (
         <div className="bg-[#1E2C44]">
-            <div className="max-w-[1366px] mx-auto px-[64px] py-[140px]">
+            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[64px] py-[80px] lg:py-[140px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="参考導入例" eng="sample use cases" jpcolor="text-white" engcolor="text-white" />
                     </div>
                 </div>
-                <div ref={containerRef} className="flex justify-between mt-[60px]">
+                <div ref={containerRef} className="lg:flex lg:justify-between mt-[50px] lg:mt-[60px] space-y-[50px] lg:space-y-0">
                     <UseCaseCard
                         title="小規模サイト運用・保守チーム"
                         description="料金目安：月額 30万円〜（税抜・別途消費税）"

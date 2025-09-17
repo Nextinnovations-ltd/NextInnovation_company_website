@@ -14,21 +14,27 @@ const Platform = () => {
     const imageContainerRef = useRef(null)
 
     useSectionTitleAnimation(titleRef,{start: "top 60%"},-200,0.8)
-    useParagraphAnimation(containerRef,"p",{start: "top 70%"})
+    useParagraphAnimation(containerRef,"p",{start: "top 70%"},0.1)
     useGoButtonAnimation(buttonRef,{start: "top 90%"})
     useCardAnimation(imageContainerRef,".product-image",{start: "top 80%"})
 
     return (
-        <div className="bg-[#1E2C44] rounded-b-[80px] pt-[120px] pb-[136px]">
-            <div className="max-w-[1366px] mx-auto px-[64px]">
-                <div className="text-[38px] overflow-hidden font-bold leading-[58px] tracking-[-1%] text-[#EDEDED]">
+        <div className="bg-[#1E2C44] rounded-b-[40px] lg:rounded-b-[80px] pt-[120px] pb-[136px]">
+            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[64px]">
+                <div className="relative lg:hidden">
+                    <div ref={imageContainerRef}>
+                        <img src={PowerFullProduct} alt="" className="product-image" />
+                    </div>
+                    <Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-[11px] lg:text-[24px] font-normal leading-[110%] tracking-[-2%] uppercase px-[11px] lg:px-[24px] py-[7px] lg:py-[16px] text-white bg-[#00000066] rounded-[3.5px] lg:rounded-[8px]">COMING SOON</Link>
+                </div>
+                <div className="text-[20px] lg:text-[38px] overflow-hidden font-bold leading-[32px] lg:leading-[58px] tracking-[-1%] text-[#EDEDED] mt-[40px] lg:mt-0">
                     <h1 ref={titleRef}>
-                        東南アジア発、人材活用プラットフォームのご紹介<br/>よりスピーディに、より安心・便利に。
+                        東南アジア発、人材活用プラットフォームのご紹介<br className="hidden lg:block"/>よりスピーディに、より安心・便利に。
                     </h1>
                 </div>
-                <div className="flex gap-[54px] mt-[90px]">
-                    <div ref={containerRef} className="w-[484px] text-[21px] font-normal leading-[34px] tracking-[0%] text-white">
-                        <p className="mb-[30px]">当社では、東南アジア初となる 人材データベースと企業をつなぐプラットフォーム を開発・運用しています。</p>
+                <div className="lg:flex lg:gap-[54px] mt-[32px] lg:mt-[90px]">
+                    <div ref={containerRef} className="lg:w-[484px] text-[14px] lg:text-[21px] font-normal leading-[29px] lg:leading-[34px] tracking-[0%] text-white">
+                        <p className="mb-4 lg:mb-[30px]">当社では、東南アジア初となる 人材データベースと企業をつなぐプラットフォーム を開発・運用しています。</p>
                         <p>
                             このプラットフォームにより、企業様は必要な人材をスピーディに検索・採用でき、従来の煩雑なプロセスを大幅に効率化できます。
                         </p>
@@ -41,7 +47,7 @@ const Platform = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-[728px] relative">
+                    <div className="w-[728px] hidden lg:block relative">
                         <div ref={imageContainerRef}>
                             <img src={PowerFullProduct} alt="" className="product-image" />
                         </div>

@@ -656,3 +656,12 @@ body {
     opacity: 1;
     transform: translateY(0) scale(1) rotateY(0);
 }
+
+/* .eor {
+    background: url('/images/eor-hero.png');
+}
+@media screen and (max-width:767px) {
+    .eor {
+        background: url('/images/eor-hero-mobile.png');
+    }
+} */
