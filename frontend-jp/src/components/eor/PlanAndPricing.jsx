@@ -26,7 +26,7 @@ const PlanAndPricing = () => {
 
                         <div className="plan-price-card lg:w-[407px] shadow-[0px_3px_21px_4px_#1E2C441A] rounded-[16px] lg:rounded-[0px] lg:rounded-l-[20px] pb-[50px] lg:mt-[97px]">
                             <div className="text-white bg-[#1E2C44] flex flex-col gap-[10px] items-center rounded-t-[16px] lg:rounded-t-[0px] lg:rounded-tl-[20px] py-[25px]">
-                                <p className="text-[11px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%]">EOR only Monthly</p>
+                                <p className="text-[11px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%] uppercase">EOR only Monthly</p>
                                 <h2 className="text-[24px] lg:text-[28px] font-bold leading-[34px] lg:leading-[40px] tracking-[1%]">EOR単体</h2>
                                 <p className="text-[12px] lg:text-[15px] font-medium leading-[21px] lg:leading-[28px] tracking-[3%] opacity-70">最低3ヶ月〜、1名から利用可能</p>
                             </div>
@@ -95,13 +95,13 @@ const PlanAndPricing = () => {
                                 <div className="text-white bg-[#F15A29] relative">
                                     <img src={Crown} alt="" className="w-[67px] h-[57px] mx-auto absolute top-[-20px] left-1/2 -translate-x-1/2" />
                                     <div className="flex flex-col gap-[10px] items-center pb-[25px] pt-[64px]">
-                                        <p className="text-[11px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%]">Safe laboratory-type EOR</p>
+                                        <p className="text-[11px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%] uppercase">Safe laboratory-type EOR</p>
                                         <h2 className="text-[24px] lg:text-[28px] font-bold leading-[34px] lg:leading-[40px] tracking-[1%]">安心ラボ型EOR</h2>
                                         <p className="text-[12px] lg:text-[15px] font-medium leading-[21px] lg:leading-[28px] tracking-[3%] opacity-70">最低12ヶ月〜、1名から利用可能</p>
                                     </div>
                                 </div>
                                 <div className="text-center mt-[30px] mb-[30px] text-[#313131]">
-                                    <p className="text-[35px] lg:text-[42px] font-bold leading-[45px] lg:leading-[54px] tracking-[3%]">¥150,000</p>
+                                    <p className="text-[35px] lg:text-[42px] font-bold leading-[45px] lg:leading-[54px] tracking-[3%]">¥150,000～</p>
                                     <p className="text-[11px] lg:text-[13px] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">／人（給与込み、ただし採用人材のレベル、<br/>スキルにより価格は変動）</p>
                                 </div>
                                 <PricingPlanButton
@@ -150,14 +150,14 @@ const PlanAndPricing = () => {
 
                         <div className="plan-price-card lg:w-[407px] shadow-[0px_3px_21px_4px_#1E2C441A] rounded-[16px] lg:rounded-[0px] lg:rounded-r-[20px] pb-[50px] lg:mt-[97px]">
                             <div className="text-white bg-[#1E2C44] flex flex-col gap-[10px] items-center rounded-t-[16px] lg:rounded-t-[0px] lg:rounded-tr-[20px] py-[25px]">
-                                <p className="text-[11px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%]">Project-accompanying EOR</p>
+                                <p className="text-[11px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%] uppercase">Project-accompanying EOR</p>
                                 <h2 className="text-[24px] lg:text-[28px] font-bold leading-[34px] lg:leading-[40px] tracking-[1%]">プロジェクト伴走型EOR</h2>
                                 <p className="text-[12px] lg:text-[15px] font-medium leading-[21px] lg:leading-[28px] tracking-[3%] opacity-70">最低6ヶ月〜、3名から利用可能</p>
                             </div>
                             
-                            <div className="text-center mt-[25px] lg:mt-[30px] mb-[36px] lg:mb-[59px] text-[#313131]">
+                            <div className="text-center mt-[25px] lg:mt-[30px] mb-[30px] text-[#313131]">
                                 <p className="text-[35px] lg:text-[42px] font-bold leading-[45px] lg:leading-[54px] tracking-[3%]">￥300,000～</p>
-                                <p className="text-[11px] lg:text-[13px] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">／人（給与込み＋当社担当PM支援料）</p>
+                                <p className="text-[11px] lg:text-[13px] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">／人（給与込み、ただし人材のレベル、<br/>スキルにより価格は変動）</p>
                             </div>
                             <PricingPlanButton
                                 link=""

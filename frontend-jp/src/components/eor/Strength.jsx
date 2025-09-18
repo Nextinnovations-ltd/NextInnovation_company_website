@@ -28,7 +28,7 @@ const Strength = () => {
                         <SectionTitle jp="当社EORの特徴と強み" eng="Features & Strengths of EOR" jpcolor="text-[#FFFFFF]" engcolor="text-[#FFFFFF]" />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[37px] mt-[50px] lg:mt-[80px]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[28px] lg:gap-[37px] mt-[50px] lg:mt-[80px] overflow-hidden lg:overflow-visible">
                     <div ref={ref1}>
                         <StrengthCard
                             image={CustomerService}

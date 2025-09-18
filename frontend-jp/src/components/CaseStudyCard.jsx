@@ -1,38 +1,21 @@
 import {PropTypes} from "prop-types"
-const CaseStudyCard = ({image, title, description, text1, text1Next='', text2, text2Next='', text3}) => {
+const CaseStudyCard = ({image,title,text1,text2,text3}) => {
     return (
-        <div>
+        <div className="lg:w-[397px] case-study-card">
             <img src={image} alt="" />
-            <h3 className="text-[20px] lg:text-[24px] font-bold leading-[44px] tracking-[-2%] mt-[12px] lg:mt-[19px] mb-[12px]">{title}</h3>
-            <div className="text-[14px] lg:text-[15px] font-normal leading-[24px] tracking-[0%] space-y-3">
-                <p className="mb-1">{description}</p>
-                <div className="flex gap-3 items-start">
-                    <h5 className="lg:text-[16px] font-medium tracking-[0%]">課題</h5>
-                    <p>
-                        {text1}
-                        {!!text1Next && (
-                            <>
-                                <br/>
-                                {text1Next}
-                            </>
-                        )}
-                    </p>
+            <h3 className="text-[20px] lg:text-[24px] font-bold leading-[44px] tracking-[-2%] uppercase mt-3 lg:mt-4 mb-2 lg:mb-3">{title}</h3>
+            <div className="space-y-2 lg:space-y-3">
+                <div className="flex gap-[19px] items-start">
+                    <h4 className="w-[69px] text-[#02021E] text-[12px] lg:text-[16px] font-medium leading-[22px] lg:leading-[31px] tracking-[0%]">タイトル</h4>
+                    <p className="w-[245px] lg:w-[296px] text-[12px] lg:text-[15px] font-normal leading-[22px] lg:leading-[24px] tracking-[0%]">{text1}</p>
                 </div>
-                <div className="flex gap-3 items-start">
-                    <h5 className="lg:text-[16px] font-medium tracking-[0%]">成果</h5>
-                    <p>
-                        {text2}
-                        {!!text2Next && (
-                            <>
-                                <br/>
-                                {text2Next}
-                            </>
-                        )}
-                    </p>
+                <div className="flex gap-[19px] items-start">
+                    <h4 className="w-[69px] text-[#02021E] text-[12px] lg:text-[16px] font-medium leading-[22px] lg:leading-[31px] tracking-[0%]">業 種</h4>
+                    <p className="w-[245px] lg:w-[296px] text-[12px] lg:text-[15px] font-normal leading-[22px] lg:leading-[24px] tracking-[0%]">{text2}</p>
                 </div>
-                <div className="flex gap-3 items-start">
-                    <h5 className="lg:text-[16px] font-medium tracking-[0%]">提供</h5>
-                    <p>{text3}</p>
+                <div className="flex gap-[19px] items-start">
+                    <h4 className="w-[69px] text-[#02021E] text-[12px] lg:text-[16px] font-medium leading-[22px] lg:leading-[31px] tracking-[0%]">利 用<br/>サービス</h4>
+                    <p className="w-[245px] lg:w-[296px] text-[12px] lg:text-[15px] font-normal leading-[22px] lg:leading-[24px] tracking-[0%]">{text3}</p>
                 </div>
             </div>
         </div>
@@ -42,11 +25,8 @@ const CaseStudyCard = ({image, title, description, text1, text1Next='', text2, t
 CaseStudyCard.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     text1: PropTypes.string.isRequired,
-    text1Next: PropTypes.string,
     text2: PropTypes.string.isRequired,
-    text2Next: PropTypes.string,
     text3: PropTypes.string.isRequired,
 }
 

@@ -18,16 +18,20 @@ const Navbar = () => {
         dropDownOpen == name ? setDropDownOpen('') : setDropDownOpen(name);
     }
 
+    const clickLink = () => {
+        setDropDownOpen('')
+    }
+
     // Close when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-                setDropDownOpen('');
-            }
-        };
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
+    // useEffect(() => {
+    //     const handleClickOutside = (event) => {
+    //         if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+    //             setDropDownOpen('');
+    //         }
+    //     };
+    //     document.addEventListener("mousedown", handleClickOutside);
+    //     return () => document.removeEventListener("mousedown", handleClickOutside);
+    // }, []);
 
     // // Prevent body scroll when modal open
     useEffect(() => {
@@ -47,16 +51,16 @@ const Navbar = () => {
 
     return (
         <>
-            <div
+            <div ref={wrapperRef}
                 className={`text-[#444444] bg-white flex justify-between items-center pt-[18px] pb-[18px] px-[32px] fixed top-0 left-0 right-0 z-50 transition-transform duration-300 
                     ${showBorder ? "border-b-[1px]" : ""}`}
             >
                 <div>
-                    <Link to="/" className="chillax text-[20px] md:text-[32px] font-light leading-[100%] tracking-[-4%]">Next Innovations</Link>
+                    <NavLink to="/" onClick={() => setDropDownOpen('')} className="chillax text-[20px] md:text-[32px] font-light leading-[100%] tracking-[-4%]">Next Innovations</NavLink>
                 </div>
 
-                <div ref={wrapperRef} className="w-[835px] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
-                    <Link className="py-2">ホーム</Link>
+                <div className="nav-menu w-[835px] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                    <NavLink to="/" onClick={() => setDropDownOpen('')} className="py-2">ホーム</NavLink>
                     <button onClick={() => clickDropDown('services')} className={`flex gap-[6px] items-center py-2 ${dropDownOpen == 'services' ? 'border-b-[2px] border-[#F15A29]' : ''}`}>
                         <h4>サービス</h4>
                         <DownArrow/>
@@ -82,12 +86,13 @@ const Navbar = () => {
                     eng="Services"
                     description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています"
                     menus={[
-                        { title: "EOR（雇用代行）", link: "" },
-                        { title: "EOR代理店制度", link: "" },
-                        { title: "DX支援", link: "" },
-                        { title: "受託開発", link: "" },
-                        { title: "UI/UXデザイン", link: "" },
+                        { title: "EOR（雇用代行）", link: "/eor" },
+                        { title: "EOR代理店制度", link: "/aa" },
+                        { title: "DX支援", link: "/bb" },
+                        { title: "受託開発", link: "/cc" },
+                        { title: "UI/UXデザイン", link: "/dd" },
                     ]}
+                    clickLink={clickLink}
                 />
             )}
             {dropDownOpen == 'about' && (
@@ -96,9 +101,9 @@ const Navbar = () => {
                     eng="About"
                     description="私たちはミャンマーに拠点を置くIT企業です。高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを、専門的なチームとともにお客様の満足を第一に提供します。"
                     menus={[
-                        { title: "会社概要", link: "" },
-                        { title: "経営方針", link: "" },
-                        { title: "メンバー紹介", link: "" },
+                        { title: "会社概要", link: "/ee" },
+                        { title: "経営方針", link: "/ff" },
+                        { title: "メンバー紹介", link: "/gg" },
                     ]}
                 />
             )}
@@ -106,47 +111,37 @@ const Navbar = () => {
             {mobileOpen && (
                 <>
                     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
-                    <div className="text-[#444444] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-40 pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
-                        <NavLink>
-                            <div className="py-[18px] border-b-[1px] border-[#C5CBCF]">ホーム</div>
-                        </NavLink>
-
+                    <div className="mobile-nav text-[#444444] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-40 pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                        <NavLink to="/" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ホーム</NavLink>
                         <MobileDropDown
                             name="サービス"
                             value="services"
                             menus={[
-                                { title: "EOR（雇用代行）", link: "" },
-                                { title: "EOR代理店制度", link: "" },
-                                { title: "DX支援", link: "" },
-                                { title: "受託開発", link: "" },
-                                { title: "UI/UXデザイン", link: "" },
+                                { title: "EOR（雇用代行）", link: "/eor" },
+                                { title: "EOR代理店制度", link: "/aa" },
+                                { title: "DX支援", link: "/bb" },
+                                { title: "受託開発", link: "/cc" },
+                                { title: "UI/UXデザイン", link: "/dd" },
                             ]}
                             openValue={mobileDropDownOpen}
                             setOpenValue={setMobileDropDownOpen}
+                            setMobileOpen={setMobileOpen}
                         />
-                        <NavLink>
-                            <div className="py-[18px] border-b-[1px] border-[#C5CBCF]">Talent Cloud</div>
-                        </NavLink>
-                        <NavLink>
-                            <div className="py-[18px] border-b-[1px] border-[#C5CBCF]">導入事例</div>
-                        </NavLink>
+                        <NavLink to="/aa" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">Talent Cloud</NavLink>
+                        <NavLink to="/bb" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">導入事例</NavLink>
                         <MobileDropDown
                             name="会社情報"
                             value="about"
                             menus={[
-                                { title: "会社概要", link: "" },
-                                { title: "経営方針", link: "" },
-                                { title: "メンバー紹介", link: "" },
+                                { title: "会社概要", link: "/ee" },
+                                { title: "経営方針", link: "/ff" },
+                                { title: "メンバー紹介", link: "/gg" },
                             ]}
                             openValue={mobileDropDownOpen}
                             setOpenValue={setMobileDropDownOpen}
                         />
-                        <NavLink>
-                            <div className="py-[18px] border-b-[1px] border-[#C5CBCF]">ニュース</div>
-                        </NavLink>
-                        <NavLink>
-                            <div className="py-[18px] border-b-[1px] border-[#C5CBCF]">ブログ</div>
-                        </NavLink>
+                        <NavLink to="/cc" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ニュース</NavLink>
+                        <NavLink to="/dd" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ブログ</NavLink>
                     </div>
                 </>
             )}

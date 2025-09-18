@@ -2,19 +2,20 @@ import {PropTypes} from "prop-types"
 import NavbarDropDownTitle from "./NavbarDropDownTitle";
 import DropDownLink from "./DropDownLink";
 
-const DropDownModal = ({jp,eng,menus,description}) => {
+const DropDownModal = ({jp,eng,menus,description,clickLink}) => {
     return (
         <>
             <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
             <div className="hidden lg:block sticky top-16 left-0 bg-white w-full ps-[138px] pe-[64px] pt-[72px] pb-[70px] z-50">
                 <div className="flex justify-between">
                     <NavbarDropDownTitle jp={jp} eng={eng} />
-                    <div className="text-[#444444] w-[246px] space-y-2">
+                    <div className="service-drop-down text-[#444444] w-[246px] space-y-2">
                         {menus.map((menu, index) => (
                             <DropDownLink 
-                            key={index} 
-                            title={menu.title} 
-                            link={menu.link} 
+                                key={index} 
+                                title={menu.title} 
+                                link={menu.link} 
+                                clickLink={clickLink}
                             />
                         ))}
                     </div>
@@ -30,6 +31,7 @@ DropDownModal.propTypes = {
     eng: PropTypes.string.isRequired,
     menus: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
+    clickLink: PropTypes.func.isRequired,
 }
 
 export default DropDownModal;

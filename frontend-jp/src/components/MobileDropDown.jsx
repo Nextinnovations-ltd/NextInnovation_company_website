@@ -4,7 +4,7 @@ import Minus from "./svg/Minus";
 import RightArrow from "./svg/RightArrow";
 import { NavLink } from "react-router-dom";
 
-const MobileDropDown = ({name,value,menus, openValue, setOpenValue}) => {
+const MobileDropDown = ({name,value,menus, openValue, setOpenValue, setMobileOpen}) => {
 
     const isOpen = openValue == value;
 
@@ -20,9 +20,9 @@ const MobileDropDown = ({name,value,menus, openValue, setOpenValue}) => {
             </div>
 
             {isOpen  && (
-                <div id="service-dropdown" className="text-[14px] ps-[16.24px] pt-[14px]">
+                <div className="mobile-dropdown text-[14px] ps-[16.24px] pt-[14px]">
                     {menus.map((menu, index) => (
-                        <NavLink to={menu.link} key={index} className="py-[14px] flex justify-between items-end">
+                        <NavLink to={menu.link} key={index} onClick={()=>setMobileOpen('')} className="py-[14px] flex justify-between items-end">
                             {menu.title}
                             <RightArrow/>
                         </NavLink>
@@ -39,6 +39,7 @@ MobileDropDown.propTypes = {
     menus: PropTypes.array.isRequired,
     openValue: PropTypes.string.isRequired,
     setOpenValue: PropTypes.func.isRequired,
+    setMobileOpen: PropTypes.func.isRequired,
 }
 
 export default MobileDropDown;

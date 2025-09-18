@@ -52,6 +52,16 @@ body {
     font-family: "Montserrat" !important;
 }
 
+.nav-menu .active {
+    border-bottom: 2px solid #F15A29;
+}
+.service-drop-down .active {
+    background-color: #FFE8E3;
+}
+.mobile-nav .active {
+    border-bottom: 1px solid #F15A29;
+}
+
 #hero-rotate{
     mix-blend-mode: difference;
 }
@@ -656,12 +666,3 @@ body {
     opacity: 1;
     transform: translateY(0) scale(1) rotateY(0);
 }
-
-/* .eor {
-    background: url('/images/eor-hero.png');
-}
-@media screen and (max-width:767px) {
-    .eor {
-        background: url('/images/eor-hero-mobile.png');
-    }
-} */
