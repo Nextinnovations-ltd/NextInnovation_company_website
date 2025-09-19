@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 
 const Footer = () => {
 
-	const [showFooter, setShowFooter] = useState(false);
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setShowFooter(true);
-		}, 5000);
-		return () => clearTimeout(timer);
-	}, []);
+	// const [showFooter, setShowFooter] = useState(false);
+	// useEffect(() => {
+	// 	const timer = setTimeout(() => {
+	// 		setShowFooter(true);
+	// 	}, 5000);
+	// 	return () => clearTimeout(timer);
+	// }, []);
 
-	if (!showFooter) return null;
+	// if (!showFooter) return null;
 
 	return (
 		// <div className="bg-[#1E2C44] lg:fixed -z-20 lg:inset-0 -mt-[35px] lg:mt-0">

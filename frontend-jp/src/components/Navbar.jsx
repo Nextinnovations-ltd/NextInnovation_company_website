@@ -88,7 +88,7 @@ const Navbar = () => {
                     menus={[
                         { title: "EOR（雇用代行）", link: "/eor" },
                         { title: "EOR代理店制度", link: "/aa" },
-                        { title: "DX支援", link: "/bb" },
+                        { title: "DX支援", link: "/dx-support" },
                         { title: "受託開発", link: "/cc" },
                         { title: "UI/UXデザイン", link: "/dd" },
                     ]}
@@ -119,7 +119,7 @@ const Navbar = () => {
                             menus={[
                                 { title: "EOR（雇用代行）", link: "/eor" },
                                 { title: "EOR代理店制度", link: "/aa" },
-                                { title: "DX支援", link: "/bb" },
+                                { title: "DX支援", link: "/dx-support" },
                                 { title: "受託開発", link: "/cc" },
                                 { title: "UI/UXデザイン", link: "/dd" },
                             ]}

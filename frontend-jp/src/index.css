@@ -666,3 +666,7 @@ body {
     opacity: 1;
     transform: translateY(0) scale(1) rotateY(0);
 }
+
+.service-overview .service-overview-card .polygon-container {
+    clip-path: polygon(0 0, 100% 0, 53% 100%, 0% 100%);
+}

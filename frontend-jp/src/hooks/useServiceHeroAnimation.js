@@ -1,7 +1,7 @@
 import { gsap } from "gsap"
 import { useEffect } from "react";
 
-const useServiceHeroAnimation = (ref1,ref2,ref3) => {
+const useServiceHeroAnimation = (ref1,ref2,ref3,ref4="") => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline();
@@ -22,9 +22,15 @@ const useServiceHeroAnimation = (ref1,ref2,ref3) => {
                 { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
                 "-=0.1"
             )
+            .fromTo(
+                ref4.current,
+                { y: -100, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
+                "-=0.1"
+            )
         });
         return () => ctx.revert();
-    }, [ref1,ref2,ref3]);
+    }, [ref1,ref2,ref3,ref4]);
 }
 
 export default useServiceHeroAnimation;

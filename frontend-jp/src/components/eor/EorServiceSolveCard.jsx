@@ -4,7 +4,7 @@ import useLineAnimation from "../../hooks/useLineAnimation";
 import useCardAnimation from "../../hooks/useCardAnimation";
 import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
 
-const EorServiceSolveCard = ({image,title,description1,description2, last = false}) => {
+const EorServiceSolveCard = ({image,title,description, last = false}) => {
     const topLineRef = useRef(null)
     const bottomLineRef = useRef(null)
     const containerRef = useRef(null)
@@ -23,11 +23,11 @@ const EorServiceSolveCard = ({image,title,description1,description2, last = fals
             {!!last && <span ref={bottomLineRef} className="absolute bottom-0 left-0 h-[1px] bg-[#1E2C44] block"></span>}
             <img src={image} alt="" className="service-image mb-[30px] lg:mb-0" />
             <div>
-                <div className="text-[16px] lg:text-[20px] overflow-hidden font-bold leading-[24px] lg:leading-[34px] tracking-[-2%] mb-[15px]">
+                <div className="text-[#02021E] text-[16px] lg:text-[20px] overflow-hidden font-bold leading-[24px] lg:leading-[34px] tracking-[-2%] mb-[15px]">
                     <h3 ref={titleRef}>{title}</h3>
                 </div>
-                <div className="text-[12px] lg:text-[15px] overflow-hidden font-normal leading-[22px] lg:leading-[24px] tracking-[0%]">
-                    <p ref={textRef}>{description1}<br className="hidden lg:block"/>{description2}</p>
+                <div ref={textRef}>
+                    <p className="lg:w-[470px] text-[#444444] text-[12px] lg:text-[15px] overflow-hidden font-normal leading-[22px] lg:leading-[24px] tracking-[0%]">{description}</p>
                 </div>
             </div>
         </div>
@@ -37,8 +37,7 @@ const EorServiceSolveCard = ({image,title,description1,description2, last = fals
 EorServiceSolveCard.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description1: PropTypes.string.isRequired,
-    description2: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     last: PropTypes.bool,
 }
 
