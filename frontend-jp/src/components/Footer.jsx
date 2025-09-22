@@ -24,6 +24,8 @@ const Footer = () => {
 							<div className="flex flex-col gap-[22px] mt-[24px]">
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR（雇用代行）</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">安心ラボ型EOR</Link>
+								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">プロジェクト伴走型EOR</Link>
+								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR代理店制度</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">DX支援</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン</Link>

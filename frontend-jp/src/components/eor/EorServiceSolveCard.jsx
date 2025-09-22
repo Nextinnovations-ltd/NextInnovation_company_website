@@ -4,7 +4,7 @@ import useLineAnimation from "../../hooks/useLineAnimation";
 import useCardAnimation from "../../hooks/useCardAnimation";
 import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
 
-const EorServiceSolveCard = ({image,title,description, last = false}) => {
+const EorServiceSolveCard = ({image,title,description, first = false}) => {
     const topLineRef = useRef(null)
     const bottomLineRef = useRef(null)
     const containerRef = useRef(null)
@@ -18,9 +18,8 @@ const EorServiceSolveCard = ({image,title,description, last = false}) => {
 
     return (
         <div ref={containerRef} className={`relative lg:flex lg:gap-[80px] py-[50px] lg:py-[64px]`}>
-            <span ref={topLineRef} className="absolute top-0 left-0 h-[1px] bg-[#1E2C44] block"></span>
-            <span ref={topLineRef} className="absolute top-0 left-0 h-[1px] bg-[#1E2C44] block"></span>
-            {!!last && <span ref={bottomLineRef} className="absolute bottom-0 left-0 h-[1px] bg-[#1E2C44] block"></span>}
+            <span ref={bottomLineRef} className="absolute bottom-0 left-0 h-[0.8px] bg-[#1E2C44] block"></span>
+            {!!first && <span ref={topLineRef} className="absolute top-0 left-0 h-[0.8px] bg-[#1E2C44] block"></span>}
             <img src={image} alt="" className="service-image mb-[30px] lg:mb-0" />
             <div>
                 <div className="text-[#02021E] text-[16px] lg:text-[20px] overflow-hidden font-bold leading-[24px] lg:leading-[34px] tracking-[-2%] mb-[15px]">
@@ -38,7 +37,7 @@ EorServiceSolveCard.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    last: PropTypes.bool,
+    first: PropTypes.bool,
 }
 
 export default EorServiceSolveCard;

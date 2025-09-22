@@ -8,11 +8,11 @@ const DxServiceSolve = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto py-[80px] lg:py-[180px] px-[24px] lg:px-[63px] text-[#444444]">
+                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[180px] px-[24px] lg:px-[63px] text-[#444444]">
 
                     <TitleFlex
                         jp="当社DX支援サービスが解決すること" eng="WHAT OUR DX SUPPORT SOLVES"
-                        text="こうした課題を解消し、企業が安心して海外人材を活用できる仕組みが当社のEOR（Employer of Record）サービスです。"
+                        text="私たちは、日本企業のニーズと海外人材の強みを結びつけ、**「スピード」「品質」「コストバランス」**を同時に実現するDX支援を提供します。"
                     />
 
                     <div className="mt-[50px] lg:mt-[64px]">
@@ -20,6 +20,7 @@ const DxServiceSolve = () => {
                             image={Img1}
                             title="日本語での要件整理と伴走支援可能"
                             description="日本語での要件整理と伴走支援で、言語や仕様のズレを解消"
+                            first
                         />
                         <EorServiceSolveCard
                             image={Img2}
@@ -30,7 +31,6 @@ const DxServiceSolve = () => {
                             image={Img3}
                             title="低コストで効率的なDX推進可能"
                             description="国内水準よりも抑えた費用かつ東南アジアでもトップレベルに安価なコストで、無駄のないDX推進を実現"
-                            last
                         />
                     </div>
 
