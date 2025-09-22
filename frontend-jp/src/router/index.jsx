@@ -13,8 +13,10 @@ import Ceo from "../pages/Ceo";
 import Career from "../pages/Career/Career";
 import CareerDetail from "../pages/Career/CareerDetail";
 import Privacy from "../pages/Privacy/Privacy";
+import Terms from "../pages/Terms/Terms";
 import Confirm from "../pages/Confirm";
 import ContactSuccess from "../pages/ContactSuccess";
+import Security from "../pages/Security/Security";
   
   const router = createBrowserRouter([
     {
@@ -80,6 +82,14 @@ import ContactSuccess from "../pages/ContactSuccess";
         {
           path: "/privacy",
           element: <Privacy/>,
+        },
+        {
+          path: "/terms",
+          element:<Terms/>,
+        },
+        {
+          path: "/security-policy",
+          element:<Security/>,
         },
       ]
     },

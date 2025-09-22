@@ -1,0 +1,27 @@
+/* Wrapper just keeps the random rotation */
+.logo-wrapper {
+    position: absolute;
+    transform-origin: center;
+}
+
+/* Child animates straight upward */
+.floating-logo {
+    animation-name: floatUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: absolute;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(200vh) scale(0.8);
+        /* start below screen */
+        opacity: 0.3;
+    }
+
+    to {
+        transform: translateY(-150px) scale(1.2);
+        /* end above */
+        opacity: 0;
+    }
+}
