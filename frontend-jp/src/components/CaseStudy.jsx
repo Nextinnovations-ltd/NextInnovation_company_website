@@ -30,21 +30,18 @@ const CaseStudy = () => {
                         title="株式会社Release"
                         text1="アプリの操作性が複雑で離脱率が高い"
                         text2="UI/UX改善によりユーザー定着率が2倍、NPSスコア+35％向上"
-                        text3="業務システム開発、AI導入支援、UI/UXデザイン"
                     />
                     <CaseStudyCard
                         image={CaseStudyImg}
                         title="株式会社Release"
                         text1="アプリの操作性が複雑で離脱率が高い"
                         text2="UI/UX改善によりユーザー定着率が2倍、NPSスコア+35％向上"
-                        text3="業務システム開発、AI導入支援、UI/UXデザイン"
                     />
                     <CaseStudyCard
                         image={CaseStudyImg}
                         title="株式会社Release"
                         text1="アプリの操作性が複雑で離脱率が高い"
                         text2="UI/UX改善によりユーザー定着率が2倍、NPSスコア+35％向上"
-                        text3="業務システム開発、AI導入支援、UI/UXデザイン"
                     />
                 </div>
             </div>
