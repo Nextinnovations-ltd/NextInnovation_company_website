@@ -85,8 +85,8 @@ const PlanAndPricing = () => {
                                 text1Next="設立する予定はない"
                                 text2="・雇用契約・給与計算・社会保険などの"
                                 text2Next="煩雑な手続きを任せたい"
-                                text3="・小規模からリスクを抑えて海外"
-                                text3Next="人材活用を試したい"
+                                text3="・小規模からリスクを抑えて海外人材活用"
+                                text3Next="を試したい"
                             />
                         </div>
 
