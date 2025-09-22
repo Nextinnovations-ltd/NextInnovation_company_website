@@ -6,6 +6,7 @@ import Blog from "/images/blog.png"
 import Note from "/images/note.png"
 import useSectionTitleAnimation from "../hooks/useSectionTitleAnimation";
 import GoButton from "./GoButton";
+import useRotateCardAnimation from "../hooks/useRotateCardAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,39 +18,8 @@ const Media = () => {
     const pathRef = useRef(null);
     const mobilePathRef = useRef(null);
     useSectionTitleAnimation(titleRef, {start: "top+=300 top"})
-
-    useEffect(() => {
-        gsap.fromTo(
-            blogRef.current,
-            { x: -300, rotate: -45, opacity: 0 },
-            {
-                x: 0,
-                rotate: 0,
-                opacity: 1,
-                duration: 1.5,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: blogRef.current,
-                    start: "top+=300 top",
-                },
-            }
-        );
-        gsap.fromTo(
-            noteRef.current,
-            { x: 300, rotate: 45, opacity: 0 },
-            {
-                x: 0,
-                rotate: 0,
-                opacity: 1,
-                duration: 1.5,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: noteRef.current,
-                    start: "top+=300 top",
-                },
-            }
-        );
-    }, []);
+    useRotateCardAnimation(blogRef,{start: "top+=300 top"},-300,-45,1.5)
+    useRotateCardAnimation(noteRef,{start: "top+=300 top"},300,45,1.5)
 
     // scroll svg path animation
     useEffect(() => {

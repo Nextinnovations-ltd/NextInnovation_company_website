@@ -1,11 +1,15 @@
+import { useRef } from "react";
 import EorCard from "./EorCard";
 import CardImg1 from "/images/eor-card1.svg"
 import CardImg2 from "/images/eor-card2.svg"
 import CardImg3 from "/images/eor-card3.svg"
+import useCardAnimation from "../../hooks/useCardAnimation";
 
 const EorCardSection = () => {
+    const containerRef = useRef(null)
+    useCardAnimation(containerRef,".eor-card",{start: "top 80%"})
     return (
-        <div className="flex justify-between pt-[100px] pb-[180px] text-[#444444]">
+        <div ref={containerRef} className="lg:flex lg:justify-between space-y-[40px] lg:space-y-0 pt-[50px] lg:pt-[100px] pb-[120px] lg:pb-[180px] text-[#444444] px-[24px] lg:px-[64px]">
             <EorCard
                 title="EORのみ"
                 image={CardImg1}

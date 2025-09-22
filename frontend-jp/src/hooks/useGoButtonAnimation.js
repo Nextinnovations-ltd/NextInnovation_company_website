@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const useGoButtonAnimation = (ref, options = {}) => {
+const useGoButtonAnimation = (ref, options = {},time = 0.5) => {
     useEffect(() => {
         if (!ref.current) return;
         gsap.fromTo(
@@ -13,7 +13,7 @@ const useGoButtonAnimation = (ref, options = {}) => {
             {
                 y: 0,
                 opacity: 1,
-                duration: 0.5,
+                duration: time,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: ref.current,
@@ -22,7 +22,7 @@ const useGoButtonAnimation = (ref, options = {}) => {
                 },
             }
         );
-    }, [ref, options]);
+    }, [ref, options,time]);
 }
 
 export default useGoButtonAnimation;

@@ -5,7 +5,7 @@ import SystemDev from "../pages/Development/System";
 import UiUx from "../pages/Development/UiUx";
 import Layout from "../layouts/Layout"
 import Eor from "../pages/Services/Eor";
-import Testing from "../pages/Development/Testing";
+import DxSupport from "../pages/Services/DxSupport";
 import Work from "../pages/Work/Work";
 import Contact from "../pages/Contact";
 import AboutUs from "../pages/AboutUs";
@@ -44,8 +44,8 @@ import Security from "../pages/Security/Security";
           element: <Eor />,
         },
         {
-          path: "/testing",
-          element: <Testing/>,
+          path: "/dx-support",
+          element: <DxSupport/>,
         },
         {
           path: "/works",

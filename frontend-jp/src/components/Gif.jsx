@@ -3,7 +3,9 @@ import Hand from "../../public/images/hand.png";
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { Link } from "react-router-dom";
-const Gif = () => {
+import {PropTypes} from "prop-types"
+
+const Gif = ({round=false}) => {
 
   const buttonRef = useRef(null);
   const contentRefs = useRef([]);
@@ -81,7 +83,7 @@ const Gif = () => {
   };
 
   return (
-    <div className="gif-section bg-cover bg-center rounded-b-[40px] lg:rounded-b-[80px] w-full h-screen bg-no-repeat relative">
+    <div className={`gif-section bg-cover bg-center w-full h-screen bg-no-repeat relative ${round ? 'rounded-b-[40px] lg:rounded-b-[80px]' : ''}`}>
       <div className="rotate absolute">
         <img src={NiLoop} alt="" />
       </div>
@@ -101,6 +103,10 @@ const Gif = () => {
       
     </div>
   )
+}
+
+Gif.propTypes = {
+  round: PropTypes.bool,
 }
 
 export default Gif
