@@ -7,6 +7,7 @@ import { useRef } from 'react';
 import useSectionTitleAnimation from '../../hooks/useSectionTitleAnimation';
 import useCardAnimation from '../../hooks/useCardAnimation';
 import PricingPlanButton from './PricingPlanButton';
+import PlanAndPricingGreenCard from './PlanAndPricingGreenCard';
 
 const PlanAndPricing = () => {
     const titleRef = useRef(null)
@@ -31,9 +32,13 @@ const PlanAndPricing = () => {
                                 <p className="text-[12px] lg:text-[15px] font-medium leading-[21px] lg:leading-[28px] tracking-[3%] opacity-70">最低3ヶ月〜、1名から利用可能</p>
                             </div>
                             
-                            <div className="text-center mt-[25px] lg:mt-[30px] mb-[36px] lg:mb-[59px] text-[#313131]">
+                            <div className="text-center my-[25px] lg:my-[30px] text-[#313131]">
                                 <p className="text-[35px] lg:text-[42px] font-bold leading-[45px] lg:leading-[54px] tracking-[3%]">¥50,000</p>
-                                <p className="text-[11px] lg:text-[13px] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">／人 ＋ 人材給与（税抜）</p>
+                                <p className="text-[10px] font-medium leading-[20px] tracking-[3%] text-[#7C7C7C] mt-[6px]">
+                                    本金額は雇用代行手数料となります。<br/>
+                                    採用人材の給与は別途ご負担が必要となります。<br/>
+                                    本金額は月額の費用となります。
+                                </p>
                             </div>
                             <PricingPlanButton
                                 link=""
@@ -44,7 +49,7 @@ const PlanAndPricing = () => {
                             />
 
                             <div className="ps-[35px] pe-[51px]">
-                                <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-y-[1px] border-[#E2E2E2] py-[24px] lg:py-[30px] sapce-y-[6px] mt-[30px]">
+                                <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-t-[1px] border-[#E2E2E2] pt-[24px] lg:pt-[30px] sapce-y-[6px] mt-[30px] mb-[24px] lg:mb-[36px]">
                                     <div className="flex items-start gap-[12px]">
                                         <CircleCorrect/>
                                         <p>採用活動代行</p>
@@ -74,15 +79,15 @@ const PlanAndPricing = () => {
                                         <p>緊急時のトラブル連絡代行</p>
                                     </div>
                                 </div>
-                                <div className="mt-[14px] lg:mt-[18px]">
-                                    <p className="text-[12px] lg:text-[16px] text-[#FF0000] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">
-                                        ※本金額は雇用代行手数料となります。<br/>
-                                        ※採用人材の給与は別途ご負担が必要と<br className="hidden lg:block"/>
-                                        なります。<br/>
-                                        ※本金額は月額の費用となります。
-                                    </p>
-                                </div>
                             </div>
+                            <PlanAndPricingGreenCard
+                                text1="・海外人材を雇いたいが、現地法人を"
+                                text1Next="設立する予定はない"
+                                text2="・雇用契約・給与計算・社会保険などの"
+                                text2Next="煩雑な手続きを任せたい"
+                                text3="・小規模からリスクを抑えて海外人材活用"
+                                text3Next="を試したい"
+                            />
                         </div>
 
                         <div className="plan-price-card my-[28px] lg:my-0">
@@ -91,7 +96,7 @@ const PlanAndPricing = () => {
                                 <p className="text-[16px] lg:text-[20px] font-bold leading-[22px] lg:leading-[28px] tracking-[3%] text-[#F15A29] mb-1 lg:mb-2">オススメ !</p>
                                 <LineRight/>
                             </div>
-                            <div className="lg:w-[424px] shadow-[0px_3px_21px_4px_#1E2C441A] border-[8px] lg:border-[10px] border-[#F15A29] rounded-t-[20px] pb-[84px]">
+                            <div className="lg:w-[424px] shadow-[0px_3px_21px_4px_#1E2C441A] border-[8px] lg:border-[10px] border-[#F15A29] rounded-t-[20px] pb-[50px]">
                                 <div className="text-white bg-[#F15A29] relative">
                                     <img src={Crown} alt="" className="w-[67px] h-[57px] mx-auto absolute top-[-20px] left-1/2 -translate-x-1/2" />
                                     <div className="flex flex-col gap-[10px] items-center pb-[25px] pt-[64px]">
@@ -102,7 +107,11 @@ const PlanAndPricing = () => {
                                 </div>
                                 <div className="text-center mt-[30px] mb-[30px] text-[#313131]">
                                     <p className="text-[35px] lg:text-[42px] font-bold leading-[45px] lg:leading-[54px] tracking-[3%]">¥150,000～</p>
-                                    <p className="text-[11px] lg:text-[13px] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">／人（給与込み、ただし採用人材のレベル、<br/>スキルにより価格は変動）</p>
+                                    <p className="text-[13px] font-medium leading-[28px] tracking-[3%] text-[#444444]">1名あたりの金額です。</p>
+                                    <p className="text-[10px] font-medium leading-[20px] tracking-[3%] text-[#7C7C7C]">
+                                        給与込み、ただし採用人材のレベル、スキルにより価格は変動します。<br/>
+                                        本金額は月額の費用となります。
+                                    </p>
                                 </div>
                                 <PricingPlanButton
                                     link=""
@@ -113,7 +122,7 @@ const PlanAndPricing = () => {
                                 />
 
                                 <div className="ps-[35px] pe-[51px]">
-                                    <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-y-[1px] border-[#E2E2E2] py-[24px] lg:py-[30px] sapce-y-[6px] mt-[30px]">
+                                    <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-t-[1px] border-[#E2E2E2] pt-[24px] lg:pt-[30px] sapce-y-[6px] mt-[30px] mb-[24px] lg:mb-[36px]">
                                         <div className="flex items-start gap-[12px]">
                                             <CircleCorrect/>
                                             <p>「EORのみ」の全サービス</p>
@@ -139,12 +148,15 @@ const PlanAndPricing = () => {
                                             <p>PC調達・配布代行<br/>(実費のみ、手数料なし)</p>
                                         </div>
                                     </div>
-                                    <div className="mt-[14px] lg:mt-[18px]">
-                                        <p className="text-[12px] lg:text-[16px] text-[#FF0000] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">
-                                            ※本金額は月額の費用となります。
-                                        </p>
-                                    </div>
                                 </div>
+                                <PlanAndPricingGreenCard
+                                    text1="・長期的に海外エンジニアを“自社チーム”の"
+                                    text1Next="一員として定着させたい"
+                                    text2="・勤怠管理・福利厚生・現場サポートまで"
+                                    text2Next="トータルで任せたい"
+                                    text3="・海外人材活用に不慣れで、安心できる"
+                                    text3Next="サポート体制を求めている"
+                                />
                             </div>
                         </div>
 
@@ -157,7 +169,11 @@ const PlanAndPricing = () => {
                             
                             <div className="text-center mt-[25px] lg:mt-[30px] mb-[30px] text-[#313131]">
                                 <p className="text-[35px] lg:text-[42px] font-bold leading-[45px] lg:leading-[54px] tracking-[3%]">￥300,000～</p>
-                                <p className="text-[11px] lg:text-[13px] font-medium leading-[22px] lg:leading-[28px] tracking-[3%]">／人（給与込み、ただし人材のレベル、<br/>スキルにより価格は変動）</p>
+                                <p className="text-[13px] font-medium leading-[28px] tracking-[3%] text-[#444444]">1名あたりの金額です。</p>
+                                <p className="text-[10px] font-medium leading-[20px] tracking-[3%] text-[#7C7C7C]">
+                                    給与込み、ただし人材のレベル、スキルにより価格は変動します。<br/>
+                                    本金額は月額の費用となります。
+                                </p>
                             </div>
                             <PricingPlanButton
                                 link=""
@@ -168,7 +184,7 @@ const PlanAndPricing = () => {
                             />
 
                             <div className="ps-[35px] pe-[51px]">
-                                <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-y-[1px] border-[#E2E2E2] py-[24px] lg:py-[30px] sapce-y-[6px] mt-[25px] lg:mt-[30px]">
+                                <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-t-[1px] border-[#E2E2E2] pt-[24px] lg:pt-[30px] sapce-y-[6px] mt-[25px] lg:mt-[30px] mb-[24px] lg:mb-[36px]">
                                     <div className="flex items-start gap-[12px]">
                                         <CircleCorrect/>
                                         <p>「安心ラボ型」の全サービス</p>
@@ -182,12 +198,15 @@ const PlanAndPricing = () => {
                                         <p>プロジェクト完了後のラボ型移行サポート</p>
                                     </div>
                                 </div>
-                                <div className="mt-[18px]">
-                                    <p className="text-[16px] text-[#FF0000] font-medium leading-[28px] tracking-[3%]">
-                                        ※本金額は月額の費用となります。
-                                    </p>
-                                </div>
                             </div>
+                            <PlanAndPricingGreenCard
+                                text1="・チームにノウハウを溜めながらプロジェク"
+                                text1Next="ト単位で確実に成果を出したい"
+                                text2="・専任PMによる進行・品質・リスク管理を"
+                                text2Next="任せたい"
+                                text3="・社内のマネジメントリソースが"
+                                text3Next="不足している"
+                            />
                         </div>
                         
                     </div>

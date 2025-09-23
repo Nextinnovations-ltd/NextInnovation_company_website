@@ -18,6 +18,7 @@ import Confirm from "../pages/Confirm";
 import ContactSuccess from "../pages/ContactSuccess";
 import Security from "../pages/Security/Security";
 import CaseStudy from "../pages/CaseStudy/CaseStudy";
+import Development from "../pages/Services/Development";
   
   const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ import CaseStudy from "../pages/CaseStudy/CaseStudy";
         {
           path: "/ui-ux",
           element: <UiUx />,
+        },
+        {
+          path: "/development",
+          element: <Development />,
         },
         {
           path: "/eor",

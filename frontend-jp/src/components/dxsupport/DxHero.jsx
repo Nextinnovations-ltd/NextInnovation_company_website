@@ -38,7 +38,7 @@ const DxHero = () => {
                     <div className="flex flex-col lg:flex-row gap-[18px] lg:gap-6">
                         <div className="overflow-hidden">
                             <div ref={buttonRef1}>
-                                <GoButton name="受託開発を詳しく見る" link="" bgColor="bg-[#E8E8E8]" textColor="text-[#444444]" arrow={BlackArrow} />
+                                <GoButton name="受託開発を詳しく見る" link="" bgColor="bg-[#E8E8E8]" bgHoverColor="hover:bg-[#444444]" textHoverColor="hover:text-white" textColor="text-[#444444]" arrow={BlackArrow} />
                             </div>
                         </div>
                         <div className="overflow-hidden">

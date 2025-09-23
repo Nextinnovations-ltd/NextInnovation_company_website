@@ -15,7 +15,7 @@ const FAQ = ({faqData}) => {
     useSectionTitleAnimation(titleRef, {start: "top+=300 top"})
 
     return (
-        <div id="faq" className="w-full text-[#444444] rounded-b-[40px] lg:rounded-b-[80px] bg-white">
+        <div id="faq" className="w-full text-[#444444] bg-white">
             <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[41px] pb-[100px] md:py-[130px] pr-5 pl-5">
                 {/* Left Title Section */}
                 <motion.div
@@ -45,7 +45,7 @@ const FAQ = ({faqData}) => {
                                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
                                 viewport={{ once: true }}
                             >
-                                <div className="flex justify-between items-center gap-[33px]">
+                                <div className="flex gap-[33px] lg:gap-0 items-center justify-between lg:min-w-[600px]">
                                     <h1
                                         onClick={() => toggleIndex(index)}
                                         className="cursor-pointer duration-300 transition-all text-[#444444] text-[12px] md:text-[20px] font-bold leading-[20px] md:leading-[48px] tracking-[0%]"

@@ -7,7 +7,6 @@ const ScrollToTop = () => {
 
     useEffect(() => {
         window.scrollTo({ top: 0, left: 0 });
-
         // Fade-in animation using GSAP
         gsap.fromTo(
             ".page-transition",
@@ -15,6 +14,15 @@ const ScrollToTop = () => {
             { opacity: 1, duration: 1.5, ease: "power2.out" }
         );
     }, [pathname]);
+
+    // refresh same page
+    useEffect(() => {
+        window.onbeforeunload = () => {
+            setTimeout(() => {
+                window.scrollTo({ top: 0, left: 0 });
+            }, 10)
+        };
+    }, []);
 
     return null;
 };

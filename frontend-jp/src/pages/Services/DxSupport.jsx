@@ -1,3 +1,4 @@
+import Deliverable from "../../components/dxsupport/Deliverable";
 import DxChallenge from "../../components/dxsupport/DxChallenge";
 import DxHero from "../../components/dxsupport/DxHero";
 import DxServiceSolve from "../../components/dxsupport/DxServiceSolve";
@@ -7,8 +8,83 @@ import ServiceOverview from "../../components/dxsupport/ServiceOverview";
 import Technology from "../../components/dxsupport/Technology";
 import ComparisonTable from "../../components/eor/ComparisonTable";
 import WhatIsEor from "../../components/eor/WhatIsEor";
+import CaseStudy from "../../components/eor/CaseStudy";
+import CsImg1 from "/images/eor-cs1.png"
+import CsImg2 from "/images/eor-cs2.png"
+import CsImg3 from "/images/eor-cs3.png"
+import FAQ from "../../components/FAQ";
+import Gif from "../../components/Gif";
+import OtherService from "../../components/eor/OtherService";
+import OsImg1 from "/images/other-service1.png"
+import OsImg2 from "/images/other-service2.png"
+import OsImg3 from "/images/other-service3.png"
 
 const DxSupport = () => {
+
+    const caseStudy = [
+        {
+            image: CsImg1,
+            title: "小規模web開発を短納期で構築実現",
+            text1: "スタートアップ",
+            text2: "UI/UXデザイン、受託開発"
+        },
+        {
+            image: CsImg2,
+            title: "SaaSダッシュボードUI刷新で利用率向上",
+            text1: "スタートアップ",
+            text2: "UI/UXデザイン"
+        },
+        {
+            image: CsImg3,
+            title: "伝統的なECサイトをSHOPIFYでリニュアル",
+            text1: "小売",
+            text2: "UI/UXデザイン、受託開発"
+        },
+    ];
+
+    const faqData = [
+        {
+            question: "成果物だけ依頼できますか？ ",
+            subTitles: ["はい。単発のプロジェクトでも対応可能です。"],
+            answers: [],
+        },
+        {
+            question: "納品後の保守・運用はお願いできますか？ ",
+            subTitles: ["ご希望に応じて、EOR契約またはスポット保守で対応します。"],
+            answers: [],
+        },
+        {
+            question: "日本語でのやり取りは可能ですか？",
+            subTitles: ["可能です。代表を含め、日本語でスムーズに進行できます。"],
+            answers: [],
+        },
+        {
+            question: "掲載されていない技術でも依頼できますか？ ",
+            subTitles: [
+                "はい。EORを基盤としているため、必要なスキルを持つ人材を採用・アサイン可能です。",
+            ],
+            answers: [],
+        },
+    ];
+
+    const otherServices = [
+        {
+            title: "DX Support",
+            description: "グローバル人材の雇用・管理をスムーズに支援。法務・労務リスクを軽減し、安心して海外人材を活用可能。",
+            image: OsImg1,
+        },
+        {
+            title: "Custom Development",
+            description: "Webシステム・アプリ開発に柔軟対応。React / Flutter 実績あり。",
+            image: OsImg2,
+        },
+        {
+            title: "UI/UX Design",
+            description: "Figmaを中心に、日本水準の高品質デザインを低コストで提供。",
+            image: OsImg3,
+        },
+    ];
+
     return (
         <>
             <div className="relative">
@@ -37,6 +113,15 @@ const DxSupport = () => {
                 <ComparisonTable/>
                 <ServiceOverview/>
                 <Technology/>
+                <Deliverable/>
+                <div className="bg-white">
+                    <CaseStudy caseStudy={caseStudy} link="" />
+                </div>
+                <FAQ faqData={faqData} />
+                <div className="bg-white">
+                    <Gif/>
+                </div>
+                <OtherService datas={otherServices} />
             </div>
         </>
     );

@@ -20,7 +20,7 @@ const DxChallenge = () => {
     useCardAnimation(containerRef2,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="px-6 lg:px-[64px] pb-[80px] lg:pb-[180px]">
+        <div className="px-6 lg:px-[64px] pb-[80px] lg:pb-[120px]">
             <div className="h-[70px] lg:h-[100px] overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp="課題" eng="Challenges" />
