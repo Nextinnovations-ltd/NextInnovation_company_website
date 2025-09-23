@@ -17,6 +17,7 @@ import Terms from "../pages/Terms/Terms";
 import Confirm from "../pages/Confirm";
 import ContactSuccess from "../pages/ContactSuccess";
 import Security from "../pages/Security/Security";
+import CaseStudy from "../pages/CaseStudy/CaseStudy";
   
   const router = createBrowserRouter([
     {
@@ -90,6 +91,10 @@ import Security from "../pages/Security/Security";
         {
           path: "/security-policy",
           element:<Security/>,
+        },
+        {
+          path: "/case-study",
+          element:<CaseStudy/>,
         },
       ]
     },

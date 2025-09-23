@@ -1,5 +1,5 @@
 import './Privacy.css';
-import logo from '../../../public/images/Group 34126.svg'; // ⬅️ replace with actual logo path
+import logo from '../../../public/images/Group 34121.svg'; // ⬅️ replace with actual logo path
 import { motion } from 'framer-motion';
 const Privacy = () => {
 	return (
@@ -18,7 +18,7 @@ const Privacy = () => {
 								width: `${Math.random() * 400 + 380}px`, // random size
 								left: `${Math.random() * 100}%`, // random horizontal position
 								animationDuration: `${Math.random() * 8 + 10}s`, // random speed
-								rotate: `${Math.random() * 30 - 15}deg`, // random tilt (-15° to 15°)
+								rotate: `${Math.random() * 90 - 15}deg`, // random tilt (-15° to 15°)
 							}}
 						/>
 					))}
