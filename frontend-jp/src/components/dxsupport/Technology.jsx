@@ -47,7 +47,7 @@ const Technology = () => {
                     </div>
                 </div>
                 <div className="mt-[60px]">
-                    <div className="flex flex-wrap gap-10">
+                    <div className="flex flex-wrap gap-10 overflow-hidden lg:overflow-visible">
                         <div ref={ref1}>
                             <TechnologyCard
                                 title="フロントエンド"

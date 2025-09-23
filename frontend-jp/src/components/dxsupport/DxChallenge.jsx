@@ -26,7 +26,6 @@ const DxChallenge = () => {
                     <SectionTitle jp="課題" eng="Challenges" />
                 </div>
             </div>
-            {/* <SectionTitle jp="課題" eng="Challenges" /> */}
             <div className="mt-[50px] lg:mt-[102px] mb-[50px] lg:mb-[60px]">
                 <SubTitleFlex
                     title="日本国内の場合"

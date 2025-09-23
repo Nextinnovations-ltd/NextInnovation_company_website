@@ -23,7 +23,7 @@ const EorChallenges = () => {
                         <SectionTitle jp="課題" eng="Challenges" />
                     </div>
                 </div>
-                <div className="w-[270px] lg:w-[523px] overflow-hidden h-[70px] text-[14px] lg:text-[20px] font-medium leading-[24px] lg:leading-[38px] tracking-[0%] mt-[28px] lg:mt-[54px]">
+                <div className="lg:w-[523px] overflow-hidden h-[70px] text-[14px] lg:text-[20px] font-medium leading-[24px] lg:leading-[38px] tracking-[0%] mt-[28px] lg:mt-[54px]">
                     <div ref={textRef}>これらの課題を解決し、海外人材の活用を容易にしたのが当社のEORサービスです。</div>
                 </div>
             </div>
