@@ -84,12 +84,12 @@ const Navbar = () => {
                 <DropDownModal
                     jp="サービス"
                     eng="Services"
-                    description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています"
+                    description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています。"
                     menus={[
                         { title: "EOR（雇用代行）", link: "/eor" },
                         { title: "EOR代理店制度", link: "/aa" },
                         { title: "DX支援", link: "/dx-support" },
-                        { title: "受託開発", link: "/cc" },
+                        { title: "受託開発", link: "/development" },
                         { title: "UI/UXデザイン", link: "/dd" },
                     ]}
                     clickLink={clickLink}
@@ -120,7 +120,7 @@ const Navbar = () => {
                                 { title: "EOR（雇用代行）", link: "/eor" },
                                 { title: "EOR代理店制度", link: "/aa" },
                                 { title: "DX支援", link: "/dx-support" },
-                                { title: "受託開発", link: "/cc" },
+                                { title: "受託開発", link: "/development" },
                                 { title: "UI/UXデザイン", link: "/dd" },
                             ]}
                             openValue={mobileDropDownOpen}

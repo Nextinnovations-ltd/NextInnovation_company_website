@@ -23,7 +23,7 @@ const DevChallenges = () => {
                         <SectionTitle jp="課題" eng="Challenges" />
                     </div>
                 </div>
-                <div className="w-[270px] lg:w-[523px] overflow-hidden h-[70px] text-[14px] lg:text-[20px] font-medium leading-[24px] lg:leading-[38px] tracking-[0%] mt-[28px] lg:mt-[54px]">
+                <div className="lg:w-[550px] overflow-hidden h-[70px] text-[14px] lg:text-[20px] font-medium leading-[24px] lg:leading-[38px] tracking-[0%] mt-[28px] lg:mt-[54px]">
                     <div ref={textRef}>受託開発には、国内コストの高さや海外委託での品質・進行管理リスク、納品後の継続性不足といった課題が伴います。</div>
                 </div>
             </div>

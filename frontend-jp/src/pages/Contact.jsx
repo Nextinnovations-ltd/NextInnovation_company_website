@@ -268,7 +268,6 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="mb-[100vh]"></div> */}
         </>
     )
 }
