@@ -15,9 +15,9 @@ import CsImg2 from "/images/eor-cs2.png"
 import CsImg3 from "/images/eor-cs3.png"
 import Gif from "../../components/Gif";
 import OtherService from "../../components/eor/OtherService";
-import OsImg1 from "/images/other-service1.png"
-import OsImg2 from "/images/other-service2.png"
-import OsImg3 from "/images/other-service3.png"
+import OsImg1 from "/images/other-service-eor.png"
+import OsImg2 from "/images/other-service-dx.png"
+import OsImg3 from "/images/other-service-uiux.png"
 
 const Development = () => {
 
@@ -125,19 +125,22 @@ const Development = () => {
 
     const otherServices = [
         {
-            title: "DX Support",
+            title: "EOR",
             description: "グローバル人材の雇用・管理をスムーズに支援。法務・労務リスクを軽減し、安心して海外人材を活用可能。",
             image: OsImg1,
+            link: "/eor"
         },
         {
-            title: "Custom Development",
-            description: "Webシステム・アプリ開発に柔軟対応。React / Flutter 実績あり。",
+            title: "DX Support",
+            description: "オリジナル性の高いWeb集客を企業独自の強みを価値へと転換し、競争力を高めます。",
             image: OsImg2,
+            link: "/dx-support"
         },
         {
             title: "UI/UX Design",
             description: "Figmaを中心に、日本水準の高品質デザインを低コストで提供。",
             image: OsImg3,
+            link: "/uiux"
         },
     ];
     
@@ -164,21 +167,21 @@ const Development = () => {
                         <DevChallenges />
                     </div>
                 </div>
-                <DevServiceSolve/>
-                <DevStrength/>
-                <Technology/>
-                <Deliverable/>
-                <DevPlanAndPricing/>
-                <DevComparison/>
-                <div className="bg-[#1E2C44]">
-                    <div className="pt-[80px] lg:pt-[142px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
-                        <CaseStudy caseStudy={caseStudy} link="" />
-                    </div>
-                </div>
-                <FAQ faqData={faqData} />
-                <Gif/>
-                <OtherService datas={otherServices} />
             </div>
+            <DevServiceSolve/>
+            <DevStrength/>
+            <Technology/>
+            <Deliverable/>
+            <DevPlanAndPricing/>
+            <DevComparison/>
+            <div className="bg-[#1E2C44]">
+                <div className="pt-[80px] lg:pt-[142px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
+                    <CaseStudy caseStudy={caseStudy} />
+                </div>
+            </div>
+            <FAQ faqData={faqData} />
+            <Gif/>
+            <OtherService datas={otherServices} />
         </>
     );
 }

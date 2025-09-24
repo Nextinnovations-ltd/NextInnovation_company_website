@@ -48,7 +48,7 @@ const PlanAndPricing = () => {
                                 hoverTextColor="hover:text-white"
                             />
 
-                            <div className="ps-[35px] pe-[51px]">
+                            <div className="px-[35px]">
                                 <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-t-[1px] border-[#E2E2E2] pt-[24px] lg:pt-[30px] sapce-y-[6px] mt-[30px] mb-[24px] lg:mb-[36px]">
                                     <div className="flex items-start gap-[12px]">
                                         <CircleCorrect/>
@@ -121,7 +121,7 @@ const PlanAndPricing = () => {
                                     hoverTextColor="hover:text-white"
                                 />
 
-                                <div className="ps-[35px] pe-[51px]">
+                                <div className="px-[35px]">
                                     <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-t-[1px] border-[#E2E2E2] pt-[24px] lg:pt-[30px] sapce-y-[6px] mt-[30px] mb-[24px] lg:mb-[36px]">
                                         <div className="flex items-start gap-[12px]">
                                             <CircleCorrect/>
@@ -183,7 +183,7 @@ const PlanAndPricing = () => {
                                 hoverTextColor="hover:text-white"
                             />
 
-                            <div className="ps-[35px] pe-[51px]">
+                            <div className="px-[35px]">
                                 <div className="text-[12px] lg:text-[15px] text-[#1E2C44] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] border-t-[1px] border-[#E2E2E2] pt-[24px] lg:pt-[30px] sapce-y-[6px] mt-[25px] lg:mt-[30px] mb-[24px] lg:mb-[36px]">
                                     <div className="flex items-start gap-[12px]">
                                         <CircleCorrect/>

@@ -17,30 +17,30 @@ import CaseStudy from "../../components/eor/CaseStudy";
 import CsImg1 from "/images/eor-cs1.png"
 import CsImg2 from "/images/eor-cs2.png"
 import CsImg3 from "/images/eor-cs3.png"
-import OsImg1 from "/images/other-service1.png"
-import OsImg2 from "/images/other-service2.png"
-import OsImg3 from "/images/other-service3.png"
+import OsImg1 from "/images/other-service-dx.png"
+import OsImg2 from "/images/other-service-dev.png"
+import OsImg3 from "/images/other-service-uiux.png"
 
 const Eor = () => {
 
     const caseStudy = [
         {
             image: CsImg1,
-            title: "小規模web開発を短納期で構築実現",
-            text1: "スタートアップ",
-            text2: "UI/UXデザイン、受託開発"
+            title: "継続的なサイト更新",
+            text1: "日本のEC企業",
+            text2: "ラボ型EOR"
         },
         {
             image: CsImg2,
-            title: "SaaSダッシュボードUI刷新で利用率向上",
+            title: "MVPを短期開発し、資金調達成功",
             text1: "スタートアップ",
-            text2: "UI/UXデザイン"
+            text2: "安心ラボ型と伴走型"
         },
         {
             image: CsImg3,
-            title: "伝統的なECサイトをSHOPIFYでリニュアル",
-            text1: "小売",
-            text2: "UI/UXデザイン、受託開発"
+            title: "自社サイトの自社プロジェクト立ち上げ",
+            text1: "AIコンサルタント会社",
+            text2: "伴走型"
         },
     ];
 
@@ -128,18 +128,21 @@ const Eor = () => {
     const otherServices = [
         {
             title: "DX Support",
-            description: "グローバル人材の雇用・管理をスムーズに支援。法務・労務リスクを軽減し、安心して海外人材を活用可能。",
+            description: "オリジナル性の高いWeb集客を企業独自の強みを価値へと転換し、競争力を高めます。",
             image: OsImg1,
+            link: "/dx-support"
         },
         {
             title: "Custom Development",
             description: "Webシステム・アプリ開発に柔軟対応。React / Flutter 実績あり。",
             image: OsImg2,
+            link: "/development"
         },
         {
             title: "UI/UX Design",
             description: "Figmaを中心に、日本水準の高品質デザインを低コストで提供。",
             image: OsImg3,
+            link: "/uiux"
         },
     ];
     
@@ -177,7 +180,7 @@ const Eor = () => {
             <UseCase/>
             <div className="bg-[#1E2C44]">
                 <div className="pt-[80px] lg:pt-[142px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
-                    <CaseStudy caseStudy={caseStudy} link="" />
+                    <CaseStudy caseStudy={caseStudy} />
                 </div>
             </div>
             <Onboarding/>

@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types"
 const DevPlanAndPricingCard = ({text1,text2,text3,text4,link=""}) => {
     return (
         <div className="lg:w-[407px] rounded-[20px] dev-plan-and-pricing-card">
-            <div className="bg-[#1E2C44] text-white text-center rounded-t-[20px] pt-[21px] lg:pt-[25px] pb-[54px] lg:pb-[63px]">
+            <div className="bg-[#1E2C44] text-white text-center rounded-t-[20px] py-[21px] lg:py-[25px] px-[30px] min-h-[141px] lg:min-h-[164px]">
                 <p className="text-[12px] lg:text-[13px] font-normal leading-[22px] lg:leading-[26px] tracking-[1%]">{text1}</p>
                 <p className="text-[20px] lg:text-[28px] font-bold leading-[28px] lg:leading-[40px] tracking-[-2%] lg:tracking-[1%] mt-[10px]">{text2}</p>
             </div>

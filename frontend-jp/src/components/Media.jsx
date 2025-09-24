@@ -92,7 +92,7 @@ const Media = () => {
                             </div>
                         </div>
                         <div className="flex justify-center">
-                            <GoButton name="詳しく見る" bgColor="bg-[#444444]" link="" />
+                            <GoButton name="詳しく見る" bgColor="bg-[#444444]" link="https://demo-site.next-innovations.ltd/ni-blog/" />
                         </div>
                     </div>
                     <div ref={noteRef} className="lg:w-[600px] ps-[22px] pe-[22px] py-6 lg:py-[50px] lg:ps-[41px] lg:pe-[33px] bg-white rounded-[12px] text-white shadow-md z-[20]">

@@ -1,5 +1,7 @@
 import EorServiceSolveCard from "./EorServiceSolveCard";
 import Img1 from "/images/eor-service-solve1.png"
+import Img2 from "/images/eor-service-solve2.png"
+import Img3 from "/images/eor-service-solve3.png"
 import TitleFlex from "../dxsupport/TitleFlex";
 
 const EorServiceSolve = () => {
@@ -22,12 +24,12 @@ const EorServiceSolve = () => {
                             first
                         />
                         <EorServiceSolveCard
-                            image={Img1}
+                            image={Img2}
                             title="自社チームとしての一体感を形成"
                             description="EORは単なる外部委託ではなく「採用」という形態をとるため、御社の考え方や文化を人材に浸透させることが可能です。当社が間に入り、日常的なサポートや文化的な橋渡しを行うことで、言語や習慣の壁を解消し、より円滑に自社の一員として育成・定着を実現します。 また、当社が現場管理を支援する事で業務上リスクを最小化します。（対象：安心ラボ型・伴走型）"
                         />
                         <EorServiceSolveCard
-                            image={Img1}
+                            image={Img3}
                             title="法人設立不要でゼロリスク採用"
                             description="現地法人の設立は不要。初期コストや運営リスクゼロで、契約・給与支払・税務・労務を当社が一括代行します。これにより、特に中小企業でも安心して海外人材を自社チームに迎え入れることができます。"
                         />
