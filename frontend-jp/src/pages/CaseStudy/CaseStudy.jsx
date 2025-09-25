@@ -15,7 +15,7 @@ const CaseStudy = () => {
   useCardAnimation(containerRef,".case-study-card",{start:"top 80%"});
   useSectionTitleAnimation(titleRef,{start:"top 70%"});
   return (
-      <div className='overflow-x-hidden'>
+      <div className='rounded-[80px] relative z-[1000]'>
           <div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%',backgroundRepeat: 'no-repeat',}} >
          
         <div className="max-w-[1240px] w-full mx-auto h-[50vh] md:h-[80vh] flex flex-col justify-between items-start pt-[100px] px-[24px] md:px-0">
@@ -57,12 +57,13 @@ const CaseStudy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}>
-            <p className='text-[#1E2C44] text-[16px] md:text-[32px] font-[700] leading-[24px] md:leading-[41px] tracking-[-0.32px] md:tracking-[-0.64px] uppercase'>全て</p>
-            <p  className='text-[#848484] text-[16px] md:text-[32px] font-[700]  leading-[24px] md:leading-[41px] tracking-[-0.32px] md:tracking-[-0.64px] uppercase'>EOR </p>
-            <p  className='text-[#848484] text-[16px] md:text-[32px] font-[700]  leading-[24px] md:leading-[41px] tracking-[-0.32px] md:tracking-[-0.64px] uppercase'>UI/UXデザイン </p>
-            <p  className='text-[#848484] text-[16px] md:text-[32px] font-[700]  leading-[24px] md:leading-[41px] tracking-[-0.32px] md:tracking-[-0.64px] uppercase'>受託開発 </p>
+            <p className='text-[#1E2C44] text-[16px] md:text-242px] font-[700] leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase'>全て</p>
+            <p  className='text-[#848484] text-[16px] md:text-[24px] font-[700]  leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase'>EOR </p>
+            <p  className='text-[#848484] text-[16px] md:text-[24px] font-[700]  leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase'>DX支援 </p>
+            <p  className='text-[#848484] text-[16px] md:text-[24px] font-[700]  leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase'>受託開発 </p>
+            <p  className='text-[#848484] text-[16px] md:text-[24px] font-[700]  leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase'>UI/UXデザイン </p>
           </motion.div>
-          <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12 md:gap-4 mt-[108px] md:mt-[125px]">
+          <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-12 md:gap-4 mt-[108px] md:mt-[100px]">
             <CaseStudyCard image={ gridImg} title='小規模web開発を短納期で構築実現'  text1='スタートアップ'  text2='UI/UXデザイン、受託開発 ' />
             <CaseStudyCard image={ gridImg} title='SaaSダッシュボードUI刷新で利用率向上' text1='スタートアップ'  text2='UI/UXデザイン、受託開発 ' />
             <CaseStudyCard image={ gridImg} title='伝統的なECサイトをSHOPIFYでリニュアル' text1='スタートアップ'  text2='UI/UXデザイン、受託開発 ' />

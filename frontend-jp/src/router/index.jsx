@@ -13,6 +13,7 @@ import ContactSuccess from "../pages/ContactSuccess";
 import Security from "../pages/Security/Security";
 import CaseStudy from "../pages/CaseStudy/CaseStudy";
 import Development from "../pages/Services/Development";
+import CompanyProfile from "../pages/CompanyProfile/CompanyProfile";
 
 const router = createBrowserRouter([
 	{
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
 			{
 				path: "/case-study",
 				element: <CaseStudy />,
+			},
+			{
+				path: "/company-profile",
+				element: <CompanyProfile />,
 			},
 		]
 	},
