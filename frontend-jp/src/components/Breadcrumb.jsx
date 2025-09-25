@@ -2,7 +2,7 @@ import {PropTypes} from "prop-types"
 import { Link } from "react-router-dom";
 import BreadcrumbRightArrow from "./svg/BreadcrumbRightArrow";
 
-const Breadcrumb = ({routes,current}) => {
+const Breadcrumb = ({routes=[],current}) => {
     return (
         <div className="text-[11px] lg:text-[13px] font-normal leading-[22px] tracking-[0%] flex gap-2 items-center">
             <Link to="/">TOP</Link>
@@ -19,7 +19,7 @@ const Breadcrumb = ({routes,current}) => {
 }
 
 Breadcrumb.propTypes = {
-    routes: PropTypes.array.isRequired,
+    routes: PropTypes.array,
     current: PropTypes.string.isRequired,
 }
 

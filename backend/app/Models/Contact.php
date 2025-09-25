@@ -32,6 +32,13 @@ class Contact extends Model
             2 => 'Development',
             3 => 'UI/UX Design',
             4 => 'Testing',
+            5 => 'EOR(Employer of Record)',
+            6 => '安心ラボ型EOR',
+            7 => 'プロジェクト伴走型EOR',
+            8 => 'EOR代理店制度',
+            9 => 'DX支援',
+            10 => '受託開発',
+            11 => 'UI/UXデザイン',
             default => 'Unknown',
         };
         return $name;

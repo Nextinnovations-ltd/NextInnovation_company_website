@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class ContactRequest extends FormRequest
+class ContactJpRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,23 @@ class ContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|min:5',
+            'name' => 'required',
             'email' => 'required|email|max:50',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:20',
-            'interest' => 'required|numeric|between:1,4',
+            'interest' => 'required|numeric|between:5,11',
             'country' => 'nullable|max:50',
             'budget' => 'nullable|max:20',
             'message' => 'nullable|max:65000',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            '*.required' => 'これは必須項目です。',
+            'email.email' => '正しいメールアドレスフォーマットで入力してください。',
+            'phone.regex' => '正しい電話番号フォーマットで入力してください。',
+            'phone.min' => '電話番号は最低6桁入力してください。',
         ];
     }
 

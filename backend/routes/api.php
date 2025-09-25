@@ -15,6 +15,8 @@ Route::get('/user', function (Request $request) {
 
 Route::post('/contact/validation', [ContactController::class, 'contactValidation']);
 Route::post('/contact', [ContactController::class, 'store']);
+Route::post('/contact/validation/jp', [ContactController::class, 'contactValidationJp']);
+Route::post('/contact/jp', [ContactController::class, 'storeJp']);
 Route::get('/works', [WorkController::class, 'getWorkApi']);
 Route::get('/last-two-works/', [WorkController::class, 'latestTwo']);
 Route::get('/news', [BlogController::class, 'getBlogApi']);

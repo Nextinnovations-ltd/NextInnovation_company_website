@@ -5,7 +5,6 @@ import WhatIsEor from "../../components/eor/WhatIsEor";
 import DevServiceSolve from "../../components/development/DevServiceSolve";
 import DevStrength from "../../components/development/DevStrength";
 import Technology from "../../components/dxsupport/Technology";
-import Deliverable from "../../components/dxsupport/Deliverable";
 import DevPlanAndPricing from "../../components/development/DevPlanAndPricing";
 import DevComparison from "../../components/development/DevComparison";
 import CaseStudy from "../../components/eor/CaseStudy";
@@ -18,6 +17,7 @@ import OtherService from "../../components/eor/OtherService";
 import OsImg1 from "/images/other-service-eor.png"
 import OsImg2 from "/images/other-service-dx.png"
 import OsImg3 from "/images/other-service-uiux.png"
+import DevDeliverable from "../../components/development/DevDeliverable";
 
 const Development = () => {
 
@@ -171,7 +171,7 @@ const Development = () => {
             <DevServiceSolve/>
             <DevStrength/>
             <Technology/>
-            <Deliverable/>
+            <DevDeliverable/>
             <DevPlanAndPricing/>
             <DevComparison/>
             <div className="bg-[#1E2C44]">
