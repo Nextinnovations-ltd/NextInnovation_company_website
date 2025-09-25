@@ -35,13 +35,13 @@ const SliderMobile = () => {
                 </p>
                 <div className="overflow-hidden">
                     <div ref={buttonRef1}>
-                        <GoButton name="詳しく見る" link="" />
+                        <GoButton name="詳しく見る" link="/eor" />
                     </div>
                 </div>
             </div>
             <div className="py-[50px]">
-                <div className="h-[80px] overflow-hidden">
-                    <h2 ref={titleRef2} className="text-[20px] font-bold leading-[38.65px] tracking-[-2%]">DX支援 / 受託開発<br/>・UI/UXデザイン</h2>
+                <div className="h-[40px] overflow-hidden">
+                    <h2 ref={titleRef2} className="text-[20px] font-bold leading-[38.65px] tracking-[-2%]">DX支援 / 受託開発・UI/UXデザイン</h2>
                 </div>
                 <p ref={descriptionRef2} className="text-[14px] font-normal leading-[19.62px] tracking-[0%] mt-[16px] mb-[29px]">
                     日本案件経験豊富なエンジニアとデザイナーが
@@ -53,7 +53,7 @@ const SliderMobile = () => {
                 </p>
                 <div className="overflow-hidden">
                     <div ref={buttonRef2}>
-                        <GoButton name="詳しく見る" link="" />
+                        <GoButton name="詳しく見る" link="/dx-support" />
                     </div>
                 </div>
             </div>

@@ -1,29 +1,34 @@
 import { useRef } from "react"
 import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation"
 import SectionTitle from "../SectionTitle"
-import Img1 from "/images/svg/html.svg"
-import Img2 from "/images/svg/css.svg"
-import Img3 from "/images/svg/wordpress.svg"
-import Img4 from "/images/svg/shopify.svg"
-import Img5 from "/images/svg/react.svg"
-import Img6 from "/images/svg/vue.svg"
-import Img7 from "/images/svg/next.svg"
-import Img8 from "/images/svg/nuxt.svg"
-import Img9 from "/images/svg/php.svg"
-import Img10 from "/images/svg/js.svg"
-import Img11 from "/images/svg/laravel.svg"
+import Img1 from "/images/svg/react.svg"
+import Img2 from "/images/svg/vue.svg"
+import Img3 from "/images/svg/tailwind.svg"
+import Img4 from "/images/svg/bootstrap.svg"
+import Img5 from "/images/svg/flutter.svg"
+import Img6 from "/images/svg/wordpress.svg"
+import Img7 from "/images/svg/php.svg"
+import Img8 from "/images/svg/laravel.svg"
+import Img9 from "/images/svg/python.svg"
+import Img10 from "/images/svg/django.svg"
+import Img11 from "/images/svg/js.svg"
 import Img12 from "/images/svg/nodejs.svg"
-import Img13 from "/images/svg/django.svg"
-import Img14 from "/images/svg/python.svg"
-import Img15 from "/images/svg/aws.svg"
-import Img16 from "/images/svg/gcp.svg"
+import Img13 from "/images/svg/aws.svg"
+import Img14 from "/images/svg/azure.svg"
+import Img15 from "/images/svg/digital-ocean.svg"
+import Img16 from "/images/svg/cpanel.svg"
 import Img17 from "/images/svg/docker.svg"
-import Img18 from "/images/svg/mongodb.svg"
-import Img19 from "/images/svg/azure.svg"
-import Img20 from "/images/svg/digital-ocean.svg"
-import Img21 from "/images/svg/postgresql.svg"
-import Img22 from "/images/svg/cpanel.svg"
-import Img23 from "/images/svg/flutter.svg"
+import Img18 from "/images/svg/mysql.svg"
+import Img19 from "/images/svg/postgresql.svg"
+import Img20 from "/images/svg/mongodb.svg"
+import Img21 from "/images/svg/adobe.svg"
+import Img22 from "/images/svg/pr.svg"
+import Img23 from "/images/svg/ps.svg"
+import Img24 from "/images/svg/ai.svg"
+import Img25 from "/images/svg/id.svg"
+import Img26 from "/images/svg/lightroom.svg"
+import Img27 from "/images/svg/figma.svg"
+import Img28 from "/images/svg/canva.svg"
 import TechnologyCard from "./TechnologyCard"
 import useRotateCardAnimation from "../../hooks/useRotateCardAnimation"
 
@@ -55,35 +60,31 @@ const Technology = () => {
                                     [
                                         {
                                             image: Img1,
-                                            name: "HTML 5"
+                                            name: "React"
                                         },
                                         {
                                             image: Img2,
-                                            name: "CSS 3"
+                                            name: "Vue"
                                         },
                                         {
                                             image: Img3,
-                                            name: "WORDPRESS"
+                                            name: "Tailwind"
                                         },
                                         {
                                             image: Img4,
-                                            name: "Shopify"
+                                            name: "Bootstrap"
+                                        },
+                                        {
+                                            image: Img1,
+                                            name: "REACT Native"
                                         },
                                         {
                                             image: Img5,
-                                            name: "REACT"
+                                            name: "Flutter"
                                         },
                                         {
                                             image: Img6,
-                                            name: "VUE"
-                                        },
-                                        {
-                                            image: Img7,
-                                            name: "NEXT.JS"
-                                        },
-                                        {
-                                            image: Img8,
-                                            name: "NUXT"
+                                            name: "Wordpress"
                                         },
                                     ]
                                 }
@@ -95,28 +96,28 @@ const Technology = () => {
                                 menus={
                                     [
                                         {
-                                            image: Img9,
+                                            image: Img7,
                                             name: "PHP"
                                         },
                                         {
-                                            image: Img10,
-                                            name: "JAVASCRIPT"
-                                        },
-                                        {
-                                            image: Img11,
+                                            image: Img8,
                                             name: "Laravel"
                                         },
                                         {
-                                            image: Img12,
-                                            name: "Node Js"
+                                            image: Img9,
+                                            name: "Python"
                                         },
                                         {
-                                            image: Img13,
+                                            image: Img10,
                                             name: "Django"
                                         },
                                         {
-                                            image: Img14,
-                                            name: "python"
+                                            image: Img11,
+                                            name: "Javascript"
+                                        },
+                                        {
+                                            image: Img12,
+                                            name: "Node js"
                                         },
                                     ]
                                 }
@@ -124,16 +125,24 @@ const Technology = () => {
                         </div>
                         <div ref={ref3}>
                             <TechnologyCard
-                                title="データベース"
+                                title="サーバーサイド"
                                 menus={
                                     [
                                         {
-                                            image: Img15,
+                                            image: Img13,
                                             name: "AWS"
                                         },
                                         {
+                                            image: Img14,
+                                            name: "Azure"
+                                        },
+                                        {
+                                            image: Img15,
+                                            name: "Digital Ocean"
+                                        },
+                                        {
                                             image: Img16,
-                                            name: "GCP"
+                                            name: "Cpanel"
                                         },
                                         {
                                             image: Img17,
@@ -141,23 +150,15 @@ const Technology = () => {
                                         },
                                         {
                                             image: Img18,
-                                            name: "MongoDB"
+                                            name: "Mysql"
                                         },
                                         {
                                             image: Img19,
-                                            name: "AZURE"
-                                        },
-                                        {
-                                            image: Img20,
-                                            name: "DIGITAL OCEAN"
-                                        },
-                                        {
-                                            image: Img21,
                                             name: "POSTGRESQL"
                                         },
                                         {
-                                            image: Img22,
-                                            name: "CPANEL"
+                                            image: Img20,
+                                            name: "MongoDb"
                                         },
                                     ]
                                 }
@@ -165,16 +166,40 @@ const Technology = () => {
                         </div>
                         <div ref={ref4} className="w-full lg:w-auto">
                             <TechnologyCard
-                                title="モバイル"
+                                title="デザイン"
                                 menus={
                                     [
                                         {
-                                            image: Img5,
-                                            name: "REACT NATIVE"
+                                            image: Img21,
+                                            name: "adobe"
+                                        },
+                                        {
+                                            image: Img22,
+                                            name: "PREMIERE PRO"
                                         },
                                         {
                                             image: Img23,
-                                            name: "FLUTTER"
+                                            name: "photoshop"
+                                        },
+                                        {
+                                            image: Img24,
+                                            name: "illustrator"
+                                        },
+                                        {
+                                            image: Img25,
+                                            name: "indesign"
+                                        },
+                                        {
+                                            image: Img26,
+                                            name: "lightroom"
+                                        },
+                                        {
+                                            image: Img27,
+                                            name: "figma"
+                                        },
+                                        {
+                                            image: Img28,
+                                            name: "canva"
                                         },
                                     ]
                                 }

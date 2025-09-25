@@ -12,27 +12,27 @@ const Footer = () => {
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">サービス</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR（雇用代行）</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">安心ラボ型EOR</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">プロジェクト伴走型EOR</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR代理店制度</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">DX支援</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン</Link>
+								<Link to="/eor" className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR（雇用代行）</Link>
+								<Link to="/eor" className="text-[15px] font-normal leading-[26px] tracking-[1%]">安心ラボ型EOR</Link>
+								<Link to="/eor" className="text-[15px] font-normal leading-[26px] tracking-[1%]">プロジェクト伴走型EOR</Link>
+								<Link to="/" className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR代理店制度</Link>
+								<Link to="/dx-support" className="text-[15px] font-normal leading-[26px] tracking-[1%]">DX支援</Link>
+								<Link to="/development" className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発</Link>
+								<Link to="/uiux" className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン</Link>
 							</div>
 						</div>
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">プロダクト</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">Talent Cloud</Link>
+								<Link to="http://staging.talent-cloud.asia/emp/lp" className="text-[15px] font-normal leading-[26px] tracking-[1%]">Talent Cloud</Link>
 							</div>
 						</div>
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">導入事例</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR事例</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発事例</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン事例</Link>
+								<Link to="/eor" className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR事例</Link>
+								<Link to="/development" className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発事例</Link>
+								<Link to="/uiux" className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン事例</Link>
 							</div>
 						</div>
 						<div>
@@ -46,9 +46,9 @@ const Footer = () => {
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">情報</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">ニュース</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">ブログ</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">FAQ</Link>
+								<Link to="/news" className="text-[15px] font-normal leading-[26px] tracking-[1%]">ニュース</Link>
+								<Link to="https://demo-site.next-innovations.ltd/ni-blog/" className="text-[15px] font-normal leading-[26px] tracking-[1%]">ブログ</Link>
+								<Link to="/" className="text-[15px] font-normal leading-[26px] tracking-[1%]">FAQ</Link>
 							</div>
 						</div>
 						<div>

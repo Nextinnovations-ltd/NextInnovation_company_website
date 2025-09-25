@@ -7,7 +7,7 @@ import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
 import useGoButtonAnimation from "../../hooks/useGoButtonAnimation";
 import {PropTypes} from "prop-types"
 
-const CaseStudy = ({caseStudy,link=""}) => {
+const CaseStudy = ({caseStudy}) => {
 
     const containerRef = useRef(null)
     const titleRef = useRef(null)
@@ -36,7 +36,7 @@ const CaseStudy = ({caseStudy,link=""}) => {
             </div>
             <div className="mt-[48px] flex justify-center lg:justify-end overflow-hidden">
                 <div ref={buttonRef}>
-                    <GoButton name="すべてを見る" link={link} />
+                    <GoButton name="すべてを見る" link="/case-study" />
                 </div>
             </div>
         </div>
@@ -45,6 +45,5 @@ const CaseStudy = ({caseStudy,link=""}) => {
 
 CaseStudy.propTypes = {
     caseStudy: PropTypes.array.isRequired,
-    link: PropTypes.string,
 }
 export default CaseStudy;

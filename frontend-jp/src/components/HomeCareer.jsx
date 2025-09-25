@@ -54,7 +54,7 @@ const HomeCareer = () => {
 
             <div className="text-center lg:text-end mt-[40px] lg:mt-[65px] h-[68px] overflow-hidden">
               <div ref={goButtonRef}>
-                <GoButton name="続きを見る" link="" />
+                <GoButton name="続きを見る" link="/news" />
               </div>
             </div>
         </div>

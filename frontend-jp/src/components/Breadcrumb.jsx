@@ -5,7 +5,7 @@ import BreadcrumbRightArrow from "./svg/BreadcrumbRightArrow";
 const Breadcrumb = ({routes,current}) => {
     return (
         <div className="text-[11px] lg:text-[13px] font-normal leading-[22px] tracking-[0%] flex gap-2 items-center">
-            <Link to="">TOP</Link>
+            <Link to="/">TOP</Link>
             <BreadcrumbRightArrow/>
             {routes.map((route, index) => (
                 <div key={index} className="flex gap-2 items-center">

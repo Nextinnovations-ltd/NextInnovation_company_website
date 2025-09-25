@@ -31,8 +31,8 @@ const EorHero = () => {
                 </h1>
                 <div className="flex flex-col gap-[30px] lg:gap-0 lg:flex-row lg:justify-between lg:items-center overflow-hidden">
                     <p ref={descriptionRef} className="text-[14px] lg:text-[15px] font-normal leading-[29px] lg:leading-[24px] tracking-[0%]">
-                        EOR（雇用代行）サービスで、採用から契約・<br className="lg:hidden"/>給与支払・<br className="hidden lg:block"/>
-                        現場サポートまでワンストップで提供。<br/>
+                        EOR（雇用代行）サービスで、採用から契約・給与支払・<br className="hidden lg:block"/>
+                        現場サポートまでワンストップで提供。<br className="hidden lg:block"/>
                         貴社に最適なチーム形成を実現します。
                     </p>
                     <div className="overflow-hidden">

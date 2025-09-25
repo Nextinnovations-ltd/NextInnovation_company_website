@@ -14,6 +14,7 @@ import Security from "../pages/Security/Security";
 import CaseStudy from "../pages/CaseStudy/CaseStudy";
 import Development from "../pages/Services/Development";
 import CompanyProfile from "../pages/CompanyProfile/CompanyProfile";
+import UiUx from "../pages/Services/UiUx";
 
 const router = createBrowserRouter([
 	{
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
 			{
 				path: "/dx-support",
 				element: <DxSupport />,
+			},
+			{
+				path: "/uiux",
+				element: <UiUx/>,
 			},
 			{
 				path: "/contact",

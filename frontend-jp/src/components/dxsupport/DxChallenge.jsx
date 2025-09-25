@@ -69,7 +69,7 @@ const DxChallenge = () => {
                 <ChallengeCard
                     image={Img6}
                     title="納期・品質の不安"
-                    description="体制が不十分だと品質が安定せず納期遅延も"
+                    description="体制が不十分だと品質が安定せず納期遅延も生じる"
                 />
             </div>
         </div>

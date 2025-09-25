@@ -27,6 +27,7 @@ const ServiceOverview = () => {
                             text1="￥20,000～"
                             text2="／人日"
                             image={Img1}
+                            link="/development"
                         />
                         <ServiceOverviewCard
                             title="UI/UXデザイン"
@@ -34,6 +35,7 @@ const ServiceOverview = () => {
                             text1="￥20,000～"
                             text2="／人日"
                             image={Img2}
+                            link="/uiux"
                         />
                     </div>
                 </div>

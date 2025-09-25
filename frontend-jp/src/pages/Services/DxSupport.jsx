@@ -15,9 +15,9 @@ import CsImg3 from "/images/eor-cs3.png"
 import FAQ from "../../components/FAQ";
 import Gif from "../../components/Gif";
 import OtherService from "../../components/eor/OtherService";
-import OsImg1 from "/images/other-service1.png"
-import OsImg2 from "/images/other-service2.png"
-import OsImg3 from "/images/other-service3.png"
+import OsImg1 from "/images/other-service-eor.png"
+import OsImg2 from "/images/other-service-dev.png"
+import OsImg3 from "/images/other-service-uiux.png"
 
 const DxSupport = () => {
 
@@ -69,19 +69,22 @@ const DxSupport = () => {
 
     const otherServices = [
         {
-            title: "DX Support",
+            title: "EOR",
             description: "グローバル人材の雇用・管理をスムーズに支援。法務・労務リスクを軽減し、安心して海外人材を活用可能。",
             image: OsImg1,
+            link: "/eor"
         },
         {
             title: "Custom Development",
             description: "Webシステム・アプリ開発に柔軟対応。React / Flutter 実績あり。",
             image: OsImg2,
+            link: "/development"
         },
         {
             title: "UI/UX Design",
             description: "Figmaを中心に、日本水準の高品質デザインを低コストで提供。",
             image: OsImg3,
+            link: "/uiux"
         },
     ];
 
@@ -108,21 +111,21 @@ const DxSupport = () => {
                         <DxChallenge/>
                     </div>
                 </div>
-                <DxServiceSolve/>
-                <DxStrength/>
-                <ComparisonTable/>
-                <ServiceOverview/>
-                <Technology/>
-                <Deliverable/>
-                <div className="bg-white">
-                    <CaseStudy caseStudy={caseStudy} link="" />
-                </div>
-                <FAQ faqData={faqData} />
-                <div className="bg-white">
-                    <Gif/>
-                </div>
-                <OtherService datas={otherServices} />
             </div>
+            <DxServiceSolve/>
+            <DxStrength/>
+            <ComparisonTable/>
+            <ServiceOverview/>
+            <Technology/>
+            <Deliverable/>
+            <div className="bg-white">
+                <CaseStudy caseStudy={caseStudy} />
+            </div>
+            <FAQ faqData={faqData} />
+            <div className="bg-white">
+                <Gif/>
+            </div>
+            <OtherService datas={otherServices} />
         </>
     );
 }

@@ -2,7 +2,9 @@ import {PropTypes} from "prop-types"
 const CaseStudyCard = ({image,title,text1,text2}) => {
     return (
         <div className="lg:w-[404px] case-study-card">
-            <img src={image} alt="" />
+            <div className="overflow-hidden rounded-[12px]">
+                <img src={image} alt="" className="hover:scale-110 duration-300 ease-in-out transition-transform" />
+            </div>
             <p className="text-[12px] font-normal leading-[22px] tracking-[0%] text-[#444444] mt-4">株式会社Release</p>
             <h3 className="text-[20px] lg:text-[20px] font-bold leading-[44px] tracking-[-2%] uppercase mb-[14px]">{title}</h3>
             <div className="space-y-2 lg:space-y-3">

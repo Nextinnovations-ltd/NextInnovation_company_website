@@ -21,7 +21,7 @@ import HomeCareer from '../../components/HomeCareer';
 import useVisiter from '../../hooks/useVisiter';
 import GoButton from '../../components/GoButton';
 import WhatWeDo from '../../components/WhatWeDo';
-import CaseStudy from '../../components/CaseStudy';
+import CaseStudy from '../../components/eor/CaseStudy';
 import SectionTitle from '../../components/SectionTitle';
 import FAQ from '../../components/FAQ';
 import Media from '../../components/Media';
@@ -29,6 +29,9 @@ import useSectionTitleAnimation from '../../hooks/useSectionTitleAnimation';
 import useGoButtonAnimation from '../../hooks/useGoButtonAnimation';
 import HeroMobile from '../../components/HeroMobile';
 import SliderMobile from '../../components/SliderMobile';
+import CsImg1 from "/images/eor-cs1.png"
+import CsImg2 from "/images/eor-cs2.png"
+import CsImg3 from "/images/eor-cs3.png"
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -39,6 +42,27 @@ const Home = () => {
 	const goButtonRef1 = useRef(null)
 	const goButtonRef2 = useRef(null)
 	const goButtonRef3 = useRef(null)
+
+	const caseStudy = [
+		{
+			image: CsImg1,
+			title: "小規模web開発を短納期で構築実現",
+			text1: "スタートアップ",
+			text2: "UI/UXデザイン、受託開発"
+		},
+		{
+			image: CsImg2,
+			title: "SaaSダッシュボードUI刷新で利用率向上",
+			text1: "スタートアップ",
+			text2: "UI/UXデザイン"
+		},
+		{
+			image: CsImg3,
+			title: "伝統的なECサイトをSHOPIFYでリニュアル",
+			text1: "小売",
+			text2: "UI/UXデザイン、受託開発"
+		},
+	];
 
 	useVisiter('home');
 	useSectionTitleAnimation(trustClientTitleRef, { start: "top+=300 top" })
@@ -315,7 +339,7 @@ const Home = () => {
 							</p>
 							<div className="h-[68px] overflow-hidden">
 								<div ref={goButtonRef1}>
-									<GoButton name="詳しく見る" link="" />
+									<GoButton name="詳しく見る" link="/eor" />
 								</div>
 							</div>
 						</div>
@@ -334,7 +358,7 @@ const Home = () => {
 					<div className="col col--1">
 						<div className="col__content col__content--2">
 							<h2 className="col__content-title">
-								<span className="line__inner text-[48px] font-bold leading-[67px] tracking-[-2%]">DX支援 / 受託開発<br />・UI/UXデザイン</span>
+								<span className="line__inner text-[48px] font-bold leading-[67px] tracking-[-2%]">DX支援 / 受託開発<br/>・UI/UXデザイン</span>
 							</h2>
 							<p className="col__content-txt text-[21px] font-normal leading-[34px] tracking-[0%] mt-[28px] mb-[50px]">
 								日本案件経験豊富なエンジニアとデザイナーが<br />
@@ -346,7 +370,7 @@ const Home = () => {
 							</p>
 							<div className="h-[68px] overflow-hidden">
 								<div ref={goButtonRef2}>
-									<GoButton name="詳しく見る" link="" />
+									<GoButton name="詳しく見る" link="/dx-support" />
 								</div>
 							</div>
 						</div>
@@ -372,7 +396,7 @@ const Home = () => {
 
 			<OurService />
 
-			<CaseStudy />
+			<CaseStudy caseStudy={caseStudy} />
 
 			<div className="bg-[#1E2C44]">
 				<div className="trusted-clients-section pt-[73px] lg:pt-[147px] pb-[36px] lg:pb-[180px] bg-white overflow-hidden flex flex-col gap-[46px] lg:gap-y-20 px-[24px] xl:px-0 rounded-b-[40px] lg:rounded-b-[80px]">
@@ -461,59 +485,57 @@ const Home = () => {
 
 			<Media />
 
-			<div className="-mb-[60px] relative z-[1]">
-				<FAQ
-					faqData={
-						[
-							{
-								question: "ミャンマーにおける当社のEORサービスを利用する利点は何ですか？",
-								subTitles: ["特典には以下が含まれます："],
-								answers: [
-									"現地法人を設立せずに迅速な採用を行う。",
-									"現地の労働法および規制への完全な遵守。",
-									"コスト効率の良い、熟練した現地人材へのアクセス。",
-									"法的リスク及び業務上のリスクの軽減。",
-								],
-							},
-							{
-								question: "ミャンマーの電力課題にどう対処していますか？",
-								subTitles: [],
-								answers: ["当社は必要に応じて電力に関する必要なサポートを提供します。"],
-							},
-							{
-								question: "従業員の採用と管理をどのように行っていますか？",
-								subTitles: ["当社は次の行動に包括的しています："],
-								answers: [
-									"バックグラウンドチェックの実施と資格の検証。",
-									"onboarding（入社手続き）の円滑化。",
-									"給与、福利厚生、書類の管理。",
-									"継続的な人事支援と業績評価を提供する。",
-								],
-							},
-							{
-								question: "職場の課題に関して、従業員にはどのような支援がありますか？",
-								subTitles: ["当社は次の点を提供しています："],
-								answers: [
-									"定期的なチェックインとフィードバック",
-									"抵触解決と職場の課題に対する支援",
-									"キャリア開発の機会に関するガイダンス",
-								],
-							},
-							{
-								question: "どのような人事サービスを提供していますか？",
-								subTitles: ["当社は次の点を含むエンドツーエンドの人事管理を扱っています："],
-								answers: [
-									"従業員の onboarding（入社手続き）と offboarding（退職手続き）",
-									"契約書作成（ミャンマー労働法に準拠）",
-									"休暇管理と出勤状況の追跡",
-									"業績の監視と抵触解決",
-									"従業員の雇用と福利厚生の調整",
-								],
-							},
-						]
-					}
-				/>
-			</div>
+			<FAQ
+				faqData={
+					[
+						{
+							question: "ミャンマーにおける当社のEORサービスを利用する利点は何ですか？",
+							subTitles: ["特典には以下が含まれます："],
+							answers: [
+								"現地法人を設立せずに迅速な採用を行う。",
+								"現地の労働法および規制への完全な遵守。",
+								"コスト効率の良い、熟練した現地人材へのアクセス。",
+								"法的リスク及び業務上のリスクの軽減。",
+							],
+						},
+						{
+							question: "ミャンマーの電力課題にどう対処していますか？",
+							subTitles: [],
+							answers: ["当社は必要に応じて電力に関する必要なサポートを提供します。"],
+						},
+						{
+							question: "従業員の採用と管理をどのように行っていますか？",
+							subTitles: ["当社は次の行動に包括的しています："],
+							answers: [
+								"バックグラウンドチェックの実施と資格の検証。",
+								"onboarding（入社手続き）の円滑化。",
+								"給与、福利厚生、書類の管理。",
+								"継続的な人事支援と業績評価を提供する。",
+							],
+						},
+						{
+							question: "職場の課題に関して、従業員にはどのような支援がありますか？",
+							subTitles: ["当社は次の点を提供しています："],
+							answers: [
+								"定期的なチェックインとフィードバック",
+								"抵触解決と職場の課題に対する支援",
+								"キャリア開発の機会に関するガイダンス",
+							],
+						},
+						{
+							question: "どのような人事サービスを提供していますか？",
+							subTitles: ["当社は次の点を含むエンドツーエンドの人事管理を扱っています："],
+							answers: [
+								"従業員の onboarding（入社手続き）と offboarding（退職手続き）",
+								"契約書作成（ミャンマー労働法に準拠）",
+								"休暇管理と出勤状況の追跡",
+								"業績の監視と抵触解決",
+								"従業員の雇用と福利厚生の調整",
+							],
+						},
+					]
+				}
+			/>
 
 			<Gif round />
 

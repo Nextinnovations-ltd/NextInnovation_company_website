@@ -90,7 +90,7 @@ const Navbar = () => {
                         { title: "EOR代理店制度", link: "/aa" },
                         { title: "DX支援", link: "/dx-support" },
                         { title: "受託開発", link: "/development" },
-                        { title: "UI/UXデザイン", link: "/dd" },
+                        { title: "UI/UXデザイン", link: "/uiux" },
                     ]}
                     clickLink={clickLink}
                 />
@@ -121,7 +121,7 @@ const Navbar = () => {
                                 { title: "EOR代理店制度", link: "/aa" },
                                 { title: "DX支援", link: "/dx-support" },
                                 { title: "受託開発", link: "/development" },
-                                { title: "UI/UXデザイン", link: "/dd" },
+                                { title: "UI/UXデザイン", link: "/uiux" },
                             ]}
                             openValue={mobileDropDownOpen}
                             setOpenValue={setMobileDropDownOpen}

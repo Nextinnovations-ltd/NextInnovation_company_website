@@ -27,6 +27,7 @@ const OtherService = ({datas}) => {
                             title={data.title}
                             description={data.description}
                             image={data.image}
+                            link={data.link}
                         />
                     ))}
                 </div>

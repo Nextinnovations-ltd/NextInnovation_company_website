@@ -308,7 +308,7 @@ const OurService = () => {
           </div>
 
           <div className="relative project" id="p2">
-            <Link to="/development/website">
+            <Link to="/eor">
               <div className="link-container flex justify-between items-center py-6 lg:py-10">
                 <div className="link-title gap-3 flex flex-col">
                   <h3 className="roboto" ref={addToRefs}>EOR with Project Management Support</h3>
@@ -323,7 +323,7 @@ const OurService = () => {
           </div>
 
           <div className="relative project" id="p3">
-            <Link to="/ui-ux">
+            <Link to="/development">
               <div className="link-container flex justify-between items-center py-6 lg:py-10">
                 <div className="link-title gap-3 flex flex-col">
                   <h3 className="roboto" ref={addToRefs}>Custom Development Services</h3>
@@ -338,7 +338,7 @@ const OurService = () => {
           </div>
 
           <div className="relative project" id="p4">
-            <Link to="/testing">
+            <Link to="/uiux">
               <div className="link-container flex justify-between items-center py-6 lg:py-10">
                 <div className="link-title gap-3 flex flex-col">
                   <h3 className="roboto" ref={addToRefs}>Creative UI/UX Design with Figma</h3>
