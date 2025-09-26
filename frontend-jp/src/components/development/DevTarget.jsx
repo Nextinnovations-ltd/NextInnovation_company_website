@@ -49,7 +49,7 @@ const DevTarget = () => {
                 <DxTargetCard
                     title="分析ダッシュボード"
                     image={Img6}
-                    description="データを可視化し、KPI管理やレポート生成を自動化する仕組みを実装 NativeでiOS・Android両対応の業務アプリ・サービスアプリを提供"
+                    description="データを可視化し、KPI管理やレポート生成を自動化する仕組みを実装"
                 />
             </div>
         </div>

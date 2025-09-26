@@ -5,11 +5,30 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { API_BASE_URL } from '../config';
-import BreadcrumbRightArrow from '../components/svg/BreadcrumbRightArrow';
-import CotnactBg from "/images/contact-bg.png"
 import ReachOut from "/images/Reach-out-to-us.png"
+import Breadcrumb from '../components/Breadcrumb';
+import useCardAnimation from '../hooks/useCardAnimation';
 
 const Contact = () => {
+
+    const ref1 = useRef(null)
+    const ref2 = useRef(null)
+    const containerRef = useRef(null)
+    useCardAnimation(containerRef,".map",{start: "top 80%"})
+    useEffect(() => {
+        const tl = gsap.timeline();
+        tl.fromTo(
+            ref1.current,
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }
+        )
+        .fromTo(
+            ref2.current,
+            { y: -100, opacity: 0 },
+            { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" },
+            "-=0.1"
+        )
+    },[])
 
     const navigate = useNavigate()
     const location = useLocation()
@@ -46,7 +65,7 @@ const Contact = () => {
     let validate = (e) => {
         setLoading(true)
         e.preventDefault();
-        fetch(`${API_BASE_URL}/api/contact/validation`, {
+        fetch(`${API_BASE_URL}/api/contact/validation/jp`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -180,39 +199,38 @@ const Contact = () => {
  
     return (
         <>
-            <div className="contact bg-white">
-                <div style={{background: `url(${CotnactBg})`,backgroundRepeat: 'no-repeat',backgroundSize: 'cover'}}>
-                    <div className="max-w-[1366px] mx-auto px-[64px] pt-[100px] text-[#444444]">
-                        <div className="text-[13px] font-normal leading-[22px] tracking-[0%] flex gap-2 items-center">
-                            <Link>TOP</Link>
-                            <BreadcrumbRightArrow/>
-                            <p className="font-medium">お問い合わせ</p>
-                        </div>
-                        <div className="mt-[51px] flex justify-between">
+            <div className="contact relative">
+                <div className="!bg-cover !bg-no-repeat bg-[url('/images/contact-bg.png')]">
+                    <div className="max-w-[1366px] mx-auto px-6 lg:px-[64px] pt-[100px] pb-[112px] lg:pb-[150px] text-[#444444]">
+                        <Breadcrumb current="お問い合わせ"  />
+                        <div className="mt-[51px] lg:flex lg:justify-between">
                             <div>
-                                <img src={ReachOut} alt="" />
-                                <p className="w-[546px] mt-[107px] text-[#000000] text-[15px] font-normal leading-[24px] tracking-[0%]">
+                                <img ref={ref1} src={ReachOut} alt="" />
+                                <p ref={ref2} className="lg:w-[546px] mt-[107px] text-[#000000] text-[15px] font-normal leading-[24px] tracking-[0%]">
                                     当社は緊密に連携したチームと効率的なプロセスを有しており、これにより当社との業務が格段に容易になり、総合的に優れたサービスを提供します。つまり、当社こそが最高のワンストップデジタルサービス企業なのです。
                                 </p>
                             </div>
                             
-                            <div className="w-[390px] md:w-[505px] lg:w-[400px] xl:w-[505px]">
+                            <div className="md:w-[505px] lg:w-[400px] xl:w-[505px]">
                                 <div>
                                     <h3 ref={addToRefs} className="text-[20px] md:text-[24px] text-[#1A1A1A] font-semibold leading-[44px] tracking-[-2%] mb-[40px]">このフォームにご記入ください</h3>
                                     <form>
-                                        <div  className="space-y-[24px]">
+                                        <div className="space-y-[24px]">
                                             <ContactInput type="text" placeholder="お名前 *" state={formData.name} setState={(value) => setFormData(prev => ({ ...prev, name: value }))} error={error.name || []}/>
                                             <ContactInput type="email" placeholder="メールアドレス *" state={formData.email} setState={(value) => setFormData(prev => ({ ...prev, email: value }))} error={error.email || []}/>
-                                            <ContactInput type="text" placeholder="携帯電話番号 *" state={formData.phone} setState={(value) => setFormData(prev => ({ ...prev, phone: value }))} error={error.phone || []}/>
-                                            <ContactInput type="text" placeholder="Country" state={formData.country} setState={(value) => setFormData(prev => ({ ...prev, country: value }))} error={error.country || []}/>
-                                            <ContactInput type="text" placeholder="Budget" state={formData.budget} setState={(value) => setFormData(prev => ({ ...prev, budget: value }))} error={error.budget || []}/>
+                                            <ContactInput type="text" placeholder="電話番号 *" state={formData.phone} setState={(value) => setFormData(prev => ({ ...prev, phone: value }))} error={error.phone || []}/>
+                                            <ContactInput type="text" placeholder="お国" state={formData.country} setState={(value) => setFormData(prev => ({ ...prev, country: value }))} error={error.country || []}/>
+                                            <ContactInput type="text" placeholder="ご予算" state={formData.budget} setState={(value) => setFormData(prev => ({ ...prev, budget: value }))} error={error.budget || []}/>
                                             <div className="relative w-full">
                                                 <ContactSelect state={formData.interest} setState={(value) => setFormData(prev => ({ ...prev, interest: value }))} error={error.interest || []}>
                                                     <option value="">ご興味のあるサービスをお選びください *</option>
-                                                    <option value="1">EOR</option>
-                                                    <option value="2">Development</option>
-                                                    <option value="3">UI/UX</option>
-                                                    <option value="4">Testing</option>
+                                                    <option value="5">EOR</option>
+                                                    <option value="6">安心ラボ型EOR</option>
+                                                    <option value="7">プロジェクト伴走型EOR</option>
+                                                    <option value="8">EOR代理店制度</option>
+                                                    <option value="9">DX支援</option>
+                                                    <option value="10">受託開発</option>
+                                                    <option value="11">UI/UXデザイン</option>
                                                 </ContactSelect>
                                             </div>
         
@@ -259,12 +277,42 @@ const Contact = () => {
                                                 Submit
                                             </button>
                                         )}
-        
                                     </form>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
+                <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
+                    <div className="max-w-[1240px] mx-auto pb-[158px]">
+                        <div className="flex flex-col lg:flex-row gap-[80px] lg:gap-[21px] text-[#444444] px-[25px] xl:px-0">
+                            <div className="lg:w-[710px] pt-[24px] contact-info">
+                                <p className="text-[12px] lg:text-[16px] font-medium leading-[31px] tracking-[0%] text-[#444444] mb-[10px]">連絡先情報</p>
+                                <h3 ref={addToRefs} className="roboto text-[32px] lg:text-[58px] font-medium lg:font-bold leading-[38px] lg:leading-[67px] tracking-[0%] lg:tracking-[-1%] uppercase">contact info</h3>
+                                <div  className="flex flex-col md:flex-row gap-[50px] md:gap-[145px] mt-[40px] md:mt-[70px] lg:mt-[100px] ">
+                                    <div className="space-y-[16px]" >
+                                        <p  ref={addToRefs}  className="text-[14px] text-[#999] font-bold tracking-[0.14px] uppercase">メール</p>
+                                        <a href="https://mail.google.com/mail/?view=cm&to=info@next-innovations.ltd" target="__blank" ref={addToRefs}  className="hidden lg:block text-[18px] text-blue-500 hover:text-blue-600 hover:underline font-normal leading-[26px] tracking-[0.18px]">info@next-innovations.ltd</a>
+                                        <a href="mailto:info@next-innovations.ltd" target="__blank" ref={addToRefs}  className="lg:hidden text-[18px] text-blue-500 hover:text-blue-600 hover:underline font-normal leading-[26px] tracking-[0.18px]">info@next-innovations.ltd</a>
+                                    </div>
+                                    <div className="space-y-[16px]">
+                                        <p  ref={addToRefs}  className="text-[14px] text-[#999] font-bold tracking-[0.14px] uppercase">電話番号</p>
+                                        <div className="text-[18px] text-blue-500 hover:text-blue-600 hover:underline font-normal leading-[26px] tracking-[0.18px]">
+                                            <a href="tel:09451663606" target="__blank" ref={addToRefs} >+959 451 663 606</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div  className="space-y-[16px] mt-[48px]">
+                                    <p className="text-[14px] text-[#999] font-bold tracking-[0.14px] uppercase"  ref={addToRefs} >住所</p>
+                                    <p className="text-[18px] font-normal leading-[26px] tracking-[0.18px]"  ref={addToRefs} >Room No (602), Gandamar Residence, Gandamar Road, Mayangone Township, Yangon, Myanmar</p>
+                                </div>
+                            </div>
+
+                            <div ref={containerRef} className="w-full lg:w-[505px]">
+                                <iframe className="w-full map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.2974840422876!2d96.15543147461591!3d16.861172417752115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1933ef77e5147%3A0x2a6d94f48d039f50!2sNext%20Innovations%20co.%2C%20Ltd!5e0!3m2!1sen!2smm!4v1740103470409!5m2!1sen!2smm" width="600" height="450" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
