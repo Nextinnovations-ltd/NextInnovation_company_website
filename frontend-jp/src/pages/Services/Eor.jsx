@@ -187,7 +187,7 @@ const Eor = () => {
             <div className="bg-[#1E2C44]">
                 <FAQ faqData={faqData} />
             </div>
-            <div className="-mb-[60px] relative !z-[1]">
+            <div className="-mb-[70px] relative !z-[1]">
                 <Platform/>
             </div>
             <Gif/>

@@ -1,6 +1,7 @@
 import './Privacy.css';
 import logo from '../../../public/images/Group 34121.svg'; // ⬅️ replace with actual logo path
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 const Privacy = () => {
 	return (
 		<div className='bg-[#1E2C44]'>
@@ -206,7 +207,7 @@ const Privacy = () => {
 						transition={{ duration: 0.8, ease: "easeOut" }}
 						viewport={{ once: true }} className="mt-[20px] text-[#096FCA] text-[20px] font-[500] leading-[38px]">
 						Next Innovations株式会社 <br />
-						メール：info@next-innovations.ltd
+						メール：<Link to="https://mail.google.com/mail/?view=cm&to=info@next-innovations.ltd" target="_blank">info@next-innovations.ltd</Link>
 					</motion.p>
 				</div>
 			</div>

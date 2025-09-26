@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import DownArrow from "./svg/DownArrow";
 import DropDownModal from "./DropDownModal";
 import Hamburger from "./svg/Hamburger";
@@ -65,14 +65,14 @@ const Navbar = () => {
                         <h4>サービス</h4>
                         <DownArrow/>
                     </button>
-                    <Link className="archivo py-2">Talent Cloud</Link>
-                    <Link className="py-2">導入事例</Link>
+                    <NavLink to="http://staging.talent-cloud.asia/emp/lp" onClick={() => setDropDownOpen('')} target="_blank" className="archivo py-2">Talent Cloud</NavLink>
+                    <NavLink to="/case-study" onClick={() => setDropDownOpen('')} className="py-2">導入事例</NavLink>
                     <button onClick={() => clickDropDown('about')} className={`flex gap-[6px] items-center py-2 ${dropDownOpen == 'about' ? 'border-b-[2px] border-[#F15A29]' : ''}`}>
                         <h4>会社情報</h4>
                         <DownArrow/>
                     </button>
-                    <Link className="py-2">ニュース</Link>
-                    <Link className="py-2">ブログ</Link>
+                    <NavLink to="/news" onClick={() => setDropDownOpen('')} className="py-2">ニュース</NavLink>
+                    <NavLink to="https://demo-site.next-innovations.ltd/ni-blog/" onClick={() => setDropDownOpen('')} target="_blank" className="py-2">ブログ</NavLink>
                 </div>
                 <div className="block lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
                     {!mobileOpen ? <Hamburger/> : <Cross/>}
@@ -101,7 +101,7 @@ const Navbar = () => {
                     eng="About"
                     description="私たちはミャンマーに拠点を置くIT企業です。高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを、専門的なチームとともにお客様の満足を第一に提供します。"
                     menus={[
-                        { title: "会社概要", link: "/ee" },
+                        { title: "会社概要", link: "/company-profile" },
                         { title: "経営方針", link: "/ff" },
                         { title: "メンバー紹介", link: "/gg" },
                     ]}
@@ -127,21 +127,21 @@ const Navbar = () => {
                             setOpenValue={setMobileDropDownOpen}
                             setMobileOpen={setMobileOpen}
                         />
-                        <NavLink to="/aa" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">Talent Cloud</NavLink>
-                        <NavLink to="/bb" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">導入事例</NavLink>
+                        <NavLink to="http://staging.talent-cloud.asia/emp/lp" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">Talent Cloud</NavLink>
+                        <NavLink to="/case-study" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">導入事例</NavLink>
                         <MobileDropDown
                             name="会社情報"
                             value="about"
                             menus={[
-                                { title: "会社概要", link: "/ee" },
+                                { title: "会社概要", link: "/company-profile" },
                                 { title: "経営方針", link: "/ff" },
                                 { title: "メンバー紹介", link: "/gg" },
                             ]}
                             openValue={mobileDropDownOpen}
                             setOpenValue={setMobileDropDownOpen}
                         />
-                        <NavLink to="/cc" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ニュース</NavLink>
-                        <NavLink to="/dd" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ブログ</NavLink>
+                        <NavLink to="/news" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ニュース</NavLink>
+                        <NavLink to="https://demo-site.next-innovations.ltd/ni-blog/" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ブログ</NavLink>
                     </div>
                 </>
             )}

@@ -7,6 +7,7 @@ import rotateImg from '../../../public/images/Group 34121.svg'
 import useCardAnimation from '../../hooks/useCardAnimation'
 import useSectionTitleAnimation from '../../hooks/useSectionTitleAnimation'
 import { motion } from 'framer-motion';
+import Breadcrumb from '../../components/Breadcrumb'
 const CaseStudy = () => {
   
   const containerRef = useRef(null);
@@ -23,11 +24,7 @@ const CaseStudy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}>
-              <p className='text-[#444] text-[13px] font-[400] leading-[22px]'>TOP</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M9.47334 7.43305L5.97334 10.9331C5.73414 11.1723 5.34633 11.1723 5.10713 10.9331C4.86794 10.6939 4.86794 10.306 5.10713 10.0668L8.17403 6.99995L5.10713 3.93305C4.86794 3.69386 4.86794 3.30604 5.10713 3.06685C5.34633 2.82765 5.73414 2.82765 5.97334 3.06685L9.47334 6.56685C9.71253 6.80604 9.71253 7.19386 9.47334 7.43305Z" fill="#F15A29"/>
-              </svg>
-              <p className='text-[#444] text-[13px] font-[400] leading-[22px] opacity-[0.6]'>お問い合わせ</p>
+              <Breadcrumb current="導入事例" />
                 </motion.div>
               <div className="pl-[30px] md:pl-[40px]">
 
@@ -35,7 +32,7 @@ const CaseStudy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}>
-             <p className='flex  items-center gap-2 text-[#575757] text-[16px] font-[500] leading-[31px]'>(<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+             <p className='flex  items-center gap-2 text-[#575757] text-[16px] font-[500] leading-[31px]'>(<svg className='animate-fade' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
               <circle cx="4" cy="4" r="4" fill="#096FCA"/>
             </svg>導入事例 )</p>
            </motion.div>

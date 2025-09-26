@@ -17,8 +17,8 @@ const EorCardSection = () => {
                 text1Next="設立する予定はない"
                 text2="雇用契約・給与計算・社会保険などの"
                 text2Next="煩雑な手続きを任せたい"
-                text3="小規模からリスクを抑えて海外人材活用"
-                text3Next="を試したい"
+                text3="海外人材のマネージメントに自信あり、"
+                text3Next="自社で業務上の管理/運営をリモートで可能"
             />
 
             <EorCard
