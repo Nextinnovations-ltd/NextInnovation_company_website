@@ -4,7 +4,7 @@ import Logoimage2 from "/images/Blur2.svg";
 import DrivingDXwith from "/images/DrivingDXwith.png";
 import HeroStar from "/images/hero-star.png";
 import useHeroAnimation from "../hooks/useHeroAnimation";
-
+import logo from '../../public/images/Group 34121.svg'; // 
 const Hero = () => {
 
 	const drivingRef = useRef(null);
@@ -17,10 +17,23 @@ const Hero = () => {
 
 	return (
 		<div className="bg-white pt-[80px]">
-			<div className="NI-homepage-background-logo-container relative flex w-full h-[650px] md:h-[110vh] justify-center items-center overflow-hidden">
-				<img src={Logoimage1} alt="" className="logo1 layer w-[24%] left-[3%] relative opacity-60" />
-				<img src={Logoimage2} alt="" className="logo2 layer w-[70%] right-[2%] relative opacity-60" />
-			</div>
+			<div className="NI-homepage-background-logo-container  w-full h-[650px] md:h-[110vh]  ">
+
+			{[...Array(10)].map((_, i) => (
+				<img
+					key={i}
+					src={logo}
+					alt="Floating Logo"
+					className="floating-logo absolute opacity-100"
+					style={{
+						width: `${Math.random() * 400 + 480}px`, // random size
+						left: `${Math.random() * 100}%`, // random horizontal position
+						animationDuration: `${Math.random() * 8 + 10}s`, // random speed
+						rotate: `${Math.random() * 90 - 15}deg`, // random tilt (-15° to 15°)
+					}}
+				/>
+			))}
+		 </div>
 			<div className="absolute top-[140px] left-[72px] right-[66px]">
 				<div className="relative">
 					<div className="h-[100px] overflow-hidden">

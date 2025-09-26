@@ -3,7 +3,7 @@ import DrivingDXwith from "/images/DrivingDXwith-mobile.png"
 import HeroBg from "/images/hero-mobile-bg.png"
 import HeroStar from "/images/hero-star.png"
 import useHeroAnimation from "../hooks/useHeroAnimation"
-
+import logo from '../../public/images/Group 34121.svg'; // 
 const HeroMobile = () => {
 
     const drivingRef = useRef(null);
@@ -16,8 +16,29 @@ const HeroMobile = () => {
 
     return (
         <div className="bg-[#1E2C44]">
-            <div className="bg-white rounded-b-[40px] pt-[60px]">
-                <div className="px-3 pt-[30px] pb-[105px]" style={{ background: `url(${HeroBg})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'top right' }}>
+            <div className="bg-white rounded-b-[40px] pt-[60px] relative overflow-hidden">
+                 <div className="w-full  absolute ">
+
+                    {[...Array(10)].map((_, i) => (
+                        <img
+                            key={i}
+                            src={logo}
+                            alt="Floating Logo"
+                            className="floating-logo"
+                            style={{
+                                width: `${Math.random() * 400 + 380}px`, // random size
+                                left: `${Math.random() * 100}%`, // random horizontal position
+                                animationDuration: `${Math.random() * 8 + 10}s`, // random speed
+                                rotate: `${Math.random() * 90 - 15}deg`, // random tilt (-15° to 15°)
+                            }}
+                        />
+                    ))}
+                 </div>
+                <div className="px-3 pt-[30px] pb-[105px] " >
+                 
+               
+                    
+
                     <div className="h-[125px] overflow-hidden">
                         <img src={DrivingDXwith} alt="" ref={drivingRef} />
                     </div>
