@@ -462,7 +462,7 @@ const Home = () => {
 									</span>
 									<div className="mt-[48px] lg:mt-[60px] h-[68px] overflow-hidden">
 										<div ref={goButtonRef3}>
-											<GoButton name="詳しく見る" link="http://staging.talent-cloud.asia/emp/lp" target="_blank" />
+											<GoButton name="β版を見る" link="http://staging.talent-cloud.asia/emp/lp" target="_blank" />
 										</div>
 									</div>
 								</div>
