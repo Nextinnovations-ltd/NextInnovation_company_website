@@ -52,7 +52,7 @@ const Navbar = () => {
     return (
         <>
             <div ref={wrapperRef}
-                className={`text-[#444444] bg-white flex justify-between items-center pt-[18px] pb-[18px] px-[32px] fixed top-0 left-0 right-0 z-50 transition-transform duration-300 
+                className={`text-[#444444] bg-white flex justify-between items-center pt-[18px] pb-[18px] px-[32px] fixed top-0 left-0 right-0 z-[999] transition-transform duration-300 
                     ${showBorder ? "border-b-[1px]" : ""}`}
             >
                 <div>

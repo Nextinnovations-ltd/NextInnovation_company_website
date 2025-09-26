@@ -41,7 +41,7 @@ const PlanAndPricing = () => {
                                 </p>
                             </div>
                             <PricingPlanButton
-                                link=""
+                                link="/contact?from=5"
                                 bgColor="bg-white"
                                 hoverBgColor="hover:bg-[#F15A29]"
                                 textColor="text-[#F15A29]"
@@ -114,7 +114,7 @@ const PlanAndPricing = () => {
                                     </p>
                                 </div>
                                 <PricingPlanButton
-                                    link=""
+                                    link="/contact?from=6"
                                     bgColor="bg-[#F15A29]"
                                     hoverBgColor="hover:bg-[#D95125]"
                                     textColor="text-white"
@@ -176,7 +176,7 @@ const PlanAndPricing = () => {
                                 </p>
                             </div>
                             <PricingPlanButton
-                                link=""
+                                link="/contact?from=7"
                                 bgColor="bg-white"
                                 hoverBgColor="hover:bg-[#F15A29]"
                                 textColor="text-[#F15A29]"

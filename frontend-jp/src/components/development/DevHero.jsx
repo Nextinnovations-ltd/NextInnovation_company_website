@@ -36,7 +36,7 @@ const DevHero = () => {
                     </p>
                     <div className="overflow-hidden">
                         <div ref={buttonRef}>
-                            <GoButton name="無料相談する" link="" />
+                            <GoButton name="無料相談する" link="/contact?from=10" />
                         </div>
                     </div>
                 </div>

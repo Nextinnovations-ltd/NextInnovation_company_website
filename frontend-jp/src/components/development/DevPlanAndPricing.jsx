@@ -25,35 +25,35 @@ const DevPlanAndPricing = () => {
                             text2="LP制作"
                             text3="20〜40万円"
                             text4="1ページ完結のキャンペーン／広告用LP"
-                            link=""
+                            link="/contact?from=10"
                         />
                         <DevPlanAndPricingCard
                             text1="10ページ以内"
                             text2="小規模サイト"
                             text3="50〜80万円"
                             text4="WordPress＋Elementor構築。会社紹介・サービスサイトに最適"
-                            link=""
+                            link="/contact?from=10"
                         />
                         <DevPlanAndPricingCard
                             text1="Shopify / WooCommerce"
                             text2="ECサイト"
                             text3="80〜120万円"
                             text4="決済・在庫機能付きECサイト。越境販売も可能"
-                            link=""
+                            link="/contact?from=10"
                         />
                         <DevPlanAndPricingCard
                             text1="Web system"
                             text2="業務Webシステム"
                             text3="150〜300万円"
                             text4="予約・在庫・マッチングなど業務効率化システム"
-                            link=""
+                            link="/contact?from=10"
                         />
                         <DevPlanAndPricingCard
                             text1="Mobile app development"
                             text2="モバイルアプリ開発"
                             text3="300〜600万円"
                             text4="Flutter / React NativeでiOS・Android対応"
-                            link=""
+                            link="/contact?from=10"
                         />
                     </div>
                 </div>

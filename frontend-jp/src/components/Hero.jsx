@@ -1,6 +1,4 @@
 import { useRef } from "react";
-import Logoimage1 from "/images/Blur1.svg";
-import Logoimage2 from "/images/Blur2.svg";
 import DrivingDXwith from "/images/DrivingDXwith.png";
 import HeroStar from "/images/hero-star.png";
 import useHeroAnimation from "../hooks/useHeroAnimation";

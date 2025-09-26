@@ -48,7 +48,6 @@ const Footer = () => {
 							<div className="flex flex-col gap-[22px] mt-[24px]">
 								<Link to="/news" className="text-[15px] font-normal leading-[26px] tracking-[1%]">ニュース</Link>
 								<Link to="https://demo-site.next-innovations.ltd/ni-blog/" className="text-[15px] font-normal leading-[26px] tracking-[1%]">ブログ</Link>
-								<Link to="/" className="text-[15px] font-normal leading-[26px] tracking-[1%]">FAQ</Link>
 							</div>
 						</div>
 						<div>

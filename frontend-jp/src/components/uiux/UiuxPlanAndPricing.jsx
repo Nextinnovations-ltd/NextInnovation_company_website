@@ -25,35 +25,35 @@ const UiuxPlanAndPricing = () => {
                             text2="LPデザイン"
                             text3="10〜20万円"
                             text4="1ページ完結のランディングページデザイン"
-                            link=""
+                            link="/contact?from=11"
                         />
                         <DevPlanAndPricingCard
                             text1="10ページ以内"
                             text2="小規模サイトデザイン"
                             text3="40〜70万円"
                             text4="WordPress＋Elementorを想定したUIデザイン"
-                            link=""
+                            link="/contact?from=11"
                         />
                         <DevPlanAndPricingCard
                             text1="10〜20画面"
                             text2="アプリUIリニューアル"
                             text3="150〜250万円"
                             text4="既存アプリのUI刷新でUX改善"
-                            link=""
+                            link="/contact?from=11"
                         />
                         <DevPlanAndPricingCard
                             text1="Web service UI/UX design+Prototype"
                             text2="WebサービスUI/UX設計＋プロトタイプ"
                             text3="100〜200万円"
                             text4="新規Webサービスの画面設計からプロトタイプまで"
-                            link=""
+                            link="/contact?from=11"
                         />
                         <DevPlanAndPricingCard
                             text1="Design system construction"
                             text2="デザインシステム構築"
                             text3="50〜80万円"
                             text4="カラー・フォント・コンポーネントを統一したデザイン基盤"
-                            link=""
+                            link="/contact?from=11"
                         />
                     </div>
                 </div>

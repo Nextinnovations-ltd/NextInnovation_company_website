@@ -32,6 +32,8 @@ const Contact = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
+    const queryParams = new URLSearchParams(location.search);
+    const from = queryParams.get("from"); 
     let editFormData = location.state
     let [error,setError] = useState('')
     let [loading,setLoading] = useState(false)
@@ -44,23 +46,15 @@ const Contact = () => {
         country : '',
         budget : '',
         message : ''
-    })    
-    
+    })
+
     useEffect(() => {
         if (editFormData) {
             setFormData(editFormData)
-        }else {
-            setFormData({
-                name : '',
-                email : '',
-                phone : '',
-                interest : '',
-                country : '',
-                budget : '',
-                message : ''
-            })
+        }else if (from) {
+            setFormData((prev) => ({ ...prev, interest: from }));
         }
-    }, [editFormData]);
+    }, [editFormData,from]);
 
     let validate = (e) => {
         setLoading(true)
