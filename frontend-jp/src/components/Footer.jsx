@@ -38,7 +38,7 @@ const Footer = () => {
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">会社情報</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">会社概要</Link>
+								<Link to="/company-profile" className="text-[15px] font-normal leading-[26px] tracking-[1%]">会社概要</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">経営方針</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">代表メッセージ</Link>
 							</div>
@@ -61,7 +61,7 @@ const Footer = () => {
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">お問い合わせ</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]"> 無料相談フォーム</Link>
+								<Link to="/contact" className="text-[15px] font-normal leading-[26px] tracking-[1%]">無料相談フォーム</Link>
 							</div>
 						</div>
 					</div>
@@ -69,10 +69,10 @@ const Footer = () => {
 						<p className="roboto text-[18px] font-normal leading-[26px] tracking-[1%]">Copyright © Next Innovations</p>
 						<p className="roboto text-[18px] font-normal leading-[26px] tracking-[1%]">Let’s grab high achievements together!</p>
 						<div className="roboto underline text-[18px] font-normal leading-[26px] tracking-[1%] flex gap-2">
-							<Link>Facebook</Link>
-							<Link>Instagram</Link>
-							<Link>Youtube</Link>
-							<Link>LinkedIn</Link>
+							<Link to="https://www.facebook.com/NextInnovationsMM">Facebook</Link>
+							<Link to="https://www.instagram.com/next_innovations_myanmar/">Instagram</Link>
+							<Link to="https://www.youtube.com/@nextinnovations/videos">Youtube</Link>
+							<Link to="https://www.linkedin.com/company/next-innovations2020/posts/?feedView=all">LinkedIn</Link>
 						</div>
 					</div>
 				</div>
