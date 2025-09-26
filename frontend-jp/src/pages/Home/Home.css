@@ -557,21 +557,24 @@
 .slide--6 .slide__scroll-line {
     background: #d7cec5
 }
-
 .col__image-wrap {
     position: absolute;
     left: 0;
-    top:50%;
-    transform: translateY(-50%);
     width: 100%;
-    height: 160vh
-}
-/* Safari only */
-@supports (-webkit-touch-callout: none) {
-  .col__image-wrap {
-    top: auto !important; /* remove the Chrome adjustment */
+    height: 160vh;
+    top: 0;             /* default for Safari */
+    transform: none;
   }
-}
+  
+  /* Chrome/Edge only */
+  @supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+    .col__image-wrap {
+      transform: translateY(-50%);
+    }
+  }
+  
+  
+
 
 .col__image-wrap .img {
     -o-object-fit: cover;
