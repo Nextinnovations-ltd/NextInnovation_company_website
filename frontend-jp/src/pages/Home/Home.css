@@ -561,9 +561,16 @@
 .col__image-wrap {
     position: absolute;
     left: 0;
+    top:50%;
     transform: translateY(-50%);
     width: 100%;
     height: 160vh
+}
+/* Safari only */
+@supports (-webkit-touch-callout: none) {
+  .col__image-wrap {
+    top: auto !important; /* remove the Chrome adjustment */
+  }
 }
 
 .col__image-wrap .img {
