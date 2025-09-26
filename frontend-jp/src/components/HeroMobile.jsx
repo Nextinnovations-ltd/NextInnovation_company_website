@@ -1,6 +1,5 @@
 import { useRef } from "react"
 import DrivingDXwith from "/images/DrivingDXwith-mobile.png"
-import HeroBg from "/images/hero-mobile-bg.png"
 import HeroStar from "/images/hero-star.png"
 import useHeroAnimation from "../hooks/useHeroAnimation"
 import logo from '../../public/images/Group 34121.svg'; // 
@@ -35,10 +34,6 @@ const HeroMobile = () => {
                     ))}
                  </div>
                 <div className="px-3 pt-[30px] pb-[105px] " >
-                 
-               
-                    
-
                     <div className="h-[125px] overflow-hidden">
                         <img src={DrivingDXwith} alt="" ref={drivingRef} />
                     </div>
@@ -52,7 +47,7 @@ const HeroMobile = () => {
                         <img ref={StarRef} src={HeroStar} className="w-[36px]" alt="" />
                         <p ref={TalentRef} className="montserrat text-[60px] text-[#096FCA] font-bold leading-[120%] tracking-[-3%] uppercase">Talent</p>
                     </div>
-                    <div className="mt-[30px] text-[#444444] px-2">
+                    <div className="mt-[60px] text-[#444444] px-2">
                         <div ref={ParaRef}>
                             <h3 className="text-[20px] font-bold leading-[29px] tracking-[0%]">グローバル人材で、DXを加速する。</h3>
                             <div className="w-[320px] border-t-[2px] border-[#444444] pt-[16px] mt-[12px]">

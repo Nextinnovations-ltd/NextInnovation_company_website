@@ -1,222 +1,71 @@
-import { Link, useSearchParams } from "react-router-dom"
-import CareerCard from "../../components/CareerCard"
-import { useState, useEffect, useRef } from 'react';
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import useVisiter from "../../hooks/useVisiter";
-import { API_BASE_URL } from "../../config";
+import {motion} from "framer-motion"
+import Breadcrumb from '../../components/Breadcrumb';
+import { useRef } from "react";
+import rotateImg from '/images/Group 34121.svg'
+import NewsText from "/images/svg/news.svg"
+import BgImg from '/images/contact-bg.png'
+import Img from "/images/eor-cs3.png"
+import useCardAnimation from "../../hooks/useCardAnimation";
+import LeftArrow from "/images/svg/pagination-arrow-left.svg"
+import RightArrow from "/images/svg/pagination-arrow-right.svg"
 
 const Career = () => {
-	useVisiter('news');
 
-	let [url, setUrl] = useState(`${API_BASE_URL}/api/news`);
-	let [news, setNews] = useState([]);
-	let [category, setCategory] = useState('');
-	let [currentPage, setCurrentPage] = useState('');
-	let [lastPage, setLastPage] = useState('');
-	let [prevPage, setPrevPage] = useState('');
-	let [nextPage, setNextPage] = useState('');
-	let [searchParams, setSearchParams] = useSearchParams();
-	let [newsCategory, setNewsCategory] = useState([]);
-
-	useEffect(() => {
-		const fetchCategories = async () => {
-			try {
-				const res = await fetch(`${API_BASE_URL}/api/news/category`);
-				const data = await res.json();
-				setNewsCategory(data.data);
-			} catch (err) {
-				console.error(err);
-			}
-		};
-
-		fetchCategories();
-	}, []);
-
-	useEffect(() => {
-		const fetchNews = async () => {
-			try {
-				const res = await fetch(url);
-				const data = await res.json();
-
-				setNews(data);
-				setCurrentPage(data.meta.current_page);
-				setLastPage(data.meta.last_page);
-				setPrevPage(data.links.prev);
-				setNextPage(data.links.next);
-			} catch (err) {
-				console.error(err);
-			}
-		};
-
-		fetchNews();
-	}, [url]);
-
-
-	let link = (page) => {
-		setUrl(`${API_BASE_URL}/api/news?category=${category}&page=${page}`);
-		pageTransition();
-	}
-
-	let categoryFilter = (id, name) => {
-		setCategory(id);
-		setSearchParams({ category: name });
-		setUrl(`${API_BASE_URL}/api/news?category=${id}`);
-		pageTransition();
-	};
-
-	useEffect(() => {
-		const name = searchParams.get("category");
-		if (name && newsCategory.length > 0) {
-			const found = newsCategory.find(cat => cat.name.toLowerCase() === name.toLowerCase());
-			if (found) {
-				setCategory(found.id);
-				setUrl(`${API_BASE_URL}/api/news?category=${found.id}`);
-			}
-		}
-	}, [searchParams, newsCategory]);
-
-	let pageTransition = () => {
-		window.scrollTo({ top: 390, left: 0 });
-		gsap.to(".card-transition", {
-			opacity: 0,
-			duration: 0.4,
-			ease: "sine.out",
-			onComplete: () => {
-				// After fade out is done, fade in
-				gsap.to(".card-transition", {
-					opacity: 1,
-					duration: 0.8,
-					ease: "sine.inOut"
-				});
-			}
-		});
-	}
-
-	/* TEXT ANIMATION */
-	const textRefs = useRef([]);
-	const addToRefs = (el) => {
-		if (el && !textRefs.current.includes(el)) {
-			textRefs.current.push(el);
-		}
-	};
-
-	useEffect(() => {
-		// Create array to store all timelines for cleanup
-		const allTimelines = [];
-
-		// 1. TEXT ANIMATIONS (improved version)
-		textRefs.current.forEach((textElement) => {
-			if (!textElement) return;
-
-			// Skip if already animated (in case this runs multiple times)
-			if (textElement.classList.contains('has-animated')) return;
-			textElement.classList.add('has-animated');
-
-			// Preserve original HTML structure but wrap lines
-			const lines = textElement.innerHTML.split('<br>');
-			textElement.innerHTML = lines.map(line =>
-				line.trim() ? `<div class="line-container"><div class="line">${line}</div></div>` : '<br>'
-			).join('');
-
-			const containers = textElement.querySelectorAll('.line-container');
-			const lineElements = textElement.querySelectorAll('.line');
-
-			// Set initial state
-			gsap.set(containers, {
-				height: 0,
-				overflow: 'hidden'
-			});
-
-			gsap.set(lineElements, {
-				y: '100%',
-				opacity: 0
-			});
-
-			// Create timeline with more reliable ScrollTrigger
-			const textTl = gsap.timeline({
-				scrollTrigger: {
-					trigger: textElement,
-					start: "top 60%",
-
-					toggleActions: "play none none none",
-					markers: false,
-
-					once: true
-				}
-			});
-
-			containers.forEach((container, i) => {
-				const line = container.querySelector('.line');
-				if (!line.textContent.trim()) return; // Skip empty lines
-
-				textTl.to(container, {
-					height: 'auto',
-					duration: 0.4,
-					ease: "power2.out"
-				}, i * 0.2)
-					.to(line, {
-						y: 0,
-						opacity: 1,
-						duration: 0.6,
-						ease: "power2.out"
-					}, i * 0.2); // Simplified stagger timing
-			});
-
-			allTimelines.push(textTl);
-		});
-
-		// Refresh ScrollTriggers after setup to ensure they detect properly
-		setTimeout(() => {
-			ScrollTrigger.refresh();
-		}, 500);
-
-	}, []);
+	const containerRef = useRef(null)
+	useCardAnimation(containerRef,".news-card",{start: "top 80%"})
 
 	return (
-		<div className="works-list max-w-[1240px] mx-auto text-[#121212] px-[24px] xl:px-0">
-			<h1 ref={addToRefs} className="text-[80px] md:text-[100px] lg:text-[120px] xl:text-[135px] italic font-light leading-[100%] tracking-[-5px] mt-[60px] md:mt-[101px] mb-[88px]">Knowledge sharing and Blogs</h1>
-			<div className="works-nav flex flex-wrap gap-[15px] md:gap-[28px] xl:gap-[32px] text-[18px] text-[#8D8D8D] font-semibold leading-[100%] tracking-[0.18px] uppercase mb-[50px] md:mb-[74px]">
-				<div className={`category-link ${category === '' ? 'active' : ''}`} onClick={() => categoryFilter('', '')}>
-					<span className="original">ALL</span>
-					<span className="duplicate">ALL</span>
-				</div>
-				{newsCategory?.map(item => (
-					<div key={item.id} className={`category-link ${category == item.id ? 'active' : ''}`} onClick={() => categoryFilter(item.id, item.name.toLowerCase())}>
-						<span className="original">{item.name}</span>
-						<span className="duplicate">{item.name}</span>
+		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10'>
+			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
+				<div className="max-w-[1240px] w-full mx-auto h-[50vh] md:h-[80vh] flex flex-col justify-between items-start pt-[100px] px-[24px] md:px-0">
+					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2 ' initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, ease: "easeOut" }}
+						viewport={{ once: true }}>
+						<Breadcrumb current="ニュース" />
+					</motion.div>
+					<div className="pl-[30px] md:pl-[40px]">
+
+						<motion.div className="" initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, ease: "easeOut" }}
+							viewport={{ once: true }}>
+							<p className='flex items-center gap-2 text-[#575757] text-[16px] font-[500] leading-[31px]'>(<svg className='animate-fade' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+								<circle cx="4" cy="4" r="4" fill="#096FCA" />
+							</svg>ニュース )</p>
+						</motion.div>
+						<motion.img src={NewsText} alt="" className='mt-[20px]' initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, ease: "easeOut" }}
+							viewport={{ once: true }} />
 					</div>
-				))}
-			</div>
-
-			<div className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-x-[20px] gap-y-[50px] text-[#999]">
-				{!!news.data && news.data.map(item => (
-					<Link key={item.id} to={`/news/${item.id}`}>
-						<CareerCard key={item.id} title={item.title} image={item.feature} date={item.created_at} category={item.category} />
-					</Link>
-				))}
-			</div>
-
-			{(!news.data || !news.data.length) && (
-				<div className="bg-gray-200 h-[400px] flex justify-center items-center">
-					<h1 className="text-[40px] font-medium">Data not Found</h1>
 				</div>
-			)}
-
-			{!!news.data && !!news.data.length && (
-				<div className="text-[#000] flex gap-[32px] items-center mt-[80px] mb-[100px] md:mb-[164px] justify-center">
-					<p onClick={() => { setUrl(prevPage); pageTransition(); }} className={`${prevPage == null ? 'cursor-not-allowed opacity-40' : 'cursor-pointer'} text-[16px] font-semibold leading-[20px] tracking-[0.16px] uppercase`}>Previous</p>
-					<div className="flex gap-[16px]">
-						{Array.from({ length: lastPage }).map((_, i) => (
-							<p key={i + 1} onClick={() => link(i + 1)} className={`${currentPage == i + 1 ? 'text-[#E84721] border-b border-b-[#E84721]' : ''} cursor-pointer p-[8px] text-center text-[18px] font-semibold leading-[21.6px] tracking-[0.09px] w-[40px] h-[40px]`}>
-								{i + 1}
-							</p>
+				<div className="max-w-[1240px] mx-auto relative z-10 px-6 md:px-0">
+					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[60px] md:gap-x-3 mt-[108px] md:mt-[100px]">
+						{Array.from({ length: 6 }, (_, i) => (
+							<div key={i} className="news-card text-[#444444]">
+								<img src={Img} alt="" className="rounded-[12px]" />
+								<p className="text-[12px] font-normal leading-[22px] tracking-[0%] mt-4">20/9/2024</p>
+								<h3 className="roboto text-[20px] font-medium leading-[30px] tracking-[0%] uppercase">Talent Cloud beta version coming soon</h3>
+							</div>
 						))}
 					</div>
-					<p onClick={() => { setUrl(nextPage); pageTransition(); }} className={`${nextPage == null ? 'cursor-not-allowed opacity-40' : 'cursor-pointer'} text-[16px] font-semibold leading-[20px] tracking-[0.16px] uppercase`}>Next</p>
+					<div className="flex justify-center mt-[153px]">
+						<div className="flex items-center justify-center py-[9px] px-3 rounded-[45px] shadow-[0px_1px_3px_0px] shadow-[#00000021] space-x-2 text-[16px] leading-[15px] tracking-[0%] text-[#637381]">
+							<button className="p-[10px] rounded-full border-[1px] border-[#DFE4EA]"><img src={LeftArrow} alt="" /></button>
+							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">1</button>
+							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">2</button>
+							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">3</button>
+							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA] bg-[#1E2C44] text-white">4</button>
+							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">5</button>
+							<button className="p-[10px] rounded-full border-[1px] border-[#DFE4EA]"><img src={RightArrow} alt="" /></button>
+						</div>
+					</div>
 				</div>
-			)}
-
+				<div className="flex justify-end items-end w-full pb-[20vh] relative right-[-10%] mt-[-20%]">
+					<img src={rotateImg} alt="" className='rotate-[20deg]' />
+				</div>
+			</div>
 		</div>
 	)
 }
