@@ -15,6 +15,7 @@ import CaseStudy from "../pages/CaseStudy/CaseStudy";
 import Development from "../pages/Services/Development";
 import CompanyProfile from "../pages/CompanyProfile/CompanyProfile";
 import UiUx from "../pages/Services/UiUx";
+import Philosophy from "../pages/Philosophy/Philosophy";
 
 const router = createBrowserRouter([
 	{
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
 			{
 				path: "/company-profile",
 				element: <CompanyProfile />,
+			},
+			{
+				path: "/business-philosophy",
+				element: <Philosophy />,
 			},
 		]
 	},
