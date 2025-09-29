@@ -562,19 +562,29 @@
     left: 0;
     width: 100%;
     height: 160vh;
-    top: 0;             /* default for Safari */
+       transform: translateY(-50%);
+        
+  }
+
+/* Safari only */
+@supports (-webkit-touch-callout: none) {
+  .col__image-wrap {
     transform: none;
   }
-  
-  /* Chrome/Edge only */
-  @supports (-webkit-appearance: none) and (not (-moz-appearance: none)) {
+}
+/* Safari only */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
     .col__image-wrap {
-      transform: translateY(-50%);
+      transform: none;
     }
   }
-  
-  
-
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .col__image-wrap {
+    transform: none;
+  }
+}
 
 .col__image-wrap .img {
     -o-object-fit: cover;
