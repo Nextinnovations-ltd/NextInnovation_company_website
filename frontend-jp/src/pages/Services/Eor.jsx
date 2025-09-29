@@ -179,7 +179,7 @@ const Eor = () => {
             <PlanAndPricing/>
             <UseCase/>
             <div className="bg-[#1E2C44]">
-                <div className="pt-[80px] lg:pt-[142px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
+                <div className="pt-[80px] lg:pt-[140px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
                     <CaseStudy caseStudy={caseStudy} />
                 </div>
             </div>

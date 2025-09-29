@@ -8,7 +8,7 @@ const useServiceHeroAnimation = (ref1,ref2,ref3,ref4="") => {
             tl.fromTo(
                 ref1.current,
                 { y: 100, opacity: 0 },
-                { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }
+                { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }
             )
             .fromTo(
                 ref2.current,

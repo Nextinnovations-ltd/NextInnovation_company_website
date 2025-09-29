@@ -14,7 +14,7 @@ const UseCase = () => {
     useCardAnimation(containerRef,".usecase-card",{start: "top 80%"})
     return (
         <div className="bg-[#1E2C44]">
-            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[64px] py-[80px] lg:py-[140px]">
+            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[121px] py-[80px] lg:py-[140px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="参考導入例" eng="sample use cases" jpcolor="text-white" engcolor="text-white" />

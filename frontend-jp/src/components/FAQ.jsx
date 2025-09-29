@@ -16,7 +16,7 @@ const FAQ = ({faqData}) => {
 
     return (
         <div id="faq" className="w-full text-[#444444] bg-white">
-            <div className="max-w-[1240px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start pt-[41px] pb-[100px] md:py-[130px] pr-5 pl-5">
+            <div className="max-w-[1366px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start px-6 lg:px-[121px] py-[147px]">
                 {/* Left Title Section */}
                 <motion.div
                     className="max-w-[394px]"
@@ -48,7 +48,7 @@ const FAQ = ({faqData}) => {
                                 <div className="flex gap-[33px] lg:gap-0 items-center justify-between lg:min-w-[600px]">
                                     <h1
                                         onClick={() => toggleIndex(index)}
-                                        className="cursor-pointer duration-300 transition-all text-[#444444] text-[12px] md:text-[20px] font-bold leading-[20px] md:leading-[48px] tracking-[0%]"
+                                        className="cursor-pointer duration-300 transition-all text-[#444444] text-[12px] md:text-[18px] font-bold leading-[20px] md:leading-[30px] tracking-[-2%]"
                                     >
                                         {faq.question}
                                     </h1>
@@ -71,7 +71,7 @@ const FAQ = ({faqData}) => {
                                             className="overflow-hidden mt-2 md:mt-[13px]"
                                         >
                                             {faq.subTitles.map((subTitle, i) => (
-                                                <p key={i} className="text-[#484747] text-[12px] md:text-[15px] font-medium md:font-normal leading-[20px] md:leading-[24px]">
+                                                <p key={i} className="text-[#484747] text-[12px] md:text-[14px] font-medium md:font-normal leading-[20px] md:leading-[31px]">
                                                     {subTitle}
                                                 </p>
                                             ))}
@@ -81,9 +81,9 @@ const FAQ = ({faqData}) => {
                                                         <img
                                                             src={circle}
                                                             alt=""
-                                                            className="mt-2 lg:mt-1 w-[7px] h-[7px] md:w-[16px] md:h-[16px]"
+                                                            className="mt-2 w-[7px] h-[7px] md:w-[14px] md:h-[14px]"
                                                         />
-                                                        <p className="text-[#484747] text-[12px] md:text-[15px] font-medium md:font-normal leading-[24px] tracking-[0%]">
+                                                        <p className="text-[#484747] text-[12px] md:text-[14px] font-medium md:font-normal leading-[31px] tracking-[0%]">
                                                             {ans}
                                                         </p>
                                                     </div>

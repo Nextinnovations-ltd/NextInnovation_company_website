@@ -14,7 +14,7 @@ const OtherService = ({datas}) => {
 
     return (
         <div className="relative bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[64px] pt-[120px] lg:pt-[140px] pb-[120px] lg:pb-[180px]">
+            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[121px] pt-[120px] lg:pt-[140px] pb-[120px] lg:pb-[180px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="他のサービス" eng="other services" />

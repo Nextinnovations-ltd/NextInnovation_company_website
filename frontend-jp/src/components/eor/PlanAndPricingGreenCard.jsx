@@ -2,12 +2,12 @@ import {PropTypes} from "prop-types"
 
 const PlanAndPricingGreenCard = ({text1,text1Next="",text2,text2Next="",text3,text3Next=""}) => {
     return (
-        <div className="px-[28px]">
+        <div className="px-[25px]">
             <div className="w-full border-[4px] border-[#4D9F89] rounded-[4px]">
-                <div className="py-[10px] text-[14px] lg:text-[16px] font-bold leading-[24px] lg:leading-[28px] tracking-[0%] text-white bg-[#4D9F89] text-center">
+                <div className="py-[10px] text-[14px] lg:text-[15px] font-bold leading-[24px] lg:leading-[25px] tracking-[0%] text-white bg-[#4D9F89] text-center">
                     こんな方におすすめ
                 </div>
-                <div className="bg-[#F0F1F6] px-[15px] py-[20px] text-[12px] lg:text-[15px] font-medium leading-[22px] lg:leading-[28px] tracking-[0%] text-[#1E2C44] space-y-[6px]">
+                <div className="bg-[#F0F1F6] px-[13px] py-[20px] text-[12px] lg:text-[14px] font-medium leading-[22px] lg:leading-[25px] tracking-[0%] text-[#1E2C44] space-y-[6px]">
                     <p>{text1}</p>
                     <p className="ps-[14px]">{text1Next}</p>
                     <p>{text2}</p>

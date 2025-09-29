@@ -83,7 +83,7 @@ const Gif = ({ round = false }) => {
 	};
 
 	return (
-		<div className={`gif-section bg-cover bg-center w-full h-[50vh] lg:h-screen bg-no-repeat relative ${round ? 'rounded-b-[40px] lg:rounded-b-[80px]' : ''}`}>
+		<div className={`gif-section bg-cover bg-center w-full h-[500px] lg:h-screen bg-no-repeat relative ${round ? 'rounded-b-[40px] lg:rounded-b-[80px]' : ''}`}>
 			<div className="rotate absolute">
 				<img src={NiLoop} alt="" />
 			</div>
