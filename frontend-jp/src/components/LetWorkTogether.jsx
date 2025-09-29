@@ -13,7 +13,7 @@ const LetWorkTogether = () => {
 
 	// Register ScrollTrigger plugin
 	gsap.registerPlugin(ScrollTrigger);
-	const textRefs = useRef([]);
+	const textRefs = useRef([]  );
 
 	const addToRefs = (el) => {
 		if (el && !textRefs.current.includes(el)) {

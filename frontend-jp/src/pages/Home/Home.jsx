@@ -36,7 +36,7 @@ import CsImg3 from "/images/eor-cs3.png"
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Home = () => {
-
+	const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 	const trustClientTitleRef = useRef(null)
 	const ourProductTitleRef = useRef(null)
 	const goButtonRef1 = useRef(null)
@@ -345,7 +345,7 @@ const Home = () => {
 						</div>
 					</div>
 					<div className="col col--2">
-						<div className="col__image-wrap">
+						<div className="col__image-wrap" >
 							<img
 								className="img img--1"
 								src={sliderImg3}
