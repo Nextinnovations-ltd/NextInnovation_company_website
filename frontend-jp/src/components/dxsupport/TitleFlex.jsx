@@ -15,7 +15,7 @@ const TitleFlex = ({jp,eng,text}) => {
             <div ref={titleRef}>
                 <SectionTitle jp={jp} eng={eng} />
             </div>
-            <div className="w-[323px] lg:w-[502px] h-[110px] text-[14px] lg:text-[20px] font-medium leading-[24px] lg:leading-[38px] tracking-[0%] pb-[7px]">
+            <div className="w-[323px] lg:w-[477px] h-[68px] lg:h-auto text-[14px] lg:text-[17px] font-medium leading-[24px] lg:leading-[34px] tracking-[0%]">
                 <p ref={textRef}>{text}</p>
             </div>
         </div>

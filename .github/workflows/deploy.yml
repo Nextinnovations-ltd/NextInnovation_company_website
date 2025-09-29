@@ -153,6 +153,15 @@ jobs:
                 username: ${{ secrets.STAGING_USER }}
                 key: ${{ secrets.STAGING_KEY }}
                 script: |
+                    sudo rm -rf /home/ubuntu/nextinnovations-company-networks/backend
+                    sudo rm -rf /home/ubuntu/nextinnovations-company-networks/dist
+                    sudo rm -rf /home/ubuntu/nextinnovations-company-networks/jpfrontend
+
+
+                    mkdir /home/ubuntu/nextinnovations-company-networks/jpfrontend
+                    
+                    
+
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/backend.tar.gz -C /home/ubuntu/nextinnovations-company-networks
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/dist.tar.gz -C /home/ubuntu/nextinnovations-company-networks
                     sudo tar -xf /home/ubuntu/nextinnovations-company-networks/jpdist.tar.gz -C /home/ubuntu/nextinnovations-company-networks/jpfrontend

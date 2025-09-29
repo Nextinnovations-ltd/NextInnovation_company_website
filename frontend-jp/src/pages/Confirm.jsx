@@ -205,12 +205,14 @@ const Confirm = () => {
                         <div className="mt-[51px] lg:flex lg:justify-between">
                             <div>
                                 <img ref={ref1} src={ReachOut} alt="" />
-                                <p ref={ref2} className="lg:w-[546px] mt-[107px] text-[#000000] text-[15px] font-normal leading-[24px] tracking-[0%]">
-                                    当社は緊密に連携したチームと効率的なプロセスを有しており、これにより当社との業務が格段に容易になり、総合的に優れたサービスを提供します。つまり、当社こそが最高のワンストップデジタルサービス企業なのです。
+                                <p ref={ref2} className="lg:w-[546px] mt-[107px] text-[#000000] text-[14px] font-normal leading-[31px] tracking-[0%]">
+                                    ご入力は約2分で完了します。<br/>
+                                    お問い合わせ内容に応じて、担当より 2営業日以内にご連絡いたします。ご入力いただいた情報は厳重に管理し、他の目的で利用することはありませんので、安心してご記入ください。
+                                    また、受託開発・UI/UXデザイン・サイトリニューアル等のお問い合わせにつきましては、対象となるURL（新規の場合は「このようなサイトを作りたい」という参考サービスのリンク）、ご希望のご予算などをできるだけ具体的にご記入いただけますと、スムーズにご提案が可能です。
                                 </p>
                             </div>
                             
-                            <div className="md:w-[505px] lg:w-[400px] xl:w-[505px]">
+                            <div className="md:w-[505px] lg:w-[400px] xl:w-[505px] mt-[61px] lg:mt-0">
                                 <div>
                                     <h3 ref={addToRefs} className="text-[20px] md:text-[24px] text-[#1A1A1A] font-semibold leading-[44px] tracking-[-2%] mb-[40px]">このフォームにご記入ください</h3>
                                     {!!formData && (

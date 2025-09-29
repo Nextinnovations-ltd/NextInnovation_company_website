@@ -1,18 +1,52 @@
+import { useState, useEffect } from "react";
 import {motion} from "framer-motion"
 import Breadcrumb from '../../components/Breadcrumb';
 import { useRef } from "react";
 import rotateImg from '/images/Group 34121.svg'
 import NewsText from "/images/svg/news.svg"
 import BgImg from '/images/contact-bg.png'
-import Img from "/images/eor-cs3.png"
 import useCardAnimation from "../../hooks/useCardAnimation";
 import LeftArrow from "/images/svg/pagination-arrow-left.svg"
 import RightArrow from "/images/svg/pagination-arrow-right.svg"
+import { API_BASE_URL } from "../../config";
 
 const Career = () => {
 
+	let [url, setUrl] = useState(`${API_BASE_URL}/api/news?category=1`);
+	let [news, setNews] = useState([]);
+	let [currentPage, setCurrentPage] = useState('');
+	let [lastPage, setLastPage] = useState('');
+	let [prevPage, setPrevPage] = useState('');
+	let [nextPage, setNextPage] = useState('');
 	const containerRef = useRef(null)
 	useCardAnimation(containerRef,".news-card",{start: "top 80%"})
+
+	useEffect(() => {
+		const fetchNews = async () => {
+			try {
+				const res = await fetch(url);
+				const data = await res.json();
+
+				setNews(data);
+				setCurrentPage(data.meta.current_page);
+				setLastPage(data.meta.last_page);
+				setPrevPage(data.links.prev);
+				setNextPage(data.links.next);
+			} catch (err) {
+				console.error(err);
+			}
+		};
+		fetchNews();
+	}, [url]);
+
+	let link = (page) => {
+		setUrl(`${API_BASE_URL}/api/news?category=1&page=${page}`);
+		pageTransition();
+	}
+
+	let pageTransition = () => {
+		window.scrollTo({ top: 390, left: 0 });
+	}
 
 	return (
 		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10'>
@@ -40,29 +74,27 @@ const Career = () => {
 							viewport={{ once: true }} />
 					</div>
 				</div>
-				<div className="max-w-[1240px] mx-auto relative z-10 px-6 md:px-0">
+				<div className="max-w-[1240px] mx-auto relative z-10 px-6 md:px-0 min-h-[1000px]">
 					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[60px] md:gap-x-3 mt-[108px] md:mt-[100px]">
-						{Array.from({ length: 6 }, (_, i) => (
-							<div key={i} className="news-card text-[#444444]">
-								<img src={Img} alt="" className="rounded-[12px]" />
-								<p className="text-[12px] font-normal leading-[22px] tracking-[0%] mt-4">20/9/2024</p>
-								<h3 className="roboto text-[20px] font-medium leading-[30px] tracking-[0%] uppercase">Talent Cloud beta version coming soon</h3>
+						{!!news.data && news.data.map(item => (
+							<div key={item.id} className="news-card text-[#444444]">
+								<img src={item.feature} alt="" className="rounded-[12px] w-[404px] h-[260px]" />
+								<p className="text-[12px] font-normal leading-[22px] tracking-[0%] mt-4">{item.created_at}</p>
+								<h3 className="roboto text-limit  min-h-[65px] max-h-[65px] text-[20px] font-medium leading-[30px] tracking-[0%] uppercase">{item.title}</h3>
 							</div>
 						))}
 					</div>
 					<div className="flex justify-center mt-[153px]">
 						<div className="flex items-center justify-center py-[9px] px-3 rounded-[45px] shadow-[0px_1px_3px_0px] shadow-[#00000021] space-x-2 text-[16px] leading-[15px] tracking-[0%] text-[#637381]">
-							<button className="p-[10px] rounded-full border-[1px] border-[#DFE4EA]"><img src={LeftArrow} alt="" /></button>
-							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">1</button>
-							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">2</button>
-							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">3</button>
-							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA] bg-[#1E2C44] text-white">4</button>
-							<button className="w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]">5</button>
-							<button className="p-[10px] rounded-full border-[1px] border-[#DFE4EA]"><img src={RightArrow} alt="" /></button>
+							<button onClick={() => { setUrl(prevPage); pageTransition(); }} className={`${prevPage == null ? 'cursor-not-allowed' : ''} p-[10px] rounded-full border-[1px] border-[#DFE4EA]`}><img src={LeftArrow} alt="" className={`${prevPage == null ? 'opacity-40' : ''}`} /></button>
+							{Array.from({ length: lastPage }).map((_, i) => (
+								<button key={i+1} onClick={() => link(i + 1)} className={`${currentPage == i + 1 ? 'bg-[#1E2C44] text-white' : ''} w-[38px] h-[38px] text-center rounded-full border-[1px] border-[#DFE4EA]`}>{i + 1}</button>
+							))}
+							<button onClick={() => { setUrl(nextPage); pageTransition(); }} className={`${nextPage == null ? 'cursor-not-allowed' : ''} p-[10px] rounded-full border-[1px] border-[#DFE4EA]`}><img src={RightArrow} alt="" className={`${nextPage == null ? 'opacity-40' : ''}`} /></button>
 						</div>
 					</div>
 				</div>
-				<div className="flex justify-end items-end w-full pb-[20vh] relative right-[-10%] mt-[-20%]">
+				<div className="flex justify-end items-end w-full pb-[] relative right-[-10%] mt-[-700px]">
 					<img src={rotateImg} alt="" className='rotate-[20deg]' />
 				</div>
 			</div>

@@ -12,8 +12,8 @@ const EorHero = () => {
     useServiceHeroAnimation(titleRef,descriptionRef,buttonRef)
 
     return (
-        <div className="bg-white pt-[80px] lg:pt-[90px] pb-[90px] lg:pb-[149px] rounded-b-[40px] lg:rounded-b-[80px]">
-            <div className="max-w-[1366px] mx-auto text-[#444444] px-[24px] lg:px-[64px]">
+        <div className="bg-white pt-[80px] lg:pt-[90px] pb-[90px] lg:pb-[120px] rounded-b-[40px] lg:rounded-b-[80px]">
+            <div className="max-w-[1366px] mx-auto text-[#444444] px-[24px] lg:px-[121px]">
                 <Breadcrumb
                     routes={[
                         { name: "サービス", link: "" }
@@ -21,8 +21,8 @@ const EorHero = () => {
                     current="EOR（雇用代行）"
                 />
 
-                <h1 className="text-[32px] lg:text-[64px] font-bold leading-[50px] lg:leading-[83px] tracking-[0%] lg:tracking-[-4%] mt-[51px] lg:mt-[46px] mb-[24px] lg:mb-[50px]">
-                    <div className="overflow-hidden h-[150px] lg:h-[160px]">
+                <h1 className="text-[32px] font-bold leading-[50px] tracking-[0%] mt-[51px] lg:mt-[46px] mb-[24px]">
+                    <div className="overflow-hidden h-[150px] lg:h-auto">
                         <div ref={titleRef}>
                             海外人材活用を、<br className="lg:hidden"/>もっと<br className="hidden lg:block"/>
                             シンプルに、<br className="lg:hidden"/>もっと安心に。
@@ -30,9 +30,8 @@ const EorHero = () => {
                     </div>
                 </h1>
                 <div className="flex flex-col gap-[30px] lg:gap-0 lg:flex-row lg:justify-between lg:items-center overflow-hidden">
-                    <p ref={descriptionRef} className="text-[14px] lg:text-[15px] font-normal leading-[29px] lg:leading-[24px] tracking-[0%]">
-                        EOR（雇用代行）サービスで、採用から契約・給与支払・<br className="hidden lg:block"/>
-                        現場サポートまでワンストップで提供。<br className="hidden lg:block"/>
+                    <p ref={descriptionRef} className="text-[14px] font-normal leading-[29px] lg:leading-[31px] tracking-[0%]">
+                        EOR（雇用代行）サービスで、採用から契約・給与支払・現場サポートまでワンストップで提供。<br className="hidden lg:block"/>
                         貴社に最適なチーム形成を実現します。
                     </p>
                     <div className="overflow-hidden">
