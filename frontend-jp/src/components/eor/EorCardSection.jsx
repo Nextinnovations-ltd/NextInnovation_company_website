@@ -9,7 +9,7 @@ const EorCardSection = () => {
     const containerRef = useRef(null)
     useCardAnimation(containerRef,".eor-card",{start: "top 80%"})
     return (
-        <div ref={containerRef} className="lg:flex lg:justify-between space-y-[40px] lg:space-y-0 pt-[50px] lg:pt-[100px] pb-[120px] lg:pb-[180px] text-[#444444] px-[24px] lg:px-[64px]">
+        <div ref={containerRef} className="lg:flex lg:justify-between space-y-[40px] lg:space-y-0 pt-[50px] lg:pt-[120px] pb-[120px] lg:pb-[180px] text-[#1E2C44] px-[24px] lg:px-[121px]">
             <EorCard
                 title="EORのみ"
                 image={CardImg1}

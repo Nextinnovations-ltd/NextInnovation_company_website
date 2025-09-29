@@ -9,14 +9,14 @@ const EorServiceSolve = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[180px] px-[24px] lg:px-[63px] text-[#444444]">
+                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[180px] px-[24px] lg:px-[121px] text-[#444444]">
 
                     <TitleFlex
                         jp="当社EORサービスが解決すること" eng="What Our EOR Service Solves"
                         text="こうした課題を解消し、企業が安心して海外人材を活用できる仕組みが当社のEOR（Employer of Record）サービスです。"
                     />
 
-                    <div className="mt-[50px] lg:mt-[64px]">
+                    <div className="mt-[50px] lg:mt-[81px]">
                         <EorServiceSolveCard
                             image={Img1}
                             title="人材豊富な東南アジアでスピード採用"
