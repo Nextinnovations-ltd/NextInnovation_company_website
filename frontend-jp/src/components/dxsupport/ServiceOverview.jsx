@@ -14,13 +14,13 @@ const ServiceOverview = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="service-overview bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto px-6 lg:px-[64px] pb-[80px] lg:pb-[140px]">
+                <div className="max-w-[1366px] mx-auto px-6 lg:px-[120px] pb-[80px] lg:pb-[140px]">
                     <div className="overflow-hidden">
                         <div ref={titleRef}>
                             <SectionTitle jp="サービス概要" eng="service overview" />
                         </div>
                     </div>
-                    <div ref={containerRef} className="mt-[50px] lg:mt-[60px] lg:flex lg:justify-between space-y-7 lg:space-y-0">
+                    <div ref={containerRef} className="mt-[50px] lg:flex lg:justify-between space-y-7 lg:space-y-0">
                         <ServiceOverviewCard
                             title="受託開発"
                             description="Webシステム・アプリ開発に柔軟対応。React / Flutter 実績あり。"

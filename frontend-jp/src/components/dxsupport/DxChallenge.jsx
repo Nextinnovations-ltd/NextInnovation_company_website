@@ -20,13 +20,13 @@ const DxChallenge = () => {
     useCardAnimation(containerRef2,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="px-6 lg:px-[64px] pb-[80px] lg:pb-[120px]">
+        <div className="px-6 lg:px-[120px] pb-[80px] lg:pb-[120px]">
             <div className="h-[70px] lg:h-[100px] overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp="課題" eng="Challenges" />
                 </div>
             </div>
-            <div className="mt-[50px] lg:mt-[102px] mb-[50px] lg:mb-[60px]">
+            <div className="my-[50px]">
                 <SubTitleFlex
                     title="日本国内の場合"
                     description="結果として「すぐに動けない」「想定以上に費用がかかる」という状況が企業のDX推進を妨げています。"
@@ -49,7 +49,7 @@ const DxChallenge = () => {
                     description="人件費・開発費の上昇で予算超過が頻発"
                 />
             </div>
-            <div className="mt-[60px] lg:mt-[80px] mb-[50px] lg:mb-[60px]">
+            <div className="my-[60px]">
                 <SubTitleFlex
                     title="海外発注(オフショアの場合)"
                     description="コストを求めても、結果的に「安かろう悪かろう」となりかねません。"

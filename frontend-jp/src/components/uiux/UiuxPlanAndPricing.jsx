@@ -13,13 +13,13 @@ const UiuxPlanAndPricing = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto px-6 lg:px-[60px] pb-[113px]">
+                <div className="max-w-[1366px] mx-auto px-6 lg:px-[120px] pb-[113px]">
                     <div className="overflow-hidden">
                         <div ref={titleRef}>
                             <SectionTitle jp="プランと料金" eng="Plans and Pricing" />
                         </div>
                     </div>
-                    <div ref={containerRef} className="space-y-4 lg:space-y-0 lg:flex lg:flex-wrap lg:justify-center lg:gap-x-3 lg:gap-y-[70px] mt-[50px] lg:mt-[60px]">
+                    <div ref={containerRef} className="space-y-4 lg:space-y-0 lg:flex lg:flex-wrap lg:justify-center lg:gap-x-[10px] lg:gap-y-[50px] mt-[50px]">
                         <DevPlanAndPricingCard
                             text1="1ページ"
                             text2="LPデザイン"

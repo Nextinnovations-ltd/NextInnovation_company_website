@@ -12,7 +12,7 @@ const EorHero = () => {
     useServiceHeroAnimation(titleRef,descriptionRef,buttonRef)
 
     return (
-        <div className="bg-white pt-[80px] lg:pt-[90px] pb-[90px] lg:pb-[120px] rounded-b-[40px] lg:rounded-b-[80px]">
+        <div className="bg-white pt-[80px] lg:pt-[152px] pb-[90px] lg:pb-[106px] rounded-b-[40px] lg:rounded-b-[80px]">
             <div className="max-w-[1366px] mx-auto text-[#444444] px-[24px] lg:px-[121px]">
                 <Breadcrumb
                     routes={[

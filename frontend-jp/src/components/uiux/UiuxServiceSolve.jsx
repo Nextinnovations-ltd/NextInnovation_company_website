@@ -9,7 +9,7 @@ const UiuxServiceSolve = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[100px] px-[24px] lg:px-[63px] text-[#444444]">
+                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[100px] px-[24px] lg:px-[120px] text-[#444444]">
 
                     <TitleFlex
                         jp="当社UI/UXデザインが解決すること" eng="What Our UI/UX Design Solves"
@@ -26,7 +26,7 @@ const UiuxServiceSolve = () => {
                         <EorServiceSolveCard
                             image={Img2}
                             title="ワンストップ対応 & 継続サポート"
-                            description="ワイヤーフレームからデザインシステム構築まで一気通貫で対応。EOR契約へ移行することで、同じ人材を継続確保し、長期的な改善や追加デザインにも対応可能"
+                            description="ワイヤーフレームからデザインシステム構築まで一気通貫で対応。EOR契約へ移行することで、同じ人材を継続確保し、長期的な改善や追加デザインにも対応可能。"
                         />
                         <EorServiceSolveCard
                             image={Img3}
