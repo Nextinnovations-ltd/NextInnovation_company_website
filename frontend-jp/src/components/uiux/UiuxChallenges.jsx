@@ -16,18 +16,18 @@ const UiuxChallenges = () => {
     useCardAnimation(containerRef,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] lg:px-[64px]">
+        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] lg:px-[120px]">
             <div className="flex flex-col lg:flex-row lg:justify-between">
                 <div className="h-[70px] lg:h-[100px] overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="課題" eng="Challenges" />
                     </div>
                 </div>
-                <div className="lg:w-[550px] overflow-hidden h-[70px] text-[14px] lg:text-[20px] font-medium leading-[24px] lg:leading-[38px] tracking-[0%] mt-[28px] lg:mt-[54px]">
+                <div className="lg:w-[446px] overflow-hidden h-[70px] text-[14px] lg:text-[17px] font-medium leading-[24px] lg:leading-[34px] tracking-[0%] mt-[28px] lg:mt-[54px]">
                     <div ref={textRef}>UI/UXデザインを外部に依頼する際、多くの企業は「コスト」「品質」「継続性」の壁に直面します。</div>
                 </div>
             </div>
-            <div ref={containerRef} className="lg:flex lg:justify-between space-y-[21px] lg:space-y-0 mt-[50px] lg:mt-[60px]">
+            <div ref={containerRef} className="lg:flex lg:gap-[22px] space-y-[21px] lg:space-y-0 mt-[50px] lg:mt-[60px]">
                 <ChallengeCard
                     image={Challenge1}
                     title="外部委託する際の課題"

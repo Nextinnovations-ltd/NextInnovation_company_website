@@ -16,7 +16,7 @@ const FAQ = ({faqData}) => {
 
     return (
         <div id="faq" className="w-full text-[#444444] bg-white">
-            <div className="max-w-[1366px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start px-6 lg:px-[121px] py-[147px]">
+            <div className="max-w-[1366px] mx-auto gap-[30px] md:gap-[100px] flex flex-col md:flex-row items-start px-6 lg:px-[120px] py-[147px]">
                 {/* Left Title Section */}
                 <motion.div
                     className="max-w-[394px]"
@@ -45,7 +45,7 @@ const FAQ = ({faqData}) => {
                                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
                                 viewport={{ once: true }}
                             >
-                                <div className="flex gap-[33px] lg:gap-0 items-center justify-between lg:min-w-[600px]">
+                                <div className="flex gap-[33px] lg:gap-0 items-center justify-between min-w-[370px] lg:min-w-[600px]">
                                     <h1
                                         onClick={() => toggleIndex(index)}
                                         className="cursor-pointer duration-300 transition-all text-[#444444] text-[12px] md:text-[18px] font-bold leading-[20px] md:leading-[30px] tracking-[-2%]"

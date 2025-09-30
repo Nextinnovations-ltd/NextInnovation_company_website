@@ -2,10 +2,10 @@ import {PropTypes} from "prop-types"
 
 const DeliverableCard = ({image,title,description}) => {
     return (
-        <div className="deliverable-card w-[397px] px-8 pt-8 pb-[60px]">
+        <div className="deliverable-card w-[360px] px-[28px] pt-[28px] pb-[32px]">
             <img src={image} alt="" />
-            <h3 className="text-[20px] font-bold leading-[34px] tracking-[-2%] text-[#02021E] mt-6 mb-[15px]">{title}</h3>
-            <p className=" text-[15px] font-normal leading-[24px] tracking-[0%] text-[#444444]">{description}</p>
+            <h3 className="text-[20px] font-bold leading-[34px] tracking-[-2%] text-[#02021E] mt-[22px] mb-[13px]">{title}</h3>
+            <p className=" text-[14px] font-normal leading-[31px] tracking-[0%] text-[#444444]">{description}</p>
         </div>
     );
 }

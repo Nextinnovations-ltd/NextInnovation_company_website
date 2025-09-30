@@ -22,13 +22,13 @@ const DevStrength = () => {
 
     return (
         <div className="bg-[#1E2C44]">
-            <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[137px] px-[24px] lg:px-[62px]">
+            <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[137px] px-[24px] lg:px-[120px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="当社の受託開発の強み" eng="Features & Strengths of DEVELOPMENT" jpcolor="text-[#FFFFFF]" engcolor="text-[#FFFFFF]" />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[28px] lg:gap-[37px] mt-[50px] lg:mt-[80px] overflow-hidden lg:overflow-visible">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[28px] lg:gap-[34px] mt-[50px] lg:mt-[80px] overflow-hidden lg:overflow-visible">
                     <div ref={ref1}>
                         <StrengthCard
                             image={Gif1}

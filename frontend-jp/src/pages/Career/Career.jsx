@@ -49,16 +49,16 @@ const Career = () => {
 	}
 
 	return (
-		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10'>
+		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 mt-[50px] lg:mt-0'>
 			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
-				<div className="max-w-[1240px] w-full mx-auto h-[50vh] md:h-[80vh] flex flex-col justify-between items-start pt-[100px] px-[24px] md:px-0">
-					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2 ' initial={{ opacity: 0, y: 30 }}
+				<div className="max-w-[1240px] w-full mx-auto h-[300px] md:h-[80vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[100px] px-[24px] lg:px-0">
+					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2' initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
 						viewport={{ once: true }}>
 						<Breadcrumb current="ニュース" />
 					</motion.div>
-					<div className="pl-[30px] md:pl-[40px]">
+					<div className="pl-[0px] lg:pl-[40px]">
 
 						<motion.div className="" initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -68,14 +68,14 @@ const Career = () => {
 								<circle cx="4" cy="4" r="4" fill="#096FCA" />
 							</svg>ニュース )</p>
 						</motion.div>
-						<motion.img src={NewsText} alt="" className='mt-[20px]' initial={{ opacity: 0, y: 30 }}
+						<motion.img src={NewsText} alt="" className='mt-[20px] w-[150px] lg:w-full' initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
 							viewport={{ once: true }} />
 					</div>
 				</div>
-				<div className="max-w-[1240px] mx-auto relative z-10 px-6 md:px-0 min-h-[1000px]">
-					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[60px] md:gap-x-3 mt-[108px] md:mt-[100px]">
+				<div className="max-w-[1240px] mx-auto relative z-10 px-6 lg:px-0 lg:min-h-[1000px]">
+					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[60px] md:gap-x-3 mt-[100px]">
 						{!!news.data && news.data.map(item => (
 							<div key={item.id} className="news-card text-[#444444]">
 								<img src={item.feature} alt="" className="rounded-[12px] w-[404px] h-[260px]" />
@@ -84,7 +84,7 @@ const Career = () => {
 							</div>
 						))}
 					</div>
-					<div className="flex justify-center mt-[153px]">
+					<div className="flex justify-center mt-[117px] lg:mt-[153px]">
 						<div className="flex items-center justify-center py-[9px] px-3 rounded-[45px] shadow-[0px_1px_3px_0px] shadow-[#00000021] space-x-2 text-[16px] leading-[15px] tracking-[0%] text-[#637381]">
 							<button onClick={() => { setUrl(prevPage); pageTransition(); }} className={`${prevPage == null ? 'cursor-not-allowed' : ''} p-[10px] rounded-full border-[1px] border-[#DFE4EA]`}><img src={LeftArrow} alt="" className={`${prevPage == null ? 'opacity-40' : ''}`} /></button>
 							{Array.from({ length: lastPage }).map((_, i) => (
@@ -94,8 +94,8 @@ const Career = () => {
 						</div>
 					</div>
 				</div>
-				<div className="flex justify-end items-end w-full pb-[] relative right-[-10%] mt-[-700px]">
-					<img src={rotateImg} alt="" className='rotate-[20deg]' />
+				<div className="flex justify-end items-end pb-[34px] lg:pb-[60px] mt-[-300px] lg:mt-[-700px]">
+					<img src={rotateImg} alt="" className='lg:rotate-[20deg]' />
 				</div>
 			</div>
 		</div>

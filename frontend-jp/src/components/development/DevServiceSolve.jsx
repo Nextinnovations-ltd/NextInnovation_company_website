@@ -9,14 +9,14 @@ const DevServiceSolve = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[100px] px-[24px] lg:px-[63px] text-[#444444]">
+                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[160px] px-[24px] lg:px-[120px] text-[#444444]">
 
                     <TitleFlex
                         jp="当社受託開発が解決すること" eng="What Our Service Solves"
                         text="こうした課題を解消し、企業が安心して活用できるシステムが使用できるようにするのが当社のサービスです。"
                     />
 
-                    <div className="mt-[50px] lg:mt-[64px]">
+                    <div className="mt-[50px] lg:mt-[108px]">
                         <EorServiceSolveCard
                             image={Img1}
                             title="最適コストでの開発提供"

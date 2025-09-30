@@ -17,11 +17,11 @@ const UiuxTarget = () => {
     useCardAnimation(containerRef,".dx-target-card",{start: "top 80%"})
 
     return (
-        <div className="px-[24px] lg:px-[64px] pt-[70px] lg:pt-[120px] pb-[120px] lg:pb-[180px]">
+        <div className="px-[24px] lg:px-[120px] pt-[70px] lg:pt-[120px] pb-[120px] lg:pb-[180px]">
             <div className="overflow-hidden">
-                <h2 ref={titleRef} className="text-[#02021E] text-[24px] font-bold leading-[34px] tracking-[-2%]">UI/UXデザインの対象例</h2>
+                <h2 ref={titleRef} className="text-[#02021E] text-[20px] font-bold leading-[34px] tracking-[-2%]">UI/UXデザインの対象例</h2>
             </div>
-            <div ref={containerRef} className="mt-[30px] lg:mt-[60px] grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div ref={containerRef} className="mt-[30px] lg:mt-[64px] grid grid-cols-1 lg:grid-cols-3 gap-[22px]">
                 <DxTargetCard
                     title="LPデザイン"
                     image={Img1}
