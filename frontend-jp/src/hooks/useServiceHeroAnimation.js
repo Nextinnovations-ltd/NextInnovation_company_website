@@ -28,6 +28,12 @@ const useServiceHeroAnimation = (ref1,ref2,ref3,ref4="") => {
                 { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" },
                 "-=0.1"
             )
+            .fromTo(
+                "#hero-rotate",
+                { scale: 0, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" },
+                "<"
+            );
         });
         return () => ctx.revert();
     }, [ref1,ref2,ref3,ref4]);

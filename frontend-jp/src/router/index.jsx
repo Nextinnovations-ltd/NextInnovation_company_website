@@ -3,13 +3,13 @@ import Home from "../pages/Home/Home";
 import Layout from "../layouts/Layout"
 import Eor from "../pages/Services/Eor";
 import DxSupport from "../pages/Services/DxSupport";
-import Contact from "../pages/Contact";
+import Contact from "../pages/Contact/Contact";
+import Confirm from "../pages/Contact/Confirm";
+import ContactSuccess from "../pages/Contact/ContactSuccess";
 import Career from "../pages/Career/Career";
 import CareerDetail from "../pages/Career/CareerDetail";
 import Privacy from "../pages/Privacy/Privacy";
 import Terms from "../pages/Terms/Terms";
-import Confirm from "../pages/Confirm";
-import ContactSuccess from "../pages/ContactSuccess";
 import Security from "../pages/Security/Security";
 import CaseStudy from "../pages/CaseStudy/CaseStudy";
 import Development from "../pages/Services/Development";
