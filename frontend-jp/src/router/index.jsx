@@ -16,6 +16,7 @@ import Development from "../pages/Services/Development";
 import CompanyProfile from "../pages/CompanyProfile/CompanyProfile";
 import UiUx from "../pages/Services/UiUx";
 import Philosophy from "../pages/Philosophy/Philosophy";
+import Conditions from "../pages/Conditions/Conditions";
 
 const router = createBrowserRouter([
 	{
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
 			{
 				path: "/business-philosophy",
 				element: <Philosophy />,
+			},
+			{
+				path: "/terms-conditions",
+				element: <Conditions />,
 			},
 		]
 	},

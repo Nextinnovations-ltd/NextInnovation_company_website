@@ -5,8 +5,8 @@ import DropDownLink from "./DropDownLink";
 const DropDownModal = ({jp,eng,menus,description,clickLink}) => {
     return (
         <>
-            <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
-            <div className="hidden lg:block sticky top-16 left-0 bg-white w-full ps-[138px] pe-[64px] pt-[72px] pb-[70px] z-50">
+           <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
+           <div className="hidden lg:block sticky top-16 left-0 bg-white w-full ps-[138px] pt-[72px] pb-[70px] z-50 ">
                 <div className="flex justify-between">
                     <NavbarDropDownTitle jp={jp} eng={eng} />
                     <div className="service-drop-down text-[#444444] w-[246px] space-y-2">
