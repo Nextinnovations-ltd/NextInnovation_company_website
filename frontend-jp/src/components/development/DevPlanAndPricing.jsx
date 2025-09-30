@@ -23,7 +23,7 @@ const DevPlanAndPricing = () => {
                         <DevPlanAndPricingCard
                             text1="1ページ"
                             text2="LP制作"
-                            text3="20〜40万円"
+                            text3="15〜40万円"
                             text4="1ページ完結のキャンペーン／広告用LP"
                             link="/contact?from=10"
                         />
