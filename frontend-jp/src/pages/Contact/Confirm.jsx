@@ -1,6 +1,7 @@
+
 const Confirm = () => {
     return (
-        <div>
+        <div className="bg-[url('/images/contact-bg.png')] h-screen">
             
         </div>
     );

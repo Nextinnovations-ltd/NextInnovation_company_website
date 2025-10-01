@@ -31,9 +31,8 @@ const UiuxHero = () => {
                 </h1>
                 <div className="flex flex-col gap-[30px] lg:gap-0 lg:flex-row lg:justify-between lg:items-center overflow-hidden">
                     <p ref={descriptionRef} className="text-[14px] font-normal leading-[29px] lg:leading-[31px] tracking-[0%]">
-                        日本人デザイナーにはない新たな感性と、日本市場を理解<br className="hidden lg:block"/>
-                        した経験を融合。唯一無二のデザインを、コスト効率よく<br className="hidden lg:block"/>
-                        お届けします。
+                        日本人デザイナーにはない新たな感性と、日本市場を理解した経験を<br className="hidden lg:block"/>
+                        融合。唯一無二のデザインを、コスト効率よくお届けします。
                     </p>
                     <div className="overflow-hidden">
                         <div ref={buttonRef}>

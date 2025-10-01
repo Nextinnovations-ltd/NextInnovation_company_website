@@ -9,7 +9,7 @@ const SectionTitle = ({jp,eng='',jpcolor='text-[#575757]',engcolor='text-[#44444
                     {jp} )
                 </div>
                 {!!eng && (
-                    <h1 className={`roboto w-[350px] text-[32px] font-bold leading-[31px] lg:leading-[40px] tracking-[0%] uppercase mt-[10px] ${engcolor}`}>{eng}</h1>
+                    <h1 className={`roboto w-[330px] text-[32px] font-bold leading-[31px] lg:leading-[40px] tracking-[0%] uppercase mt-[10px] ${engcolor}`}>{eng}</h1>
                 )}
             </div>
         </>

@@ -3,7 +3,7 @@ import {PropTypes} from "prop-types"
 const UseCaseCard = ({title,description,image,text1,text1Next='',text2,footer}) => {
     return (
         <div className="lg:w-[357px] usecase-card bg-white rounded-[20px] pt-[31px] lg:pt-[33px] pb-[40px] lg:pb-[50px] px-[26px] lg:px-[27px]">
-            <div className="flex flex-col items-center gap-[5px] mb-[54px]">
+            <div className="flex flex-col items-center gap-[5px] mb-[24px] min-h-[104px]">
                 <h3 className="text-[#02021E] text-center text-[16px] lg:text-[21px] font-bold leading-[24px] lg:leading-[34px] tracking-[-2%]">{title}</h3>
                 <p className="text-[#F15A29] text-[12px] lg:text-[13px] font-bold leading-[30px] tracking-[-2%]">{description}</p>
             </div>

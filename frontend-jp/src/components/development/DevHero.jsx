@@ -31,8 +31,8 @@ const DevHero = () => {
                 </h1>
                 <div className="flex flex-col gap-[30px] lg:gap-0 lg:flex-row lg:justify-between lg:items-center overflow-hidden">
                     <p ref={descriptionRef} className="text-[14px] font-normal leading-[29px] lg:leading-[31px] tracking-[0%]">
-                        コスト最適化と開発スピードを両立させることを重視。市場投入<br className="hidden lg:block"/>
-                        までのリードタイムを短縮し、効果を最大化します。
+                        コスト最適化と開発スピードを両立させることを重視。市場投入まで<br className="hidden lg:block"/>
+                        のリードタイムを短縮し、効果を最大化します。
                     </p>
                     <div className="overflow-hidden">
                         <div ref={buttonRef}>
