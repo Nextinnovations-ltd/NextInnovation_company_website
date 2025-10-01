@@ -340,7 +340,7 @@
     justify-content: center;
     overflow: hidden;
     height: 100%;
-    padding: 6vw 6vw
+    padding-left: 150px
 }
 
 @media all and (max-width: 768px) {
@@ -612,9 +612,8 @@
 /* about us section */
 .home .about-us {
     padding-top: 111px;
-    max-width: 1240px;
+    max-width: 1126px;
     margin: auto;
-
 }
 
 
@@ -696,7 +695,7 @@
 
 .home .our-services .link-container .link-title h3 {
     color: #999999;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 20px;
@@ -706,7 +705,7 @@
 
 .home .our-services .link-container .link-title h2 {
     color: #444444;
-    font-size: 38px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 44px;
@@ -893,10 +892,10 @@
 /* Trusted clients section */
 .home .trusted-clients-section h1 {
     color: #444444;
-    font-size: 58px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 67px;
+    line-height: 40px;
     letter-spacing: -1%;
     text-transform: uppercase;
 }
