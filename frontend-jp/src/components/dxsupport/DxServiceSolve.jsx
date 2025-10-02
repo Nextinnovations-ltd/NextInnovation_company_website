@@ -12,7 +12,7 @@ const DxServiceSolve = () => {
 
                     <TitleFlex
                         jp="当社DX支援サービスが解決すること" eng="WHAT OUR DX SUPPORT SOLVES"
-                        text="私たちは、日本企業のニーズと海外人材の強みを結びつけ、**「スピード」「品質」「コストバランス」**を同時に実現するDX支援を提供します。"
+                        text="私たちは、日本企業のニーズと海外人材の強みを結びつけ、**「スピード」「品質」「コストバランス」**　を同時に実現するDX支援を提供します。"
                     />
 
                     <div className="mt-[50px] lg:mt-[64px]">

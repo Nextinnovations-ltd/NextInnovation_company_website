@@ -24,7 +24,7 @@ const ServiceOverview = () => {
                         <ServiceOverviewCard
                             title="受託開発"
                             description="Webシステム・アプリ開発に柔軟対応。React / Flutter 実績あり。"
-                            text1="￥20,000～"
+                            text1="￥15,000～"
                             text2="／人日"
                             image={Img1}
                             link="/development"
@@ -32,7 +32,7 @@ const ServiceOverview = () => {
                         <ServiceOverviewCard
                             title="UI/UXデザイン"
                             description="Figmaを中心に、日本水準の高品質デザインを低コストで提供。 / Flutter 実績あり。"
-                            text1="￥20,000～"
+                            text1="￥15,000～"
                             text2="／人日"
                             image={Img2}
                             link="/uiux"

@@ -56,6 +56,7 @@ const Footer = () => {
 								<Link to="/privacy" className="text-[15px] font-normal leading-[26px] tracking-[1%]">プライバシーポリシー</Link>
 								<Link to="/security-policy" className="text-[15px] font-normal leading-[26px] tracking-[1%]">セキュリティポリシー</Link>
 								<Link to="/terms" className="text-[15px] font-normal leading-[26px] tracking-[1%]">利用規約</Link>
+								<Link to="/" className="text-[15px] font-normal leading-[26px] tracking-[1%]">EORサービス利用規約</Link>
 							</div>
 						</div>
 						<div>

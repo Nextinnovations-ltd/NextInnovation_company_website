@@ -20,7 +20,7 @@ const DevServiceSolve = () => {
                         <EorServiceSolveCard
                             image={Img1}
                             title="最適コストでの開発提供"
-                            description="東南アジアでも最安値クラスの料金体系（1人日20,000円〜）で、国内相場より大幅にコストを抑えた開発が可能です。また、上流工程は弊社代表が担当しますがコストは変わりません。"
+                            description="東南アジアでも最安値クラスの料金体系（1人日15,000円〜）で、国内相場より大幅にコストを抑えた開発が可能です。また、上流工程は弊社代表が担当しますがコストは変わりません。"
                             first
                         />
                         <EorServiceSolveCard

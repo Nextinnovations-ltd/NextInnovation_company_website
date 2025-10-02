@@ -328,14 +328,14 @@ const Home = () => {
 					<div className="col col--1">
 						<div className="col__content col__content--4">
 							<h2 className="col__content-title">
-								<span className="line__inner text-[48px] font-bold leading-[67px] tracking-[-2%]">EOR/ 海外人材雇用代行</span>
+								<span className="line__inner text-[24px] font-bold leading-[44px] tracking-[-2%]">EOR/ 海外人材雇用代行</span>
 							</h2>
-							<p className="col__content-txt text-[21px] font-normal leading-[34px] tracking-[0%] mt-[28px] mb-[50px]">
-								現地法人を設立せずに、東南アジアの優秀な人材を<br />
-								採用可能。最短1ヶ月で稼働を開始でき、給与支払い<br />
-								や法務手続きもすべて代行。独自の安心ラボ型・<br />
-								伴走型プランにより、採用からチームビルディング、<br />
-								人材定着、教育、成果創出まで、海外人材活用と<br />
+							<p className="col__content-txt w-[477px] text-[14px] font-normal leading-[31px] tracking-[0%] mt-[18px] mb-[40px]">
+								現地法人を設立せずに、東南アジアの優秀な人材を
+								採用可能。最短1ヶ月で稼働を開始でき、給与支払い
+								や法務手続きもすべて代行。独自の安心ラボ型・
+								伴走型プランにより、採用からチームビルディング、
+								人材定着、教育、成果創出まで、海外人材活用と
 								チーム化を一気通貫でサポートします。
 							</p>
 							<div className="h-[68px] overflow-hidden">
@@ -359,14 +359,14 @@ const Home = () => {
 					<div className="col col--1">
 						<div className="col__content col__content--2">
 							<h2 className="col__content-title">
-								<span className="line__inner text-[48px] font-bold leading-[67px] tracking-[-2%]">DX支援 / 受託開発<br/>・UI/UXデザイン</span>
+								<span className="line__inner text-[24px] font-bold leading-[44px] tracking-[-2%]">DX支援 / 受託開発<br/>・UI/UXデザイン</span>
 							</h2>
-							<p className="col__content-txt text-[21px] font-normal leading-[34px] tracking-[0%] mt-[28px] mb-[50px]">
-								日本案件経験豊富なエンジニアとデザイナーが<br />
-								在籍。Figmaを用いた最新UI/UX設計から、Web<br />
-								開発、クロスプラットフォーム開発など一貫対応。<br />
-								EORと組み合わせれば、採用・開発・デザインを<br />
-								ワンストップで実現し、企業のDX推進とチームの<br />
+							<p className="col__content-txt w-[477px] text-[14px] font-normal leading-[31px] tracking-[0%] mt-[18px] mb-[40px]">
+								日本案件経験豊富なエンジニアとデザイナーが
+								在籍。Figmaを用いた最新UI/UX設計から、Web
+								開発、クロスプラットフォーム開発など一貫対応。
+								EORと組み合わせれば、採用・開発・デザインを
+								ワンストップで実現し、企業のDX推進とチームの
 								成長を強力にバックアップします。
 							</p>
 							<div className="h-[68px] overflow-hidden">
@@ -401,7 +401,7 @@ const Home = () => {
 
 			<div className="bg-[#1E2C44]">
 				<div className="trusted-clients-section pt-[73px] lg:pt-[147px] pb-[36px] lg:pb-[180px] bg-white overflow-hidden flex flex-col gap-[46px] lg:gap-y-20 px-[24px] xl:px-0 rounded-b-[40px] lg:rounded-b-[80px]">
-					<div className="w-[1240px] mx-auto">
+					<div className="w-[1126px] mx-auto">
 						<div className="overflow-hidden">
 							<div ref={trustClientTitleRef}>
 								<SectionTitle jp="取引先/パートナー一覧" />
