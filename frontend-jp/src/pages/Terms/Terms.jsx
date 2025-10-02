@@ -65,7 +65,7 @@ const Terms = () => {
 						viewport={{ once: true }} className="mt-[60px] md:mt-[73px] text-[#096FCA] text-[20px] md:text-[24px]  font-[600] md:font-[700] leading-[44px] tracking-[-0.48px] uppercase">
 						第1条（適用範囲）
 					</motion.h1>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ const Terms = () => {
 							本規約は、ユーザーと当社との間の本サービス利用に関する一切の関係に適用されます。
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ const Terms = () => {
 						2. 当社は、登録申請者に以下の事由があると判断した場合、登録を拒否することができます。
 					</motion.p>
 
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +119,7 @@ const Terms = () => {
 							虚偽の事項を届け出た場合
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +128,7 @@ const Terms = () => {
 							過去に本規約違反があった場合
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ const Terms = () => {
 						ユーザーは、本サービスの利用にあたり、以下の行為を行ってはなりません。
 					</motion.p>
 
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +160,7 @@ const Terms = () => {
 							法令または公序良俗に違反する行為
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -169,7 +169,7 @@ const Terms = () => {
 							本サービスの運営を妨害する行為
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -178,7 +178,7 @@ const Terms = () => {
 							他のユーザーや第三者の情報を不正に取得・利用する行為
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -187,7 +187,7 @@ const Terms = () => {
 							当社または第三者の知的財産権を侵害する行為
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<div className="bg-[#096FCA] min-w-[10px] min-h-[10px] rounded-full mt-3.5"></div>
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -203,7 +203,7 @@ const Terms = () => {
 						viewport={{ once: true }} className="mt-[60px] md:mt-[73px] text-[#096FCA] text-[20px] md:text-[24px] font-[600] md:font-[700] leading-[44px] tracking-[-0.48px] uppercase">
 						第4条（本サービスの提供）
 					</motion.h1>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
 
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -213,7 +213,7 @@ const Terms = () => {
 
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] ">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] ">
 
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -244,7 +244,7 @@ const Terms = () => {
 						viewport={{ once: true }} className="mt-[60px] md:mt-[73px] text-[#096FCA] text-[20px] md:text-[24px] font-[600] md:font-[700] leading-[44px] tracking-[-0.48px] uppercase">
 						第6条（免責事項）
 					</motion.h1>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
@@ -254,7 +254,7 @@ const Terms = () => {
 
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
@@ -283,7 +283,7 @@ const Terms = () => {
 						viewport={{ once: true }} className="mt-[60px] md:mt-[73px] text-[#096FCA] text-[20px] md:text-[24px] font-[600] md:font-[700] leading-[44px] tracking-[-0.48px] uppercase">
 						第8条（協議および紛争解決）
 					</motion.h1>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px] mt-[12px] md:mt-[20px]">
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
@@ -292,7 +292,7 @@ const Terms = () => {
 
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
@@ -302,7 +302,7 @@ const Terms = () => {
 
 						</motion.p>
 					</div>
-					<div className="flex gap-[26px] md:gap-[11px] items-start mb-[8px] md:mb-[12px]">
+					<div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
