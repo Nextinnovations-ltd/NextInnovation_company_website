@@ -9,6 +9,7 @@ import useCardAnimation from "../../hooks/useCardAnimation";
 import LeftArrow from "/images/svg/pagination-arrow-left.svg"
 import RightArrow from "/images/svg/pagination-arrow-right.svg"
 import { API_BASE_URL } from "../../config";
+import CareerCard from "../../components/CareerCard";
 
 const Career = () => {
 
@@ -77,11 +78,7 @@ const Career = () => {
 				<div className="max-w-[1240px] mx-auto relative z-10 px-6 lg:px-0 lg:min-h-[1000px]">
 					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[60px] md:gap-x-3 mt-[100px]">
 						{!!news.data && news.data.map(item => (
-							<div key={item.id} className="news-card text-[#444444]">
-								<img src={item.feature} alt="" className="rounded-[12px] w-[404px] h-[260px]" />
-								<p className="text-[12px] font-normal leading-[22px] tracking-[0%] mt-4">{item.created_at}</p>
-								<h3 className="roboto text-limit  min-h-[65px] max-h-[65px] text-[20px] font-medium leading-[30px] tracking-[0%] uppercase">{item.title}</h3>
-							</div>
+							<CareerCard key={item.id} image={item.feature} date={item.created_at} title={item.title} />
 						))}
 					</div>
 					<div className="flex justify-center mt-[117px] lg:mt-[153px]">

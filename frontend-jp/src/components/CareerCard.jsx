@@ -1,27 +1,21 @@
 import { PropTypes } from "prop-types";
 
-const CareerCard = ({ title, image, category, date }) => {
+const CareerCard = ({image,date,title}) => {
     return (
-      <div>
-         <div>
-            <div className="blockReveal overflow-hidden">
-                <img src={image} className="w-full h-[300px] hover:scale-110 ease-in-out duration-300" alt="" />
+        <div className="news-card text-[#444444]">
+            <div className="overflow-hidden rounded-[12px]">
+                <img src={image} alt="" className="rounded-[12px] w-[404px] h-[260px] hover:scale-110 duration-300 ease-in-out transition-transform" />
             </div>
-            <div className="roboto text-[#444444] flex gap-[16px] text-[12px] lg:text-[14px] font-semibold leading-[100%] tracking-[1%] uppercase mt-[34px] mb-2">
-                <span>{date}</span>
-                <span>{category}</span>
-            </div>
-            <h4 className="text-[24px] text-[#444444] font-bold leading-[44px] tracking-[-2%] text-limit min-h-[71px]">{title}</h4>
+            <p className="text-[12px] font-normal leading-[22px] tracking-[0%] mt-4">{date}</p>
+            <h3 className="roboto text-limit  min-h-[65px] max-h-[65px] text-[20px] font-medium leading-[30px] tracking-[0%] uppercase">{title}</h3>
         </div>
-       </div>
     )
 }
 
 CareerCard.propTypes = {
     image: PropTypes.string.isRequired,
-    category:PropTypes.string.isRequired,
     date:PropTypes.string.isRequired,
-    title:PropTypes.string.isRequired
+    title:PropTypes.string.isRequired,
 }
 
 export default CareerCard

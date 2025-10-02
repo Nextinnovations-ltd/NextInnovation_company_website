@@ -69,7 +69,7 @@ const Home = () => {
 	useSectionTitleAnimation(ourProductTitleRef, { start: "top+=300 top" })
 	useGoButtonAnimation(goButtonRef1, { start: "top 90%" })
 	useGoButtonAnimation(goButtonRef2, { start: "top 90%" })
-	useGoButtonAnimation(goButtonRef3, { start: "top+=300 top" })
+	useGoButtonAnimation(goButtonRef3, { start: "top+=200 top" })
 
 	/* TEXT AND LINE ANIMATION */
 	const textRefs = useRef([]);
@@ -410,23 +410,31 @@ const Home = () => {
 							trusted Clients<span>50+</span>
 						</h1>
 					</div>
-					<div className="marquee-logo-container max-w-[1400px] mx-auto ">
-						<div className="marquee-animation flex items-center justify-between gap-24">
-							<img src={marqueeLogo1} alt="" />
+					<div className="marquee-logo-container max-w-[1290px] mx-auto ">
+						<div className="marquee-animation flex items-center gap-[62px]">
+							<img src={marqueeLogo1} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo2} alt="" />
+							<img src={marqueeLogo2} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo3} alt="" />
+							<img src={marqueeLogo3} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo4} alt="" />
+							<img src={marqueeLogo4} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo1} alt="" />
+							<img src={marqueeLogo1} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo2} alt="" />
+							<img src={marqueeLogo2} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo3} alt="" />
+							<img src={marqueeLogo3} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo4} alt="" />
+							<img src={marqueeLogo4} alt="" className="w-[146px]" />
+							<div className="logo-divider"></div>
+							<img src={marqueeLogo1} alt="" className="w-[146px]" />
+							<div className="logo-divider"></div>
+							<img src={marqueeLogo2} alt="" className="w-[146px]" />
+							<div className="logo-divider"></div>
+							<img src={marqueeLogo3} alt="" className="w-[146px]" />
+							<div className="logo-divider"></div>
+							<img src={marqueeLogo4} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
 						</div>
 						<img src={marqueeGradientLeft} alt="" className="coverLeft hidden lg:block" />
@@ -437,14 +445,14 @@ const Home = () => {
 
 			{/* start our powerful section */}
 			<div className="bg-white">
-				<div className="our-powerful-product-section w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[40px] lg:rounded-b-[80px] px-6 lg:px-0">
-					<div className="our-powerful-product mx-auto lg:pl-[63px]">
+				<div className="our-powerful-product-section bg-[#1E2C44] text-[#EDEDED] w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[40px] lg:rounded-b-[80px] px-6 lg:px-0">
+					<div className="our-powerful-product max-w-[1126px] mx-auto">
 						<div className="overflow-hidden lg:hidden">
 							<div ref={ourProductTitleRef}>
 								<SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" engcolor="text-white" />
 							</div>
 						</div>
-						<div className="flex flex-col-reverse lg:flex-row lg:gap-[55px]">
+						<div className="flex flex-col-reverse lg:flex-row lg:gap-[108px]">
 							<div className="lg:w-[483px]">
 								<div className="overflow-hidden hidden lg:block">
 									<div ref={ourProductTitleRef}>
@@ -452,26 +460,26 @@ const Home = () => {
 									</div>
 								</div>
 								<div className="main-left mt-[50px]">
-									<h3 ref={addToRefs} className="roboto text-[24px] md:text-[38px] xl:text-[48px] font-normal mb-6 xl:mb-8 lg:pt-[64px]">
+									<h3 ref={addToRefs} className="roboto text-[24px] font-bold leading-[44px] tracking-[-2%] text-[#EDEDED] mb-6 xl:mb-[20px] lg:pt-[30px]">
 										Talent Cloud
 									</h3>
-									<span ref={addToRefs} className="text-[14px] md:text-[21px] xl:text-[18px] font-normal leading-[34px] tracking-[0%]">
+									<span ref={addToRefs} className="text-[14px] font-normal leading-[31px] tracking-[0%] text-white">
 										Talent Cloudは、ミャンマーの優秀なエンジニア・専門人材と、海外企業をつなぐことを目的とした
 										クラウド型人材プラットフォームです。
 										「グローバルに活躍したい個人」と「信頼できる海外人材を確保したい企業」、双方のニーズをスムーズに結びつけることを使命としています。
 									</span>
-									<div className="mt-[48px] lg:mt-[60px] h-[68px] overflow-hidden">
+									<div className="mt-[50px] h-[68px] overflow-hidden">
 										<div ref={goButtonRef3}>
 											<GoButton name="β版を見てみる" link="http://staging.talent-cloud.asia/emp/lp" target="_blank" />
 										</div>
 									</div>
 								</div>
 							</div>
-							<div className="w-full mt-[26px] lg:mt-0 border-t-[2px] lg:border-t-0 pt-[70px] lg:pt-0 border-[#EDEDED] lg:w-[728px] relative">
+							<div className="w-full mt-[26px] lg:mt-0 border-t-[2px] lg:border-t-0 pt-[70px] lg:pt-0 border-[#EDEDED] lg:w-[535px] relative">
 								<div className="image-container rounded-l-[16px] overflow-hidden">
 									<img src={PowerFullProduct} alt="" className="blockReveal w-full" />
 								</div>
-								<Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="coming-soon absolute md:text-2xl uppercase font-normal px-6 py-4 rounded-lg">
+								<Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="coming-soon absolute md:text-[17px] uppercase font-normal leading-[110%] tracking-[-2%] px-4 py-3 rounded-lg">
 									Coming Soon
 								</Link>
 							</div>

@@ -20,7 +20,7 @@ const HomeCareer = () => {
     const containerRef = useRef(null)
 
     useEffect(() => {
-        fetch(`${API_BASE_URL}/api/news`)
+        fetch(`${API_BASE_URL}/api/news?category=1`)
         .then(res => res.json())
         .then(data => {
             setCareer(data.data.slice(0, 3));
@@ -32,7 +32,7 @@ const HomeCareer = () => {
 
     useSectionTitleAnimation(titleRef, {start: "top+=300 top"})
     useGoButtonAnimation(goButtonRef, {start: "top+=500 top"})
-    useCardAnimation(containerRef, '.career-card', {start: "top+=400 top"})
+    useCardAnimation(containerRef, '.news-card', {start: "top+=400 top"})
 
     return (
       <div className="bg-white">
@@ -42,12 +42,10 @@ const HomeCareer = () => {
                     <SectionTitle jp="ニュース" eng="NEWS" />
                 </div>
             </div>
-            <div ref={containerRef} className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-[40px] text-[#444444] mt-[50px]">
+            <div ref={containerRef} className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-[36px] text-[#444444] mt-[50px]">
                 {!!career.length && career.map(item => (
                     <Link key={item.id} to={`/news/${item.id}`}>
-                        <div className="career-card">
-                            <CareerCard title={item.title} image={item.feature} date={item.created_at} category={item.category} />
-                        </div>
+                        <CareerCard title={item.title} image={item.feature} date={item.created_at} category={item.category} />
                     </Link>
                 ))}
             </div>

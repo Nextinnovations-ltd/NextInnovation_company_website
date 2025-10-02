@@ -372,11 +372,9 @@ body {
 
 .gif-section .consult-free {
     color: #FFF;
-    line-height: 64px;
-    letter-spacing: -1.12px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
     transition: transform 0.3s ease-in-out;
 }
 

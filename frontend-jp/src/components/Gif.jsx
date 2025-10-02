@@ -83,24 +83,33 @@ const Gif = ({ round = false }) => {
 	};
 
 	return (
+		// <div className={`gif-section bg-cover bg-center w-full h-[500px] lg:h-screen bg-no-repeat relative ${round ? 'rounded-b-[40px] lg:rounded-b-[80px]' : ''}`}>
+		// 	<div className="rotate absolute">
+		// 		<img src={NiLoop} alt="" />
+		// 	</div>
+		// 	<div ref={buttonRef} data-magnetic-value="0.5" className="magnetic-button consult-free cursor-default absolute">
+		// 		<div className="flex gap-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 justify-center items-center">
+		// 			<img ref={addContentRef} src={Hand} alt="Hand pointing" className="w-[48px] md:w-[64px] lg:w-[70px] xl:w-[85px]" />
+		// 			<Link ref={addContentRef} to="/contact" className="text-[28px] text-nowrap md:text-[35px] lg:text-[46px] uppercase font-semibold leading-[52.67px] tracking-[-2%]">
+		// 				consult free
+		// 			</Link>
+		// 		</div>
+		// 	</div>
+
+		// </div>
+
 		<div className={`gif-section bg-cover bg-center w-full h-[500px] lg:h-screen bg-no-repeat relative ${round ? 'rounded-b-[40px] lg:rounded-b-[80px]' : ''}`}>
 			<div className="rotate absolute">
 				<img src={NiLoop} alt="" />
 			</div>
 			<div ref={buttonRef} data-magnetic-value="0.5" className="magnetic-button consult-free cursor-default absolute">
-				<div className="flex gap-3 md:gap-x-4 lg:gap-x-6 xl:gap-x-8 justify-center items-center">
-					<img ref={addContentRef} src={Hand} alt="Hand pointing" className="w-[48px] md:w-[64px] lg:w-[70px] xl:w-[85px]" />
-					<Link ref={addContentRef} to="/contact" className="text-[28px] text-nowrap md:text-[35px] lg:text-[40px] xl:text-[56px] uppercase font-semibold">
+				<div className="flex gap-3 md:gap-x-4 lg:gap-x-6 justify-center items-center">
+					<img ref={addContentRef} src={Hand} alt="Hand pointing" className="w-[48px] md:w-[64px] lg:w-[70px]" />
+					<Link to="/contact" ref={addContentRef} className="text-[28px] text-nowrap md:text-[35px] lg:text-[40px] xl:text-[46px] leading-[52px] tracking-[-2%] uppercase font-semibold">
 						consult free
 					</Link>
 				</div>
-				{/* <p className="archivo text-[20px] font-normal leading-[28px] tracking-[1%] mt-5">
-          海外人材の活用や弊社サービスに少しでもご関心がございましたら、<br/>
-          ぜひお気軽にお問い合わせください。<br/>
-          弊社代表より直接ご返信し、貴社の状況に応じてご案内いたします。
-        </p> */}
 			</div>
-
 		</div>
 	)
 }

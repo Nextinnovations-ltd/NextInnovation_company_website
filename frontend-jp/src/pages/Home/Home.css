@@ -1190,15 +1190,6 @@
 }
 
 /* start our powerful product section */
-.home .our-powerful-product-section {
-    background: #1E2C44;
-    color: #EDEDED;
-}
-
-.home .our-powerful-product {
-    max-width: 1266px;
-}
-
 .home .our-powerful-product .coming-soon {
     background: rgba(0, 0, 0, 0.40);
     top: 50%;
@@ -1273,7 +1264,7 @@
 
 /* start news section */
 .home .home-news {
-    max-width: 1240px;
+    max-width: 1126px;
     color: #121212;
 }
 
