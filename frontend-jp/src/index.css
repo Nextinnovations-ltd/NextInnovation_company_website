@@ -57,6 +57,7 @@ body {
 }
 .service-drop-down .active {
     background-color: #FFE8E3;
+    border: none;
 }
 .mobile-nav .active {
     border-bottom: 1px solid #F15A29;

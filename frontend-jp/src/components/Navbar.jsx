@@ -16,11 +16,6 @@ const Navbar = () => {
     const [mobileDropDownOpen, setMobileDropDownOpen] = useState('');
     const wrapperRef  = useRef(null);
 
-    // click service
-    const clickDropDown = (name) => {
-        dropDownOpen == name ? setDropDownOpen('') : setDropDownOpen(name);
-    }
-
     const clickLink = () => {
         setDropDownOpen('')
     }

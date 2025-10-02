@@ -4,6 +4,9 @@ import { useRef } from "react";
 import useLineAnimation from "../../hooks/useLineAnimation";
 import ContactLabelInput from "../../components/ContactLabelInput";
 import ContactLabelSelect from "../../components/ContactLabelSelect";
+import ContactLabel from "../../components/ContactLabel";
+import ContactRadio from "../../components/ContactRadio";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
     const topLineRef = useRef(null)
@@ -71,8 +74,25 @@ const Contact = () => {
                                 <option value="11">未定</option>
                                 <option value="11">応相談</option>
                             </ContactLabelSelect>
+                            <ContactLabelSelect label="ご希望形式" name="budget">
+                                <option value="">ご希望のご提案形式を選択して下さい。</option>
+                                <option value="5">50万未満</option>
+                                <option value="6">100万未満</option>
+                                <option value="7">100万円</option>
+                                <option value="8">200万円</option>
+                                <option value="9">300万円</option>
+                                <option value="10">400万円</option>
+                                <option value="11">500万円</option>
+                                <option value="11">600万円</option>
+                                <option value="11">700万円</option>
+                                <option value="11">800万円</option>
+                                <option value="11">900万円</option>
+                                <option value="11">1000万円以上</option>
+                                <option value="11">未定</option>
+                                <option value="11">応相談</option>
+                            </ContactLabelSelect>
                             <ContactLabelSelect label="ご相談サービス" name="services" require>
-                                <option value="">ご興味のあるサービスをお選びください</option>
+                                <option value="">ご興味のあるサービスをお選びください。</option>
                                 <option value="5">EOR</option>
                                 <option value="6">安心ラボ型EOR</option>
                                 <option value="7">プロジェクト伴走型EOR</option>
@@ -81,6 +101,22 @@ const Contact = () => {
                                 <option value="10">受託開発</option>
                                 <option value="11">UI/UXデザイン</option>
                             </ContactLabelSelect>
+                            <div className="flex flex-col gap-3 pb-6">
+                                <ContactLabel label="知ったきっかけ" name="known" require />
+                                <ContactRadio label="ご紹介" name="sns" />
+                                <ContactRadio label="SNS" name="sns" />
+                                <ContactRadio label="その他媒体" name="sns" />
+                                <ContactRadio label="営業" name="sns" />
+                            </div>
+                            <div className="flex flex-col gap-3">
+                                <ContactLabel label="お問い合わせ内容詳細 " name="message" />
+                                <textarea className="w-[510px] h-[130px] px-4 py-5 text-[#7F7F7F] text-[14px] font-normal leading-[31px] tracking-[0%] bg-transparent border-[2px] border-[#00000014] rounded-[8px] focus:outline-none" placeholder="ご依頼内容の詳細についてお聞かせください。"></textarea>
+                            </div>
+                            <div className="flex gap-[10px] items-center">
+                                <input type="checkbox" id="terms" className="w-4 h-4 border-[1px] border-[#DFE4EA] rounded-[4px]" />
+                                <div className="text-[14px] font-normal leading-[31px] tracking-[0%] text-[#111928]"><Link to="/privacy" className="text-blue-600 hover:font-semibold">プライバシーポリシー</Link>に同意する</div>
+                            </div>
+                            <button className="text-[20px] font-bold leading-[22px] tracking-[-2%] text-white w-full rounded-[40px] py-5 bg-[#E84721] hover:bg-[#F15A29]">確認する</button>
                         </form>
                     </div>
                 </div>

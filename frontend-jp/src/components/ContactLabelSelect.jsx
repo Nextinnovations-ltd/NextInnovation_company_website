@@ -1,9 +1,10 @@
 import { PropTypes } from "prop-types"
+import ContactLabel from "./ContactLabel";
 
 const ContactLabelSelect = ({children,label,name,require=false}) => {
     return (
         <div className="flex flex-col gap-3 text-[14px] font-normal leading-[31px] tracking-[0%]">
-            <label htmlFor={name} className="text-[#000000CC]">{label} <span className="text-[#FF0000CC]">{require ? '*' : ''}</span></label>
+            <ContactLabel label={label} name={name} require={require} />
             <div className="relative w-full">
                 <select id={name} name="name" className="appearance-none text-[14px] font-normal leading-[31px] tracking-[0%] bg-transparent text-[#7F7F7F] border-[2px] border-[#00000014] rounded-[8px] h-[71px] px-4 focus:outline-none w-full">
                     {children}
