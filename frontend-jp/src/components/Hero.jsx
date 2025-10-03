@@ -52,8 +52,8 @@ const Hero = () => {
 						<h3 className="text-[36px] font-bold leading-[76px] tracking-[0%]">グローバル人材で、DXを加速する。</h3>
 						<div className="border-t-[2px] border-[#444444] pt-[16px] mt-[12px]">
 							<p className="text-[14px] font-normal leading-[31px] tracking-[0%]">
-								EORを基盤に、東南アジアの優秀なタレントと共に、企業のDX推進
-								から受託開発、UI/UXデザインまでを 一貫してサポート。国境を
+								EORを基盤に、東南アジアの優秀なタレントと共に、企業のDX推進から受託開発、UI/UX<br/>
+								デザインまでを 一貫してサポート。国境を
 								越えた新しいチームで、未来の成長と挑戦を共に実現します。
 							</p>
 						</div>

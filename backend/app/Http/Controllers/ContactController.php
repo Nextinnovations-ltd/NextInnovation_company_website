@@ -70,7 +70,7 @@ class ContactController extends Controller
             $data = $this->requestContactInfo($request);
             DB::beginTransaction();
             $contact = Contact::create($data);
-            $mail = [$contact->email, 'info@next-innovations.ltd'];
+            $mail = [$contact->email];
             Mail::to($mail)->send(new ContactJpMail($contact));
             DB::commit();
             return response()->json([
@@ -89,12 +89,16 @@ class ContactController extends Controller
 
     private function requestContactInfo($request) {
         return [
+            'company_name' => $request->company_name,
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'interest' => $request->interest,
             'country' => $request->country,
             'budget' => $request->budget,
+            'budget_jp' => $request->budget_jp,
+            'hope' => $request->hope,
+            'known' => $request->known,
             'message' => $request->message,
         ];
     }
