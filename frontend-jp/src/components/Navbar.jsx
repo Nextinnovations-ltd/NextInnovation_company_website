@@ -42,14 +42,14 @@ const Navbar = () => {
         <> 
        
               {(dropDownOpen === "services" || dropDownOpen === "about")&& (
-                <div className="fixed left-0 right-0  h-[100vh] bg-black/80 backdrop-blur-sm z-[1000]"></div>
+                <div className="fixed left-0 right-0  h-[100vh] bg-[#02021E4D] backdrop-blur-[13.5px] z-[1000]"></div>
               )} 
             <div ref={wrapperRef}
-                className={`navbar max-w-[1250px] mx-auto text-[#444444] backdrop-blur-[30px] bg-white/60 rounded-[50px] border border-white flex justify-between items-center h-[68px] px-[32px] fixed top-0 left-0 right-0 z-[10000] transition-transform duration-300 mt-[20px]
+                className={`navbar max-w-[1250px] mx-auto text-[#000] md:backdrop-blur-[30px] bg-white md:bg-white/60 md:rounded-[50px] border border-white flex justify-between items-center h-[68px] px-[32px] fixed top-0 left-0 right-0 z-[10000] transition-transform duration-300 md:mt-[20px]
                     ${showBorder ? "border-b-[1px]" : ""}`}
             >
                 <div>
-                    <NavLink to="/" onClick={() => setDropDownOpen('')} className="chillax text-[#444] text-[20px] font-[500] tracking-[-0.8px]">Next Innovations</NavLink>
+                    <NavLink to="/" onClick={() => setDropDownOpen('')} className="chillax text-[#000] text-[20px] font-[500] tracking-[-0.8px]">Next Innovations</NavLink>
                 </div>
 
                 <div className="nav-menu w-[835px] h-[100%] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
@@ -161,7 +161,7 @@ const Navbar = () => {
             {mobileOpen && (
                 <>
                     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
-                    <div className="mobile-nav text-[#444444] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-40 pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                    <div className="mobile-nav text-[#000] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-40 pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
                         <NavLink to="/" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ホーム</NavLink>
                         <MobileDropDown
                             name="サービス"
