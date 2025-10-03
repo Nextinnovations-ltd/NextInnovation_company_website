@@ -1,12 +1,13 @@
 import { PropTypes } from "prop-types"
 import ContactLabel from "./ContactLabel";
+import Danger from "./svg/Danger";
 
-const ContactLabelSelect = ({children,label,name,require=false}) => {
+const ContactLabelSelect = ({children,label,require=false,state,setState,error=[]}) => {
     return (
         <div className="flex flex-col gap-3 text-[14px] font-normal leading-[31px] tracking-[0%]">
-            <ContactLabel label={label} name={name} require={require} />
+            <ContactLabel label={label} require={require} />
             <div className="relative w-full">
-                <select id={name} name="name" className="appearance-none text-[14px] font-normal leading-[31px] tracking-[0%] bg-transparent text-[#7F7F7F] border-[2px] border-[#00000014] rounded-[8px] h-[71px] px-4 focus:outline-none w-full">
+                <select value={state} onChange={(e)=>setState(e.target.value)} className="appearance-none text-[14px] font-normal leading-[31px] tracking-[0%] bg-transparent text-[#7F7F7F] border-[2px] border-[#00000014] rounded-[8px] h-[71px] px-4 focus:outline-none w-full">
                     {children}
                 </select>
                 <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
@@ -15,6 +16,12 @@ const ContactLabelSelect = ({children,label,name,require=false}) => {
                     </svg>
                 </div>
             </div>
+            {error.length > 0 && (
+                <p className="text-[#E01C1CCC] flex items-center gap-[13px]">
+                    <Danger/>
+                    {error}
+                </p>
+            )}
         </div>
     );
 }
@@ -22,8 +29,10 @@ const ContactLabelSelect = ({children,label,name,require=false}) => {
 ContactLabelSelect.propTypes = {
     children: PropTypes.node,
     label: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
     require: PropTypes.bool,
+    state: PropTypes.string.isRequired,
+    setState: PropTypes.func.isRequired,
+    error: PropTypes.array
 }
 
 export default ContactLabelSelect;

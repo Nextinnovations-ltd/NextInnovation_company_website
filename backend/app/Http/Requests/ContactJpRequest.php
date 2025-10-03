@@ -24,12 +24,14 @@ class ContactJpRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'company_name' => 'nullable|max:200',
             'name' => 'required',
             'email' => 'required|email|max:50',
-            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:20',
-            'interest' => 'required|numeric|between:5,11',
-            'country' => 'nullable|max:50',
-            'budget' => 'nullable|max:20',
+            'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:6|max:20',
+            'interest' => 'required|numeric|between:5,12',
+            'budget_jp' => 'nullable|numeric|between:1,14',
+            'hope' => 'nullable|numeric|between:1,4',
+            'known' => 'required|numeric|between:1,4',
             'message' => 'nullable|max:65000',
         ];
     }
