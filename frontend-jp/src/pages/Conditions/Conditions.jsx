@@ -47,22 +47,13 @@ const Conditions = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }} className="max-w-[1073px] text-[#444] text-[14px] md:text-[20px] leading-[29px] md:leading-[38px] font-[500]">
-                本EORサービス利用規約（以下「本規約」といいます。）は、
-            </motion.p>
-            <motion.p initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }} className="max-w-[1073px] text-[#444] text-[14px] md:text-[20px] leading-[29px] md:leading-[38px] font-[500] mt-[22px]">
-
-                Next Innovations Co., Ltd.（以下「当社」といいます。ミャンマー法人）が提供する
-            </motion.p>
-            <motion.p initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }} className="max-w-[1073px] text-[#444] text-[14px] md:text-[20px] leading-[29px] md:leading-[38px] font-[500] mt-[22px]">
-
+                本EORサービス利用規約（以下「本規約」といいます。）は、<br/>
+                Next Innovations Co., Ltd.（以下「当社」といいます。ミャンマー法人）が提供する<br/>
                 EOR（Employer of Record：雇用代行）サービス（以下「本サービス」といいます。）の利用条件を定めるものです。
+
             </motion.p>
+           
+          
             <motion.p initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
@@ -593,23 +584,11 @@ const Conditions = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }} className="text-[#444] mt-[12px] md:mt-[20px] text-[14px] md:text-[20px] font-[500] leading-[38px]">
-                    (1) 本サービスを通じて提供された人材を、当社を介さず直接雇用する行為 
-
+                    (1) 本サービスを通じて提供された人材を、当社を介さず直接雇用する行為  <br/>
+                     (2) 現地法令に違反する業務指示 <br/>
+                    (3) 本サービスの範囲を逸脱する行為 
                 </motion.p>
-                <motion.p initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }} className="text-[#444] mt-[12px] md:mt-[20px] text-[14px] md:text-[20px] font-[500] leading-[38px]">
-                       (2) 現地法令に違反する業務指示 
-
-                </motion.p>
-                <motion.p initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    viewport={{ once: true }} className="text-[#444] mt-[12px] md:mt-[20px] text-[14px] md:text-[20px] font-[500] leading-[38px]">
-                       (3) 本サービスの範囲を逸脱する行為 
-
-                </motion.p>
+               
 
      
             <div className="flex gap-[11px] items-start mb-[8px] md:mb-[12px]">

@@ -81,7 +81,7 @@ const Navbar = () => {
                         <DropDownModal
                           jp="サービス"
                           eng="Services"
-                          description="海外人材の採用やマネジメントには、不安やハードルがつきものです。..."
+                          description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています"
                           menus={[
                             { title: "EOR（雇用代行）", link: "/eor" },
                             { title: "EOR代理店制度", link: "/aa" },
@@ -132,7 +132,7 @@ const Navbar = () => {
                         <DropDownModal
                           jp="会社情報"
                           eng="About"
-                          description="私たちはミャンマーに拠点を置くIT企業です。高品質で革新的なウェブデザイン、ウェブマーケティング、開発サービスを提供しています。"
+                          description="私たちはミャンマーに拠点を置くIT企業です。高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを、専門的なチームとともにお客様の満足を第一に提供します。"
                           menus={[
                             { title: "会社概要", link: "/about" },
                             { title: "私たちの強み", link: "/strengths" },

@@ -11,7 +11,7 @@ const CompanyProfile = () => {
            <div className="" >
                        <p className='flex  items-center gap-2 text-[#575757] text-[16px] font-[500] leading-[31px]'>(<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                         <circle cx="4" cy="4" r="4" fill="#096FCA"/>
-                      </svg>導入事例 )</p>
+                      </svg>会社概要 )</p>
              </div>
 <img src={TextImg} alt="" className='mt-[30px] md:mt-[40px]'/>
           <p className='text-black text-[12px] md:text-[15px] font-[400] leading-[22px] md:leading-[24px] max-w-[463px] mt-[27px] md:mt-[43px] ml-[80px]'>

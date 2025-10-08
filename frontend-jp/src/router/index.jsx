@@ -17,6 +17,7 @@ import CompanyProfile from "../pages/CompanyProfile/CompanyProfile";
 import UiUx from "../pages/Services/UiUx";
 import Philosophy from "../pages/Philosophy/Philosophy";
 import Conditions from "../pages/Conditions/Conditions";
+import CeoMessage from "../pages/CeoMessage/CeoMessage";
 
 const router = createBrowserRouter([
 	{
@@ -90,6 +91,10 @@ const router = createBrowserRouter([
 			{
 				path: "/terms-conditions",
 				element: <Conditions />,
+			},
+			{
+				path: "/ceo-message",
+				element: <CeoMessage />,
 			},
 		]
 	},
