@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Mail\ClientMail;
 use App\Mail\ContactMail;
-use App\Mail\ContactJpMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
@@ -71,7 +71,7 @@ class ContactController extends Controller
             DB::beginTransaction();
             $contact = Contact::create($data);
             $mail = [$contact->email];
-            Mail::to($mail)->send(new ContactJpMail($contact));
+            Mail::to($mail)->send(new ClientMail($contact));
             DB::commit();
             return response()->json([
                 "data" => [
