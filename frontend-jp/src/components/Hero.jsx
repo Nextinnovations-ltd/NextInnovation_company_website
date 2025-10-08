@@ -49,7 +49,7 @@ const Hero = () => {
 
 				<div className="mt-[70px] text-[#444444] w-[583px]">
 					<div ref={ParaRef}>
-						<h3 className="text-[36px] font-bold leading-[76px] tracking-[0%]">グローバル人材で、DXを加速する。</h3>
+						<h3 className="text-[36px] font-bold leading-[76px] tracking-[0%] text-nowrap">グローバル人材で、DXを加速する。</h3>
 						<div className="border-t-[2px] border-[#444444] pt-[16px] mt-[12px]">
 							<p className="text-[14px] font-normal leading-[31px] tracking-[0%]">
 								EORを基盤に、東南アジアの優秀なタレントと共に、企業のDX推進から受託開発、UI/UX<br/>

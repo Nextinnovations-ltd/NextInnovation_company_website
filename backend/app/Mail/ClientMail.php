@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactJpMail extends Mailable
+class ClientMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $contact;
@@ -19,18 +19,6 @@ class ContactJpMail extends Mailable
      */
     public function __construct($contact)
     {
-        $budget = $contact['budget'];
-        preg_match('/^(\d+)(\D+)$/u', $budget, $matches);
-
-        if (count($matches) === 3) {
-            $number = $matches[1];
-            $currency = $matches[2];
-            $formattedBudget = number_format((int) $number) . $currency;
-        } else {
-            $formattedBudget = $budget; // fallback if pattern doesn't match
-        }
-        $contact['budget'] = $formattedBudget;
-
         $this->contact = $contact;
     }
 
@@ -40,7 +28,7 @@ class ContactJpMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Next Innovations にお問い合わせいただきありがとうございます。',
+            subject: '【自動返信】お問い合わせありがとうございます｜Next Innovations',
         );
     }
 
@@ -50,7 +38,7 @@ class ContactJpMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mails.contact-jp',
+            view: 'mails.client-mail',
         );
     }
 
