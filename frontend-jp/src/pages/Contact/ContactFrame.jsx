@@ -5,7 +5,7 @@ import useLineAnimation from "../../hooks/useLineAnimation";
 import ContactInfo from "../../components/ContactInfo";
 import { PropTypes } from "prop-types"
 
-const ContactFrame = ({children}) => {
+const ContactFrame = ({children,children2}) => {
     const topLineRef = useRef(null)
     useLineAnimation(topLineRef,{start: "top 90%"})
 
@@ -17,13 +17,7 @@ const ContactFrame = ({children}) => {
                     <div className="lg:w-[546px] pt-[13px]">
                         <img src={ReachOut} alt="" />
                         <div className="mt-[64px] space-y-[18px] text-[#000000] text-[12px] lg:text-[14px] font-normal leading-[24px] lg:leading-[31px] tracking-[0%]">
-                            <p className="">
-                                ご入力は約2分で完了します。<br/>
-                                お問い合わせ内容に応じて、担当より 2営業日以内にご連絡いたします。<br className="hidden lg:block"/><br className="hidden lg:block"/>
-                                ご入力いただいた情報は厳重に管理し、他の目的で利用することはありませんので、安心してご記入ください。また、受託開発・UI/UXデザイン・サイトリニューアル等のお問い合わせにつきましては、
-                                <span className="font-semibold">対象となるURL（新規の場合は「このようなサイトを作りたい」という参考サービスのリンク）、ご希望のご予算などをできるだけ具体的にご記入いただけますと、</span>
-                                スムーズにご提案が可能です。
-                            </p>
+                            {children2}
                         </div>
                         <div className="hidden lg:block">
                             <ContactInfo/>
@@ -43,6 +37,7 @@ const ContactFrame = ({children}) => {
 
 ContactFrame.propTypes = {
     children: PropTypes.node,
+    children2: PropTypes.node,
 }
 
 export default ContactFrame;

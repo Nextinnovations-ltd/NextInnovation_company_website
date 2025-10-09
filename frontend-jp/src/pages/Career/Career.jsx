@@ -10,6 +10,7 @@ import LeftArrow from "/images/svg/pagination-arrow-left.svg"
 import RightArrow from "/images/svg/pagination-arrow-right.svg"
 import { API_BASE_URL } from "../../config";
 import CareerCard from "../../components/CareerCard";
+import { Link } from "react-router-dom";
 
 const Career = () => {
 
@@ -52,7 +53,7 @@ const Career = () => {
 	return (
 		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 mt-[50px] lg:mt-0'>
 			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
-				<div className="max-w-[1240px] w-full mx-auto h-[300px] md:h-[80vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[100px] px-[24px] lg:px-0">
+				<div className="max-w-[1240px] w-full mx-auto h-[300px] md:h-[80vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[120px] px-[24px] lg:px-0">
 					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2' initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
@@ -78,7 +79,9 @@ const Career = () => {
 				<div className="max-w-[1240px] mx-auto relative z-10 px-6 lg:px-0 lg:min-h-[1000px]">
 					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[60px] md:gap-x-3 mt-[100px]">
 						{!!news.data && news.data.map(item => (
-							<CareerCard key={item.id} image={item.feature} date={item.created_at} title={item.title} />
+							<Link to={`/news/${item.id}`} key={item.id}>
+								<CareerCard image={item.feature} date={item.created_at} title={item.title} />
+							</Link>
 						))}
 					</div>
 					<div className="flex justify-center mt-[117px] lg:mt-[153px]">

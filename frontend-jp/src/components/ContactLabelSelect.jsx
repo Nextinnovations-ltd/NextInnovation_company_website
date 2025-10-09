@@ -7,7 +7,7 @@ const ContactLabelSelect = ({children,label,require=false,state,setState,error=[
         <div className="flex flex-col gap-3">
             <ContactLabel label={label} require={require} />
             <div className="relative w-full">
-                <select value={state} onChange={(e)=>setState(e.target.value)} className={`${error.length > 0 ? 'border-[#E32222CC]' : 'border-[#00000014]'} appearance-none text-[12px] lg:text-[14px] font-normal leading-[16px] lg:leading-[31px] tracking-[0%] bg-transparent text-[#7F7F7F] border-[2px] rounded-[8px] h-[44px] lg:h-[71px] px-4 focus:outline-none w-full`}>
+                <select value={state} onChange={(e)=>setState(e.target.value)} className={`${error.length > 0 ? 'border-[#E32222CC]' : 'border-[#00000014]'} appearance-none text-[12px] lg:text-[14px] font-normal leading-[16px] lg:leading-[31px] tracking-[0%] bg-transparent text-[#02021E] placeholder:text-[#7F7F7F] border-[2px] rounded-[8px] h-[44px] lg:h-[71px] px-4 focus:outline-none w-full`}>
                     {children}
                 </select>
                 <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">

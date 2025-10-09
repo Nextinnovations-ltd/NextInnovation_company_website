@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminMail;
 use App\Models\Contact;
 use App\Mail\ClientMail;
 use App\Mail\ContactMail;
@@ -70,7 +71,11 @@ class ContactController extends Controller
             $data = $this->requestContactInfo($request);
             DB::beginTransaction();
             $contact = Contact::create($data);
+            $contact->ip = $request->ip;
+            $contact->date = $contact->created_at->format('Y年 m月 d日 H:i');
             $mail = [$contact->email];
+            $adminMail = ['info@next-innovations.ltd','yuta-mukai@next-innovations.ltd'];
+            Mail::to($adminMail)->send(new AdminMail($contact));
             Mail::to($mail)->send(new ClientMail($contact));
             DB::commit();
             return response()->json([

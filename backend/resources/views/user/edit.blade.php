@@ -1,12 +1,12 @@
 <x-layout>
 
-    <h1 class="text-4xl font-semibold mb-3">Users</h1>
+    <h1 class="text-4xl font-semibold mb-3">Admin</h1>
     <x-breadcrumb :route="[
-        ['name'=>'Users','link'=>route('users')],
+        ['name'=>'Admin','link'=>route('users')],
     ]" current="Edit" />
 
     <div class="w-full xl:w-2/3 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
-        <h5 class="text-2xl font-medium text-gray-900 mb-6">Edit Users</h5>
+        <h5 class="text-2xl font-medium text-gray-900 mb-6">Edit Admin</h5>
         <form class="space-y-6" action="{{ route('users.update', $user->id) }}" method="POST">
             @csrf
             @method('PUT')

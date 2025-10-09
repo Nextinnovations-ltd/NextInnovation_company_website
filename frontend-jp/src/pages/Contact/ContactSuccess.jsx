@@ -23,7 +23,13 @@ const ContactSuccess = () => {
     }, [message, navigate]);
 
     return (
-        <ContactFrame>
+        <ContactFrame
+            children2={
+                <p className="text-[40px] font-semibold leading-[63px] tracking-[0%] text-[#000000]">
+                    Thank you for contacting Next Innovations!
+                </p>
+            }
+        >
             <div className="flex flex-col items-center">
                 <p className="text-[#444444] text-[20px] lg:text-[24px] font-bold leading-[29px] lg:leading-[44px] tracking-[-2%]">お問い合わせありがとうございます！</p>
                 <svg className="mt-8 mb-6" width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
