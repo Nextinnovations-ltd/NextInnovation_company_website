@@ -8,6 +8,12 @@
     <div class="w-1/2 p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
         <h5 class="text-3xl font-medium text-gray-900 mb-6">Contact Information</h5>
         <div class="flex flex-col gap-3">
+            @if ($contact->company_name)
+            <div class="flex items-end gap-4">
+                <h4 class="text-[20px] font-semibold">Company Name :</h4>
+                <span class="text-[16px] font-medium">{{ $contact->company_name }}</span>
+            </div>
+            @endif
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Name :</h4>
                 <span class="text-[16px] font-medium">{{ $contact->name }}</span>
@@ -16,26 +22,46 @@
                 <h4 class="text-[20px] font-semibold">Email :</h4>
                 <span class="text-[16px] font-medium">{{ $contact->email }}</span>
             </div>
+            @if ($contact->phone)
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Phone :</h4>
                 <span class="text-[16px] font-medium">{{ $contact->phone }}</span>
             </div>
+            @endif
+            @if ($contact->country)
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Country :</h4>
                 <span class="text-[16px] font-medium">{{ ucwords($contact->country) }}</span>
             </div>
+            @endif
+            @if ($contact->budget || $contact->budget_jp)
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Budget :</h4>
-                <span class="text-[16px] font-medium">{{ $contact->budget_format }}</span>
+                <span class="text-[16px] font-medium">{{ $contact->budget_jp ? $contact->budget_jp_name : $contact->budget_format }}</span>
             </div>
+            @endif
+            @if ($contact->hope)
+            <div class="flex items-end gap-4">
+                <h4 class="text-[20px] font-semibold">Preferred Format :</h4>
+                <span class="text-[16px] font-medium">{{ $contact->hope_name }}</span>
+            </div>
+            @endif
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Interest :</h4>
                 <span class="text-[16px] font-medium">{{ $contact->interest_name }}</span>
             </div>
+            @if ($contact->known)
+            <div class="flex items-start gap-4">
+                <h4 class="text-[20px] text-nowrap font-semibold">Known :</h4>
+                <span class="text-[16px] mt-1 font-medium">{{ $contact->known_name }}</span>
+            </div>
+            @endif
+            @if ($contact->message)
             <div class="flex items-start gap-4">
                 <h4 class="text-[20px] text-nowrap font-semibold">Message :</h4>
                 <span class="text-[16px] mt-1 font-medium">{{ $contact->message }}</span>
             </div>
+            @endif
             <div class="flex items-end gap-4">
                 <h4 class="text-[20px] font-semibold">Date :</h4>
                 <span class="text-[16px] font-medium">{{ $contact->created_at->format('j M Y g:i a') }}</span>

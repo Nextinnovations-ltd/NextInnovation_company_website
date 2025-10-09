@@ -25,6 +25,52 @@ class Contact extends Model
         });
     }
 
+    public function getBudgetJpNameAttribute() {
+        $budget = $this->budget_jp;
+        $name = match ($budget) {
+            1 => '50万未満',
+            2 => '100万未満',
+            3 => '100万円',
+            4 => '200万円',
+            5 => '300万円',
+            6 => '400万円',
+            7 => '500万円',
+            8 => '600万円',
+            9 => '700万円',
+            10 => '800万円',
+            11 => '900万円',
+            12 => '1000万円以上',
+            13 => '未定',
+            14 => '応相談',
+            default => 'Unknown',
+        };
+        return $name;
+    }
+
+    public function getHopeNameAttribute() {
+        $hope = $this->hope;
+        $name = match ($hope) {
+            1 => '資料送付',
+            2 => '見積依頼',
+            3 => '打ち合せ希望',
+            4 => 'その他',
+            default => 'Unknown',
+        };
+        return $name;
+    }
+
+    public function getKnownNameAttribute() {
+        $known = $this->known;
+        $name = match ($known) {
+            1 => 'ご紹介',
+            2 => 'SNS',
+            3 => 'その他媒体',
+            4 => '営業',
+            default => 'Unknown',
+        };
+        return $name;
+    }
+
     public function getInterestNameAttribute() {
         $interest = $this->interest;
         $name = match ($interest) {
@@ -32,13 +78,14 @@ class Contact extends Model
             2 => 'Development',
             3 => 'UI/UX Design',
             4 => 'Testing',
-            5 => 'EOR(Employer of Record)',
+            5 => 'EORのみ',
             6 => '安心ラボ型EOR',
             7 => 'プロジェクト伴走型EOR',
-            8 => 'EOR代理店制度',
-            9 => 'DX支援',
-            10 => '受託開発',
-            11 => 'UI/UXデザイン',
+            8 => 'UI/UXデザイン',
+            9 => 'サイト制作・リニューアル',
+            10 => 'システム開発・DX支援',
+            11 => 'EOR代理店制度について',
+            12 => 'その他',
             default => 'Unknown',
         };
         return $name;

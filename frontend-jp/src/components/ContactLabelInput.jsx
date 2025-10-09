@@ -10,7 +10,7 @@ const ContactLabelInput = ({label,placeholder,type,name,require=false,state,setS
         <div className="flex flex-col gap-3 text-[12px] lg:text-[14px] font-normal leading-[16px] lg:leading-[31px] tracking-[0%]">
             <ContactLabel label={label} name={name} require={require} />
             <input id={name} type={type} 
-                className={`${className} bg-transparent text-[#7F7F7F] border-[2px] rounded-[8px] h-[44px] lg:h-[71px] px-4 focus:outline-none`} placeholder={placeholder}
+                className={`${className} bg-transparent text-[#02021E] placeholder:text-[#7F7F7F] border-[2px] rounded-[8px] h-[44px] lg:h-[71px] px-4 focus:outline-none`} placeholder={placeholder}
                 onChange={(e)=>setState(e.target.value)} value={state}
             />
             {error.length > 0 && (

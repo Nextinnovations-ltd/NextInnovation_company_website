@@ -7,7 +7,7 @@ const ContactInfo = () => {
     useLineAnimation(topLineRef,{start: "top 90%"})
 
     return (
-        <div className="relative mt-[117px] lg:mt-[122px] text-[#444444] pt-[24px]">
+        <div className="relative mt-[100px] text-[#444444] pt-[24px]">
             <span ref={topLineRef} className="absolute top-0 left-0 h-[1px] lg:h-[2px] bg-[#1E2C44] block"></span>
             <p className="text-[12px] lg:text-[16px] font-medium leading-[31px] tracking-[0%] mb-[10px]">連絡先情報</p>
             <h3 className="roboto text-[32px] lg:text-[58px] font-medium lg:font-bold leading-[38px] lg:leading-[67px] tracking-[0%] lg:tracking-[-1%] uppercase">contact info</h3>

@@ -134,8 +134,8 @@ const Navbar = () => {
                           eng="About"
                           description="私たちはミャンマーに拠点を置くIT企業です。高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを、専門的なチームとともにお客様の満足を第一に提供します。"
                           menus={[
-                            { title: "会社概要", link: "/about" },
-                            { title: "私たちの強み", link: "/strengths" },
+                            { title: "会社概要", link: "/company-profile" },
+                            { title: "経営方針", link: "/strengths" },
                             { title: "代表挨拶", link: "/ceo-message" },
                           ]}
                           clickLink={clickLink}

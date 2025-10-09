@@ -33,7 +33,8 @@ const Contact = () => {
         budget_jp : '',
         hope : '',
         known : '',
-        message : ''
+        message : '',
+        ip : ''
     })
 
     useEffect(() => {
@@ -43,6 +44,20 @@ const Contact = () => {
             setFormData((prev) => ({ ...prev, interest: from }));
         }
     }, [editFormData,from]);
+
+    useEffect(() => {
+		const fetchIP = async () => {
+			try {
+				const res = await fetch("https://api.ipify.org?format=json");
+				const data = await res.json();
+                setFormData((prev) => ({ ...prev, ip: data.ip }));
+			} catch (err) {
+                setFormData((prev) => ({ ...prev, ip: '' }));
+				console.log(err);
+			}
+		};
+		fetchIP();
+	}, []);
 
     let validate = (e) => {
         setLoading(true)
@@ -80,7 +95,17 @@ const Contact = () => {
     }
 
     return (
-        <ContactFrame>
+        <ContactFrame
+            children2={
+                <p>
+                    ご入力は約2分で完了します。<br/>
+                    お問い合わせ内容に応じて、担当より 2営業日以内にご連絡いたします。<br className="hidden lg:block"/><br className="hidden lg:block"/>
+                    ご入力いただいた情報は厳重に管理し、他の目的で利用することはありませんので、安心してご記入ください。また、受託開発・UI/UXデザイン・サイトリニューアル等のお問い合わせにつきましては、
+                    <span className="font-semibold">対象となるURL（新規の場合は「このようなサイトを作りたい」という参考サービスのリンク）、ご希望のご予算などをできるだけ具体的にご記入いただけますと、</span>
+                    スムーズにご提案が可能です。
+                </p>
+            }
+        >
             <p className="text-[#444444] text-[20px] lg:text-[24px] font-bold leading-[29px] lg:leading-[44px] tracking-[-2%]">こちらのフォームへご記入下さい</p>
             <form className="mt-[40px] space-y-[24px]">
                 <ContactLabelInput state={formData.company_name} setState={(value) => setFormData(prev => ({ ...prev, company_name: value }))} error={error.company_name || []} label="会社名" placeholder="株式会社 Next Innovations" type="text" name="companyName" />
@@ -106,7 +131,7 @@ const Contact = () => {
                 </ContactLabelSelect>
                 <ContactLabelSelect state={formData.hope} setState={(value) => setFormData(prev => ({ ...prev, hope: value }))} error={error.hope || []} label="ご希望形式">
                     <option value="">ご希望のご提案形式を選択して下さい</option>
-                    <option value="1"> 資料送付</option>
+                    <option value="1">資料送付</option>
                     <option value="2">見積依頼</option>
                     <option value="3">打ち合せ希望</option>
                     <option value="4">その他</option>
@@ -139,7 +164,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col gap-3">
                     <ContactLabel label="お問い合わせ内容詳細 " name="message" />
-                    <textarea value={formData.message} onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))} className="lg:w-[510px] h-[90px] lg:h-[130px] px-4 py-5 text-[#7F7F7F] text-[12px] lg:text-[14px] font-normal leading-[16px] lg:leading-[31px] tracking-[0%] bg-transparent border-[2px] border-[#00000014] rounded-[8px] focus:outline-none" placeholder="ご依頼内容の詳細についてお聞かせください"></textarea>
+                    <textarea value={formData.message} onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))} className="lg:w-[510px] h-[90px] lg:h-[130px] px-4 py-5 text-[#02021E] placeholder:text-[#7F7F7F] text-[12px] lg:text-[14px] font-normal leading-[16px] lg:leading-[31px] tracking-[0%] bg-transparent border-[2px] border-[#00000014] rounded-[8px] focus:outline-none" placeholder="ご依頼内容の詳細についてお聞かせください"></textarea>
                 </div>
                 <div className="flex gap-[10px] items-center">
                     <input type="checkbox" checked={check} onChange={(e) => setCheck(e.target.checked)} id="terms" className="w-4 h-4 border-[1px] border-[#DFE4EA] rounded-[4px]" />

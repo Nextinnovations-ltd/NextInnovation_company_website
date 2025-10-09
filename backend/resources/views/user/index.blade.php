@@ -1,12 +1,12 @@
 <x-layout>
-    <h1 class="text-4xl font-semibold mb-3">Users</h1>
-    <x-breadcrumb :route="[]" current="Users" />
+    <h1 class="text-4xl font-semibold mb-3">Admin</h1>
+    <x-breadcrumb :route="[]" current="Admin" />
 
     @if (session('success'))
     <x-success-alert name="success" />
     @endif
 
-    <x-total-create :total="$data->total()" routeName="users.create" createName="Add User" />
+    <x-total-create :total="$data->total()" routeName="users.create" createName="Add Admin" />
 
     <form action="{{ route('users') }}" class="flex flex-col md:flex-row md:items-center mb-2 gap-2">
         <input type="text" name="search" value="{{ request('search') }}" id="search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:ring-1 focus:border-blue-500 focus:outline-none block w-full md:w-[300px] p-2.5" placeholder="Search Name, Email or Id" />

@@ -89,7 +89,16 @@ const Confirm = () => {
     }
     
     return (
-        <ContactFrame>
+        <ContactFrame
+            children2={
+                <p>
+                    内容ご確認の上、お間違い無ければ送信ボタンを押して下さい。以下の内容でお問い合わせを承ります。
+                    ご入力内容にお間違いがないかご確認ください。<br className="hidden lg:block" />
+                    記載内容を修正する場合は「戻る」を、
+                    この内容で送信してよろしければ「送信する」を押してください。
+                </p>
+            }
+        >
             <p className="text-[#444444] text-[20px] lg:text-[24px] font-bold leading-[29px] lg:leading-[44px] tracking-[-2%]">内容をご確認下さい</p>
             <div className="space-y-6 mt-[40px]">
                 <ContactConfirmInfo label="会社名" text={formData?.company_name} />
