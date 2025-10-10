@@ -25,7 +25,7 @@ const Navbar = () => {
     // // Prevent body scroll when modal open
     useEffect(() => {
         if (dropDownOpen || mobileOpen) {
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "";
         } else {
             document.body.style.overflow = "";
         }
@@ -81,7 +81,7 @@ const Navbar = () => {
                         <DropDownModal
                           jp="サービス"
                           eng="Services"
-                          description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています"
+                          description="海外人材の採用やマネジメントには、不安やハードルがつきものです。私たちはミャンマーを中心とした東南アジアの優秀な人材を、日本企業が安心して活用できる仕組みを提供しています。"
                           menus={[
                             { title: "EOR（雇用代行）", link: "/eor" },
                             { title: "EOR代理店制度", link: "/aa" },
@@ -136,7 +136,7 @@ const Navbar = () => {
                           menus={[
                             { title: "会社概要", link: "/company-profile" },
                             { title: "経営方針", link: "/strengths" },
-                            { title: "代表挨拶", link: "/ceo-message" },
+                            { title: "代表メッセージ", link: "/ceo-message" },
                           ]}
                           clickLink={clickLink}
                         />
@@ -160,8 +160,8 @@ const Navbar = () => {
 
             {mobileOpen && (
                 <>
-                    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"></div>
-                    <div className="mobile-nav text-[#000] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-40 pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] "></div>
+                    <div className="mobile-nav text-[#000] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-[1000] pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
                         <NavLink to="/" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ホーム</NavLink>
                         <MobileDropDown
                             name="サービス"

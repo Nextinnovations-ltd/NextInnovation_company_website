@@ -3,7 +3,7 @@ const CaseStudyCard = ({image,title,text1,text2}) => {
     return (
         <div className="lg:w-[366px] case-study-card">
             <div className="overflow-hidden rounded-[12px]">
-                <img src={image} alt="" className="hover:scale-110 duration-300 ease-in-out transition-transform" />
+                <img src={image} alt="" className="hover:scale-110 duration-300 ease-in-out transition-transform w-full" />
             </div>
             <p className="text-[11px] font-normal leading-[20px] tracking-[0%] text-[#444444] mt-[14px]">株式会社Release</p>
             <h3 className="text-[18px] font-bold leading-[34px] tracking-[-2%] uppercase mb-[14px]">{title}</h3>

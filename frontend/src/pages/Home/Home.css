@@ -597,12 +597,34 @@
     background: #d7cec5
 }
 
+
 .col__image-wrap {
     position: absolute;
     left: 0;
-    transform: translateY(-50%);
     width: 100%;
-    height: 160vh
+    height: 160vh;
+       transform: translateY(-50%);
+        
+  }
+
+/* Safari only */
+@supports (-webkit-touch-callout: none) {
+  .col__image-wrap {
+    transform: none;
+  }
+}
+/* Safari only */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .col__image-wrap {
+      transform: none;
+    }
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .col__image-wrap {
+    transform: none;
+  }
 }
 
 .col__image-wrap .img {
@@ -621,10 +643,6 @@
         height: 100%
     }
 }
-
-
-
-
 
 
 

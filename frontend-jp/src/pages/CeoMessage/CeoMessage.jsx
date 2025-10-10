@@ -38,11 +38,11 @@ const CeoMessage = () => {
         <div className="">
           <motion.h1 variants={fadeUp} className='text-[#444] text-[32px] font-[700] leading-[50px] tracking-[-1.28px]'>代表メッセージ</motion.h1>
           <motion.p variants={fadeUp} className='text-[#444] text-[12px] md:text-[14px] font-[400] leading-[22px] md:leading-[31px]'>
-            CEO 向井 優太からのご挨拶です。<br/>
+            代表の向井 悠太からのご挨拶です。<br/>
             創業の背景やビジョン、事業内容、そして私たちのスタンスについてお話しいたします。
           </motion.p>
         </div>
-        <GoButton name="無料相談する" />
+        <GoButton name="無料相談する" link='/contact'/>
       </motion.div>
 
       <motion.div 
@@ -59,7 +59,7 @@ const CeoMessage = () => {
           </motion.h1>
           <div className="flex flex-col gap-3 md:gap-5 max-w-[558px] mt-[24px] md:mt-[50px]">
             <motion.p variants={fadeUp} className='text-[#444] text-[12px] md:text-[14px] font-[400] leading-[22px] md:leading-[31px]'>
-              CEOとして、私はここに誇りを持って立っています。
+              代表として、私はここに誇りを持って立っています。
             </motion.p>
             <motion.p variants={fadeUp} className='text-[#444] text-[12px] md:text-[14px] font-[400] leading-[22px] md:leading-[31px] max-w-[448px]'>
               私たちの献身的なプロフェッショナルチームが卓越した成果を提供する
