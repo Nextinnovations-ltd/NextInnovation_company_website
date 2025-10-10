@@ -53,7 +53,7 @@ const CompanyProfile = () => {
                   <p className='text-nowrap text-[#444] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>
                     事業内容
                   </p>
-                  <p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px] max-w-[891px]'>私たちNext Innovationsは、ミャンマーに拠点を置く日本企業であり、IT分野に特化しています。  プロフェッショナルなチームと多くのお客様に支えられ、高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを提供しています。  当社は2020年に向井優太氏の出資により設立され、これまでに国内外および日本で2,000以上のブランドに携わってまいりました。  IT分野でNo.1の企業となり、一人ひとりのお客様にご満足いただけることを目指しています</p>
+                  <p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px] max-w-[891px]'>私たちNext Innovationsは、ミャンマーに拠点を置く日本企業であり、IT分野に特化しています。  プロフェッショナルなチームと多くのお客様に支えられ、高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを提供しています。  当社は2020年に向井優太氏の出資により設立され、これまでに国内外および日本で2,000以上のブランドに携わってまいりました。  IT分野でNo.1の企業となり、一人ひとりのお客様にご満足いただけることを目指しています。</p>
               </div>
 
 {/* <div className="flex justify-between pt-[88px] pb-[460px]">

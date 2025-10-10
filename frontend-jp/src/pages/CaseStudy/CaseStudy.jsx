@@ -24,24 +24,24 @@ const CaseStudy = () => {
 	const caseStudies = [
 	  {
 		image: gridImg1,
-		title: "小規模web開発を短納期で構築実現",
+		title: "継続的なサイト更新",
 		text1: "日本のEC企業",
-		text2: "UI/ラボ型EOR",
+		text2: "ラボ型EOR",
 		categories: ["EOR"],
 	  },
 	  {
 		image: gridImg2,
-		title: "SaaSダッシュボードUI刷新で利用率向上",
+		title: "MVPを短期開発し、資金調達成功",
 		text1: "スタートアップ",
 		text2: "安心ラボ型と伴走型",
 		categories: ["EOR"],
 	  },
 	  {
 		image: gridImg3,
-		title: "伝統的なECサイトをSHOPIFYでリニュアル",
+		title: "自社サイトの自社プロジェクト立ち上げ",
 		text1: "AIコンサルタント会社",
 		text2: "伴走型",
-		categories: ["受託開発"],
+		categories: ["EOR"],
 	  },
 	  {
 		image: gridImg4,
@@ -66,24 +66,24 @@ const CaseStudy = () => {
 	  },
 	  {
 		image: gridImg7,
-		title: "小規模web開発を短納期で構築実現",
+		title: "ホームページ制作",
 		text1: "スタートアップ",
 		text2: "UI/UXデザイン、受託開発",
 		categories: ["UI/UXデザイン", "受託開発"],
 	  },
 	  {
 		image: gridImg8,
-		title: "SaaSダッシュボードUI刷新で利用率向上",
+		title: "ホームページ制作",
 		text1: "スタートアップ",
 		text2: "UI/UXデザイン、受託開発",
 		categories: ["UI/UXデザイン", "受託開発"],
 	  },
 	  {
 		image: gridImg9,
-		title: "伝統的なECサイトをSHOPIFYでリニュアル",
+		title: "ホームページ制作",
 		text1: "小売",
-		text2: "小売",
-		categories: ["受託開発"],
+		text2: "UI/UXデザイン、受託開発",
+		categories: ["UI/UXデザイン","受託開発"],
 	  },
 	];
 
@@ -99,7 +99,7 @@ const CaseStudy = () => {
 		  ? caseStudies
 		  : caseStudies.filter((c) => c.categories.includes(activeCategory));
 	return (
-		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10'>
+		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 overflow-hidden'>
 			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
 				<div className="max-w-[1240px] w-full mx-auto h-[50vh] md:h-[80vh] flex flex-col justify-between items-start pt-[100px] px-[24px] md:px-0">
 					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2 ' initial={{ opacity: 0, y: 30 }}
@@ -128,10 +128,11 @@ const CaseStudy = () => {
 							viewport={{ once: true }} className='pl-12 md:pl-[276px] text-black text-[20px] md:text-[24px] font-[700] leading-[44px] tracking-[-0.48px] uppercase mt-[37px] md:mt-[56px]'>長く愛される 新しい ストーリー</motion.p>
 					</div>
 				</div>
-				 <div className="max-w-[1240px] mx-auto relative z-10 px-6 md:px-0">
+				 <div className="w-full max-w-[1240px] mx-auto relative z-10 px-6 md:px-0">
 				  {/* Category Filter */}
+			<div className="w-[100%] overflow-x-auto "   style={{ msOverflowStyle: "none", scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
 				  <motion.div
-					className="mt-[67px] md:mt-[85px] flex gap-12 cursor-pointer"
+					className="mt-[67px] md:mt-[85px] flex gap-6 md:gap-12 cursor-pointer "
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
@@ -141,9 +142,9 @@ const CaseStudy = () => {
 					  <p
 						key={cat}
 						onClick={() => setActiveCategory(cat)}
-						className={`text-[16px] md:text-[24px] font-[700] leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase transition-colors duration-300 cursor-pointer ${
+						className={`text-nowrap text-[16px] md:text-[24px] font-[700] leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase transition-colors duration-300 cursor-pointer ${
 						  activeCategory === cat
-							? "text-[#1E2C44]"
+							? "text-[#1E2C44] underline underline-offset-8 decoration-2 decoration-[#F15A29]"
 							: "text-[#848484] hover:text-[#1E2C44]"
 						}`}
 					  >
@@ -151,6 +152,8 @@ const CaseStudy = () => {
 					  </p>
 					))}
 				  </motion.div>
+			</div>
+
 
 				  {/* Cards */}
 				  <div
@@ -169,7 +172,7 @@ const CaseStudy = () => {
 				  </div>
 				</div>
 				<div className="flex justify-end items-end w-full pb-[20vh] relative right-[-10%] mt-[-20%]">
-					<img src={rotateImg} alt="" className=' rotate-[20deg]' />
+					<img src={rotateImg} alt="" className=' rotate-[20deg] ' />
 				</div>
 			</div>
 		</div>
