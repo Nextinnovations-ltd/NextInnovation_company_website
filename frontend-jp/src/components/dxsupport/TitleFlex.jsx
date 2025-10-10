@@ -11,7 +11,7 @@ const TitleFlex = ({jp,eng,text}) => {
     useSectionTitleAnimation(textRef,{start: "top 80%"},50)
 
     return (
-        <div className="lg:flex lg:items-start lg:justify-between space-y-[28px] lg:space-y-0 overflow-hidden">
+        <div className="md:flex md:items-start md:justify-between space-y-[28px] lg:space-y-0 overflow-hidden">
             <div ref={titleRef}>
                 <SectionTitle jp={jp} eng={eng} />
             </div>

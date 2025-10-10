@@ -1,7 +1,7 @@
 import {PropTypes} from "prop-types"
 const CaseStudyCard = ({image,title,text1,text2}) => {
     return (
-        <div className="lg:w-[366px] case-study-card">
+        <div className="case-study-card">
             <div className="overflow-hidden rounded-[12px]">
                 <img src={image} alt="" className="hover:scale-110 duration-300 ease-in-out transition-transform" />
             </div>

@@ -22,13 +22,13 @@ const Strength = () => {
 
     return (
         <div className="bg-[#1E2C44]">
-            <div className="max-w-[1366px] mx-auto py-[80px] lg:py-[105px] px-[24px] lg:px-[120px]">
+            <div className="max-w-[1366px] mx-auto py-[80px] lg:py-[105px] px-[24px] xl:px-[120px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="当社EORの特徴と強み" eng="Features & Strengths of EOR" jpcolor="text-[#FFFFFF]" engcolor="text-[#FFFFFF]" />
                     </div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-[28px] lg:gap-[34px] mt-[50px] lg:mt-[63px] overflow-hidden lg:overflow-visible">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[28px] lg:gap-[34px] mt-[50px] lg:mt-[63px] overflow-hidden lg:overflow-visible">
                     <div ref={ref1}>
                         <StrengthCard
                             image={Gif1}

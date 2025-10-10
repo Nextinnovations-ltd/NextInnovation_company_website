@@ -17,16 +17,16 @@ const EorServiceSolveCard = ({image,title,description, first = false}) => {
     useSectionTitleAnimation(textRef,{start: "top 80%"})
 
     return (
-        <div ref={containerRef} className={`relative lg:flex lg:gap-[92px] py-[50px] lg:py-[64px]`}>
+        <div ref={containerRef} className={`relative md:flex md:gap-[20px] lg:gap-[50px] xl:gap-[92px] py-[50px] lg:py-[64px]`}>
             <span ref={bottomLineRef} className="absolute bottom-0 left-0 h-[0.8px] bg-[#1E2C44] block"></span>
             {!!first && <span ref={topLineRef} className="absolute top-0 left-0 h-[0.8px] bg-[#1E2C44] block"></span>}
-            <img src={image} alt="" className="service-image mb-[30px] lg:mb-0" />
+            <img src={image} alt="" className="md:w-[300px] md:h-auto lg:w-auto service-image mb-[30px] md:mb-0" />
             <div>
                 <div className="text-[#02021E] text-[16px] lg:text-[20px] overflow-hidden font-bold leading-[24px] lg:leading-[34px] tracking-[-2%] mb-[15px]">
                     <h3 ref={titleRef}>{title}</h3>
                 </div>
                 <div ref={textRef}>
-                    <p className="lg:w-[430px] text-[#444444] text-[12px] lg:text-[14px] overflow-hidden font-normal leading-[22px] lg:leading-[31px] tracking-[0%]">{description}</p>
+                    <p className="xl:w-[430px] text-[#444444] text-[12px] lg:text-[14px] overflow-hidden font-normal leading-[22px] lg:leading-[31px] tracking-[0%]">{description}</p>
                 </div>
             </div>
         </div>

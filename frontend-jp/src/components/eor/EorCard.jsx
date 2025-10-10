@@ -3,7 +3,7 @@ import LineLeft from "../svg/LineLeft";
 import LineRight from "../svg/LineRight";
 import CircleCorrect from "../svg/CircleCorrect";
 
-const EorCard = ({title,image,text1,text1Next,text2,text2Next,text3,text3Next}) => {
+const EorCard = ({title,image,text1,text2,text3}) => {
     return (
         <div className="eor-card">
             {title != 'EORのみ' && (
@@ -13,7 +13,7 @@ const EorCard = ({title,image,text1,text1Next,text2,text2Next,text3,text3Next}) 
                     <LineRight/>
                 </div>
             )}
-            <div className={`lg:w-[361px] bg-white rounded-[30px] pt-[29px] ps-[34.5px] pb-[50px] ${title != 'EORのみ' ? 'border-[5px] border-[#F15A29]' : 'mt-[44px]'}`}>
+            <div className={`xl:w-[361px] h-full bg-white rounded-[30px] pt-[29px] px-4 xl:px-[26px] ${title != 'EORのみ' ? 'border-[5px] border-[#F15A29]' : 'mt-[44px]'}`}>
                 <h4 className="text-[20px] text-[#02021E] text-center font-bold leading-[28px] lg:leading-[34px] tracking-[-2%] uppercase">{title}</h4>
                 <img src={image} alt="" className="my-[28px] lg:my-[31px] text-center" />
                 <div className="text-[#1E2C44]">
@@ -23,19 +23,19 @@ const EorCard = ({title,image,text1,text1Next,text2,text2Next,text3,text3Next}) 
                             <div className="w-[21px] mt-1">
                                 <CircleCorrect/>
                             </div>
-                            <p>{text1}<br/>{text1Next}</p>
+                            <p>{text1}</p>
                         </div>
                         <div className="flex gap-[12px] items-start">
                             <div className="w-[21px] mt-1">
                                 <CircleCorrect/>
                             </div>
-                            <p>{text2}<br/>{text2Next}</p>
+                            <p>{text2}<br/></p>
                         </div>
                         <div className="flex gap-[12px] items-start">
                             <div className="w-[21px] mt-1">
                                 <CircleCorrect/>
                             </div>
-                            <p>{text3}<br/>{text3Next}</p>
+                            <p>{text3}<br/></p>
                         </div>
                     </div>
                 </div>
@@ -48,11 +48,8 @@ EorCard.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     text1: PropTypes.string.isRequired,
-    text1Next: PropTypes.string.isRequired,
     text2: PropTypes.string.isRequired,
-    text2Next: PropTypes.string.isRequired,
     text3: PropTypes.string.isRequired,
-    text3Next: PropTypes.string.isRequired,
 }
 
 export default EorCard;

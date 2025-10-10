@@ -19,13 +19,13 @@ const Onboarding = () => {
     
     return (
         <div className="bg-white">
-            <div className="max-w-[1366px] mx-auto pt-[120px] lg:pt-[160px] pb-[33px] px-[24px] lg:px-[121px]">
+            <div className="max-w-[1366px] mx-auto pt-[120px] lg:pt-[160px] pb-[33px] px-[24px] xl:px-[121px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="導入の流れ" eng="onboarding process" />
                     </div>
                 </div>
-                <div ref={containerRef} className="mt-[90px] grid grid-cols-1 lg:grid-cols-3 gap-x-[31px] gap-y-[46px]">
+                <div ref={containerRef} className="mt-[90px] grid grid-cols-1 md:grid-cols-3 gap-x-5 lg:gap-x-[31px] gap-y-[46px] lg:pe-2 xl:pe-0">
                     <OnboardingCard
                         step="1"
                         title="お問い合わせ／お打ち合わせ"

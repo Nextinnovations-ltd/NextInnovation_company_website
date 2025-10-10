@@ -17,15 +17,15 @@ const PlanAndPricing = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[121px] pb-[80px] lg:pb-[137px]">
+                <div className="max-w-[1366px] mx-auto px-[24px] xl:px-[121px] pb-[80px] lg:pb-[137px]">
                     <div className="overflow-hidden">
                         <div ref={titleRef}>
                             <SectionTitle jp="プランと料金" eng="Plans and Pricing" />
                         </div>
                     </div>
-                    <div ref={containerRef} className="lg:flex mt-[50px] lg:mt-[68px]">
+                    <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-0 mt-[50px] lg:mt-[68px]">
 
-                        <div className="plan-price-card lg:w-[370px] shadow-[0px_3px_21px_4px_#1E2C441A] rounded-[16px] lg:rounded-[0px] lg:rounded-l-[20px] pb-[50px] lg:mt-[97px]">
+                        <div className="plan-price-card shadow-[0px_3px_21px_4px_#1E2C441A] rounded-[16px] lg:rounded-[0px] lg:rounded-l-[20px] pb-[50px] lg:mt-[97px]">
                             <div className="text-white bg-[#1E2C44] flex flex-col gap-[9px] items-center rounded-t-[16px] lg:rounded-t-[0px] lg:rounded-tl-[20px] py-[22px]">
                                 <p className="text-[11px] lg:text-[12px] font-normal leading-[22px] lg:leading-[23px] tracking-[1%] uppercase">EOR only Monthly</p>
                                 <h2 className="text-[24px] lg:text-[25px] font-bold leading-[34px] lg:leading-[36px] tracking-[1%]">EOR単体</h2>
@@ -95,22 +95,22 @@ const PlanAndPricing = () => {
                                 </div>
                             </div>
                             <PlanAndPricingGreenCard
-                                text1="・海外人材を雇いたいが、現地法人を"
-                                text1Next="設立する予定はない"
-                                text2="・雇用契約・給与計算・社会保険などの"
-                                text2Next="煩雑な手続きを任せたい"
-                                text3="・海外人材のマネージメントに自信あり、"
-                                text3Next="自社で業務上の管理/運営をリモートで可能"
+                                text1="・"
+                                text1Next="海外人材を雇いたいが、現地法人を設立する予定はない"
+                                text2="・"
+                                text2Next="雇用契約・給与計算・社会保険などの煩雑な手続きを任せたい"
+                                text3="・"
+                                text3Next="海外人材のマネージメントに自信あり、自社で業務上の管理/運営をリモートで可能"
                             />
                         </div>
 
-                        <div className="plan-price-card my-[28px] lg:my-0">
+                        <div className="plan-price-card">
                             <div className="flex justify-center gap-[20px] items-end mb-2 lg:mb-3">
                                 <LineLeft/>
                                 <p className="text-[16px] lg:text-[18px] font-bold leading-[22px] lg:leading-[25px] tracking-[3%] text-[#F15A29] mb-1 lg:mb-[7px]">オススメ !</p>
                                 <LineRight/>
                             </div>
-                            <div className="lg:w-[385px] shadow-[0px_3px_21px_4px_#1E2C441A] border-[8px] lg:border-[9px] border-[#F15A29] rounded-t-[20px] pb-[50px]">
+                            <div className="shadow-[0px_3px_21px_4px_#1E2C441A] border-[8px] lg:border-[9px] border-[#F15A29] rounded-t-[20px] pb-[50px]">
                                 <div className="text-white bg-[#F15A29] relative">
                                     <img src={Crown} alt="" className="w-[51px] h-[44px] mx-auto absolute top-[-16px] left-1/2 -translate-x-1/2" />
                                     <div className="flex flex-col gap-[9px] items-center pb-[25px] pt-[64px]">
@@ -147,19 +147,19 @@ const PlanAndPricing = () => {
                                             <div className="mt-1">
                                                 <CircleCorrect/>
                                             </div>
-                                            <p>勤怠管理  (当社HRスタッフ)</p>
+                                            <p>勤怠管理（当社HRスタッフ）</p>
                                         </div>
                                         <div className="flex items-start gap-[12px]">
                                             <div className="mt-1">
                                                 <CircleCorrect/>
                                             </div>
-                                            <p>現場サポート<br/>(基本現場管理•人材の悩み・課題対応)</p>
+                                            <p>現場サポート（基本現場管理•人材の悩み・課題対応）</p>
                                         </div>
                                         <div className="flex items-start gap-[12px]">
                                             <div className="mt-1">
                                                 <CircleCorrect/>
                                             </div>
-                                            <p>労働環境サポート<br/>(オフィス・停電対策など)</p>
+                                            <p>労働環境サポート（オフィス・停電対策など）</p>
                                         </div>
                                         <div className="flex items-start gap-[12px]">
                                             <div className="mt-1">
@@ -171,22 +171,22 @@ const PlanAndPricing = () => {
                                             <div className="mt-1">
                                                 <CircleCorrect/>
                                             </div>
-                                            <p>PC調達・配布代行<br/>(実費のみ、手数料なし)</p>
+                                            <p>PC調達・配布代行（実費のみ、手数料なし）</p>
                                         </div>
                                     </div>
                                 </div>
                                 <PlanAndPricingGreenCard
-                                    text1="・長期的に海外エンジニアを“自社チーム”の"
-                                    text1Next="一員として定着させたい"
-                                    text2="・勤怠管理・福利厚生・現場サポートまで"
-                                    text2Next="トータルで任せたい"
-                                    text3="・海外人材活用に不慣れで、安心できる"
-                                    text3Next="サポート体制を求めている"
+                                    text1="・"
+                                    text1Next="長期的に海外エンジニアを“自社チーム”の一員として定着させたい"
+                                    text2="・"
+                                    text2Next="勤怠管理・福利厚生・現場サポートまでトータルで任せたい"
+                                    text3="・"
+                                    text3Next="海外人材活用に不慣れで、安心できるサポート体制を求めている"
                                 />
                             </div>
                         </div>
 
-                        <div className="plan-price-card lg:w-[370px] shadow-[0px_3px_21px_4px_#1E2C441A] rounded-[16px] lg:rounded-[0px] lg:rounded-r-[20px] pb-[50px] lg:mt-[97px]">
+                        <div className="plan-price-card shadow-[0px_3px_21px_4px_#1E2C441A] rounded-[16px] lg:rounded-[0px] lg:rounded-r-[20px] pb-[50px] lg:mt-[97px]">
                             <div className="text-white bg-[#1E2C44] flex flex-col gap-[9px] items-center rounded-t-[16px] lg:rounded-t-[0px] lg:rounded-tr-[20px] py-[22px]">
                                 <p className="text-[11px] lg:text-[12px] font-normal leading-[22px] lg:leading-[23px] tracking-[1%] uppercase">Project-accompanying EOR</p>
                                 <h2 className="text-[24px] lg:text-[25px] font-bold leading-[34px] lg:leading-[36px] tracking-[1%]">プロジェクト伴走型EOR</h2>
@@ -221,7 +221,7 @@ const PlanAndPricing = () => {
                                         <div className="mt-1">
                                             <CircleCorrect/>
                                         </div>
-                                        <p>当社担当によるPM支援<br/>（進捗・品質・リスク管理）</p>
+                                        <p>当社担当によるPM支援（進捗・品質・リスク管理）</p>
                                     </div>
                                     <div className="flex items-start gap-[12px]">
                                         <div className="mt-1">
@@ -232,12 +232,12 @@ const PlanAndPricing = () => {
                                 </div>
                             </div>
                             <PlanAndPricingGreenCard
-                                text1="・チームにノウハウを溜めながらプロジェク"
-                                text1Next="ト単位で確実に成果を出したい"
-                                text2="・専任PMによる進行・品質・リスク管理を"
-                                text2Next="任せたい"
-                                text3="・社内のマネジメントリソースが"
-                                text3Next="不足している"
+                                text1="・"
+                                text1Next="チームにノウハウを溜めながらプロジェクト単位で確実に成果を出したい"
+                                text2="・"
+                                text2Next="専任PMによる進行・品質・リスク管理を任せたい"
+                                text3="・"
+                                text3Next="社内のマネジメントリソースが不足している"
                             />
                         </div>
                         

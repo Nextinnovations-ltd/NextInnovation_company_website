@@ -67,12 +67,32 @@ const CareerDetail = () => {
                         </div>
                     </div>
                     <div className="max-w-[1052px] mx-auto relative z-10 px-6 lg:px-0 lg:min-h-[1000px] pt-[92px] lg:pt-[211px] pb-[100px] text-[#444444]">
-                        <img src={news.feature} alt="" className="w-full lg:w-[900px]" />
-                        <div className="mt-[43px] lg:mt-[48px] mb-[31px]">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                        >
+                            <img src={news.feature} alt="" className="w-full lg:w-[900px]" />
+                        </motion.div>
+                        <motion.div
+                            className="mt-[43px] lg:mt-[48px] mb-[31px]"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                            viewport={{ once: true }}
+                        >
                             <p className="text-[14px] font-normal leading-[22px] tracking-[0%]">{news.created_at}</p>
                             <h3 className="roboto text-[20px] font-semibold leading-[34px] tracking-[-2%] uppercase">{news.title}</h3>
-                        </div>
-                        <div className="description" dangerouslySetInnerHTML={{ __html: news.description }} />
+                        </motion.div>
+                        <motion.div
+                            className="description"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+                            viewport={{ once: true }}
+                            dangerouslySetInnerHTML={{ __html: news.description }}
+                        />
                     </div>
                 </div>
             </div>
