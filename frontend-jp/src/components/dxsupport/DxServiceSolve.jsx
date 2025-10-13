@@ -8,7 +8,7 @@ const DxServiceSolve = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[180px] px-[24px] lg:px-[120px] text-[#444444]">
+                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[180px] px-[24px] xl:px-[120px] text-[#444444]">
 
                     <TitleFlex
                         jp="当社DX支援サービスが解決すること" eng="WHAT OUR DX SUPPORT SOLVES"

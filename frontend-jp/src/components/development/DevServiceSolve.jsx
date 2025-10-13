@@ -9,7 +9,7 @@ const DevServiceSolve = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-b-[40px] lg:rounded-b-[80px]">
-                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[160px] px-[24px] lg:px-[120px] text-[#444444]">
+                <div className="max-w-[1366px] mx-auto pt-[80px] lg:pt-[120px] pb-[80px] lg:pb-[160px] px-[24px] xl:px-[120px] text-[#444444]">
 
                     <TitleFlex
                         jp="当社受託開発が解決すること" eng="What Our Service Solves"

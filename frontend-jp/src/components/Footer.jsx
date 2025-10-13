@@ -8,7 +8,7 @@ const Footer = () => {
 		<div className="bg-[#1E2C44] -mt-[70px]">
 			<div className="max-w-[1420px] mx-auto text-white pb-[54px] pt-[105px] lg:pb-[50px]">
 				<div className="max-w-[1266px] mx-auto px-6 xl:px-0">
-					<div className="grid grid-cols-2 gap-y-[66px] lg:gap-y-0 lg:flex lg:justify-between">
+					<div className="grid grid-cols-3 md:grid-cols-4 gap-y-[66px] lg:gap-y-0 lg:flex lg:justify-between">
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">サービス</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
@@ -77,7 +77,7 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="montserrat text-center text-[37px] lg:text-[90px] xl:text-[131px] font-bold leading-[100%] tracking-[-3%] uppercase">DRIVEN DX WITH US</div>
+				<div className="montserrat text-center text-[37px] md:text-[70px] lg:text-[90px] xl:text-[131px] font-bold leading-[100%] tracking-[-3%] uppercase">DRIVEN DX WITH US</div>
 			</div>
 		</div>
 	)

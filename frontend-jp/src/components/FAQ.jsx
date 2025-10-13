@@ -16,24 +16,24 @@ const FAQ = ({faqData}) => {
 
     return (
         <div id="faq" className="w-full text-[#444444] bg-white">
-            <div className="max-w-[1366px] mx-auto space-y-[30px] lg:space-y-0 lg:gap-[100px] lg:flex lg:items-start px-6 xl:px-[120px] py-[147px]">
+            <div className="max-w-[1366px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[32px] lg:gap-0 lg:items-start px-6 xl:px-[120px] py-[147px]">
                 {/* Left Title Section */}
                 <motion.div
-                    className="max-w-[394px]"
+                    className="lg:w-[370px]"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
                     <SectionTitle jp="よくある質問" eng="FAQ" />
-                    <p className="w-[370px] text-[14px] lg:text-[15px] text-[#575757] font-normal leading-[24px] tracking-[0%] mt-[20px]">
+                    <p className="text-[14px] lg:text-[15px] text-[#575757] font-normal leading-[24px] tracking-[0%] mt-[20px]">
                         よくあるご質問とその回答をまとめました。ご不明点
                         の解消にお役立てください。<br/>
                         また、海外人材の活用や弊社サービスに少しでもご関心がございましたら、ぜひお気軽にお問い合わせください。代表より直接ご返信いたします。
                     </p>
                 </motion.div>
                 {/* FAQ Section */}
-                <div className="max-w-[822px] flex flex-col gap-[7px] md:gap-4">
+                <div className="flex flex-col gap-[7px] md:gap-4">
                     {faqData.map((faq, index) => {
                         const isOpen = openIndex === index;
                         return (
@@ -45,7 +45,7 @@ const FAQ = ({faqData}) => {
                                 transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
                                 viewport={{ once: true }}
                             >
-                                <div className="flex items-center justify-between lg:min-w-[370px] xl:min-w-[600px]">
+                                <div className="flex items-center justify-between">
                                     <h1
                                         onClick={() => toggleIndex(index)}
                                         className="cursor-pointer duration-300 transition-all text-[#444444] text-[12px] md:text-[18px] font-bold leading-[20px] md:leading-[30px] tracking-[-2%]"
@@ -81,7 +81,7 @@ const FAQ = ({faqData}) => {
                                                         <img
                                                             src={circle}
                                                             alt=""
-                                                            className="mt-2 w-[7px] h-[7px] md:w-[14px] md:h-[14px]"
+                                                            className="mt-3 md:mt-2 w-[7px] h-[7px] md:w-[14px] md:h-[14px]"
                                                         />
                                                         <p className="text-[#484747] text-[12px] md:text-[14px] font-medium md:font-normal leading-[31px] tracking-[0%]">
                                                             {ans}

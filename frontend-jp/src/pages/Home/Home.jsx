@@ -378,7 +378,7 @@ const Home = () => {
 							<h2 className="col__content-title">
 								<span className="line__inner text-[24px] font-bold leading-[44px] tracking-[-2%]">EOR/ 海外人材雇用代行</span>
 							</h2>
-							<p className="col__content-txt w-[477px] text-[14px] font-normal leading-[31px] tracking-[0%] mt-[18px] mb-[40px]">
+							<p className="col__content-txt w-[400px] xl:w-[477px] text-[14px] font-normal leading-[31px] tracking-[0%] mt-[18px] mb-[40px]">
 								現地法人を設立せずに、東南アジアの優秀な人材を
 								採用可能。最短1ヶ月で稼働を開始でき、給与支払い
 								や法務手続きもすべて代行。独自の安心ラボ型・
@@ -409,7 +409,7 @@ const Home = () => {
 							<h2 className="col__content-title">
 								<span className="line__inner text-[24px] font-bold leading-[44px] tracking-[-2%]">DX支援 / 受託開発<br/>・UI/UXデザイン</span>
 							</h2>
-							<p className="col__content-txt w-[477px] text-[14px] font-normal leading-[31px] tracking-[0%] mt-[18px] mb-[40px]">
+							<p className="col__content-txt w-[400px] xl:w-[477px] text-[14px] font-normal leading-[31px] tracking-[0%] mt-[18px] mb-[40px]">
 								日本案件経験豊富なエンジニアとデザイナーが
 								在籍。Figmaを用いた最新UI/UX設計から、Web
 								開発、クロスプラットフォーム開発など一貫対応。
@@ -459,7 +459,7 @@ const Home = () => {
 							trusted Clients<span>50+</span>
 						</h1>
 					</div>
-					<div className="marquee-logo-container max-w-[1290px] mx-auto ">
+					<div className="marquee-logo-container xl:max-w-[1290px] mx-auto ">
 						<div className="marquee-animation flex items-center gap-[62px]">
 							<img src={marqueeLogo1} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
@@ -477,39 +477,31 @@ const Home = () => {
 							<div className="logo-divider"></div>
 							<img src={marqueeLogo4} alt="" className="w-[146px]" />
 							<div className="logo-divider"></div>
-							<img src={marqueeLogo1} alt="" className="w-[146px]" />
-							<div className="logo-divider"></div>
-							<img src={marqueeLogo2} alt="" className="w-[146px]" />
-							<div className="logo-divider"></div>
-							<img src={marqueeLogo3} alt="" className="w-[146px]" />
-							<div className="logo-divider"></div>
-							<img src={marqueeLogo4} alt="" className="w-[146px]" />
-							<div className="logo-divider"></div>
 						</div>
-						<img src={marqueeGradientLeft} alt="" className="coverLeft hidden lg:block" />
-						<img src={marqueeGradientRight} alt="" className="coverRight hidden lg:block" />
+						<img src={marqueeGradientLeft} alt="" className="coverLeft hidden xl:block" />
+						<img src={marqueeGradientRight} alt="" className="coverRight hidden xl:block" />
 					</div>
 				</div>
 			</div>
 
 			{/* start our powerful section */}
 			<div className="bg-white">
-				<div className="our-powerful-product-section bg-[#1E2C44] text-[#EDEDED] w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[40px] lg:rounded-b-[80px] px-6 lg:px-0">
+				<div className="our-powerful-product-section bg-[#1E2C44] text-[#EDEDED] w-full pt-[70px] lg:pt-[100px] pb-[103px] lg:pb-[216px] rounded-b-[40px] lg:rounded-b-[80px] px-6 xl:px-0">
 					<div className="our-powerful-product max-w-[1126px] mx-auto">
-						<div className="overflow-hidden lg:hidden">
+						<div className="overflow-hidden md:hidden">
 							<div ref={ourProductTitleRef}>
 								<SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" engcolor="text-white" />
 							</div>
 						</div>
-						<div className="flex flex-col-reverse lg:flex-row lg:gap-[108px]">
-							<div className="lg:w-[483px]">
-								<div className="overflow-hidden hidden lg:block">
+						<div className="flex flex-col-reverse md:flex-row md:gap-[40px] lg:gap-[108px]">
+							<div className="md:w-[350px] lg:w-[483px]">
+								<div className="overflow-hidden hidden md:block">
 									<div ref={ourProductTitleRef}>
 										<SectionTitle jp="プロダクト" eng="OUR PRODUCT" jpcolor="text-white" engcolor="text-white" />
 									</div>
 								</div>
 								<div className="main-left mt-[50px]">
-									<h3 ref={addToRefs} className="roboto text-[24px] font-bold leading-[44px] tracking-[-2%] text-[#EDEDED] mb-6 xl:mb-[20px] lg:pt-[30px]">
+									<h3 ref={addToRefs} className="roboto text-[24px] font-bold leading-[44px] tracking-[-2%] text-[#EDEDED] mb-6 xl:mb-[20px] md:pt-[30px]">
 										Talent Cloud
 									</h3>
 									<span ref={addToRefs} className="text-[14px] font-normal leading-[31px] tracking-[0%] text-white">
@@ -524,13 +516,13 @@ const Home = () => {
 									</div>
 								</div>
 							</div>
-							<div className="w-full mt-[26px] lg:mt-0 border-t-[2px] lg:border-t-0 pt-[70px] lg:pt-0 border-[#EDEDED] lg:w-[535px] relative">
-								<div className="image-container rounded-l-[16px] overflow-hidden">
+							<div className="w-full mt-[26px] md:mt-[120px] lg:mt-0 border-t-[2px] md:border-t-0 pt-[70px] md:pt-0 border-[#EDEDED] lg:w-[535px]">
+								<div className="image-container rounded-[16px] overflow-hidden relative">
 									<img src={PowerFullProduct} alt="" className="blockReveal w-full" />
+									<Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="coming-soon absolute md:text-[17px] uppercase font-normal leading-[110%] tracking-[-2%] px-4 py-3 rounded-lg">
+										Coming Soon
+									</Link>
 								</div>
-								<Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="coming-soon absolute md:text-[17px] uppercase font-normal leading-[110%] tracking-[-2%] px-4 py-3 rounded-lg">
-									Coming Soon
-								</Link>
 							</div>
 						</div>
 					</div>
