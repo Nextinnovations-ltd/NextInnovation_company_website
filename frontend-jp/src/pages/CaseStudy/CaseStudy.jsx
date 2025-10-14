@@ -99,7 +99,7 @@ const CaseStudy = () => {
 		  ? caseStudies
 		  : caseStudies.filter((c) => c.categories.includes(activeCategory));
 	return (
-		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 overflow-hidden'>
+		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 overflow-hidden md:px-6 '>
 			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
 				<div className="max-w-[1240px] w-full mx-auto h-[50vh] md:h-[80vh] flex flex-col justify-between items-start pt-[100px] px-[24px] md:px-0">
 					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2 ' initial={{ opacity: 0, y: 30 }}

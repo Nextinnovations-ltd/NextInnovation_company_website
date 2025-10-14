@@ -29,7 +29,7 @@ const CeoMessage = () => {
       </motion.div>
 
       <motion.div 
-        className="flex flex-col md:flex-row justify-between items-start md:items-end gap-[33px] md:gap-0 mt-[111px] md:mt-0 mb-[80px] md:mb-[180px]"
+        className="flex flex-col md:flex-row justify-between items-start md:items-end gap-[33px] lg:gap-0 mt-[111px] md:mt-0 mb-[80px] md:mb-[180px]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -46,7 +46,7 @@ const CeoMessage = () => {
       </motion.div>
 
       <motion.div 
-        className="flex flex-col-reverse md:flex-row items-center justify-between gap-[50px] md:gap-0"
+        className="flex flex-col-reverse md:flex-row items-start justify-between gap-[50px] lg:gap-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -115,8 +115,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[269px] pb-6">
-          <p  className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] pb-6">
+          <p  className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Z.com Myanmar
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>Sales website</p>
@@ -124,8 +124,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[229px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Yadanapon Airlines
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>Website/booking system</p>
@@ -133,8 +133,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[293px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             JTB Myanmar
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>JTB Myanmar website</p>
@@ -142,8 +142,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[334px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Samsung
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>Smartphone sales EC site/order inventory management system </p>
@@ -152,7 +152,7 @@ const CeoMessage = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Myanmar government agencies
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>Official websites</p>
@@ -160,8 +160,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[117px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Myanmar Stock Exchange (YSX)
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>YSX Website</p>
@@ -169,8 +169,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[201px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Japanese educational <br/>
             materials company
           </p>
@@ -179,8 +179,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[202px] py-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className="border-solid border-b border-b-[#CDCDCD] flex gap-[33px] md:gap-[114px] py-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Japanese SEO company
           </p>
           <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[400] leading-[32px] md:leading-[30px] '>Production of WordPress templates for SEO</p>
@@ -188,8 +188,8 @@ const CeoMessage = () => {
         <motion.div     initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeUp} className=" flex gap-[33px] md:gap-[230px] pt-6">
-          <p className='w-[171px] md:w-auto text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
+          variants={fadeUp} className=" flex gap-[33px] md:gap-[114px] pt-6">
+          <p className='w-[171px] md:min-w-[308px] text-[#575757] font-roboto text-[14px] md:text-[18px] font-[600] leading-[32px] tracking-[0.14px] md:tracking-[0.18px] uppercase'>
             Overseas travel <br/>
             insurance company
           </p>

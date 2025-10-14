@@ -45,7 +45,7 @@ const Navbar = () => {
                 <div className="fixed left-0 right-0  h-[100vh] bg-[#02021E4D] backdrop-blur-[13.5px] z-[1000]"></div>
               )} 
             <div ref={wrapperRef}
-                className={`navbar max-w-[1250px] mx-auto text-[#000] md:backdrop-blur-[30px] bg-white md:bg-white/60 md:rounded-[50px] border border-white flex justify-between items-center h-[68px] px-[32px] fixed top-0 left-0 right-0 z-[10000] transition-transform duration-300 md:mt-[20px]
+                className={`navbar max-w-[1250px] mx-auto text-[#000] lg:backdrop-blur-[30px] bg-white lg:bg-white/60 lg:rounded-[50px] border border-white flex justify-between items-center h-[68px] px-[32px] fixed top-0 left-0 right-0 z-[10000] transition-transform duration-300 lg:mt-[20px]
                     ${showBorder ? "border-b-[1px]" : ""}`}
             >
                 <div>
@@ -96,8 +96,6 @@ const Navbar = () => {
 
 
                 
-
-
 
 
 
@@ -184,8 +182,8 @@ const Navbar = () => {
                             value="about"
                             menus={[
                                 { title: "会社概要", link: "/company-profile" },
-                                { title: "経営方針", link: "/ff" },
-                                { title: "メンバー紹介", link: "/gg" },
+                                { title: "経営方針", link: "/" },
+                                { title: "代表メッセージ", link: "/ceo-message" },
                             ]}
                             openValue={mobileDropDownOpen}
                             setOpenValue={setMobileDropDownOpen}
