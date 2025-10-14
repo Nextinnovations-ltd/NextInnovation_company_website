@@ -30,9 +30,10 @@ const Footer = () => {
 						<div>
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">導入事例</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
-								<Link to="/eor" className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR事例</Link>
-								<Link to="/development" className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発事例</Link>
-								<Link to="/uiux" className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン事例</Link>
+								<Link to="/case-study?category=eor" className="text-[15px] font-normal leading-[26px] tracking-[1%]">EOR事例</Link>
+								<Link to="/case-study?category=DX支援" className="text-[15px] font-normal leading-[26px] tracking-[1%]">DX支援</Link>
+								<Link to="/case-study?category=受託開発" className="text-[15px] font-normal leading-[26px] tracking-[1%]">受託開発事例</Link>
+								<Link to="/case-study?category=UI/UXデザイン" className="text-[15px] font-normal leading-[26px] tracking-[1%]">UI/UXデザイン事例</Link>
 							</div>
 						</div>
 						<div>
@@ -40,7 +41,7 @@ const Footer = () => {
 							<div className="flex flex-col gap-[22px] mt-[24px]">
 								<Link to="/company-profile" className="text-[15px] font-normal leading-[26px] tracking-[1%]">会社概要</Link>
 								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">経営方針</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">代表メッセージ</Link>
+								<Link to="/ceo-message" className="text-[15px] font-normal leading-[26px] tracking-[1%]">代表メッセージ</Link>
 							</div>
 						</div>
 						<div>

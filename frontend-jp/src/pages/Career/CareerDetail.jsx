@@ -5,6 +5,7 @@ import { API_BASE_URL } from "../../config";
 import Breadcrumb from "../../components/Breadcrumb";
 import NewsText from "/images/svg/news.svg"
 import BgImg from '/images/contact-bg.png'
+import useHeroRotate from "../../hooks/useHeroRotate";
 
 const CareerDetail = () => {
     let {id} = useParams();
@@ -24,6 +25,7 @@ const CareerDetail = () => {
         })
     }, [url]);
 
+    useHeroRotate()
     
     return (
         <>
