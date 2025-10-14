@@ -49,10 +49,10 @@ const Navbar = () => {
                     ${showBorder ? "border-b-[1px]" : ""}`}
             >
                 <div>
-                    <NavLink to="/" onClick={() => setDropDownOpen('')} className="chillax text-[#000] text-[20px] font-[500] tracking-[-0.8px]">Next Innovations</NavLink>
+                    <NavLink to="/" onClick={() => setDropDownOpen('')} className="chillax text-[#000] text-[20px] text-nowrap font-[500] tracking-[-0.8px]">Next Innovations</NavLink>
                 </div>
 
-                <div className="nav-menu w-[835px] h-[100%] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                <div className="nav-menu md:w-[700px] w-[835px] h-[100%] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
                     <NavLink to="/" onClick={() => setDropDownOpen('')} className="py-2">ホーム</NavLink>
                   
                     <div

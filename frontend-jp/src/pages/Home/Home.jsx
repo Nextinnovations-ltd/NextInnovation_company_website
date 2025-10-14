@@ -363,7 +363,7 @@ const Home = () => {
 
 	return (
 		<div className="home">
-			<div className="hidden md:block">
+			<div className="overflow-hidden hidden md:block">
 				<Hero />
 			</div>
 			<div className="block md:hidden">
