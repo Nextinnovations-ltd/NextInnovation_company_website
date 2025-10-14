@@ -4,7 +4,7 @@ import {PropTypes} from "prop-types"
 
 const OnboardingCard = ({step,title,image,description,last = false}) => {
     return (
-        <div className="relative lg:w-[346px]">
+        <div className="relative">
             {/* Card */}
             <div className="h-full onboarding-card border-[2px] border-[#DFDFDF] rounded-[18px] px-[26px] lg:px-[27px] py-[37px] lg:py-[40px]">
                 <p className="absolute -top-[15px] left-1/2 -translate-x-1/2 bg-[#F15A29] text-[14px] font-bold leading-[17px] tracking-[-1%] text-white px-[44px] py-[5px] rounded-[27px]">
@@ -25,9 +25,9 @@ const OnboardingCard = ({step,title,image,description,last = false}) => {
                     <img
                         src={Arrow}
                         alt=""
-                        className={`${last ? "-right-[32px]" : "-right-[50px]"} hidden lg:block absolute top-1/2 -translate-y-1/2 z-[50]`}
+                        className={`${last ? "md:-right-[24px] lg:-right-[32px]" : "md:-right-[36px] lg:-right-[50px]"} md:w-[50px] lg:w-auto hidden md:block absolute top-1/2 -translate-y-1/2 z-[50]`}
                     />
-                    <img src={ArrowMobile} alt="" className="absolute -bottom-[20px] left-1/2 -translate-x-1/2 lg:hidden" />
+                    <img src={ArrowMobile} alt="" className="absolute -bottom-[20px] left-1/2 -translate-x-1/2 md:hidden" />
                 </>
             )}
 

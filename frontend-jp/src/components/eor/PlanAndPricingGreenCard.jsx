@@ -8,12 +8,18 @@ const PlanAndPricingGreenCard = ({text1,text1Next="",text2,text2Next="",text3,te
                     こんな方におすすめ
                 </div>
                 <div className="rounded-b-[6px] bg-[#F0F1F6] px-[13px] py-[20px] text-[12px] lg:text-[14px] font-medium leading-[22px] lg:leading-[25px] tracking-[0%] text-[#1E2C44] space-y-[6px]">
-                    <p>{text1}</p>
-                    <p className="ps-[14px]">{text1Next}</p>
-                    <p>{text2}</p>
-                    <p className="ps-[14px]">{text2Next}</p>
-                    <p>{text3}</p>
-                    <p className="ps-[14px]">{text3Next}</p>
+                    <div className="flex">
+                        <p>{text1}</p>
+                        <p>{text1Next}</p>
+                    </div>
+                    <div className="flex">
+                        <p>{text2}</p>
+                        <p>{text2Next}</p>
+                    </div>
+                    <div className="flex">
+                        <p>{text3}</p>
+                        <p>{text3Next}</p>
+                    </div>
                 </div>
             </div>
         </div>

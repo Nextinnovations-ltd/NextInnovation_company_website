@@ -20,7 +20,7 @@ const DxChallenge = () => {
     useCardAnimation(containerRef2,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="px-6 lg:px-[120px] pb-[80px] lg:pb-[120px]">
+        <div className="px-6 xl:px-[120px] pb-[80px] lg:pb-[120px]">
             <div className="h-[70px] lg:h-[100px] overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp="課題" eng="Challenges" />
@@ -32,7 +32,7 @@ const DxChallenge = () => {
                     description="結果として「すぐに動けない」「想定以上に費用がかかる」という状況が企業のDX推進を妨げています。"
                 />
             </div>
-            <div ref={containerRef1} className="lg:flex lg:gap-6 pb-[60px] lg:pb-[80px] border-b-[1px] space-y-6 lg:space-y-0 border-[#44444433]">
+            <div ref={containerRef1} className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-[60px] lg:pb-[80px] border-b-[1px] border-[#44444433]">
                 <ChallengeCard
                     image={Img1}
                     title="開発リソース不足"
@@ -55,7 +55,7 @@ const DxChallenge = () => {
                     description="コストを求めても、結果的に「安かろう悪かろう」となりかねません。"
                 />
             </div>
-            <div ref={containerRef2} className="lg:flex lg:gap-6 space-y-6 lg:space-y-0">
+            <div ref={containerRef2} className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <ChallengeCard
                     image={Img4}
                     title="言語の壁"

@@ -10,7 +10,7 @@ const Diagram = () => {
     useGoButtonAnimation(titleRef, {start: "top 80%"},1)
     
     return (
-        <div className="px-6 lg:px-[121px]">
+        <div className="px-6 xl:px-[121px]">
             <div className="bg-white text-[#444444] py-[60px] lg:py-[109px] rounded-[40px] lg:rounded-[80px] mt-[66px] lg:mt-[105px]">
                 <div className="lg:w-[553px] overflow-hidden mx-auto text-center text-[12px] lg:text-[14px] font-normal leading-[22px] lg:leading-[31px] tracking-[0%] mb-[60px] lg:mb-[0px]">
                     <div ref={titleRef}>

@@ -16,7 +16,7 @@ const UiuxChallenges = () => {
     useCardAnimation(containerRef,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] lg:px-[120px]">
+        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] xl:px-[120px]">
             <div className="flex flex-col lg:flex-row lg:justify-between">
                 <div className="h-[70px] lg:h-[100px] overflow-hidden">
                     <div ref={titleRef}>
@@ -27,7 +27,7 @@ const UiuxChallenges = () => {
                     <div ref={textRef}>UI/UXデザインを外部に依頼する際、多くの企業は「コスト」「品質」「継続性」の壁に直面します。</div>
                 </div>
             </div>
-            <div ref={containerRef} className="lg:flex lg:gap-[22px] space-y-[21px] lg:space-y-0 mt-[50px] lg:mt-[60px]">
+            <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-[22px] mt-[50px] lg:mt-[60px]">
                 <ChallengeCard
                     image={Challenge1}
                     title="外部委託する際の課題"

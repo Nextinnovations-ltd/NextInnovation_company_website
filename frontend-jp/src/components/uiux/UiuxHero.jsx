@@ -13,7 +13,7 @@ const UiuxHero = () => {
 
     return (
         <div className="bg-white pt-[80px] lg:pt-[152px] pb-[90px] lg:pb-[106px] rounded-b-[40px] lg:rounded-b-[80px]">
-            <div className="max-w-[1366px] mx-auto text-[#444444] px-[24px] lg:px-[120px]">
+            <div className="max-w-[1366px] mx-auto text-[#444444] px-[24px] xl:px-[120px]">
                 <Breadcrumb
                     routes={[
                         { name: "サービス", link: "" }
@@ -36,7 +36,7 @@ const UiuxHero = () => {
                     </p>
                     <div className="overflow-hidden">
                         <div ref={buttonRef}>
-                            <GoButton name="無料相談する" link="/contact?from=11" />
+                            <GoButton name="無料相談する" link="/contact?from=8" />
                         </div>
                     </div>
                 </div>

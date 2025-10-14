@@ -11,9 +11,9 @@ const ContactFrame = ({children,children2}) => {
 
     return (
         <div className="bg-[url('/images/contact-bg.png')] bg-cover bg-no-repeat bg-fixed rounded-b-[40px] lg:rounded-b-[80px] relative pb-[52px] lg:pb-[172px]">
-            <div className="max-w-[1240px] mx-auto pt-[100px] lg:pt-[130px] px-6 lg:px-0">
+            <div className="max-w-[1240px] mx-auto pt-[100px] lg:pt-[130px] px-6 xl:px-0">
                 <Breadcrumb current="お問い合わせ" />
-                <div className="mt-[38px] lg:flex lg:justify-between">
+                <div className="mt-[38px] lg:flex lg:gap-[100px] xl:gap-0 xl:justify-between">
                     <div className="lg:w-[546px] pt-[13px]">
                         <img src={ReachOut} alt="" />
                         <div className="mt-[64px] space-y-[18px] text-[#000000] text-[12px] lg:text-[14px] font-normal leading-[24px] lg:leading-[31px] tracking-[0%]">

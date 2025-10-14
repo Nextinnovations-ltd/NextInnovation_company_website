@@ -20,8 +20,8 @@ const Platform = () => {
 
     return (
         <div className="bg-[#1E2C44] rounded-b-[40px] lg:rounded-b-[80px] pt-[120px] pb-[136px]">
-            <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[121px]">
-                <div className="relative lg:hidden">
+            <div className="max-w-[1366px] mx-auto px-[24px] xl:px-[121px]">
+                <div className="relative md:hidden">
                     <div ref={imageContainerRef}>
                         <img src={PowerFullProduct} alt="" className="product-image" />
                     </div>
@@ -32,8 +32,8 @@ const Platform = () => {
                         東南アジア発、人材活用プラットフォームのご紹介<br className="hidden lg:block"/>よりスピーディに、より安心・便利に。
                     </h1>
                 </div>
-                <div className="lg:flex lg:justify-between mt-[32px] lg:mt-[50px]">
-                    <div ref={containerRef} className="lg:w-[484px] text-[14px] font-normal leading-[29px] lg:leading-[31px] tracking-[0%] text-white">
+                <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-[40px] xl:gap-0 mt-[32px] lg:mt-[50px]">
+                    <div ref={containerRef} className="xl:w-[484px] text-[14px] font-normal leading-[29px] lg:leading-[31px] tracking-[0%] text-white">
                         <p className="mb-4 lg:mb-[24px]">当社では、東南アジア初となる 人材データベースと企業をつなぐプラットフォーム を開発・運用しています。</p>
                         <p>
                             このプラットフォームにより、企業様は必要な人材をスピーディに検索・採用でき、従来の煩雑なプロセスを大幅に効率化できます。
@@ -47,11 +47,11 @@ const Platform = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-[540px] hidden lg:block relative">
-                        <div ref={imageContainerRef}>
+                    <div className="xl:w-[540px] hidden md:block ">
+                        <div ref={imageContainerRef} className="relative">
                             <img src={PowerFullProduct} alt="" className="product-image" />
+                        <Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-[11px] lg:text-[16px] xl:text-[24px] font-normal leading-[110%] tracking-[-2%] uppercase px-[11px] lg:px-[18px] xl:px-[24px] py-[7px] lg:py-[12px] xl:py-[16px] text-white bg-[#00000066] rounded-[3.5px] lg:rounded-[8px]">COMING SOON</Link>
                         </div>
-                        <Link to="http://staging.talent-cloud.asia/emp/lp" target="_blank" className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-[24px] font-normal leading-[110%] tracking-[-2%] uppercase px-[24px] py-[16px] text-white bg-[#00000066] rounded-[8px]">COMING SOON</Link>
                     </div>
                 </div>
             </div>

@@ -17,13 +17,13 @@ const UiuxDeliverable = () => {
     return (
         <div className="bg-[#1E2C44]">
             <div className="bg-white rounded-t-[40px] lg:rounded-t-[80px]">
-                <div className="max-w-[1366px] mx-auto px-6 lg:px-[120px] pt-[140px] pb-[105px]  ">
+                <div className="max-w-[1366px] mx-auto px-6 xl:px-[120px] pt-[140px] pb-[105px]  ">
                     <div className="overflow-hidden">
                         <div ref={titleRef}>
                             <SectionTitle jp="制作可能な成果物" eng="Possible Deliverables" />
                         </div>
                     </div>
-                    <div ref={containerRef} className="flex flex-wrap gap-[22px] mt-[50px]">
+                    <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-[22px] mt-[50px]">
                         <DeliverableCard
                             image={Img1}
                             title="LPデザイン"

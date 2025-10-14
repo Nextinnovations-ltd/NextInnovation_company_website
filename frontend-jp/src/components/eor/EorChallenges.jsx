@@ -16,7 +16,7 @@ const EorChallenges = () => {
     useCardAnimation(containerRef,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] lg:px-[121px]">
+        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] xl:px-[121px]">
             <div className="flex flex-col lg:flex-row lg:justify-between">
                 <div className="h-[70px] lg:h-[100px] overflow-hidden">
                     <div ref={titleRef}>
@@ -27,7 +27,7 @@ const EorChallenges = () => {
                     <div ref={textRef}>これらの課題を解決し、海外人材の活用を容易にしたのが当社のEORサービスです。</div>
                 </div>
             </div>
-            <div ref={containerRef} className="lg:flex lg:justify-between space-y-[21px] lg:space-y-0 mt-[50px] lg:mt-[60px]">
+            <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-[23px] md:gap-3 lg:gap-[23px] mt-[50px] lg:mt-[60px]">
                 <ChallengeCard
                     image={Challenge1}
                     title="国内採用の壁"

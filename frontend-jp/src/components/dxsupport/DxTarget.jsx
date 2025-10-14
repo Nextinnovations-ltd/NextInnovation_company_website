@@ -15,11 +15,11 @@ const DxTarget = () => {
     useCardAnimation(containerRef,".dx-target-card",{start: "top 80%"})
 
     return (
-        <div className="px-[24px] lg:px-[120px] pt-[70px] lg:pt-[120px] pb-[120px] lg:pb-[180px]">
+        <div className="px-[24px] xl:px-[120px] pt-[70px] lg:pt-[120px] pb-[120px] lg:pb-[180px]">
             <div className="overflow-hidden">
                 <h2 ref={titleRef} className="text-[#02021E] text-[24px] font-bold leading-[34px] tracking-[-2%]">DX化支援の対象例</h2>
             </div>
-            <div ref={containerRef} className="mt-[30px] lg:mt-[64px] grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div ref={containerRef} className="mt-[30px] lg:mt-[64px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <DxTargetCard
                     title="業務プロセス改善"
                     image={Img1}

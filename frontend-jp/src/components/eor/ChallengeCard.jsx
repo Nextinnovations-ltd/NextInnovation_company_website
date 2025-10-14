@@ -2,7 +2,7 @@ import {PropTypes} from "prop-types"
 
 const ChallengeCard = ({image,title,description}) => {
     return (
-        <div className="lg:w-[360px] challenge-card bg-white px-[28px] lg:px-[29px] pt-[28px] lg:pt-[29px] pb-[50px] rounded-[18px]">
+        <div className="challenge-card bg-white px-[28px] md:px-4 lg:px-[29px] pt-[28px] lg:pt-[29px] pb-[50px] rounded-[18px]">
             <div className="overflow-hidden rounded-[15px]">
                 <img src={image} alt="" className="rounded-[10px] hover:scale-110 transition-transform duration-300 ease-in-out" />
             </div>

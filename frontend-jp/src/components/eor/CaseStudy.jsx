@@ -17,13 +17,13 @@ const CaseStudy = ({caseStudy}) => {
     useGoButtonAnimation(buttonRef,{start: "top 100%"})
 
     return (
-        <div className="max-w-[1366px] mx-auto px-[24px] lg:px-[120px] bg-white">
+        <div className="max-w-[1366px] mx-auto px-[24px] xl:px-[120px] bg-white">
             <div className="overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp="導入事例" eng="Case Study" />
                 </div>
             </div>
-            <div ref={containerRef} className="mt-[48px] lg:mt-[60px] text-[#444444] lg:flex lg:gap-[14px] space-y-6 lg:space-y-0">
+            <div ref={containerRef} className="mt-[48px] lg:mt-[60px] text-[#444444] grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-[14px]">
                 {caseStudy.map((study,index) => (
                     <CaseStudyCard
                         key={index}
@@ -34,7 +34,7 @@ const CaseStudy = ({caseStudy}) => {
                     />
                 ))}
             </div>
-            <div className="mt-[40px] flex justify-center lg:justify-end overflow-hidden">
+            <div className="mt-[40px] flex justify-center md:justify-end overflow-hidden">
                 <div ref={buttonRef}>
                     <GoButton name="すべてを見る" link="/case-study" />
                 </div>

@@ -45,14 +45,14 @@ const Technology = () => {
     useRotateCardAnimation(ref4,{start: "top 80%"},300,45,1.5)
     return (
         <div className="bg-[#1E2C44]">
-            <div className="max-w-[1366px] mx-auto py-[80px] lg:py-[140px] px-6 lg:px-[120px]">
+            <div className="max-w-[1366px] mx-auto py-[80px] lg:py-[140px] px-6 xl:px-[120px]">
                 <div className="overflow-hidden">
                     <div ref={titleRef}>
                         <SectionTitle jp="技術スタックと利用可能なツール" eng="Technology Stack & Tools" jpcolor="text-white" engcolor="text-white" />
                     </div>
                 </div>
                 <div className="mt-[60px]">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-[36px] overflow-hidden lg:overflow-visible">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[36px] overflow-hidden lg:overflow-visible">
                         <div ref={ref1}>
                             <TechnologyCard
                                 title="フロントエンド"

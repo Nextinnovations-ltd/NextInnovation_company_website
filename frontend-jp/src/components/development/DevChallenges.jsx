@@ -16,7 +16,7 @@ const DevChallenges = () => {
     useCardAnimation(containerRef,".challenge-card",{start: "top 80%"})
 
     return (
-        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] lg:px-[120px]">
+        <div className="text-[#444444] pb-[80px] lg:pb-[120px] px-[24px] xl:px-[120px]">
             <div className="flex flex-col lg:flex-row lg:justify-between">
                 <div className="h-[70px] lg:h-[100px] overflow-hidden">
                     <div ref={titleRef}>
@@ -27,7 +27,7 @@ const DevChallenges = () => {
                     <div ref={textRef}>受託開発には、国内コストの高さや海外委託での品質・進行管理リスク、納品後の継続性不足といった課題が伴います。</div>
                 </div>
             </div>
-            <div ref={containerRef} className="lg:flex lg:justify-between space-y-[21px] lg:space-y-0 mt-[50px] lg:mt-[60px]">
+            <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-[21px] mt-[50px] lg:mt-[60px]">
                 <ChallengeCard
                     image={Challenge1}
                     title="国内発注のコスト高"

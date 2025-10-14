@@ -27,7 +27,7 @@ const WhatIsEor = ({jp,eng,text1,text2="",text3=""}) => {
     useTextSplitAnimation(textRef,"span.animate-char")
 
     return (
-        <div className="text-[#444444] pt-[60px] lg:pt-[180px] px-[24px] lg:px-[121px]">
+        <div className="text-[#444444] pt-[60px] lg:pt-[180px] px-[24px] xl:px-[121px]">
             <div className="overflow-hidden">
                 <div ref={titleRef}>
                     <SectionTitle jp={jp} eng={eng} />
