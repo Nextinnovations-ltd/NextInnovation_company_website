@@ -9,9 +9,9 @@ import DevPlanAndPricing from "../../components/development/DevPlanAndPricing";
 import DevComparison from "../../components/development/DevComparison";
 import CaseStudy from "../../components/eor/CaseStudy";
 import FAQ from "../../components/FAQ";
-import CsImg1 from "/images/eor-cs1.png"
-import CsImg2 from "/images/eor-cs2.png"
-import CsImg3 from "/images/eor-cs3.png"
+import CsImg1 from "/images/dx-cs1.png"
+import CsImg2 from "/images/dx-cs3.png"
+import CsImg3 from "/images/dev-cs1.png"
 import Gif from "../../components/Gif";
 import OtherService from "../../components/eor/OtherService";
 import OsImg1 from "/images/other-service-eor.png"
@@ -24,21 +24,24 @@ const Development = () => {
     const caseStudy = [
         {
             image: CsImg1,
+            companyName: "株式会社Release",
             title: "小規模web開発を短納期で構築実現",
             text1: "スタートアップ",
-            text2: "UI/UXデザイン、受託開発"
+            text2: "DX支援、UI/UXデザイン、受託開発",
         },
         {
             image: CsImg2,
-            title: "SaaSダッシュボードUI刷新で利用率向上",
-            text1: "スタートアップ",
-            text2: "UI/UXデザイン"
+            companyName: "株式会社山鶴",
+            title: "伝統的なECサイトをSHOPIFYでリニュアル",
+            text1: "小売",
+            text2: "DX支援、UI/UXデザイン、受託開発",
         },
         {
             image: CsImg3,
-            title: "伝統的なECサイトをSHOPIFYでリニュアル",
-            text1: "小売",
-            text2: "UI/UXデザイン、受託開発"
+            companyName: "株式会社Release Food",
+            title: "ホームページ制作",
+            text1: "スタートアップ",
+            text2: "UI/UXデザイン、受託開発",
         },
     ];
 
@@ -176,7 +179,7 @@ const Development = () => {
             <DevComparison/>
             <div className="bg-[#1E2C44]">
                 <div className="pt-[80px] lg:pt-[142px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
-                    <CaseStudy caseStudy={caseStudy} />
+                    <CaseStudy caseStudy={caseStudy} service="受託開発" />
                 </div>
             </div>
             <FAQ faqData={faqData} />

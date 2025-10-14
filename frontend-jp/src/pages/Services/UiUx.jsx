@@ -11,9 +11,9 @@ import CaseStudy from "../../components/eor/CaseStudy";
 import FAQ from "../../components/FAQ";
 import Gif from "../../components/Gif";
 import OtherService from "../../components/eor/OtherService";
-import CsImg1 from "/images/eor-cs1.png"
-import CsImg2 from "/images/eor-cs2.png"
-import CsImg3 from "/images/eor-cs3.png"
+import CsImg1 from "/images/uiux-cs2.png"
+import CsImg2 from "/images/dev-cs1.png"
+import CsImg3 from "/images/uiux-cs1.png"
 import OsImg1 from "/images/other-service-eor.png"
 import OsImg2 from "/images/other-service-dev.png"
 import OsImg3 from "/images/other-service-dx.png"
@@ -24,21 +24,24 @@ const UiUx = () => {
     const caseStudy = [
         {
             image: CsImg1,
-            title: "小規模web開発を短納期で構築実現",
+            companyName: "株式会社Reme",
+            title: "ホームページ制作",
             text1: "スタートアップ",
-            text2: "UI/UXデザイン、受託開発"
+            text2: "UI/UXデザイン、受託開発",
         },
         {
             image: CsImg2,
-            title: "SaaSダッシュボードUI刷新で利用率向上",
+            companyName: "株式会社Release Food",
+            title: "ホームページ制作",
             text1: "スタートアップ",
-            text2: "UI/UXデザイン"
+            text2: "UI/UXデザイン、受託開発",
         },
         {
             image: CsImg3,
-            title: "伝統的なECサイトをSHOPIFYでリニュアル",
+            companyName: "株式会社Release",
+            title: "ホームページ制作",
             text1: "小売",
-            text2: "UI/UXデザイン、受託開発"
+            text2: "UI/UXデザイン、受託開発",
         },
     ];
 
@@ -118,7 +121,7 @@ const UiUx = () => {
             <UiuxComparison/>
             <div className="bg-[#1E2C44]">
                 <div className="pt-[80px] lg:pt-[142px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
-                    <CaseStudy caseStudy={caseStudy} />
+                    <CaseStudy caseStudy={caseStudy} service="UI/UXデザイン" />
                 </div>
             </div>
             <FAQ faqData={faqData} />

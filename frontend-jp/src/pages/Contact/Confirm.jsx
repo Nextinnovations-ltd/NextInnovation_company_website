@@ -3,9 +3,11 @@ import { useLocation,useNavigate } from "react-router-dom";
 import ContactConfirmInfo from "../../components/ContactConfirmInfo";
 import ContactFrame from "./ContactFrame";
 import { API_BASE_URL } from "../../config";
+import useHeroRotate from "../../hooks/useHeroRotate";
 
 const Confirm = () => {
 
+    useHeroRotate({ visible: false })
     const location = useLocation()
     const navigate = useNavigate()
     const formData = location.state

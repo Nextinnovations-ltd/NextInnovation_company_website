@@ -11,6 +11,7 @@ import RightArrow from "/images/svg/pagination-arrow-right.svg"
 import { API_BASE_URL } from "../../config";
 import CareerCard from "../../components/CareerCard";
 import { Link } from "react-router-dom";
+import useHeroRotate from "../../hooks/useHeroRotate";
 
 const Career = () => {
 
@@ -22,6 +23,7 @@ const Career = () => {
 	let [nextPage, setNextPage] = useState('');
 	const containerRef = useRef(null)
 	useCardAnimation(containerRef,".news-card",{start: "top 80%"})
+	useHeroRotate()
 
 	useEffect(() => {
 		const fetchNews = async () => {

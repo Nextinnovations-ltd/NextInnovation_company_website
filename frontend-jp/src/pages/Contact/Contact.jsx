@@ -11,10 +11,12 @@ import { API_BASE_URL } from "../../config";
 import Danger from "../../components/svg/Danger";
 import ContactFrame from "./ContactFrame";
 import ContactButton from "../../components/ContactButton";
+import useHeroRotate from "../../hooks/useHeroRotate";
 
 const Contact = () => {
     const topLineRef = useRef(null)
     useLineAnimation(topLineRef,{start: "top 90%"})
+    useHeroRotate({ visible: false })
 
     const navigate = useNavigate()
     const location = useLocation()

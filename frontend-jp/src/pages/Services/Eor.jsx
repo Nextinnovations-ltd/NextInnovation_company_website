@@ -26,18 +26,21 @@ const Eor = () => {
     const caseStudy = [
         {
             image: CsImg1,
+            companyName: "株式会社Release",
             title: "継続的なサイト更新",
             text1: "日本のEC企業",
             text2: "ラボ型EOR"
         },
         {
             image: CsImg2,
+			companyName: "株式会社Reimei",
             title: "MVPを短期開発し、資金調達成功",
             text1: "スタートアップ",
             text2: "安心ラボ型と伴走型"
         },
         {
             image: CsImg3,
+			companyName: "株式会社FlyHigh",
             title: "自社サイトの自社プロジェクト立ち上げ",
             text1: "AIコンサルタント会社",
             text2: "伴走型"
@@ -180,7 +183,7 @@ const Eor = () => {
             <UseCase/>
             <div className="bg-[#1E2C44]">
                 <div className="pt-[80px] lg:pt-[140px] rounded-t-[40px] lg:rounded-t-[80px] bg-white">
-                    <CaseStudy caseStudy={caseStudy} />
+                    <CaseStudy caseStudy={caseStudy} service="eor" />
                 </div>
             </div>
             <Onboarding/>

@@ -9,9 +9,9 @@ import Technology from "../../components/dxsupport/Technology";
 import ComparisonTable from "../../components/eor/ComparisonTable";
 import WhatIsEor from "../../components/eor/WhatIsEor";
 import CaseStudy from "../../components/eor/CaseStudy";
-import CsImg1 from "/images/eor-cs1.png"
-import CsImg2 from "/images/eor-cs2.png"
-import CsImg3 from "/images/eor-cs3.png"
+import CsImg1 from "/images/dx-cs1.png"
+import CsImg2 from "/images/dx-cs2.png"
+import CsImg3 from "/images/dx-cs3.png"
 import FAQ from "../../components/FAQ";
 import Gif from "../../components/Gif";
 import OtherService from "../../components/eor/OtherService";
@@ -24,21 +24,24 @@ const DxSupport = () => {
     const caseStudy = [
         {
             image: CsImg1,
+            companyName: "株式会社Release",
             title: "小規模web開発を短納期で構築実現",
             text1: "スタートアップ",
-            text2: "UI/UXデザイン、受託開発"
+            text2: "DX支援、UI/UXデザイン、受託開発",
         },
         {
             image: CsImg2,
+            companyName: "株式会社Release",
             title: "SaaSダッシュボードUI刷新で利用率向上",
             text1: "スタートアップ",
-            text2: "UI/UXデザイン"
+            text2: "DX支援、UI/UXデザイン",
         },
         {
             image: CsImg3,
+            companyName: "株式会社山鶴",
             title: "伝統的なECサイトをSHOPIFYでリニュアル",
             text1: "小売",
-            text2: "UI/UXデザイン、受託開発"
+            text2: "DX支援、UI/UXデザイン、受託開発",
         },
     ];
 
@@ -119,7 +122,7 @@ const DxSupport = () => {
             <Technology/>
             <Deliverable/>
             <div className="bg-white">
-                <CaseStudy caseStudy={caseStudy} />
+                <CaseStudy caseStudy={caseStudy} service="DX支援" />
             </div>
             <FAQ faqData={faqData} />
             <div className="bg-white">

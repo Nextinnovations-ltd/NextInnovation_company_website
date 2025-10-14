@@ -7,7 +7,7 @@ import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
 import useGoButtonAnimation from "../../hooks/useGoButtonAnimation";
 import {PropTypes} from "prop-types"
 
-const CaseStudy = ({caseStudy}) => {
+const CaseStudy = ({caseStudy,service}) => {
 
     const containerRef = useRef(null)
     const titleRef = useRef(null)
@@ -28,6 +28,7 @@ const CaseStudy = ({caseStudy}) => {
                     <CaseStudyCard
                         key={index}
                         image={study.image}
+                        companyName={study.companyName}
                         title={study.title}
                         text1={study.text1}
                         text2={study.text2}
@@ -36,7 +37,7 @@ const CaseStudy = ({caseStudy}) => {
             </div>
             <div className="mt-[40px] flex justify-center md:justify-end overflow-hidden">
                 <div ref={buttonRef}>
-                    <GoButton name="すべてを見る" link="/case-study" />
+                    <GoButton name="すべてを見る" link={`/case-study?category=${service}`} />
                 </div>
             </div>
         </div>
@@ -45,5 +46,6 @@ const CaseStudy = ({caseStudy}) => {
 
 CaseStudy.propTypes = {
     caseStudy: PropTypes.array.isRequired,
+    service: PropTypes.string.isRequired,
 }
 export default CaseStudy;
