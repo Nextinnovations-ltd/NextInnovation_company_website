@@ -20,7 +20,7 @@ const CompanyProfile = () => {
 		<div className='bg-white overflow-hidden z-[100] relative rounded-[40px] md:rounded-[80px] px-6'>
 			<div>
 				<div
-					className="h-[100vh] absolute top-[-10%] md:top-[0%] right-[-10%]"
+					className="h-[100vh] absolute top-[-10%] md:top-[0%] right-[-10%] -z-[20]"
 					style={{
 						backgroundImage: `url(${rotateImg})`,
 						backgroundSize: 'contain',
