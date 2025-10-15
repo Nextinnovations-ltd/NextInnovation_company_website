@@ -1,5 +1,5 @@
 import './Privacy.css';
-import logo from '../../../public/images/Group 34121.svg'; // ⬅️ replace with actual logo path
+import logo from '/images/Group 34121.svg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 const Privacy = () => {

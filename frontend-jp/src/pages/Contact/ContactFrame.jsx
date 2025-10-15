@@ -4,10 +4,12 @@ import { useRef } from "react";
 import useLineAnimation from "../../hooks/useLineAnimation";
 import ContactInfo from "../../components/ContactInfo";
 import { PropTypes } from "prop-types"
+import useHeroRotate from "../../hooks/useHeroRotate";
 
 const ContactFrame = ({children,children2}) => {
     const topLineRef = useRef(null)
     useLineAnimation(topLineRef,{start: "top 90%"})
+    useHeroRotate({ visible: false })
 
     return (
         <div className="bg-[url('/images/contact-bg.png')] bg-cover bg-no-repeat bg-fixed rounded-b-[40px] lg:rounded-b-[80px] relative pb-[52px] lg:pb-[172px]">

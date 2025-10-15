@@ -45,7 +45,7 @@ const CareerDetail = () => {
             </style>
             <div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 mt-[50px] lg:mt-0'>
                 <div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
-                    <div className="max-w-[1240px] w-full mx-auto h-[300px] md:h-[80vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[120px] px-[24px] lg:px-0">
+                    <div className="max-w-[1240px] w-full mx-auto h-[300px] md:h-[80vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[120px] px-[24px] xl:px-0">
                         <motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2' initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -68,7 +68,7 @@ const CareerDetail = () => {
                                 viewport={{ once: true }} />
                         </div>
                     </div>
-                    <div className="max-w-[1052px] mx-auto relative z-10 px-6 lg:px-0 lg:min-h-[1000px] pt-[92px] lg:pt-[211px] pb-[100px] text-[#444444]">
+                    <div className="max-w-[1052px] mx-auto relative z-10 px-6 xl:px-0 lg:min-h-[1000px] pt-[92px] lg:pt-[211px] pb-[100px] text-[#444444]">
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}

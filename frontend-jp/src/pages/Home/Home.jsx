@@ -46,21 +46,24 @@ const Home = () => {
 	const caseStudy = [
 		{
 			image: CsImg1,
-			title: "小規模web開発を短納期で構築実現",
-			text1: "スタートアップ",
-			text2: "UI/UXデザイン、受託開発"
+			companyName: "株式会社Release",
+			title: "継続的なサイト更新",
+			text1: "日本のEC企業",
+			text2: "ラボ型EOR"
 		},
 		{
 			image: CsImg2,
-			title: "SaaSダッシュボードUI刷新で利用率向上",
+			companyName: "株式会社Reimei",
+			title: "MVPを短期開発し、資金調達成功",
 			text1: "スタートアップ",
-			text2: "UI/UXデザイン"
+			text2: "安心ラボ型と伴走型"
 		},
 		{
 			image: CsImg3,
-			title: "伝統的なECサイトをSHOPIFYでリニュアル",
-			text1: "小売",
-			text2: "UI/UXデザイン、受託開発"
+			companyName: "株式会社FlyHigh",
+			title: "自社サイトの自社プロジェクト立ち上げ",
+			text1: "AIコンサルタント会社",
+			text2: "伴走型"
 		},
 	];
 

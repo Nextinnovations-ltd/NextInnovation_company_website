@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
-import BgImg from '../../../public/images/contact-bg.png'
-import caseStudyText from '../../../public/images/svg/Case study.svg'
+import BgImg from '/images/contact-bg.png'
+import caseStudyText from '/images/svg/Case study.svg'
 import CaseStudyCard from '../../components/CaseStudyCard'
 import gridImg1 from '/images/eor-cs1.png'
 import gridImg2 from '/images/eor-cs2.png'

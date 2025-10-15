@@ -2,11 +2,9 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import ContactFrame from "./ContactFrame";
 import ContactButton from "../../components/ContactButton";
-import useHeroRotate from "../../hooks/useHeroRotate";
 
 const ContactSuccess = () => {
 
-    useHeroRotate({ visible: false })
     const location = useLocation();
     const message = location.state
     const navigate = useNavigate()

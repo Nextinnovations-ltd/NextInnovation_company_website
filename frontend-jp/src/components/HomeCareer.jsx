@@ -42,7 +42,7 @@ const HomeCareer = () => {
                     <SectionTitle jp="ニュース" eng="NEWS" />
                 </div>
             </div>
-            <div ref={containerRef} className="card-transition grid md:grid-cols-2 lg:grid-cols-3 gap-[36px] text-[#444444] mt-[50px]">
+            <div ref={containerRef} className="card-transition grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[36px] text-[#444444] mt-[50px]">
                 {!!career.length && career.map(item => (
                     <Link key={item.id} to={`/news/${item.id}`}>
                         <CareerCard title={item.title} image={item.feature} date={item.created_at} category={item.category} />

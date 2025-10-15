@@ -198,7 +198,7 @@ const LetWorkTogether = () => {
 					</div>
 					<div className="h-[68px] overflow-hidden">
 						<div ref={goButtonRef}>
-							<GoButton name="私たちについて" link="" />
+							<GoButton name="私たちについて" link="/company-profile" />
 						</div>
 					</div>
 				</div>

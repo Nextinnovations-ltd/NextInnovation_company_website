@@ -7,7 +7,7 @@ import useSectionTitleAnimation from "../../hooks/useSectionTitleAnimation";
 import useGoButtonAnimation from "../../hooks/useGoButtonAnimation";
 import {PropTypes} from "prop-types"
 
-const CaseStudy = ({caseStudy,service}) => {
+const CaseStudy = ({caseStudy,service=""}) => {
 
     const containerRef = useRef(null)
     const titleRef = useRef(null)
@@ -46,6 +46,6 @@ const CaseStudy = ({caseStudy,service}) => {
 
 CaseStudy.propTypes = {
     caseStudy: PropTypes.array.isRequired,
-    service: PropTypes.string.isRequired,
+    service: PropTypes.string,
 }
 export default CaseStudy;
