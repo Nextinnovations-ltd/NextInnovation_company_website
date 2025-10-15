@@ -5,7 +5,7 @@ const NavbarDropDownTitle = ({jp,eng}) => {
         <>
             <div>
                 <div className="text-[#575757] flex items-center text-[12px] lg:text-[16px] font-medium leading-[31px] tracking-[0%]">(
-                    <div className="w-2 h-2 rounded-full bg-[#096FCA] ms-1 me-2"></div>
+                    <div className="w-2 h-2 rounded-full bg-[#096FCA] ms-1 me-2 animate-fade"></div>
                     {jp} )
                 </div>
                 {!!eng && (

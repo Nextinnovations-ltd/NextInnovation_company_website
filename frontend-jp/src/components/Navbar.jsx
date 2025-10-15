@@ -52,7 +52,7 @@ const Navbar = () => {
                     <NavLink to="/" onClick={() => setDropDownOpen('')} className="chillax text-[#000] text-[20px] text-nowrap font-[500] tracking-[-0.8px]">Next Innovations</NavLink>
                 </div>
 
-                <div className="nav-menu md:w-[700px] w-[835px] h-[100%] hidden lg:flex justify-between items-center text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                <div className="nav-menu md:w-[700px] lg:w-[835px] w-[835px] h-[100%] hidden lg:flex justify-between items-center text-[16px]  leading-[100%] tracking-[-4%]">
                     <NavLink to="/" onClick={() => setDropDownOpen('')} className="py-2">ホーム</NavLink>
                   
                     <div
@@ -159,7 +159,7 @@ const Navbar = () => {
             {mobileOpen && (
                 <>
                     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] "></div>
-                    <div className="mobile-nav text-[#000] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-[1000] pt-[13px] pb-[43px] px-[32px] text-[16px] font-medium leading-[100%] tracking-[-4%]">
+                    <div className="mobile-nav text-[#000] bg-white fixed lg:hidden top-[60px] left-0 right-0 z-[1000] pt-[13px] pb-[43px] px-[32px] text-[16px] leading-[100%] tracking-[-4%]">
                         <NavLink to="/" onClick={()=>setMobileOpen('')} className="py-[18px] border-b-[1px] border-[#C5CBCF] block">ホーム</NavLink>
                         <MobileDropDown
                             name="サービス"
