@@ -1,5 +1,5 @@
 import rotateImg from "/images/Group 34121.svg";
-import textImg from "/images/svg/Philosophy.svg";
+import textImg from "/images/philosophy.png";
 const Philosophy = () => {
 	return (
 		<div className="bg-white overflow-hidden z-[100] relative rounded-[80px]">

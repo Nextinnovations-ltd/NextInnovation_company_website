@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 import BgImg from '/images/contact-bg.png'
-import caseStudyText from '/images/svg/Case study.svg'
+import caseStudyText from '/images/case-study.png'
 import CaseStudyCard from '../../components/CaseStudyCard'
 import gridImg1 from '/images/eor-cs1.png'
 import gridImg2 from '/images/eor-cs2.png'
@@ -119,16 +119,16 @@ const CaseStudy = () => {
 	},[searchParams])
 
 	return (
-		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 overflow-hidden md:px-6 '>
-			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
-				<div className="max-w-[1240px] w-full mx-auto h-[50vh] md:h-[80vh] flex flex-col justify-between items-start pt-[100px] px-[24px] md:px-0">
+		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 overflow-hidden md:px-6 pt-[50px]'>
+			<div className="flex flex-col justify-between max-w-[1071px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
+				<div className="max-w-[1071px] w-full mx-auto h-[400px] md:h-[90vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[70px] px-[24px] md:px-0">
 					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2 ' initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
 						viewport={{ once: true }}>
 						<Breadcrumb current="導入事例" />
 					</motion.div>
-					<div className="pl-[30px] md:pl-[40px]">
+					<div className="">
 
 						<motion.div className="" initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
@@ -138,17 +138,17 @@ const CaseStudy = () => {
 								<circle cx="4" cy="4" r="4" fill="#096FCA" />
 							</svg>導入事例 )</p>
 						</motion.div>
-						<motion.img src={caseStudyText} alt="" className='mt-[20px]' initial={{ opacity: 0, y: 30 }}
+						<motion.img src={caseStudyText} alt="" className='mt-[20px] w-[300px] md:w-auto' initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
 							viewport={{ once: true }} />
 						<motion.p initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
-							viewport={{ once: true }} className='pl-12 md:pl-[276px] text-black text-[20px] md:text-[24px] font-[700] leading-[44px] tracking-[-0.48px] uppercase mt-[37px] md:mt-[56px]'>長く愛される 新しい ストーリー</motion.p>
+							viewport={{ once: true }} className='md:pl-[276px] text-black text-[20px] md:text-[24px] font-[700] leading-[44px] tracking-[-0.48px] uppercase mt-[37px] md:mt-[56px]'>長く愛される 新しい ストーリー</motion.p>
 					</div>
 				</div>
-				<div className="w-full max-w-[1240px] mx-auto relative z-10 px-6 md:px-0">
+				<div className="w-full max-w-[1071px] mx-auto relative z-10 px-6 md:px-0">
 					{/* Category Filter */}
 					<div className="w-[100%] overflow-x-auto " style={{ msOverflowStyle: "none", scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
 						<motion.div
@@ -165,7 +165,7 @@ const CaseStudy = () => {
 										setActiveCategory(cat);
 										setSearchParams({ category: cat });
 									}}
-									className={`text-nowrap text-[16px] md:text-[24px] font-[700] leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase transition-colors duration-300 cursor-pointer ${activeCategory.toLowerCase() === cat.toLowerCase()
+									className={`text-nowrap h-[30px] md:h-auto text-[16px] lg:text-[24px] font-[700] leading-[24px] md:leading-[44px] tracking-[-0.32px] md:tracking-[-0.48px] uppercase transition-colors duration-300 cursor-pointer ${activeCategory.toLowerCase() === cat.toLowerCase()
 											? "text-[#1E2C44] underline underline-offset-8 decoration-2 decoration-[#F15A29]"
 											: "text-[#848484] hover:text-[#1E2C44]"
 										}`}
@@ -180,7 +180,7 @@ const CaseStudy = () => {
 					{/* Cards */}
 					<div
 						ref={containerRef}
-						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-12 md:gap-x-4 mt-[108px] md:mt-[100px]"
+						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 md:gap-x-4 mt-[50px] lg:mt-[80px]"
 					>
 						{filteredCases.map((item, i) => (
 							<CaseStudyCard

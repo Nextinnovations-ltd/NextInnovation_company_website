@@ -40,7 +40,7 @@ const Footer = () => {
 							<p className="text-[18px] font-bold leading-[26px] tracking-[1%]">会社情報</p>
 							<div className="flex flex-col gap-[22px] mt-[24px]">
 								<Link to="/company-profile" className="text-[15px] font-normal leading-[26px] tracking-[1%]">会社概要</Link>
-								<Link className="text-[15px] font-normal leading-[26px] tracking-[1%]">経営方針</Link>
+								<Link to="/business-philosophy" className="text-[15px] font-normal leading-[26px] tracking-[1%]">経営方針</Link>
 								<Link to="/ceo-message" className="text-[15px] font-normal leading-[26px] tracking-[1%]">代表メッセージ</Link>
 							</div>
 						</div>

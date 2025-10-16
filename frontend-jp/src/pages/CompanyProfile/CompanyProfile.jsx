@@ -1,5 +1,5 @@
 import rotateImg from '/images/Group 34121.svg'
-import TextImg from '/images/svg/Profile.svg'
+import TextImg from '/images/profile.png'
 import { motion } from 'framer-motion'
 import Breadcrumb from '../../components/Breadcrumb'
 import useHeroRotate from "../../hooks/useHeroRotate"
@@ -20,7 +20,7 @@ const CompanyProfile = () => {
 		<div className='bg-white overflow-hidden z-[100] relative rounded-[40px] md:rounded-[80px] px-6'>
 			<div>
 				<div
-					className="h-[100vh] absolute top-[-10%] md:top-[0%] right-[-10%] -z-[20]"
+					className="h-[100vh] absolute -top-[80px] md:top-[30px] right-[0px] -z-[20]"
 					style={{
 						backgroundImage: `url(${rotateImg})`,
 						backgroundSize: 'contain',
@@ -37,12 +37,12 @@ const CompanyProfile = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, ease: 'easeOut' }}
 					viewport={{ once: true }}
-					className='mt-[15vh] opacity-0 md:opacity-1 flex max-w-[1071px] mx-auto items-center gap-2'
+					className='mt-[80px] lg:mt-[120px] opacity-0 md:opacity-1 flex max-w-[1071px] mx-auto items-center gap-2'
 				>
 					<Breadcrumb current="会社概要" />
 				</motion.div>
 
-				<div className="pt-[30vh] md:pt-[30vh] max-w-[1071px] mx-auto relative z-[100] px-6 md:px-0">
+				<div className="pt-[180px] md:pt-[280px] max-w-[1071px] mx-auto relative z-[100]">
 
 					{/* Section title */}
 					<motion.div
@@ -66,7 +66,7 @@ const CompanyProfile = () => {
 						viewport={{ once: true }}
 						src={TextImg}
 						alt=""
-						className='mt-[30px] md:mt-[40px]'
+						className='mt-[30px] md:mt-[40px] w-[300px] md:w-auto'
 					/>
 
 					{/* Description */}
@@ -83,26 +83,26 @@ const CompanyProfile = () => {
 
 					{/* Company info sections */}
 					<motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="border-solid border-b border-b-[#D0D8E6] flex gap-[48px] md:gap-[65px] itmes-center max-w-[1071px] mt-[96px] md:mt-[157px] pb-6 md:pb-12">
-						<p className='text-[#444] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>会社名</p>
-						<p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>Next Innovations株式会社</p>
+						<p className='text-[#444] text-[14px] font-normal leading-[29px] md:leading-[31px]'>会社名</p>
+						<p className='text-[#000] text-[14px] font-normal leading-[29px] md:leading-[31px]'>Next Innovations株式会社</p>
 					</motion.div>
 
 					<motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="border-solid border-b border-b-[#D0D8E6] flex gap-[20px] md:gap-[33px] itmes-center max-w-[1071px] pt-6 md:pt-12 pb-6 md:pb-12">
-						<p className='text-[#444] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>設立年月日</p>
-						<p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>2020年5月5日</p>
+						<p className='text-[#444] text-[14px] font-normal leading-[29px] md:leading-[31px]'>設立年月日</p>
+						<p className='text-[#000] text-[14px] font-normal leading-[29px] md:leading-[31px]'>2020年5月5日</p>
 					</motion.div>
 
 					<motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="border-solid border-b border-b-[#D0D8E6] flex gap-[20px] md:gap-[33px] itmes-center max-w-[1071px] pt-6 md:pt-12 pb-6 md:pb-12">
-						<p className='text-[#444] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>代表取締役</p>
-						<p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>向井悠太</p>
+						<p className='text-[#444] text-[14px] font-normal leading-[29px] md:leading-[31px]'>代表取締役</p>
+						<p className='text-[#000] text-[14px] font-normal leading-[29px] md:leading-[31px]'>向井悠太</p>
 					</motion.div>
 
 					{/* Address */}
 					<motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-[1071px] pt-12 pb-12 border-solid border-b border-b-[#D0D8E6]">
 						<div className="flex gap-[45px] md:gap-[65px] itmes-center">
-							<p className='text-[#444] text-nowrap text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>所在地</p>
+							<p className='text-[#444] text-nowrap text-[14px] md:text-[14px] font-normal leading-[29px] md:leading-[31px]'>所在地</p>
 							<div className="flex flex-col gap-4">
-								<p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px] max-w-[779px]'>
+								<p className='text-[#000] text-[14px] font-normal leading-[29px] md:leading-[31px] max-w-[779px]'>
 									部屋番号 (602)、ガンダマール レジデンス、ガンダマール ロード、マヤンゴン タウンシップ、ヤンゴン、ミャンマー
 								</p>
 								<iframe
@@ -121,8 +121,8 @@ const CompanyProfile = () => {
 
 					{/* Business description */}
 					<motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="border-solid border-b border-b-[#D0D8E6] flex gap-[24px] md:gap-[50px] itmes-center max-w-[1071px] pt-6 md:pt-12 pb-6 md:pb-12 mb-[113px] md:mb-[400px]">
-						<p className='text-nowrap text-[#444] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px]'>事業内容</p>
-						<p className='text-[#000] text-[14px] md:text-[16px] font-[500] leading-[29px] md:leading-[31px] max-w-[891px]'>
+						<p className='text-nowrap text-[#444] text-[14px] font-normal leading-[29px] md:leading-[31px]'>事業内容</p>
+						<p className='text-[#000] text-[14px] font-normal leading-[29px] md:leading-[31px] max-w-[891px]'>
 							私たちNext Innovationsは、ミャンマーに拠点を置く日本企業であり、IT分野に特化しています。
 							プロフェッショナルなチームと多くのお客様に支えられ、高品質で革新的なウェブデザイン、ウェブマーケティング、映像制作サービスを提供しています。
 							当社は2020年に向井優太氏の出資により設立され、これまでに国内外および日本で2,000以上のブランドに携わってまいりました。

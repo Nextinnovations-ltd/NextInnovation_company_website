@@ -15,10 +15,9 @@ const CeoMessage = () => {
 	useHeroRotate();
 	return (
 		<div className='w-full bg-white pb-[100px] md:pb-[160px] rounded-[40px] md:rounded-[80px] relative px-6'>
-			<div className='max-w-[1120px] mx-auto md:pt-[100px] lg:pt-[150px]'>
+			<div className='max-w-[1071px] mx-auto pt-[100px] lg:pt-[150px]'>
 
 				<motion.div
-					className="hidden md:flex gap-2 items-center mb-[46px]"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
@@ -28,7 +27,7 @@ const CeoMessage = () => {
 				</motion.div>
 
 				<motion.div
-					className="flex flex-col md:flex-row justify-between items-start md:items-end gap-[33px] lg:gap-0 mt-[111px] md:mt-0 mb-[80px] lg:mb-[180px]"
+					className="flex flex-col md:flex-row justify-between items-start md:items-end gap-[33px] lg:gap-0 mt-[46px] mb-[80px] lg:mb-[180px]"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}
@@ -45,7 +44,7 @@ const CeoMessage = () => {
 				</motion.div>
 
 				<motion.div
-					className="flex flex-col-reverse md:flex-row items-start justify-between gap-[50px] lg:gap-0"
+					className="flex flex-col-reverse md:flex-row items-start justify-between gap-[50px]"
 					initial="hidden"
 					whileInView="visible"
 					viewport={{ once: true }}

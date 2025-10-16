@@ -156,7 +156,7 @@ const LetWorkTogether = () => {
 	// Empty dependency array means this runs once on mount
 	return (
 		<div className="bg-white z-0" id='letWorkTogether' >
-			<div className="about-us grid grid-cols-1 md:grid-cols-2 gap-[57px] md:gap-0 lg:px-[25px] xl:px-0">
+			<div className="about-us grid grid-cols-1 md:grid-cols-2 gap-[57px] md:gap-0 md:px-[25px] xl:px-0">
 				<div className="title-section">
 					<h1 ref={addToRefs} className="roboto text-[#444444] uppercase text-[40px] lg:text-[56px] font-bold leading-[48px] lg:leading-[65px] tracking-[-1%]" style={{ whiteSpace: 'pre-line' }}>
 						Beyond Borders, <br />
@@ -172,7 +172,7 @@ const LetWorkTogether = () => {
 						</div>
 					</h1>
 				</div>
-				<div className="vision-mission-section lg:max-w-[503px] text-[#444444] px-[20.5px] md:px-0">
+				<div className="vision-mission-section lg:max-w-[503px] text-[#444444]">
 					<div className="section flex flex-col" >
 						<div ref={addToRefs} className="title flex justify-start items-center gap-4">
 							<img src={VisionIcon} className="w-[24px] h-[15px] lg:w-[46px] lg:h-[28px] animate-fade" alt="" />

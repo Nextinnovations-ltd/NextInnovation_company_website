@@ -3,7 +3,7 @@ import {motion} from "framer-motion"
 import Breadcrumb from '../../components/Breadcrumb';
 import { useRef } from "react";
 import rotateImg from '/images/Group 34121.svg'
-import NewsText from "/images/svg/news.svg"
+import NewsText from "/images/news.png"
 import BgImg from '/images/contact-bg.png'
 import useCardAnimation from "../../hooks/useCardAnimation";
 import LeftArrow from "/images/svg/pagination-arrow-left.svg"
@@ -53,17 +53,16 @@ const Career = () => {
 	}
 
 	return (
-		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 mt-[50px] lg:mt-0'>
-			<div className="flex flex-col justify-between max-w-[1240px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
-				<div className="max-w-[1240px] w-full mx-auto h-[300px] md:h-[80vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[120px] px-[24px] xl:px-0">
+		<div className='bg-white rounded-[40px] lg:rounded-[80px] relative z-10 mt-[50px]'>
+			<div className="flex flex-col justify-between max-w-[1071px] mx-auto" style={{ backgroundImage: `url(${BgImg})`, backgroundSize: 'contain', backgroundPosition: 'top', width: '100%', backgroundRepeat: 'no-repeat', }} >
+				<div className="max-w-[1071px] w-full mx-auto h-[320px] md:h-[75vh] flex flex-col justify-between items-start pt-[30px] lg:pt-[70px] px-[24px] xl:px-0">
 					<motion.div className='opacity-0 md:opacity-1 flex justify-center items-center gap-2' initial={{ opacity: 0, y: 30 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, ease: "easeOut" }}
 						viewport={{ once: true }}>
 						<Breadcrumb current="ニュース" />
 					</motion.div>
-					<div className="pl-[0px] lg:pl-[40px]">
-
+					<div>
 						<motion.div className="" initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
@@ -72,13 +71,13 @@ const Career = () => {
 								<circle cx="4" cy="4" r="4" fill="#096FCA" />
 							</svg>ニュース )</p>
 						</motion.div>
-						<motion.img src={NewsText} alt="" className='mt-[20px] w-[150px] lg:w-full' initial={{ opacity: 0, y: 30 }}
+						<motion.img src={NewsText} alt="" className='mt-[20px] w-[150px] md:w-auto' initial={{ opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, ease: "easeOut" }}
 							viewport={{ once: true }} />
 					</div>
 				</div>
-				<div className="max-w-[1240px] mx-auto relative z-10 px-6 xl:px-0 lg:min-h-[1000px]">
+				<div className="max-w-[1071px] mx-auto relative z-10 px-6 xl:px-0 lg:min-h-[1000px]">
 					<div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-[30px] md:gap-x-3 mt-[100px]">
 						{!!news.data && news.data.map(item => (
 							<Link to={`/news/${item.id}`} key={item.id}>
