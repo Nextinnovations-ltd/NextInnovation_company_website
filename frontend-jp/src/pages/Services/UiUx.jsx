@@ -18,6 +18,7 @@ import OsImg1 from "/images/other-service-eor.png"
 import OsImg2 from "/images/other-service-dev.png"
 import OsImg3 from "/images/other-service-dx.png"
 import Technology from "../../components/dxsupport/Technology";
+import useVisiter from "../../hooks/useVisiter";
 
 const UiUx = () => {
 
@@ -88,6 +89,8 @@ const UiUx = () => {
             link: "/dx-support"
         },
     ];
+
+    useVisiter('uiux');
 
     return (
         <>

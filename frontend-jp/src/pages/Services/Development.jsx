@@ -18,6 +18,7 @@ import OsImg1 from "/images/other-service-eor.png"
 import OsImg2 from "/images/other-service-dx.png"
 import OsImg3 from "/images/other-service-uiux.png"
 import DevDeliverable from "../../components/development/DevDeliverable";
+import useVisiter from "../../hooks/useVisiter"
 
 const Development = () => {
 
@@ -146,6 +147,8 @@ const Development = () => {
             link: "/uiux"
         },
     ];
+
+    useVisiter('website');
     
     return (
         <>

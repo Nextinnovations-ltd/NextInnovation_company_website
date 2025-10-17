@@ -20,6 +20,7 @@ import CsImg3 from "/images/eor-cs3.png"
 import OsImg1 from "/images/other-service-dx.png"
 import OsImg2 from "/images/other-service-dev.png"
 import OsImg3 from "/images/other-service-uiux.png"
+import useVisiter from "../../hooks/useVisiter"
 
 const Eor = () => {
 
@@ -148,6 +149,8 @@ const Eor = () => {
             link: "/uiux"
         },
     ];
+
+    useVisiter('eor');
     
     return (
         <>

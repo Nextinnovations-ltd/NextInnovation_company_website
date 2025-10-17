@@ -17,7 +17,7 @@ const ContactLabelSelect = ({children,label,require=false,state,setState,error=[
                 </div>
             </div>
             {error.length > 0 && (
-                <p className="text-[#E01C1CCC] flex items-center gap-[13px]">
+                <p className="text-[#E01C1CCC] flex items-center gap-[13px] text-[12px] lg:text-[14px]">
                     <Danger/>
                     {error}
                 </p>

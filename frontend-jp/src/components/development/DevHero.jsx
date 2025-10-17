@@ -14,12 +14,7 @@ const DevHero = () => {
     return (
         <div className="bg-white pt-[80px] lg:pt-[152px] pb-[90px] lg:pb-[106px] rounded-b-[40px] lg:rounded-b-[80px]">
             <div className="max-w-[1366px] mx-auto text-[#444444] px-[24px] xl:px-[120px]">
-                <Breadcrumb
-                    routes={[
-                        { name: "サービス", link: "" }
-                    ]}
-                    current="受託開発"
-                />
+                <Breadcrumb current="受託開発" />
 
                 <h1 className="text-[32px] font-bold leading-[50px] tracking-[0%] lg:tracking-[-4%] mt-[51px] lg:mt-[46px] mb-[24px]">
                     <div className="overflow-hidden h-auto">

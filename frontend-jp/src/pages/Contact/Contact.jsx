@@ -156,7 +156,7 @@ const Contact = () => {
                         <ContactRadio state={formData.known} setState={(value) => setFormData(prev => ({ ...prev, known: value }))} error={error.known || []} label="営業" name="marketing" value="4" />
                     </div>
                     {!!error.known  && (
-                        <p className="text-[#E01C1CCC] flex items-center gap-[13px]">
+                        <p className="text-[#E01C1CCC] flex items-center gap-[13px] text-[12px] lg:text-[14px]">
                             <Danger/>
                             {error.known}
                         </p>

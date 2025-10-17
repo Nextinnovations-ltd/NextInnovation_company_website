@@ -18,6 +18,7 @@ import OtherService from "../../components/eor/OtherService";
 import OsImg1 from "/images/other-service-eor.png"
 import OsImg2 from "/images/other-service-dev.png"
 import OsImg3 from "/images/other-service-uiux.png"
+import useVisiter from "../../hooks/useVisiter";
 
 const DxSupport = () => {
 
@@ -90,6 +91,8 @@ const DxSupport = () => {
             link: "/uiux"
         },
     ];
+
+    useVisiter('system');
 
     return (
         <>
