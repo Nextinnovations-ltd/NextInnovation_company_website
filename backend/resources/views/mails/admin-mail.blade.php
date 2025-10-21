@@ -10,7 +10,7 @@
     <p style="font-weight: bold;">送信日時 <span style="font-weight: 400;">: {{$contact['date']}}</span></p>
     <p style="font-weight: bold;">送信元IP <span style="font-weight: 400;">: {{$contact['ip']}}</span></p>
     <p style="color: black;">お客様情報</p>
-    <table style="width:800px; padding-left: 20px;">
+    <table style="width:800px; padding-left: 20px; font-size: 16px;">
         <tr>
             <td style="width: 35%; font-weight:bold">会社名</td>
             <td>:</td>
@@ -33,7 +33,7 @@
         </tr>
     </table>
     <p style="color: black;">お問い合わせ内容</p>
-    <table style="width:800px; padding-left: 20px;">
+    <table style="width:800px; padding-left: 20px; font-size: 16px;">
         <tr>
             @php
                 $services = [
