@@ -47,7 +47,6 @@ import sliderImg from "../../../public/images/video section.png";
 import sliderImg2 from "../../../public/images/video section (2).png";
 import sliderImg3 from "../../../public/images/eor-slider.png"
 import sliderImg4 from "../../../public/images/development-slider.png"
-import Package from "../../components/Package"
 import Instagram from "../../components/Instagram"
 import HomeCareer from '../../components/HomeCareer';
 import HomeWork from '../../components/HomeWork';
@@ -560,8 +559,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-
-      <Package/>
 
       <LetWorkTogether/>
 
